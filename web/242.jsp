@@ -8,15 +8,18 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <%
+        String path =request.getContextPath();
+    %>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="Shortcut Icon" href=/favicon.ico>
-    <link rel="stylesheet" type="text/css" href="css/reset.css" />
-    <link rel="stylesheet" type="text/css" href="css/head.css" />
-    <link rel="stylesheet" type="text/css" href="css/article.css" />
-    <link href="css/Page.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="<%=path %>/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="<%=path %>/css/head.css" />
+    <link rel="stylesheet" type="text/css" href="<%=path %>/css/article.css" />
+    <link href="<%=path %>/css/Page.css" type="text/css" rel="stylesheet" />
 
 
     <title>宜兴终身学习网</title>
@@ -77,7 +80,7 @@
     <div class="header-con">
         <div class="top clearfix">
             <div class="top-logo l">
-                <img src="images/logo-yx.png" />
+                <img src="<%=path %>/images/logo-yx.png" />
             </div>
             <div class="top_2 r clearfix">
                 <div class="search_1 l">
@@ -85,7 +88,7 @@
                         <div class="type">
                             活动
                         </div>
-                        <img src="images/arrow-down.png" class="search_img">
+                        <img src="<%=path %>/images/arrow-down.png" class="search_img">
                     </div>
                     <div class="type_con" id="SreachType">
                         <ul>
@@ -345,25 +348,25 @@
                         发布日期：
                     </div>
                     <div class="show-date1 l">
-                        <img src="images/rili.png" class="starttime_img"><input type="text" placeholder="2017-01-10" class="starttime" />
+                        <img src="<%=path %>/images/rili.png" class="starttime_img"><input type="text" placeholder="2017-01-10" class="starttime" />
                     </div>
                     <div class="show-date-p2 l">-</div>
                     <div class="show-date2 l">
-                        <img src="images/rili.png" class="endtime_img"><input type="text" placeholder="2017-01-13" class="endtime" />
+                        <img src="<%=path %>/images/rili.png" class="endtime_img"><input type="text" placeholder="2017-01-13" class="endtime" />
                     </div>
                     <div id='schedule-box' class="boxshaw"></div>
 
                     <div id='schedule-box1' class="boxshaw"></div>
                 </div>
                 <div class="key-show-search l">
-                    <a href="javascript:void();" onclick="SearchCourse();"><img src="images/search-img.png" />检索</a>
+                    <a href="javascript:void();" onclick="SearchCourse();"><img src="<%=path %>/images/search-img.png" />检索</a>
                 </div>
                 <div class="key-show-close r">
-                    <a href="javascript:;"><img src="images/close.png" /></a>
+                    <a href="javascript:;"><img src="<%=path %>/images/close.png" /></a>
                 </div>
             </div>
             <div class="pc-key-hide">
-                <a href="javascript:;">打开索引 <img src="images/search-img.png" /></a>
+                <a href="javascript:;">打开索引 <img src="<%=path %>/images/search-img.png" /></a>
             </div>
         </div>
         <div class="cm-lesson">
@@ -372,8 +375,8 @@
                     全部活动
                 </div>
                 <div class="cm-lesson-top2 l">
-                    排序 <span id="span1" onclick="location.href = '/Course/Index/242?type=1&amp;pageSize=20'">最新  <img src="images/arrow-down1.png" /> </span>
-                    <span id="span2" onclick="location.href = '/Course/Index/242?type=2&amp;pageSize=20'">最热  <img src="images/arrow-down.png" /> </span>
+                    排序 <span id="span1" onclick="location.href = '/Course/Index/242?type=1&amp;pageSize=20'">最新  <img src="<%=path %>/images/arrow-down1.png" /> </span>
+                    <span id="span2" onclick="location.href = '/Course/Index/242?type=2&amp;pageSize=20'">最热  <img src="<%=path %>/images/arrow-down.png" /> </span>
                 </div>
                 <div class="cm-lesson-top3 l">
                     <p class="l">视图</p>
@@ -399,8 +402,8 @@
                         <div class="lb1-con">
                             <a href="/Course/Details?id=10414">
                                 <div class="lb1-con-hd">
-                                    <img src="http://112.25.215.35:80/Resource/Images/Course/" onerror="this.src = 'images/renwenxiuyang.jpg'" class="lb1-con-hd-img" />
-                                    <p class="clearfix"><span class="l"><img src="images/eye-1.png" />476次</span> <span class="r"><img src="images/clock.png" />1080秒</span></p>
+                                    <img src="http://112.25.215.35:80/Resource/Images/Course/" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" class="lb1-con-hd-img" />
+                                    <p class="clearfix"><span class="l"><img src="<%=path %>/images/eye-1.png" />476次</span> <span class="r"><img src="images/clock.png" />1080秒</span></p>
                                 </div>
                                 <div class="lb1-con-bd">
                                     <p class="lb1-con-bd-p1">市场需求、供给与均衡...</p>
@@ -414,8 +417,8 @@
                         <div class="lb1-con">
                             <a href="/Course/Details?id=10454">
                                 <div class="lb1-con-hd">
-                                    <img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" class="lb1-con-hd-img" />
-                                    <p class="clearfix"><span class="l"><img src="/images/eye-1.png" />1666次</span> <span class="r"><img src="images/clock.png" />864秒</span></p>
+                                    <img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" class="lb1-con-hd-img" />
+                                    <p class="clearfix"><span class="l"><img src="/images/eye-1.png" />1666次</span> <span class="r"><img src="<%=path %>/images/clock.png" />864秒</span></p>
                                 </div>
                                 <div class="lb1-con-bd">
                                     <p class="lb1-con-bd-p1">所得税会计的处理方法...</p>
@@ -429,8 +432,8 @@
                         <div class="lb1-con">
                             <a href="/Course/Details?id=10455">
                                 <div class="lb1-con-hd">
-                                    <img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" class="lb1-con-hd-img" />
-                                    <p class="clearfix"><span class="l"><img src="images/eye-1.png" />1230次</span> <span class="r"><img src="images/clock.png" />780秒</span></p>
+                                    <img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" class="lb1-con-hd-img" />
+                                    <p class="clearfix"><span class="l"><img src="images/eye-1.png" />1230次</span> <span class="r"><img src="<%=path %>/images/clock.png" />780秒</span></p>
                                 </div>
                                 <div class="lb1-con-bd">
                                     <p class="lb1-con-bd-p1">租赁会计准则操作实务...</p>
@@ -444,8 +447,8 @@
                         <div class="lb1-con">
                             <a href="/Course/Details?id=10456">
                                 <div class="lb1-con-hd">
-                                    <img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" class="lb1-con-hd-img" />
-                                    <p class="clearfix"><span class="l"><img src="images/eye-1.png" />1079次</span> <span class="r"><img src="images/clock.png" />1403秒</span></p>
+                                    <img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" class="lb1-con-hd-img" />
+                                    <p class="clearfix"><span class="l"><img src="images/eye-1.png" />1079次</span> <span class="r"><img src="<%=path %>/images/clock.png" />1403秒</span></p>
                                 </div>
                                 <div class="lb1-con-bd">
                                     <p class="lb1-con-bd-p1">租赁会计准则操作实务...</p>
@@ -459,8 +462,8 @@
                         <div class="lb1-con">
                             <a href="/Course/Details?id=10457">
                                 <div class="lb1-con-hd">
-                                    <img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" class="lb1-con-hd-img" />
-                                    <p class="clearfix"><span class="l"><img src="images/eye-1.png" />987次</span> <span class="r"><img src="images/clock.png" />840秒</span></p>
+                                    <img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" class="lb1-con-hd-img" />
+                                    <p class="clearfix"><span class="l"><img src="images/eye-1.png" />987次</span> <span class="r"><img src="<%=path %>/images/clock.png" />840秒</span></p>
                                 </div>
                                 <div class="lb1-con-bd">
                                     <p class="lb1-con-bd-p1">首次执行企业会计准则...</p>
@@ -474,8 +477,8 @@
                         <div class="lb1-con">
                             <a href="/Course/Details?id=10458">
                                 <div class="lb1-con-hd">
-                                    <img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" class="lb1-con-hd-img" />
-                                    <p class="clearfix"><span class="l"><img src="images/eye-1.png" />930次</span> <span class="r"><img src="images/clock.png" />886秒</span></p>
+                                    <img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" class="lb1-con-hd-img" />
+                                    <p class="clearfix"><span class="l"><img src="images/eye-1.png" />930次</span> <span class="r"><img src="<%=path %>/images/clock.png" />886秒</span></p>
                                 </div>
                                 <div class="lb1-con-bd">
                                     <p class="lb1-con-bd-p1">首次执行企业会计准则...</p>
@@ -489,8 +492,8 @@
                         <div class="lb1-con">
                             <a href="/Course/Details?id=10459">
                                 <div class="lb1-con-hd">
-                                    <img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" class="lb1-con-hd-img" />
-                                    <p class="clearfix"><span class="l"><img src="images/eye-1.png" />973次</span> <span class="r"><img src="images/clock.png" />720秒</span></p>
+                                    <img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" class="lb1-con-hd-img" />
+                                    <p class="clearfix"><span class="l"><img src="images/eye-1.png" />973次</span> <span class="r"><img src="<%=path %>/images/clock.png" />720秒</span></p>
                                 </div>
                                 <div class="lb1-con-bd">
                                     <p class="lb1-con-bd-p1">会计政策、会计估计变...</p>
@@ -504,8 +507,8 @@
                         <div class="lb1-con">
                             <a href="/Course/Details?id=10460">
                                 <div class="lb1-con-hd">
-                                    <img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" class="lb1-con-hd-img" />
-                                    <p class="clearfix"><span class="l"><img src="images/eye-1.png" />862次</span> <span class="r"><img src="images/clock.png" />686秒</span></p>
+                                    <img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" class="lb1-con-hd-img" />
+                                    <p class="clearfix"><span class="l"><img src="images/eye-1.png" />862次</span> <span class="r"><img src="<%=path %>/images/clock.png" />686秒</span></p>
                                 </div>
                                 <div class="lb1-con-bd">
                                     <p class="lb1-con-bd-p1">会计政策、会计估计变...</p>
@@ -519,8 +522,8 @@
                         <div class="lb1-con">
                             <a href="/Course/Details?id=10461">
                                 <div class="lb1-con-hd">
-                                    <img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" class="lb1-con-hd-img" />
-                                    <p class="clearfix"><span class="l"><img src="images/eye-1.png" />890次</span> <span class="r"><img src="images/clock.png" />900秒</span></p>
+                                    <img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" class="lb1-con-hd-img" />
+                                    <p class="clearfix"><span class="l"><img src="images/eye-1.png" />890次</span> <span class="r"><img src="<%=path %>/images/clock.png" />900秒</span></p>
                                 </div>
                                 <div class="lb1-con-bd">
                                     <p class="lb1-con-bd-p1">外币折算会计准则1</p>
@@ -534,8 +537,8 @@
                         <div class="lb1-con">
                             <a href="/Course/Details?id=10462">
                                 <div class="lb1-con-hd">
-                                    <img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" class="lb1-con-hd-img" />
-                                    <p class="clearfix"><span class="l"><img src="images/eye-1.png" />839次</span> <span class="r"><img src="images/clock.png" />1030秒</span></p>
+                                    <img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" class="lb1-con-hd-img" />
+                                    <p class="clearfix"><span class="l"><img src="images/eye-1.png" />839次</span> <span class="r"><img src="<%=path %>/images/clock.png" />1030秒</span></p>
                                 </div>
                                 <div class="lb1-con-bd">
                                     <p class="lb1-con-bd-p1">外币折算会计准则2</p>
@@ -549,8 +552,8 @@
                         <div class="lb1-con">
                             <a href="/Course/Details?id=10463">
                                 <div class="lb1-con-hd">
-                                    <img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" class="lb1-con-hd-img" />
-                                    <p class="clearfix"><span class="l"><img src="images/eye-1.png" />843次</span> <span class="r"><img src="images/clock.png" />900秒</span></p>
+                                    <img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" class="lb1-con-hd-img" />
+                                    <p class="clearfix"><span class="l"><img src="images/eye-1.png" />843次</span> <span class="r"><img src="<%=path %>/images/clock.png" />900秒</span></p>
                                 </div>
                                 <div class="lb1-con-bd">
                                     <p class="lb1-con-bd-p1">企业合并的会计处理1</p>
@@ -564,8 +567,8 @@
                         <div class="lb1-con">
                             <a href="/Course/Details?id=10464">
                                 <div class="lb1-con-hd">
-                                    <img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" class="lb1-con-hd-img" />
-                                    <p class="clearfix"><span class="l"><img src="images/eye-1.png" />723次</span> <span class="r"><img src="images/clock.png" />899秒</span></p>
+                                    <img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" class="lb1-con-hd-img" />
+                                    <p class="clearfix"><span class="l"><img src="images/eye-1.png" />723次</span> <span class="r"><img src="<%=path %>/images/clock.png" />899秒</span></p>
                                 </div>
                                 <div class="lb1-con-bd">
                                     <p class="lb1-con-bd-p1">企业合并的会计处理2</p>
@@ -579,8 +582,8 @@
                         <div class="lb1-con">
                             <a href="/Course/Details?id=10465">
                                 <div class="lb1-con-hd">
-                                    <img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" class="lb1-con-hd-img" />
-                                    <p class="clearfix"><span class="l"><img src="images/eye-1.png" />780次</span> <span class="r"><img src="images/clock.png" />736秒</span></p>
+                                    <img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" class="lb1-con-hd-img" />
+                                    <p class="clearfix"><span class="l"><img src="images/eye-1.png" />780次</span> <span class="r"><img src="<%=path %>/images/clock.png" />736秒</span></p>
                                 </div>
                                 <div class="lb1-con-bd">
                                     <p class="lb1-con-bd-p1">企业合并的会计处理3</p>
@@ -594,8 +597,8 @@
                         <div class="lb1-con">
                             <a href="/Course/Details?id=10480">
                                 <div class="lb1-con-hd">
-                                    <img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" class="lb1-con-hd-img" />
-                                    <p class="clearfix"><span class="l"><img src="images/eye-1.png" />798次</span> <span class="r"><img src="images/clock.png" />900秒</span></p>
+                                    <img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" class="lb1-con-hd-img" />
+                                    <p class="clearfix"><span class="l"><img src="images/eye-1.png" />798次</span> <span class="r"><img src="<%=path %>/images/clock.png" />900秒</span></p>
                                 </div>
                                 <div class="lb1-con-bd">
                                     <p class="lb1-con-bd-p1">财务报告类准则会计处...</p>
@@ -609,8 +612,8 @@
                         <div class="lb1-con">
                             <a href="/Course/Details?id=10481">
                                 <div class="lb1-con-hd">
-                                    <img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" class="lb1-con-hd-img" />
-                                    <p class="clearfix"><span class="l"><img src="images/eye-1.png" />749次</span> <span class="r"><img src="images/clock.png" />899秒</span></p>
+                                    <img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" class="lb1-con-hd-img" />
+                                    <p class="clearfix"><span class="l"><img src="images/eye-1.png" />749次</span> <span class="r"><img src="<%=path %>/images/clock.png" />899秒</span></p>
                                 </div>
                                 <div class="lb1-con-bd">
                                     <p class="lb1-con-bd-p1">财务报告类准则会计处...</p>
@@ -624,8 +627,8 @@
                         <div class="lb1-con">
                             <a href="/Course/Details?id=10482">
                                 <div class="lb1-con-hd">
-                                    <img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" class="lb1-con-hd-img" />
-                                    <p class="clearfix"><span class="l"><img src="images/eye-1.png" />788次</span> <span class="r"><img src="images/clock.png" />1121秒</span></p>
+                                    <img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" class="lb1-con-hd-img" />
+                                    <p class="clearfix"><span class="l"><img src="images/eye-1.png" />788次</span> <span class="r"><img src="<%=path %>/images/clock.png" />1121秒</span></p>
                                 </div>
                                 <div class="lb1-con-bd">
                                     <p class="lb1-con-bd-p1">财务报告类准则会计处...</p>
@@ -639,8 +642,8 @@
                         <div class="lb1-con">
                             <a href="/Course/Details?id=10483">
                                 <div class="lb1-con-hd">
-                                    <img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" class="lb1-con-hd-img" />
-                                    <p class="clearfix"><span class="l"><img src="images/eye-1.png" />841次</span> <span class="r"><img src="images/clock.png" />1080秒</span></p>
+                                    <img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" class="lb1-con-hd-img" />
+                                    <p class="clearfix"><span class="l"><img src="images/eye-1.png" />841次</span> <span class="r"><img src="<%=path %>/images/clock.png" />1080秒</span></p>
                                 </div>
                                 <div class="lb1-con-bd">
                                     <p class="lb1-con-bd-p1">新会计准则实施对上市...</p>
@@ -654,8 +657,8 @@
                         <div class="lb1-con">
                             <a href="/Course/Details?id=10484">
                                 <div class="lb1-con-hd">
-                                    <img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" class="lb1-con-hd-img" />
-                                    <p class="clearfix"><span class="l"><img src="images/eye-1.png" />848次</span> <span class="r"><img src="images/clock.png" />460秒</span></p>
+                                    <img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" class="lb1-con-hd-img" />
+                                    <p class="clearfix"><span class="l"><img src="images/eye-1.png" />848次</span> <span class="r"><img src="<%=path %>/images/clock.png" />460秒</span></p>
                                 </div>
                                 <div class="lb1-con-bd">
                                     <p class="lb1-con-bd-p1">新会计准则实施对上市...</p>
@@ -669,8 +672,8 @@
                         <div class="lb1-con">
                             <a href="/Course/Details?id=10485">
                                 <div class="lb1-con-hd">
-                                    <img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" class="lb1-con-hd-img" />
-                                    <p class="clearfix"><span class="l"><img src="images/eye-1.png" />768次</span> <span class="r"><img src="images/clock.png" />1080秒</span></p>
+                                    <img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" class="lb1-con-hd-img" />
+                                    <p class="clearfix"><span class="l"><img src="images/eye-1.png" />768次</span> <span class="r"><img src="<%=path %>/images/clock.png" />1080秒</span></p>
                                 </div>
                                 <div class="lb1-con-bd">
                                     <p class="lb1-con-bd-p1">新会计准则实施对上市...</p>
@@ -684,8 +687,8 @@
                         <div class="lb1-con">
                             <a href="/Course/Details?id=10486">
                                 <div class="lb1-con-hd">
-                                    <img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" class="lb1-con-hd-img" />
-                                    <p class="clearfix"><span class="l"><img src="images/eye-1.png" />714次</span> <span class="r"><img src="images/clock.png" />1051秒</span></p>
+                                    <img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" class="lb1-con-hd-img" />
+                                    <p class="clearfix"><span class="l"><img src="images/eye-1.png" />714次</span> <span class="r"><img src="<%=path %>/images/clock.png" />1051秒</span></p>
                                 </div>
                                 <div class="lb1-con-bd">
                                     <p class="lb1-con-bd-p1">新会计准则实施对上市...</p>
@@ -928,7 +931,7 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Course/Details?id=10456"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Course/Details?id=10456"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" /></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -952,7 +955,7 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Course/Details?id=10457"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Course/Details?id=10457"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" /></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -976,7 +979,7 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Course/Details?id=10458"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Course/Details?id=10458"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" /></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -1000,7 +1003,7 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Course/Details?id=10459"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Course/Details?id=10459"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" /></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -1024,7 +1027,7 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Course/Details?id=10460"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Course/Details?id=10460"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" /></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -1048,7 +1051,7 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Course/Details?id=10461"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Course/Details?id=10461"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" /></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -1072,7 +1075,7 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Course/Details?id=10462"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Course/Details?id=10462"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" /></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -1096,7 +1099,7 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Course/Details?id=10463"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Course/Details?id=10463"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" /></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -1120,7 +1123,7 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Course/Details?id=10464"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Course/Details?id=10464"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" /></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -1144,7 +1147,7 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Course/Details?id=10465"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Course/Details?id=10465"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" /></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -1168,7 +1171,7 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Course/Details?id=10480"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Course/Details?id=10480"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" /></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -1192,7 +1195,7 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Course/Details?id=10481"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Course/Details?id=10481"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" /></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -1216,7 +1219,7 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Course/Details?id=10482"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Course/Details?id=10482"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" /></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -1240,7 +1243,7 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Course/Details?id=10483"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Course/Details?id=10483"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" /></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -1264,7 +1267,7 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Course/Details?id=10484"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Course/Details?id=10484"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" /></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -1288,7 +1291,7 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Course/Details?id=10485"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Course/Details?id=10485"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" /></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -1312,7 +1315,7 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Course/Details?id=10486"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Course/Details?id=10486"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" /></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -1375,13 +1378,13 @@
 
 
 
-<script src="js/newjs/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script src="<%=path %>/js/jquery-1.11.2.min.js" type="text/javascript"></script>
 
-<script src="js/newjs/html5.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/newjs/respond.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/newjs/schedule.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/jquery.tiles.js"></script>
-<script src="/Content/layui/src/layui.js"></script>
+<script src="<%=path %>/js/html5.js" type="text/javascript" charset="utf-8"></script>
+<script src="<%=path %>/js/respond.js" type="text/javascript" charset="utf-8"></script>
+<script src="<%=path %>/js/schedule.js" type="text/javascript" charset="utf-8"></script>
+<script src="<%=path %>/js/jquery.tiles.js"></script>
+<script src="<%=path %>/Content/layui/src/layui.js"></script>
 
 
 
@@ -1423,7 +1426,7 @@
 </script>
 
 
-<script src="js/newjs/article.js" type="text/javascript" charset="utf-8"></script>
+<script src="<%=path %>/js/newjs/article.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
     function SearchCourse() {
         var coursename = $("#CourseName").val();
@@ -1436,7 +1439,7 @@
     $(document).ready(function () {
         $("#pagesize20").addClass("on");
         $("#span1").addClass("on");
-        $(".cm-lesson-top2 span").find("img").attr("src", "images/arrow-down.png");
+        $(".cm-lesson-top2 span").find("img").attr("src", "<%=path %>/images/arrow-down.png");
         $("#span1").find("img").attr("src", "images/arrow-down1.png");
 
 
@@ -1537,8 +1540,8 @@
         //排序最新最热
         $(".cm-lesson-top2 span").on("click", function () {
             $(this).addClass("on").siblings().removeClass("on");
-            $(".cm-lesson-top2 span").find("img").attr("src", "/images/arrow-down.png")
-            $(this).find("img").attr("src", "images/arrow-down1.png")
+            $(".cm-lesson-top2 span").find("img").attr("src", "<%=path %>/images/arrow-down.png")
+            $(this).find("img").attr("src", "<%=path %>/images/arrow-down1.png")
         })
         //条目切换
         $(".cm-lesson-top4 ul li").click(function () {
