@@ -8,7 +8,5 @@ import java.util.List;
 
 public interface ActivityDao {
 
-    public Activity show(Activity activity) throws SQLException;
-    public List<Activity> queryAll() throws SQLException;
-    public void save(Activity activity);
+    public List<Activity> findData() throws SQLException;
 }
