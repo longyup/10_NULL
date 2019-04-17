@@ -2,7 +2,6 @@ package club.vasilis.xtwh.service.impl;
 
 import club.vasilis.xtwh.dao.UserDao;
 import club.vasilis.xtwh.dao.impl.UserDaoImpl;
-import club.vasilis.xtwh.domain.Admin;
 import club.vasilis.xtwh.domain.User;
 import club.vasilis.xtwh.service.UserService;
 import club.vasilis.xtwh.util.PasswordUtils;
@@ -25,9 +24,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void save(Admin admin) throws Exception {
+    public void save(User user) throws Exception {
 
     }
+
+
     @Test
     public void Test() throws Exception {
         User user = new User();
