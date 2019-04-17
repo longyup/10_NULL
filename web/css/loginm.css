@@ -1,0 +1,115 @@
+body{background: #fff;width: 1349px;height: auto;margin: 0 auto;}
+.login_main{width: 100%;margin: 0 auto;height: 475px;background: url(../images/ph_loginbg.png) no-repeat ;background-size:100% 475px ;}
+.login_footer{width: 100%;height: 66px;line-height: 66px;color: white;background: #333333;text-align: center;}
+.nnl_login{/* margin-left: 25px; */width:  258px;margin:  0 auto;}
+.login_mainw{width: 1200px;margin: 0 auto;margin-right: 30px;padding-top: 60px;}
+.login_mainw1{height: 381px;width: 391px;background: url(../images/ph_login_bg.png) no-repeat;margin-right: 120px;}
+.nnl_title{height: 40px;margin-top: 80px;}
+.nnl_lt{/* background: url(../images/login_titlebg.png) no-repeat 0 24px; */height: 30px;width: 100%;color: #fff;border-bottom:  1px solid #0099e5;}
+.nnl_con{width: 100%;height: 185px;border-bottom: 1px solid #e5e5e5;}
+.nnl_con ul li{height: 28px;line-height: 28px;background: url(../images/list_img1.png) no-repeat 0px 12px;text-indent: 8px;}
+.nnl_con ul li a{color: #313131;font-size: 14px;}
+.nnl_con ul li a:hover{color:#ff9600;}
+.login_dh_user, .login_dh_password {
+    width: 100%;
+    height: 28px;
+    background: #fff;
+    border: 1px solid #e3e3e3;
+}
+.login_dh_user {width: 100%;}
+.login_dh_userimg, .login_dh_passwordimg {
+    height: 28px;
+    width: 42px;
+    display: inline-block;
+}
+.login_dh_userimg img {
+    width: 13px;
+    height: 14px;
+    margin-left: 13px;
+    vertical-align: middle;
+}
+.login_dh_passwordimg img {
+    width: 13px;
+    height: 14px;
+    margin-left: 13px;
+    vertical-align: middle;
+}
+.login_dh_user input {
+    width: 162px;
+    height: 100%;
+    margin-top: -3px;
+    background: #faffbd;
+}
+.login_dh_password {margin-top: 20px;}
+.login_dh_password input {
+    width: 162px;
+    height: 100%;
+    margin-top: -3px;
+    background: #faffbd;
+}
+.login_dh_password input::-webkit-input-placeholder,.login_dh_user input::-webkit-input-placeholder {color: #999; font-size: 16px;} 
+.login_dh_password input:-moz-placeholder,.login_dh_user input:-moz-placeholder {color:  #999; font-size: 16px;} 
+.login_dh_password input:-ms-input-placeholder,.login_dh_user input:-ms-input-placeholder {color:#999; font-size: 16px;} 
+
+.sign_forget {
+    width: 258px;
+    margin-top: 15px;
+    text-align: center;
+}
+.sign_forget a {
+    color: #0083ad;
+}
+.sign_forget1 {
+    margin-right: 15px;
+}
+.sign_forget2 {
+    margin-left: 15px;
+}
+.login_dl {
+    color: white;
+    width: 258px;
+    height: 40px;
+    margin-top: 15px;
+}
+.login_dl input {
+    color: white;
+    background: #ff7f00;
+    height: 40px;
+    width: 258px;
+    line-height: 40px;
+    font-size: 16px;
+    display: inline-block;
+    text-align: center;
+    letter-spacing: 8px;
+    font-weight: bold;
+}
+.nnl_logined{width: 100%;}
+.logined_con2{height: 28px;line-height: 28px;}
+.logined_con2 span{float: left;font-size: 14px;color: #313131;}
+.logined_con2 a{float: right;font-size: 14px;color: #313131;}
+.logined_con2 a:hover{color:#ff9600}
+.logined_con1{width: 100%;font-size: 14px;color: #313131;}
+.logined_con3{width: 100%;margin-top: 10px;}
+.logined_con3 a{font-size: 14px;color: #313131;font-weight: bold;display: block;}
+.logined_con3 a:hover{color: #ff9600;}
+.logined_con3_a1{float: left;text-align: left;}
+.logined_con3_div{width: 1px;height: 15px;background: #5b5b5b;float: left;margin-top: 4px;margin-left: 20px;margin-right: 20px;}
+.logined_con3_a2{float:left;}
+
+.footer{width: 100%;margin: 0 auto;}
+.link,.bottom{width: 1100px;margin: 0 auto;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
