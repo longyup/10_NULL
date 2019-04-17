@@ -3,7 +3,6 @@ package club.vasilis.xtwh.servlet;
 import club.vasilis.xtwh.domain.Admin;
 import club.vasilis.xtwh.service.AdminService;
 import club.vasilis.xtwh.service.impl.AdminServiceImpl;
-import org.apache.commons.beanutils.BeanUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -39,7 +38,7 @@ public class AdminServlet extends HttpServlet {
             // 3.封装对象
             //Admin admin = new Admin(null, name, pwd, null);
             Admin admin = new Admin();
-            BeanUtils.populate(admin,request.getParameterMap());
+           // BeanUtils.populate(admin,request.getParameterMap());
             // 4.查询数据库
             admin = service.login(admin);
             // 5.判断是否成功

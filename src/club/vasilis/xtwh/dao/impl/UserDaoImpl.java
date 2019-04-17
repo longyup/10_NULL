@@ -33,6 +33,10 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public void save(User user) throws Exception {
+        QueryRunner runner = new QueryRunner(DsUtils.getDataSource());
+        String sql = "insert into user (account,password) values (?,?)";
+        runner.insert(sql,new BeanHandler<User>(User.class),user.getAccount(),user.getPassword());
+
 
     }
     @Test
