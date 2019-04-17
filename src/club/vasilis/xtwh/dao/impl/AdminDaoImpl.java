@@ -100,6 +100,4 @@ public class AdminDaoImpl implements AdminDao {
         AdminDao dao = new AdminDaoImpl();
         System.err.println(dao.queryAll());
     }
-
-
 }
