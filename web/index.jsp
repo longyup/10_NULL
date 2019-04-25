@@ -1,5 +1,11 @@
-<!DOCTYPE html>
-<!-- saved from url=(0046)Index.html -->
+<%--
+  Created by IntelliJ IDEA.
+  User: Vasilis
+  Date: 2019/4/25
+  Time: 20:03
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
 
@@ -612,71 +618,43 @@
         </div>
         <div class="rank-con rc-study">
             <ul>
-                    <li>
-                        <a href="javascript:void();" class="rc-name">紫砂茶杯 </a>
-                        <p class="rc-score">9850</p>
-                    </li>
-                    <li>
-                        <a href="javascript:void();" class="rc-name">皮影戏 </a>
-                        <p class="rc-score">9623</p>
-                    </li>
-                    <li>
-                        <a href="javascript:void();" class="rc-name">华拉面 </a>
-                        <p class="rc-score">9513</p>
-                    </li>
-                    <li>
-                        <a href="javascript:void();" class="rc-name">杭州宋城 </a>
-                        <p class="rc-score">9505</p>
-                    </li>
-                    <li>
-                        <a href="javascript:void();" class="rc-name">西湖 </a>
-                        <p class="rc-score">9397</p>
-                    </li>
-                    <li>
-                        <a href="javascript:void();" class="rc-name">白娘子 </a>
-                        <p class="rc-score">9245</p>
-                    </li>
-               
+                <li>
+                    <a href="javascript:void();" class="rc-name">紫砂茶杯 </a>
+                    <p class="rc-score">9850</p>
+                </li>
+                <li>
+                    <a href="javascript:void();" class="rc-name">皮影戏 </a>
+                    <p class="rc-score">9623</p>
+                </li>
+                <li>
+                    <a href="javascript:void();" class="rc-name">华拉面 </a>
+                    <p class="rc-score">9513</p>
+                </li>
+                <li>
+                    <a href="javascript:void();" class="rc-name">杭州宋城 </a>
+                    <p class="rc-score">9505</p>
+                </li>
+                <li>
+                    <a href="javascript:void();" class="rc-name">西湖 </a>
+                    <p class="rc-score">9397</p>
+                </li>
+                <li>
+                    <a href="javascript:void();" class="rc-name">白娘子 </a>
+                    <p class="rc-score">9245</p>
+                </li>
+
             </ul>
         </div>
 
     </div>
 </div>
 <!-- 底部 -->
-<div class="footer ">
-    <div class="footer-con clearfix">
-        <div class="footer-left">
-            <div class="footer-link">
-                <ul class="clearfix">
-                    <li><a href="/Home/Index">首页</a></li>
-                    <li><a href="/Course/Index">活动中心</a></li>
-                    <li><a href="/UserCenter/MyCourse">个人中心</a></li>
-                    
-                </ul>
-            </div>
-            <div class="footer-text">
-               <!--  <p>主办单位：宜兴社区培训学院  版权归属：江苏省宜兴中等专业学校(宜兴开放大学)(江苏省宜兴高级技工学校、宜兴市旅游职业学校)</p>
-               <p>电话： 0510-87975061  客服QQ群：134806811   苏ICP备05002113号-3    学习访问人次：1182938   课程总数:8954</p> -->
-              <p> Copyright@ 10_NULL版权所有</p>
-            </div>
-        </div>
-        <div class="footer-right">
-            <img src="images/back-top.png" />
-            <p>返回顶部</p>
-        </div>
-    </div>
-
-</div>
+<%@include file="foot.jsp"%>
 
 <div style="position: fixed;">
 
 </div>
 
-<script src="file:///C:/js/newjs/jquery-1.11.2.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="file:///C:/js/newjs/jquery.SuperSlide.2.1.1.js" type="text/javascript" charset="utf-8"></script>
-<script src="file:///C:/js/newjs/firstPage.js?v=1.0" type="text/javascript" charset="utf-8"></script>
-<script src="file:///C:/js/jquery.tiles.js"></script>
-<script src="file:///C:/Content/layui/src/layui.js"></script>
 <script type="text/javascript">
     $(function () {
         search("课程");
@@ -711,78 +689,78 @@
 <script src="file:///C:/js/newjs/jquery.SuperSlide.2.1.1.js" type="text/javascript" charset="utf-8"></script>
 <script src="file:///C:/js/newjs/firstPage.js" type="text/javascript" charset="utf-8"></script>
 
-    <script src="file:///C:/Content/layui/src/layui.js"></script>
-    <script src="file:///C:/js/jquery.tiles.js"></script>
-    <!---客服JS-->
+<script src="file:///C:/Content/layui/src/layui.js"></script>
+<script src="file:///C:/js/jquery.tiles.js"></script>
+<!---客服JS-->
 
-    <!---课程模块JS-->
-    <script type="text/javascript">
-        (function init() {
+<!---课程模块JS-->
+<script type="text/javascript">
+    (function init() {
 
-            //初始化加载课程信息
-            var channelId = $("#hdCourseId").val();
-            ShowCourse(channelId);
+        //初始化加载课程信息
+        var channelId = $("#hdCourseId").val();
+        ShowCourse(channelId);
 
-        }());
+    }());
 
-        function ShowCourse(channelId) {
-            //var channelId = $(".course_left_on input[type=hidden]").val();
-            //console.log("channelId：" + channelId);
-            var params = {
-                ChannelType: channelId, //频道
-                Limit: 8 //记录数
-            }
+    function ShowCourse(channelId) {
+        //var channelId = $(".course_left_on input[type=hidden]").val();
+        //console.log("channelId：" + channelId);
+        var params = {
+            ChannelType: channelId, //频道
+            Limit: 8 //记录数
+        }
 
-            $.ajax({
-                type: "post", //type：(string)请求方式，POST或GET
-                dataType: "json", //dataType：(string)预期返回的数据类型。xml,html,json,text等
-                url: "/Course/LoadModelJson", //url：(string)发送请求的地址，可以是服务器页面也可以是WebService动作。
-                data: params,
-                success: function(data) {
-                    var str = "<ul class=\"clearfix\">";
-                    if (data.code == '0') {
-                        var data = data.data;
-                        for (i in data) {
-                            str += "<li class='cc-list' > "
-                                + "<a href='/Course/Details/" + data[i].CourseId + "' class='cc-list-img'>"
-                                + "<img src='" + data[i].CourseImage + "'onerror='this.src =\"/images/renwenxiuyang.jpg\"'/></a>"
-                                + "<a href='/Course/Details?id=" + data[i].CourseId + "' class='cc-list-title'>"
-                                + "<img src='/images/play.png'/>" + data[i].CourseName + "</a>"
-                                + "</li>";
-                        }
-                        str += "</ul>";
-                        $("#ChannelCourse").html(str);
+        $.ajax({
+            type: "post", //type：(string)请求方式，POST或GET
+            dataType: "json", //dataType：(string)预期返回的数据类型。xml,html,json,text等
+            url: "/Course/LoadModelJson", //url：(string)发送请求的地址，可以是服务器页面也可以是WebService动作。
+            data: params,
+            success: function(data) {
+                var str = "<ul class=\"clearfix\">";
+                if (data.code == '0') {
+                    var data = data.data;
+                    for (i in data) {
+                        str += "<li class='cc-list' > "
+                            + "<a href='/Course/Details/" + data[i].CourseId + "' class='cc-list-img'>"
+                            + "<img src='" + data[i].CourseImage + "'onerror='this.src =\"/images/renwenxiuyang.jpg\"'/></a>"
+                            + "<a href='/Course/Details?id=" + data[i].CourseId + "' class='cc-list-title'>"
+                            + "<img src='/images/play.png'/>" + data[i].CourseName + "</a>"
+                            + "</li>";
                     }
-
+                    str += "</ul>";
+                    $("#ChannelCourse").html(str);
                 }
-            });
-        }
-        function func(s, n) {
-            var s2 = s.slice(0, n).replace(/([^x00-xff])/g, "$1a").slice(0, n).replace(/([^x00-xff])a/g, "$1");
-            if (s2 != s) {
-                s2 += "...";
+
             }
-            return s2;
+        });
+    }
+    function func(s, n) {
+        var s2 = s.slice(0, n).replace(/([^x00-xff])/g, "$1a").slice(0, n).replace(/([^x00-xff])a/g, "$1");
+        if (s2 != s) {
+            s2 += "...";
         }
-    </script>
+        return s2;
+    }
+</script>
 
-    <!---社区新闻动态更多-->
-    <script type="text/javascript">
+<!---社区新闻动态更多-->
+<script type="text/javascript">
 
-        function ArticleMore() {
-            var text = $(".nr_news_title1 ul li a.on").text().trim();
-            if (text == '活动简报') {
-                var link1 = '/Article/Index?id=120';
-                $("#NewsMore").attr('href', link1);
-            } else {
-                var link2 = '/Article/Index?id=144';
-                $("#NewsMore").attr('href', link2);
-            }
-            // console.log(text);
+    function ArticleMore() {
+        var text = $(".nr_news_title1 ul li a.on").text().trim();
+        if (text == '活动简报') {
+            var link1 = '/Article/Index?id=120';
+            $("#NewsMore").attr('href', link1);
+        } else {
+            var link2 = '/Article/Index?id=144';
+            $("#NewsMore").attr('href', link2);
         }
-    </script>
+        // console.log(text);
+    }
+</script>
 
-    <!---课程推荐更多-->
+<!---课程推荐更多-->
 <script type="text/javascript">
 
     function CourseMore() {
@@ -797,42 +775,42 @@
     }
 </script>
 
-    <!---登录-->
-    <script type="text/javascript">
-        function login() {
-            var userName = $.trim($("#userName").val());
-            var password = $.trim($("#pwd").val());
-            var remember = $("input[type='checkbox']").is(':checked');
-            //var Remeber = $("#Remeber").val();
-            $.post("/Home/Login", { userName: userName, password: password, remember: remember }, function (msg) {
-                if (msg.success) {
-                    
-                    window.location.reload();
-                } else {
-                    alert(msg.message);
-                }
-            });
-        }
+<!---登录-->
+<script type="text/javascript">
+    function login() {
+        var userName = $.trim($("#userName").val());
+        var password = $.trim($("#pwd").val());
+        var remember = $("input[type='checkbox']").is(':checked');
+        //var Remeber = $("#Remeber").val();
+        $.post("/Home/Login", { userName: userName, password: password, remember: remember }, function (msg) {
+            if (msg.success) {
 
-        $(document).ready(function () {
+                window.location.reload();
+            } else {
+                alert(msg.message);
+            }
+        });
+    }
 
-            $(".nr_rank_xy tr").eq(1).find("td span").css({ "background": "red", "color": "#fff" })
-            $(".nr_rank_xy tr").eq(2).find("td span").css({ "background": "red", "color": "#fff" })
-            $(".nr_rank_xy tr").eq(3).find("td span").css({ "background": "red", "color": "#fff" })
+    $(document).ready(function () {
 
-            $(".nr_rank_title1").click(function () {
-                $(".nr_rank_ad").show();
-                $("#ArticleRankMore").attr('href', '/Article/Index?id=121');
-                $(".nr_rank_xy").hide();
-            })
-            $(".nr_rank_title2").click(function () {
-                $(".nr_rank_ad").hide();
-                $(".nr_rank_xy").show();
-                $("#ArticleRankMore").attr('href', '/UserCenter/MyCreditRank');
-            })
+        $(".nr_rank_xy tr").eq(1).find("td span").css({ "background": "red", "color": "#fff" })
+        $(".nr_rank_xy tr").eq(2).find("td span").css({ "background": "red", "color": "#fff" })
+        $(".nr_rank_xy tr").eq(3).find("td span").css({ "background": "red", "color": "#fff" })
+
+        $(".nr_rank_title1").click(function () {
+            $(".nr_rank_ad").show();
+            $("#ArticleRankMore").attr('href', '/Article/Index?id=121');
+            $(".nr_rank_xy").hide();
         })
-        $(".slider").tilesSlider({ random: true, loop: true, auto: true });
-    </script>
+        $(".nr_rank_title2").click(function () {
+            $(".nr_rank_ad").hide();
+            $(".nr_rank_xy").show();
+            $("#ArticleRankMore").attr('href', '/UserCenter/MyCreditRank');
+        })
+    })
+    $(".slider").tilesSlider({ random: true, loop: true, auto: true });
+</script>
 
 
 <script type="text/javascript">
@@ -1516,7 +1494,4 @@
     };
     scroll();
 </script>
-</body>
-
-
-</html>
+</body></html>
