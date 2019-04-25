@@ -8,21 +8,22 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <% String path = request.getContextPath(); %>
+    <meta charset="utf-8" />
 
     <meta name="viewport" content="width=device-width">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="Shortcut Icon" href="file:///C:/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/firstPage.css">
-    <link rel="stylesheet" type="text/css" href="css/head.css" />
+    <link rel="Shortcut Icon" href=/favicon.ico>
+    <link rel="stylesheet" type="text/css" href="<%= path%>/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="<%= path%>/css/firstPage.css">
+    <link rel="stylesheet" type="text/css" href="<%= path%>/css/head.css" />
     <title>乡土文化教育网</title>
 
-    <link href="Content/layui/src/css/layui.css" rel="stylesheet">
+    <link href="<%= path%>/Content/layui/src/css/layui.css" rel="stylesheet">
 
-    <link href="css/lb-default.css" rel="stylesheet">
-    <link href="css/jquery.tiles.min.css" rel="stylesheet">
+    <link href="<%= path%>/css/lb-default.css" rel="stylesheet">
+    <link href="<%= path%>/css/jquery.tiles.min.css" rel="stylesheet">
 
     <script>
         var _hmt = _hmt || [];
@@ -69,18 +70,35 @@
 <div class="banner_lb">
     <div class="hd">
         <ul class="clearfix">
-            <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
         </ul>
     </div>
     <div class="bd">
         <ul>
-            <li>
-                <a href="http://112.25.215.35/" target="_blank"><img src="Index_files/db0fbd00-3035-457b-83b9-8044564fc1f6.jpg"></a>
-            </li>
-
-
+                <li>
+                    <a href="http://www.yxzsxxw.com/" target="_blank"><img src="http://112.25.215.35:80/Resource/Images/Banner/Primary/24ff62e2-5ae6-4848-b4aa-eabfe0637999.jpg" /></a>
+																   
+																																											 
+                </li>
+													
+																																												 
+                <li>
+													
+                    <a href="http://www.yxzsxxw.com/" target="_blank"><img src="http://112.25.215.35:80/Resource/Images/Banner/Primary/58a5b584-9f0d-43a4-bc44-623a69db0a5b.jpg" /></a>
+                </li>
+                <li>
+                    <a href="http://www.yxzsxxw.com/" target="_blank"><img src="http://112.25.215.35:80/Resource/Images/Banner/Primary/db0fbd00-3035-457b-83b9-8044564fc1f6.jpg" /></a>
+                </li>
+           
+          
         </ul>
     </div>
+
+    
+    
+    
 </div>
 
 <!--新闻动态和排名-->
@@ -138,11 +156,11 @@
                         <li>通知公告</li>
                     </ul>
                 </div>
-                <a href="file:///C:/Article/Index" class="notice-more"><img src="images/more.png"></a>
+                <a href="file:///C:/Article/Index" class="notice-more"><img src="<%= path%>/images/more.png"></a>
             </div>
             <div class="notice-con">
                 <div class="ncl-first clearfix">
-                    <p class="nclf-icon l"><img src="images/new-up.png"></p>
+                    <p class="nclf-icon l"><img src="<%= path%>/images/new-up.png"></p>
                     <p class="nclf-text l" style="cursor:pointer;" onclick="location.href = &#39;/Article/Details?id=7264&#39;">xx村被认定为国家级非物质文化教育示范村</p>
                 </div>
                 <ul>
@@ -158,7 +176,7 @@
             </div>
             <div class="notice-con" style="display: none;">
                 <div class="ncl-first clearfix">
-                    <p class="nclf-icon l"><img src="images/new-up.png"></p>
+                    <p class="nclf-icon l"><img src="<%= path%>/images/new-up.png"></p>
                     <p class="nclf-text l" style="cursor:pointer;" onclick="location.href = &#39;/Article/Details?id=7660&#39;">“乡土文化教育网”投稿文章发布规则(试行)</p>
 
                 </div>
@@ -175,14 +193,14 @@
     </div>
     <div class="login l">
         <div class="login-title">
-            <img src="images/login-icon1.png">登录
+            <img src="<%= path%>/images/login-icon1.png">登录
         </div>
         <div class="logining">
             <div class="login-ac clearfix">
-                <img src="images/account-img.png"><input type="text" name="" id="userName" value="" placeholder="请输入用户名或账号">
+                <img src="<%= path%>/images/account-img.png"><input type="text" name="" id="userName" value="" placeholder="请输入用户名或账号">
             </div>
             <div class="login-pw">
-                <img src="images/password-img.png"><input type="password" name="" id="pwd" value="" placeholder="请输入用户密码">
+                <img src="<%= path%>/images/password-img.png"><input type="password" name="" id="pwd" value="" placeholder="请输入用户密码">
             </div>
             <div class="logining-text clearfix">
                 <p><a href="file:///C:/User/Register">账号注册</a> </p>
@@ -244,7 +262,7 @@
         </ul>
     </div>
     <div style="margin-left: 90px" class="cc-title3 l">
-        <a href="file:///C:/Course"><img src="images/more.png"></a>
+        <a href="file:///C:/Course"><img src="<%= path%>/images/more.png"></a>
     </div>
 
 </div>
@@ -258,7 +276,7 @@
     <div class="tc l">
         <div class="tc-title clearfix">
             <p>乡土特产</p>
-            <a href="file:///C:/Course/TopicIndex"><img src="images/more.png"></a>
+            <a href="file:///C:/Course/TopicIndex"><img src="<%= path%>/images/more.png"></a>
         </div>
         <div class="tc-con">
             <div class="tcl-lb">
@@ -383,7 +401,7 @@
     </div>
     <div class="prize r">
         <div class="prize-title clearfix">
-            <div class="pt1 clearfix"><img src="images/prize-img2.png"><p>公布</p></div>
+            <div class="pt1 clearfix"><img src="<%= path%>/images/prize-img2.png"><p>公布</p></div>
 
         </div>
         <div class="prize-con">
@@ -391,7 +409,7 @@
                 <li>
                     <a href="javascript:;" class="prize-nl clearfix">
                         <div class="prize-nl-img l">
-                            <img src="images/prize-head.png" onerror="this.src =&#39;images/prize-head.png&#39;">
+                            <img src="<%= path%>/images/prize-head.png" onerror="this.src =&#39;images/prize-head.png&#39;">
                         </div>
                         <div class="prize-nl-text l">
                             <p class="prize-nl-text1">用户名:qq1212</p>
@@ -403,7 +421,7 @@
                 <li>
                     <a href="javascript:;" class="prize-nl clearfix">
                         <div class="prize-nl-img l">
-                            <img src="images/prize-head.png" onerror="this.src =&#39;images/prize-head.png&#39;">
+                            <img src="<%= path%>/images/prize-head.png" onerror="this.src =&#39;images/prize-head.png&#39;">
                         </div>
                         <div class="prize-nl-text l">
                             <p class="prize-nl-text1">用户名:cheng1212</p>
@@ -415,7 +433,7 @@
                 <li>
                     <a href="javascript:;" class="prize-nl clearfix">
                         <div class="prize-nl-img l">
-                            <img src="images/prize-head.png" onerror="this.src =&#39;images/prize-head.png&#39;">
+                            <img src="<%= path%>/images/prize-head.png" onerror="this.src =&#39;images/prize-head.png&#39;">
                         </div>
                         <div class="prize-nl-text l">
                             <p class="prize-nl-text1">用户名:zqzqzq</p>
