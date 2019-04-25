@@ -1443,44 +1443,5 @@
     scroll();
 </script>
 </body>
-<script>
-    window.onload = function () {
-        var xhr;
-        if (window.XMLHttpRequest){
-            xhr = new XMLHttpRequest();
-        } else{
-            try {
-                xhr = new ActiveXObject("Msxml2.XMLHTTP");
-            }catch (e) {
-                xhr = new ActiveXObject("Microsoft.XMLHTTP");
-            }
-        }
 
-        xhr.open("GET","<%=path %>/index?",true);
-        xhr.onreadystatechange = function () {
-            if (4 == xhr.readyState){
-                if(200 == xhr.status){
-                    var result = xhr.responseText;
-                    // 类型转换 object
-                    result = JSON.parse(result);
-                    displaySixProduct1(result);
-                }
-            }
-        };
-        xhr.send();
-        // 解析字符串
-        function displaySixProduct1(json) {
-            var len = json.length;
-            for(var i = 0; i< len;i++){
-                var obj = json[i];
-
-
-
-            }
-        }
-
-
-    };
-
-</script>
 </html>
