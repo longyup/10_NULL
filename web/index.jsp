@@ -1,9 +1,15 @@
-<!DOCTYPE html>
-<!-- saved from url=(0046)Index.html -->
+<%--
+  Created by IntelliJ IDEA.
+  User: Vasilis
+  Date: 2019/4/25
+  Time: 20:03
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+
     <meta name="viewport" content="width=device-width">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,20 +18,20 @@
     <link rel="stylesheet" type="text/css" href="css/firstPage.css">
     <link rel="stylesheet" type="text/css" href="css/head.css" />
     <title>乡土文化教育网</title>
-    
+
     <link href="Content/layui/src/css/layui.css" rel="stylesheet">
-    
+
     <link href="css/lb-default.css" rel="stylesheet">
     <link href="css/jquery.tiles.min.css" rel="stylesheet">
 
     <script>
-    var _hmt = _hmt || [];
-    (function () {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?426a0ad4105b6ba0c920b36847139756";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?426a0ad4105b6ba0c920b36847139756";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
     </script>
 
 </head>
@@ -40,87 +46,39 @@
         height: 25px;
     }
 
-        .section-top1 a, .section-top2 a {
-            margin-left: 5px;
-            color: #fff;
-        }
+    .section-top1 a, .section-top2 a {
+        margin-left: 5px;
+        color: #fff;
+    }
 
-            .section-top1 a:hover {
-                text-decoration: underline;
-            }
+    .section-top1 a:hover {
+        text-decoration: underline;
+    }
 
-            .section-top2 a:hover {
-                text-decoration: underline;
-            }
+    .section-top2 a:hover {
+        text-decoration: underline;
+    }
 </style>
 
 
 <!--nav 导航-->
+<%@include file="head.jsp"%>
 
 
-<div class="header">
-        <div class="section-top1">
-            您好,欢迎您进入XXXXXX网！<a href="#">登录</a><a href="#">注册</a>
-        </div>
-
-
-    <div class="header-con">
-        <div class="top clearfix">
-            <div class="top-logo l">
-                <img src="images/logo-yx.png" />
-            </div>
-            <div class="top_2 r clearfix">
-                <div class="search_1 l">
-                    <div class="search_con">
-                        <div class="type">
-                            课程
-                        </div>
-                        <img src="images/arrow-down.png" class="search_img">
-                    </div>
-                    <div class="type_con" id="SreachType">
-                        <ul>
-                            <li onclick="search('新闻')">新闻</li>
-                            <li onclick="search('课程')">课程</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <input type="text" id="SearchKeyword" value="" placeholder="请输入搜索关键字" class="l">
-                <div class="search_2 l">
-                    <a href="javascript:;" id="Search"><img src="images/glass.png" /></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="nav">
-        <div class="nav-con">
-            <ul class="clearfix">
-                <li><a href="#" style="color:white;" class="nl-title">网站首页</a></li>
-                <li><a href="#" style="color:white;" class="nl-title">文化遗址</a></li>
-                <li><a href="/CourseSeminar/CourseCenter" style="color:white;" class="nl-title">特色美食</a></li>
-                <li><a href="#" style="color:white;" class="nl-title">名人风情</a></li>
-                <li><a href="#" style="color:white;" class="nl-title">风情民俗</a></li>
-                <li><a href="#" style="color:white;" class="nl-title">活动一览</a></li>
-                <li><a href="#" style="color:white;" class="nl-title">杂谈交流</a></li>
-                <li><a href="#" style="color:white;" class="nl-title">关于我们</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
 <!--top-->
 <div class="banner_lb">
     <div class="hd">
         <ul class="clearfix">
-                <li></li>
+            <li></li>
         </ul>
     </div>
     <div class="bd">
         <ul>
-                <li>
-                    <a href="http://112.25.215.35/" target="_blank"><img src="Index_files/db0fbd00-3035-457b-83b9-8044564fc1f6.jpg"></a>
-                </li>
-           
-            
+            <li>
+                <a href="http://112.25.215.35/" target="_blank"><img src="Index_files/db0fbd00-3035-457b-83b9-8044564fc1f6.jpg"></a>
+            </li>
+
+
         </ul>
     </div>
 </div>
@@ -143,30 +101,30 @@
                 </div>
                 <div class="bd">
                     <ul>
-                            <li>
-                                <a href="file:///C:/Article/Details?id=7546" target="_blank">
-                                    <img src="Index_files/6e0fc38d-8548-4002-9567-b0f68a10bc39.jpg" onerror="this.src = &#39;/images/renwenxiuyang.jpg&#39;">
-                                    <div class="text">
-                                        <p>乡愁不老 思念不改—...</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="file:///C:/Article/Details?id=7473" target="_blank">
-                                    <img src="Index_files/2510b36d-21f0-4421-8d3f-179c4e142f88.jpg" onerror="this.src = &#39;/images/renwenxiuyang.jpg&#39;">
-                                    <div class="text">
-                                        <p>乡音嘹亮，唱响精彩万...</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="file:///C:/Article/Details?id=7354" target="_blank">
-                                    <img src="Index_files/a9f07aec-a1ad-48f4-81dc-8b6d2e2ba061.jpg" onerror="this.src = &#39;/images/renwenxiuyang.jpg&#39;">
-                                    <div class="text">
-                                        <p>2018年度全国会计专业...</p>
-                                    </div>
-                                </a>
-                            </li>
+                        <li>
+                            <a href="file:///C:/Article/Details?id=7546" target="_blank">
+                                <img src="Index_files/6e0fc38d-8548-4002-9567-b0f68a10bc39.jpg" onerror="this.src = &#39;/images/renwenxiuyang.jpg&#39;">
+                                <div class="text">
+                                    <p>乡愁不老 思念不改—...</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="file:///C:/Article/Details?id=7473" target="_blank">
+                                <img src="Index_files/2510b36d-21f0-4421-8d3f-179c4e142f88.jpg" onerror="this.src = &#39;/images/renwenxiuyang.jpg&#39;">
+                                <div class="text">
+                                    <p>乡音嘹亮，唱响精彩万...</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="file:///C:/Article/Details?id=7354" target="_blank">
+                                <img src="Index_files/a9f07aec-a1ad-48f4-81dc-8b6d2e2ba061.jpg" onerror="this.src = &#39;/images/renwenxiuyang.jpg&#39;">
+                                <div class="text">
+                                    <p>2018年度全国会计专业...</p>
+                                </div>
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
@@ -183,34 +141,34 @@
                 <a href="file:///C:/Article/Index" class="notice-more"><img src="images/more.png"></a>
             </div>
             <div class="notice-con">
-                    <div class="ncl-first clearfix">
-                        <p class="nclf-icon l"><img src="images/new-up.png"></p>
-                             <p class="nclf-text l" style="cursor:pointer;" onclick="location.href = &#39;/Article/Details?id=7264&#39;">xx村被认定为国家级非物质文化教育示范村</p>
-                    </div>
+                <div class="ncl-first clearfix">
+                    <p class="nclf-icon l"><img src="images/new-up.png"></p>
+                    <p class="nclf-text l" style="cursor:pointer;" onclick="location.href = &#39;/Article/Details?id=7264&#39;">xx村被认定为国家级非物质文化教育示范村</p>
+                </div>
                 <ul>
-                            <li><a href="file:///C:/Article/Details?id=8194">【04-12】<span style="color:#FF9933">【荐】</span>西渚镇社区教育工作会议暨业务培训班顺利召开</a></li>
-                            <li><a href="file:///C:/Article/Details?id=8193">【04-12】周铁镇隆重举办2019年竺山风筝节</a></li>
-                            <li><a href="file:///C:/Article/Details?id=8192">【04-12】周铁社区教育中心举办《三国演义》图片展</a></li>
-                            <li><a href="file:///C:/Article/Details?id=8183">【04-08】缅怀革命先烈 共筑远大理想——徐舍镇开展青少年清明...</a></li>
-                            <li><a href="file:///C:/Article/Details?id=8182">【04-08】“追寻烈士足迹，重温入党誓词”祭扫烈士墓主题党日活...</a></li>
-                            <li><a href="file:///C:/Article/Details?id=8181">【04-05】新时代文明实践在太华：红色热土传承红色精神，太华缅...</a></li>
-                            <li><a href="file:///C:/Article/Details?id=8180">【04-03】缅怀先烈 牢记使命</a></li>
+                    <li><a href="file:///C:/Article/Details?id=8194">【04-12】<span style="color:#FF9933">【荐】</span>西渚镇社区教育工作会议暨业务培训班顺利召开</a></li>
+                    <li><a href="file:///C:/Article/Details?id=8193">【04-12】周铁镇隆重举办2019年竺山风筝节</a></li>
+                    <li><a href="file:///C:/Article/Details?id=8192">【04-12】周铁社区教育中心举办《三国演义》图片展</a></li>
+                    <li><a href="file:///C:/Article/Details?id=8183">【04-08】缅怀革命先烈 共筑远大理想——徐舍镇开展青少年清明...</a></li>
+                    <li><a href="file:///C:/Article/Details?id=8182">【04-08】“追寻烈士足迹，重温入党誓词”祭扫烈士墓主题党日活...</a></li>
+                    <li><a href="file:///C:/Article/Details?id=8181">【04-05】新时代文明实践在太华：红色热土传承红色精神，太华缅...</a></li>
+                    <li><a href="file:///C:/Article/Details?id=8180">【04-03】缅怀先烈 牢记使命</a></li>
                 </ul>
 
             </div>
             <div class="notice-con" style="display: none;">
-                    <div class="ncl-first clearfix">
-                        <p class="nclf-icon l"><img src="images/new-up.png"></p>
-                            <p class="nclf-text l" style="cursor:pointer;" onclick="location.href = &#39;/Article/Details?id=7660&#39;">“乡土文化教育网”投稿文章发布规则(试行)</p>
+                <div class="ncl-first clearfix">
+                    <p class="nclf-icon l"><img src="images/new-up.png"></p>
+                    <p class="nclf-text l" style="cursor:pointer;" onclick="location.href = &#39;/Article/Details?id=7660&#39;">“乡土文化教育网”投稿文章发布规则(试行)</p>
 
-                    </div>
+                </div>
                 <ul>
-                            <li><a href="file:///C:/Article/Details?id=8190">【04-11】<span style="color:#FF9933">【荐】</span>“乡土文化教育网”2018年度奖励领取通知</a></li>                                                    <li><a href="file:///C:/Article/Details?id=8076">【03-09】2018年度“乡土文化教育网”学习币兑换通知及年度奖励...</a></li>
-                            <li><a href="file:///C:/Article/Details?id=6769">【03-21】“乡土文化教育网”2017年度奖励领取通知</a></li>
-                            <li><a href="file:///C:/Article/Details?id=6606">【02-24】2017年度“乡土文化教育网”学习币兑换通知及年度奖励...</a></li>
-                            <li><a href="file:///C:/Article/Details?id=6198">【10-09】关于禁封恶意刷分账号的公示(2017.10)</a></li>
-                            <li><a href="file:///C:/Article/Details?id=5827">【04-28】关于组织召开民办教育新政解读培训会的预备通知</a></li>
-                            <li><a href="file:///C:/Article/Details?id=5586">【03-03】“乡土文化教育网”2016年度奖励领取通知</a></li>
+                    <li><a href="file:///C:/Article/Details?id=8190">【04-11】<span style="color:#FF9933">【荐】</span>“乡土文化教育网”2018年度奖励领取通知</a></li>                                                    <li><a href="file:///C:/Article/Details?id=8076">【03-09】2018年度“乡土文化教育网”学习币兑换通知及年度奖励...</a></li>
+                    <li><a href="file:///C:/Article/Details?id=6769">【03-21】“乡土文化教育网”2017年度奖励领取通知</a></li>
+                    <li><a href="file:///C:/Article/Details?id=6606">【02-24】2017年度“乡土文化教育网”学习币兑换通知及年度奖励...</a></li>
+                    <li><a href="file:///C:/Article/Details?id=6198">【10-09】关于禁封恶意刷分账号的公示(2017.10)</a></li>
+                    <li><a href="file:///C:/Article/Details?id=5827">【04-28】关于组织召开民办教育新政解读培训会的预备通知</a></li>
+                    <li><a href="file:///C:/Article/Details?id=5586">【03-03】“乡土文化教育网”2016年度奖励领取通知</a></li>
                 </ul>
             </div>
         </div>
@@ -219,23 +177,23 @@
         <div class="login-title">
             <img src="images/login-icon1.png">登录
         </div>
-            <div class="logining">
-                <div class="login-ac clearfix">
-                    <img src="images/account-img.png"><input type="text" name="" id="userName" value="" placeholder="请输入用户名或账号">
-                </div>
-                <div class="login-pw">
-                    <img src="images/password-img.png"><input type="password" name="" id="pwd" value="" placeholder="请输入用户密码">
-                </div>
-                <div class="logining-text clearfix">
-                    <p><a href="file:///C:/User/Register">账号注册</a> </p>
-                    <a href="file:///C:/User/ForgetPwd">忘记密码？</a>
-                </div>
-                <div class="logining-bottom">
-                    <button type="submit" id="btnlogin" onclick="login()">
-                        登 录
-                    </button>
-                </div>
+        <div class="logining">
+            <div class="login-ac clearfix">
+                <img src="images/account-img.png"><input type="text" name="" id="userName" value="" placeholder="请输入用户名或账号">
             </div>
+            <div class="login-pw">
+                <img src="images/password-img.png"><input type="password" name="" id="pwd" value="" placeholder="请输入用户密码">
+            </div>
+            <div class="logining-text clearfix">
+                <p><a href="file:///C:/User/Register">账号注册</a> </p>
+                <a href="file:///C:/User/ForgetPwd">忘记密码？</a>
+            </div>
+            <div class="logining-bottom">
+                <button type="submit" id="btnlogin" onclick="login()">
+                    登 录
+                </button>
+            </div>
+        </div>
 
         <div class="login-bottom clearfix">
             <div class="logined-bt">
@@ -257,42 +215,42 @@
 
 
 <!--乡土文化-->
-    <!-- <div class="courseCenter">
-    <div class="cc-title clearfix">
-        <div class="cc-title1 l">
-            乡土文化中心
-        </div>
-        <div class="cc-title2 l">
-            <ul class="clearfix">
-                                <li class="course_left_on" onmouseover="ShowCourse(242)">
-                                    <input type="hidden" id="hdCourseId" value="242">
-                                    <a target="_blank" href="file:///C:/Course/Index/242">文化遗产</a>
-                                </li>
-                                <li onmouseover="ShowCourse(211)">
-                                    <a target="_blank" href="file:///C:/Course/Index/211">特色美食</a>
-                                </li>
-                                <li onmouseover="ShowCourse(197)">
-                                    <a target="_blank" href="file:///C:/Course/Index/197">名人趣事</a>
-                                </li>
-                                <li onmouseover="ShowCourse(190)">
-                                    <a target="_blank" href="file:///C:/Course/Index/190">民俗风情</a>
-                                </li>
-                                <li onmouseover="ShowCourse(184)">
-                                    <a target="_blank" href="file:///C:/Course/Index/184">文化遗址</a>
-                                </li>
-                                <li onmouseover="ShowCourse(178)">
-                                    <a target="_blank" href="file:///C:/Course/Index/178">文化讯息</a>
-                                </li>                             
-            </ul>
-        </div>
-        <div style="margin-left: 90px" class="cc-title3 l">
-            <a href="file:///C:/Course"><img src="images/more.png"></a>
-        </div>
-
+<!-- <div class="courseCenter">
+<div class="cc-title clearfix">
+    <div class="cc-title1 l">
+        乡土文化中心
     </div>
-        <div class="cc-con" id="ChannelCourse">
-            正在加载文化信息...
-        </div> -->
+    <div class="cc-title2 l">
+        <ul class="clearfix">
+                            <li class="course_left_on" onmouseover="ShowCourse(242)">
+                                <input type="hidden" id="hdCourseId" value="242">
+                                <a target="_blank" href="file:///C:/Course/Index/242">文化遗产</a>
+                            </li>
+                            <li onmouseover="ShowCourse(211)">
+                                <a target="_blank" href="file:///C:/Course/Index/211">特色美食</a>
+                            </li>
+                            <li onmouseover="ShowCourse(197)">
+                                <a target="_blank" href="file:///C:/Course/Index/197">名人趣事</a>
+                            </li>
+                            <li onmouseover="ShowCourse(190)">
+                                <a target="_blank" href="file:///C:/Course/Index/190">民俗风情</a>
+                            </li>
+                            <li onmouseover="ShowCourse(184)">
+                                <a target="_blank" href="file:///C:/Course/Index/184">文化遗址</a>
+                            </li>
+                            <li onmouseover="ShowCourse(178)">
+                                <a target="_blank" href="file:///C:/Course/Index/178">文化讯息</a>
+                            </li>
+        </ul>
+    </div>
+    <div style="margin-left: 90px" class="cc-title3 l">
+        <a href="file:///C:/Course"><img src="images/more.png"></a>
+    </div>
+
+</div>
+    <div class="cc-con" id="ChannelCourse">
+        正在加载文化信息...
+    </div> -->
 </div>
 
 <div class="tc-prize clearfix">
@@ -306,7 +264,7 @@
             <div class="tcl-lb">
                 <div class="bd">
                     <ul class="picList">
-                          <li>
+                        <li>
                             <div class="pic">
                                 <a href="file:///C:/Course/Details?id=11541" target="_blank">
                                     <img src="Index_files/2df0210e-b6bc-40ba-8591-c1f21254ec5b.jpg">
@@ -314,10 +272,10 @@
                             </div>
                             <div class="title">
                                 <a href="file:///C:/Course/Details?id=11541">
-                                无痛英语01建立模型理...</a>
+                                    无痛英语01建立模型理...</a>
                             </div>
                         </li>
-                          <li>
+                        <li>
                             <div class="pic">
                                 <a href="file:///C:/Course/Details?id=11542" target="_blank">
                                     <img src="Index_files/8af8ca21-bb5e-43d8-9ace-38315d70ae9a.jpg">
@@ -325,10 +283,10 @@
                             </div>
                             <div class="title">
                                 <a href="file:///C:/Course/Details?id=11542">
-                                无痛英语02英汉排序差...</a>
+                                    无痛英语02英汉排序差...</a>
                             </div>
                         </li>
-                          <li>
+                        <li>
                             <div class="pic">
                                 <a href="file:///C:/Course/Details?id=11543" target="_blank">
                                     <img src="Index_files/22d3db60-d9b3-4644-af64-18360550b8af.jpg">
@@ -336,10 +294,10 @@
                             </div>
                             <div class="title">
                                 <a href="file:///C:/Course/Details?id=11543">
-                                无痛英语03主干定位</a>
+                                    无痛英语03主干定位</a>
                             </div>
                         </li>
-                          <li>
+                        <li>
                             <div class="pic">
                                 <a href="file:///C:/Course/Details?id=11544" target="_blank">
                                     <img src="Index_files/4a66b8c6-7cbb-4e9a-bb32-02669d374f8e.jpg">
@@ -347,10 +305,10 @@
                             </div>
                             <div class="title">
                                 <a href="file:///C:/Course/Details?id=11544">
-                                无痛英语04英汉公式神...</a>
+                                    无痛英语04英汉公式神...</a>
                             </div>
                         </li>
-                          <li>
+                        <li>
                             <div class="pic">
                                 <a href="file:///C:/Course/Details?id=11545" target="_blank">
                                     <img src="Index_files/dcdf7fb6-2deb-4dc4-9862-a18ffda647a0.jpg">
@@ -358,10 +316,10 @@
                             </div>
                             <div class="title">
                                 <a href="file:///C:/Course/Details?id=11545">
-                                无痛英语05英汉公式神...</a>
+                                    无痛英语05英汉公式神...</a>
                             </div>
                         </li>
-                          <li>
+                        <li>
                             <div class="pic">
                                 <a href="file:///C:/Course/Details?id=11546" target="_blank">
                                     <img src="Index_files/9c252126-f975-4928-8d5d-1b00f7190f71.jpg">
@@ -369,10 +327,10 @@
                             </div>
                             <div class="title">
                                 <a href="file:///C:/Course/Details?id=11546">
-                                无痛英语06修辞的排序...</a>
+                                    无痛英语06修辞的排序...</a>
                             </div>
                         </li>
-                          <li>
+                        <li>
                             <div class="pic">
                                 <a href="file:///C:/Course/Details?id=11547" target="_blank">
                                     <img src="Index_files/612ecc7d-d104-48e2-9a0a-f90ac8d562c1.jpg">
@@ -380,10 +338,10 @@
                             </div>
                             <div class="title">
                                 <a href="file:///C:/Course/Details?id=11547">
-                                无痛英语07修辞的排序...</a>
+                                    无痛英语07修辞的排序...</a>
                             </div>
                         </li>
-                          <li>
+                        <li>
                             <div class="pic">
                                 <a href="file:///C:/Course/Details?id=11548" target="_blank">
                                     <img src="Index_files/1954f1e1-2d5c-42ad-8d5a-8e83169ba4fb.jpg">
@@ -391,10 +349,10 @@
                             </div>
                             <div class="title">
                                 <a href="file:///C:/Course/Details?id=11548">
-                                无痛英语08并列不变序...</a>
+                                    无痛英语08并列不变序...</a>
                             </div>
                         </li>
-                          <li>
+                        <li>
                             <div class="pic">
                                 <a href="file:///C:/Course/Details?id=11549" target="_blank">
                                     <img src="Index_files/aa931aa0-3a16-4a23-becd-82756b750cb7.jpg">
@@ -402,10 +360,10 @@
                             </div>
                             <div class="title">
                                 <a href="file:///C:/Course/Details?id=11549">
-                                无痛英语09并列不变序...</a>
+                                    无痛英语09并列不变序...</a>
                             </div>
                         </li>
-                          <li>
+                        <li>
                             <div class="pic">
                                 <a href="file:///C:/Course/Details?id=11550" target="_blank">
                                     <img src="Index_files/1267df7e-ad2c-44e0-b7a4-f7847b98c6aa.jpg">
@@ -413,7 +371,7 @@
                             </div>
                             <div class="title">
                                 <a href="file:///C:/Course/Details?id=11550">
-                                无痛英语10公式大练兵</a>
+                                    无痛英语10公式大练兵</a>
                             </div>
                         </li>
                     </ul>
@@ -426,46 +384,46 @@
     <div class="prize r">
         <div class="prize-title clearfix">
             <div class="pt1 clearfix"><img src="images/prize-img2.png"><p>公布</p></div>
-            
+
         </div>
         <div class="prize-con">
             <ul>
-                    <li>
-                        <a href="javascript:;" class="prize-nl clearfix">
-                            <div class="prize-nl-img l">
-                                <img src="images/prize-head.png" onerror="this.src =&#39;images/prize-head.png&#39;">
-                            </div>
-                            <div class="prize-nl-text l">
-                                <p class="prize-nl-text1">用户名:qq1212</p>
-                                <p class="prize-nl-text2" title="实物100元实物礼品(需本人领取)">奖品:实物100元实物礼品(...</p>
-                                <p class="prize-nl-text3">获奖时间:2019/3/13</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:;" class="prize-nl clearfix">
-                            <div class="prize-nl-img l">
-                                <img src="images/prize-head.png" onerror="this.src =&#39;images/prize-head.png&#39;">
-                            </div>
-                            <div class="prize-nl-text l">
-                                <p class="prize-nl-text1">用户名:cheng1212</p>
-                                <p class="prize-nl-text2" title="实物100元实物礼品(需本人领取)">奖品:实物100元实物礼品(...</p>
-                                <p class="prize-nl-text3">获奖时间:2019/3/13</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:;" class="prize-nl clearfix">
-                            <div class="prize-nl-img l">
-                                <img src="images/prize-head.png" onerror="this.src =&#39;images/prize-head.png&#39;">
-                            </div>
-                            <div class="prize-nl-text l">
-                                <p class="prize-nl-text1">用户名:zqzqzq</p>
-                                <p class="prize-nl-text2" title="实物100元实物礼品(需本人领取)">奖品:实物100元实物礼品(...</p>
-                                <p class="prize-nl-text3">获奖时间:2019/3/12</p>
-                            </div>
-                        </a>
-                    </li>
+                <li>
+                    <a href="javascript:;" class="prize-nl clearfix">
+                        <div class="prize-nl-img l">
+                            <img src="images/prize-head.png" onerror="this.src =&#39;images/prize-head.png&#39;">
+                        </div>
+                        <div class="prize-nl-text l">
+                            <p class="prize-nl-text1">用户名:qq1212</p>
+                            <p class="prize-nl-text2" title="实物100元实物礼品(需本人领取)">奖品:实物100元实物礼品(...</p>
+                            <p class="prize-nl-text3">获奖时间:2019/3/13</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="prize-nl clearfix">
+                        <div class="prize-nl-img l">
+                            <img src="images/prize-head.png" onerror="this.src =&#39;images/prize-head.png&#39;">
+                        </div>
+                        <div class="prize-nl-text l">
+                            <p class="prize-nl-text1">用户名:cheng1212</p>
+                            <p class="prize-nl-text2" title="实物100元实物礼品(需本人领取)">奖品:实物100元实物礼品(...</p>
+                            <p class="prize-nl-text3">获奖时间:2019/3/13</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="prize-nl clearfix">
+                        <div class="prize-nl-img l">
+                            <img src="images/prize-head.png" onerror="this.src =&#39;images/prize-head.png&#39;">
+                        </div>
+                        <div class="prize-nl-text l">
+                            <p class="prize-nl-text1">用户名:zqzqzq</p>
+                            <p class="prize-nl-text2" title="实物100元实物礼品(需本人领取)">奖品:实物100元实物礼品(...</p>
+                            <p class="prize-nl-text3">获奖时间:2019/3/12</p>
+                        </div>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
@@ -484,26 +442,26 @@
                     <p class="sc-list-text">民宿风情</p>
                 </a>
                 <ul>
-                        <li>
-                            <a href="file:///C:/Article/Details?id=7208">
-                                万石荟萃~快来这里赏...
-                            </a>
-                        </li>
-                        <li>
-                            <a href="file:///C:/Article/Details?id=7071">
-                                芹菜里谱写青春华章
-                            </a>
-                        </li>
-                        <li>
-                            <a href="file:///C:/Article/Details?id=6803">
-                                行业尖兵热血搏击——...
-                            </a>
-                        </li>
-                        <li>
-                            <a href="file:///C:/Article/Details?id=6128">
-                                相见甚是怀念！——『...
-                            </a>
-                        </li>
+                    <li>
+                        <a href="file:///C:/Article/Details?id=7208">
+                            万石荟萃~快来这里赏...
+                        </a>
+                    </li>
+                    <li>
+                        <a href="file:///C:/Article/Details?id=7071">
+                            芹菜里谱写青春华章
+                        </a>
+                    </li>
+                    <li>
+                        <a href="file:///C:/Article/Details?id=6803">
+                            行业尖兵热血搏击——...
+                        </a>
+                    </li>
+                    <li>
+                        <a href="file:///C:/Article/Details?id=6128">
+                            相见甚是怀念！——『...
+                        </a>
+                    </li>
                 </ul>
             </div>
             <div class="sc-list">
@@ -512,26 +470,26 @@
                     <p class="sc-list-text">【名人趣事】</p>
                 </a>
                 <ul>
-                        <li>
-                            <a href="file:///C:/Article/Details?id=6480">
-                                曾经同枕漕桥河——致...
-                            </a>
-                        </li>
-                        <li>
-                            <a href="file:///C:/Article/Details?id=5723">
-                                东城人的骄傲—无线电...
-                            </a>
-                        </li>
-                        <li>
-                            <a href="file:///C:/Article/Details?id=5327">
-                                蛤蟆皮旧二胡成就辉煌...
-                            </a>
-                        </li>
-                        <li>
-                            <a href="file:///C:/Article/Details?id=5324">
-                                爱心荡漾送春风-----...
-                            </a>
-                        </li>
+                    <li>
+                        <a href="file:///C:/Article/Details?id=6480">
+                            曾经同枕漕桥河——致...
+                        </a>
+                    </li>
+                    <li>
+                        <a href="file:///C:/Article/Details?id=5723">
+                            东城人的骄傲—无线电...
+                        </a>
+                    </li>
+                    <li>
+                        <a href="file:///C:/Article/Details?id=5327">
+                            蛤蟆皮旧二胡成就辉煌...
+                        </a>
+                    </li>
+                    <li>
+                        <a href="file:///C:/Article/Details?id=5324">
+                            爱心荡漾送春风-----...
+                        </a>
+                    </li>
                 </ul>
             </div>
             <div class="sc-list">
@@ -540,29 +498,29 @@
                     <p class="sc-list-text">【文化遗产】</p>
                 </a>
                 <ul>
-                        <li>
-                            <a href="file:///C:/Article/Details?id=15">
-                                清代茶贡终结和茶业起...
-                            </a>
-                        </li>
-                        <li>
-                            <a href="file:///C:/Article/Details?id=14">
-                                清末民初宜兴茶业的艰...
-                            </a>
-                        </li>
-                        <li>
-                            <a href="file:///C:/Article/Details?id=13">
-                                宜兴岕茶兴起和制茶工...
-                            </a>
-                        </li>
-                        <li>
-                            <a href="file:///C:/Article/Details?id=12">
-                                明代宜兴茶贡和当时茶...
-                            </a>
-                        </li>
+                    <li>
+                        <a href="file:///C:/Article/Details?id=15">
+                            清代茶贡终结和茶业起...
+                        </a>
+                    </li>
+                    <li>
+                        <a href="file:///C:/Article/Details?id=14">
+                            清末民初宜兴茶业的艰...
+                        </a>
+                    </li>
+                    <li>
+                        <a href="file:///C:/Article/Details?id=13">
+                            宜兴岕茶兴起和制茶工...
+                        </a>
+                    </li>
+                    <li>
+                        <a href="file:///C:/Article/Details?id=12">
+                            明代宜兴茶贡和当时茶...
+                        </a>
+                    </li>
                 </ul>
             </div>
-            
+
         </div>
     </div>
     <div class="rank l">
@@ -574,105 +532,77 @@
                 <a href="javascript:;" class="rank-c on">活动点击排行</a>/<a href="javascript:;" class="rank-s">文化排行</a>
             </div>
             <div class="rt3 l">
-                
+
             </div>
         </div>
         <div class="rank-con rc-course">
             <ul>
-                    <li>
-                        <a href="javascript:void();" class="rc-name">乌龟的繁殖 </a>
-                        <p class="rc-score">12431</p>
-                    </li>
-                    <li>
-                        <a href="javascript:void();" class="rc-name">社会关系的拓展和管理... </a>
-                        <p class="rc-score">11210</p>
-                    </li>
-                    <li>
-                        <a href="javascript:void();" class="rc-name">少儿美术快乐营3 </a>
-                        <p class="rc-score">8255</p>
-                    </li>
-                    <li>
-                        <a href="javascript:void();" class="rc-name">篱笆形枣园 </a>
-                        <p class="rc-score">6912</p>
-                    </li>
-                    <li>
-                        <a href="javascript:void();" class="rc-name">草地枣园 </a>
-                        <p class="rc-score">6611</p>
-                    </li>
-                    <li>
-                        <a href="javascript:void();" class="rc-name">莆田黑鸭 </a>
-                        <p class="rc-score">6089</p>
-                    </li>
-             
+                <li>
+                    <a href="javascript:void();" class="rc-name">乌龟的繁殖 </a>
+                    <p class="rc-score">12431</p>
+                </li>
+                <li>
+                    <a href="javascript:void();" class="rc-name">社会关系的拓展和管理... </a>
+                    <p class="rc-score">11210</p>
+                </li>
+                <li>
+                    <a href="javascript:void();" class="rc-name">少儿美术快乐营3 </a>
+                    <p class="rc-score">8255</p>
+                </li>
+                <li>
+                    <a href="javascript:void();" class="rc-name">篱笆形枣园 </a>
+                    <p class="rc-score">6912</p>
+                </li>
+                <li>
+                    <a href="javascript:void();" class="rc-name">草地枣园 </a>
+                    <p class="rc-score">6611</p>
+                </li>
+                <li>
+                    <a href="javascript:void();" class="rc-name">莆田黑鸭 </a>
+                    <p class="rc-score">6089</p>
+                </li>
+
             </ul>
         </div>
         <div class="rank-con rc-study">
             <ul>
-                    <li>
-                        <a href="javascript:void();" class="rc-name">紫砂茶杯 </a>
-                        <p class="rc-score">9850</p>
-                    </li>
-                    <li>
-                        <a href="javascript:void();" class="rc-name">皮影戏 </a>
-                        <p class="rc-score">9623</p>
-                    </li>
-                    <li>
-                        <a href="javascript:void();" class="rc-name">华拉面 </a>
-                        <p class="rc-score">9513</p>
-                    </li>
-                    <li>
-                        <a href="javascript:void();" class="rc-name">杭州宋城 </a>
-                        <p class="rc-score">9505</p>
-                    </li>
-                    <li>
-                        <a href="javascript:void();" class="rc-name">西湖 </a>
-                        <p class="rc-score">9397</p>
-                    </li>
-                    <li>
-                        <a href="javascript:void();" class="rc-name">白娘子 </a>
-                        <p class="rc-score">9245</p>
-                    </li>
-               
+                <li>
+                    <a href="javascript:void();" class="rc-name">紫砂茶杯 </a>
+                    <p class="rc-score">9850</p>
+                </li>
+                <li>
+                    <a href="javascript:void();" class="rc-name">皮影戏 </a>
+                    <p class="rc-score">9623</p>
+                </li>
+                <li>
+                    <a href="javascript:void();" class="rc-name">华拉面 </a>
+                    <p class="rc-score">9513</p>
+                </li>
+                <li>
+                    <a href="javascript:void();" class="rc-name">杭州宋城 </a>
+                    <p class="rc-score">9505</p>
+                </li>
+                <li>
+                    <a href="javascript:void();" class="rc-name">西湖 </a>
+                    <p class="rc-score">9397</p>
+                </li>
+                <li>
+                    <a href="javascript:void();" class="rc-name">白娘子 </a>
+                    <p class="rc-score">9245</p>
+                </li>
+
             </ul>
         </div>
 
     </div>
 </div>
 <!-- 底部 -->
-<div class="footer ">
-    <div class="footer-con clearfix">
-        <div class="footer-left">
-            <div class="footer-link">
-                <ul class="clearfix">
-                    <li><a href="/Home/Index">首页</a></li>
-                    <li><a href="/Course/Index">活动中心</a></li>
-                    <li><a href="/UserCenter/MyCourse">个人中心</a></li>
-                    
-                </ul>
-            </div>
-            <div class="footer-text">
-               <!--  <p>主办单位：宜兴社区培训学院  版权归属：江苏省宜兴中等专业学校(宜兴开放大学)(江苏省宜兴高级技工学校、宜兴市旅游职业学校)</p>
-               <p>电话： 0510-87975061  客服QQ群：134806811   苏ICP备05002113号-3    学习访问人次：1182938   课程总数:8954</p> -->
-              <p> Copyright@ 10_NULL版权所有</p>
-            </div>
-        </div>
-        <div class="footer-right">
-            <img src="images/back-top.png" />
-            <p>返回顶部</p>
-        </div>
-    </div>
-
-</div>
+<%@include file="foot.jsp"%>
 
 <div style="position: fixed;">
 
 </div>
 
-<script src="file:///C:/js/newjs/jquery-1.11.2.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="file:///C:/js/newjs/jquery.SuperSlide.2.1.1.js" type="text/javascript" charset="utf-8"></script>
-<script src="file:///C:/js/newjs/firstPage.js?v=1.0" type="text/javascript" charset="utf-8"></script>
-<script src="file:///C:/js/jquery.tiles.js"></script>
-<script src="file:///C:/Content/layui/src/layui.js"></script>
 <script type="text/javascript">
     $(function () {
         search("课程");
@@ -707,78 +637,78 @@
 <script src="file:///C:/js/newjs/jquery.SuperSlide.2.1.1.js" type="text/javascript" charset="utf-8"></script>
 <script src="file:///C:/js/newjs/firstPage.js" type="text/javascript" charset="utf-8"></script>
 
-    <script src="file:///C:/Content/layui/src/layui.js"></script>
-    <script src="file:///C:/js/jquery.tiles.js"></script>
-    <!---客服JS-->
+<script src="file:///C:/Content/layui/src/layui.js"></script>
+<script src="file:///C:/js/jquery.tiles.js"></script>
+<!---客服JS-->
 
-    <!---课程模块JS-->
-    <script type="text/javascript">
-        (function init() {
+<!---课程模块JS-->
+<script type="text/javascript">
+    (function init() {
 
-            //初始化加载课程信息
-            var channelId = $("#hdCourseId").val();
-            ShowCourse(channelId);
+        //初始化加载课程信息
+        var channelId = $("#hdCourseId").val();
+        ShowCourse(channelId);
 
-        }());
+    }());
 
-        function ShowCourse(channelId) {
-            //var channelId = $(".course_left_on input[type=hidden]").val();
-            //console.log("channelId：" + channelId);
-            var params = {
-                ChannelType: channelId, //频道
-                Limit: 8 //记录数
-            }
+    function ShowCourse(channelId) {
+        //var channelId = $(".course_left_on input[type=hidden]").val();
+        //console.log("channelId：" + channelId);
+        var params = {
+            ChannelType: channelId, //频道
+            Limit: 8 //记录数
+        }
 
-            $.ajax({
-                type: "post", //type：(string)请求方式，POST或GET
-                dataType: "json", //dataType：(string)预期返回的数据类型。xml,html,json,text等
-                url: "/Course/LoadModelJson", //url：(string)发送请求的地址，可以是服务器页面也可以是WebService动作。
-                data: params,
-                success: function(data) {
-                    var str = "<ul class=\"clearfix\">";
-                    if (data.code == '0') {
-                        var data = data.data;
-                        for (i in data) {
-                            str += "<li class='cc-list' > "
-                                + "<a href='/Course/Details/" + data[i].CourseId + "' class='cc-list-img'>"
-                                + "<img src='" + data[i].CourseImage + "'onerror='this.src =\"/images/renwenxiuyang.jpg\"'/></a>"
-                                + "<a href='/Course/Details?id=" + data[i].CourseId + "' class='cc-list-title'>"
-                                + "<img src='/images/play.png'/>" + data[i].CourseName + "</a>"
-                                + "</li>";
-                        }
-                        str += "</ul>";
-                        $("#ChannelCourse").html(str);
+        $.ajax({
+            type: "post", //type：(string)请求方式，POST或GET
+            dataType: "json", //dataType：(string)预期返回的数据类型。xml,html,json,text等
+            url: "/Course/LoadModelJson", //url：(string)发送请求的地址，可以是服务器页面也可以是WebService动作。
+            data: params,
+            success: function(data) {
+                var str = "<ul class=\"clearfix\">";
+                if (data.code == '0') {
+                    var data = data.data;
+                    for (i in data) {
+                        str += "<li class='cc-list' > "
+                            + "<a href='/Course/Details/" + data[i].CourseId + "' class='cc-list-img'>"
+                            + "<img src='" + data[i].CourseImage + "'onerror='this.src =\"/images/renwenxiuyang.jpg\"'/></a>"
+                            + "<a href='/Course/Details?id=" + data[i].CourseId + "' class='cc-list-title'>"
+                            + "<img src='/images/play.png'/>" + data[i].CourseName + "</a>"
+                            + "</li>";
                     }
-
+                    str += "</ul>";
+                    $("#ChannelCourse").html(str);
                 }
-            });
-        }
-        function func(s, n) {
-            var s2 = s.slice(0, n).replace(/([^x00-xff])/g, "$1a").slice(0, n).replace(/([^x00-xff])a/g, "$1");
-            if (s2 != s) {
-                s2 += "...";
+
             }
-            return s2;
+        });
+    }
+    function func(s, n) {
+        var s2 = s.slice(0, n).replace(/([^x00-xff])/g, "$1a").slice(0, n).replace(/([^x00-xff])a/g, "$1");
+        if (s2 != s) {
+            s2 += "...";
         }
-    </script>
+        return s2;
+    }
+</script>
 
-    <!---社区新闻动态更多-->
-    <script type="text/javascript">
+<!---社区新闻动态更多-->
+<script type="text/javascript">
 
-        function ArticleMore() {
-            var text = $(".nr_news_title1 ul li a.on").text().trim();
-            if (text == '活动简报') {
-                var link1 = '/Article/Index?id=120';
-                $("#NewsMore").attr('href', link1);
-            } else {
-                var link2 = '/Article/Index?id=144';
-                $("#NewsMore").attr('href', link2);
-            }
-            // console.log(text);
+    function ArticleMore() {
+        var text = $(".nr_news_title1 ul li a.on").text().trim();
+        if (text == '活动简报') {
+            var link1 = '/Article/Index?id=120';
+            $("#NewsMore").attr('href', link1);
+        } else {
+            var link2 = '/Article/Index?id=144';
+            $("#NewsMore").attr('href', link2);
         }
-    </script>
+        // console.log(text);
+    }
+</script>
 
-    <!---课程推荐更多-->
+<!---课程推荐更多-->
 <script type="text/javascript">
 
     function CourseMore() {
@@ -793,723 +723,764 @@
     }
 </script>
 
-    <!---登录-->
-    <script type="text/javascript">
-        function login() {
-            var userName = $.trim($("#userName").val());
-            var password = $.trim($("#pwd").val());
-            var remember = $("input[type='checkbox']").is(':checked');
-            //var Remeber = $("#Remeber").val();
-            $.post("/Home/Login", { userName: userName, password: password, remember: remember }, function (msg) {
-                if (msg.success) {
-                    
-                    window.location.reload();
-                } else {
-                    alert(msg.message);
+<!---登录-->
+<script type="text/javascript">
+    function login() {
+        var userName = $.trim($("#userName").val());
+        var password = $.trim($("#pwd").val());
+        var remember = $("input[type='checkbox']").is(':checked');
+        //var Remeber = $("#Remeber").val();
+        $.post("/Home/Login", { userName: userName, password: password, remember: remember }, function (msg) {
+            if (msg.success) {
+
+                window.location.reload();
+            } else {
+                alert(msg.message);
+            }
+        });
+    }
+
+    $(document).ready(function () {
+
+        $(".nr_rank_xy tr").eq(1).find("td span").css({ "background": "red", "color": "#fff" })
+        $(".nr_rank_xy tr").eq(2).find("td span").css({ "background": "red", "color": "#fff" })
+        $(".nr_rank_xy tr").eq(3).find("td span").css({ "background": "red", "color": "#fff" })
+
+        $(".nr_rank_title1").click(function () {
+            $(".nr_rank_ad").show();
+            $("#ArticleRankMore").attr('href', '/Article/Index?id=121');
+            $(".nr_rank_xy").hide();
+        })
+        $(".nr_rank_title2").click(function () {
+            $(".nr_rank_ad").hide();
+            $(".nr_rank_xy").show();
+            $("#ArticleRankMore").attr('href', '/UserCenter/MyCreditRank');
+        })
+    })
+    $(".slider").tilesSlider({ random: true, loop: true, auto: true });
+</script>
+
+
+<script type="text/javascript">
+    layui.use('table', function () {
+        var table = layui.table, form = layui.form;
+    });
+
+    $(document).ready(function () {
+        $(".nr_rank_xy tr").eq(1).find("td span").css({ "background": "red", "color": "#fff" })
+        $(".nr_rank_xy tr").eq(2).find("td span").css({ "background": "red", "color": "#fff" })
+        $(".nr_rank_xy tr").eq(3).find("td span").css({ "background": "red", "color": "#fff" })
+
+        $(".nr_rank_title1").click(function () {
+            $(".nr_map").show();
+            $(".nr_rank_ad").hide();
+            $(".nr_rank_xy").hide();
+        })
+        $(".nr_rank_title2").click(function () {
+            $(".nr_rank_ad").show();
+            $(".nr_rank_xy").hide();
+            $(".nr_map").hide();
+        });
+        $(".nr_rank_title3").click(function () {
+            $(".nr_rank_ad").hide();
+            $(".nr_rank_xy").show();
+            $(".nr_map").hide();
+        });
+        $(".slider").tilesSlider({ random: true, loop: true, auto: true })
+    })
+
+    $(function () {
+        $('#close_im').bind('click', function () {
+            $('#main-im').css("height", "0");
+            $('#im_main').hide();
+            $('#open_im').show();
+        });
+        $('#open_im').bind('click', function (e) {
+            $('#main-im').css("height", "272");
+            $('#im_main').show();
+            $(this).hide();
+        });
+        $('.go-top').bind('click', function () {
+            $(window).scrollTop(0);
+        });
+        $(".weixing-container").bind('mouseenter', function () {
+            $('.weixing-show').show();
+        })
+        $(".weixing-container").bind('mouseleave', function () {
+            $('.weixing-show').hide();
+        });
+        var ad = new AdMove("ad1");
+        ad.Run();
+        var ad2 = new AdMove("ad2");
+        ad2.Run();
+
+
+
+
+    });
+    function addEvent(obj, evtType, func, cap) {
+
+        cap = cap || false;
+
+        if (obj.addEventListener) {
+
+            obj.addEventListener(evtType, func, cap);
+
+            return true;
+
+        } else if (obj.attachEvent) {
+
+            if (cap) {
+
+                obj.setCapture();
+
+                return true;
+
+            } else {
+
+                return obj.attachEvent("on" + evtType, func);
+
+            }
+
+        } else {
+
+            return false;
+
+        }
+
+    }
+    function getPageScroll() {
+
+        var xScroll, yScroll;
+
+        if (self.pageXOffset) {
+
+            xScroll = self.pageXOffset;
+
+        } else if (document.documentElement && document.documentElement.scrollLeft) {
+
+            xScroll = document.documentElement.scrollLeft;
+
+        } else if (document.body) {
+
+            xScroll = document.body.scrollLeft;
+
+        }
+
+        if (self.pageYOffset) {
+
+            yScroll = self.pageYOffset;
+
+        } else if (document.documentElement && document.documentElement.scrollTop) {
+
+            yScroll = document.documentElement.scrollTop;
+
+        } else if (document.body) {
+
+            yScroll = document.body.scrollTop;
+
+        }
+
+        arrayPageScroll = new Array(xScroll, yScroll);
+
+        return arrayPageScroll;
+
+    }
+
+    function GetPageSize() {
+
+        var xScroll, yScroll;
+
+        if (window.innerHeight && window.scrollMaxY) {
+
+            xScroll = document.body.scrollWidth;
+
+            yScroll = window.innerHeight + window.scrollMaxY;
+
+        } else if (document.body.scrollHeight > document.body.offsetHeight) {
+
+            xScroll = document.body.scrollWidth;
+
+            yScroll = document.body.scrollHeight;
+
+        } else {
+
+            xScroll = document.body.offsetWidth;
+
+            yScroll = document.body.offsetHeight;
+
+        }
+
+        var windowWidth, windowHeight;
+
+        if (self.innerHeight) {
+
+            windowWidth = self.innerWidth;
+
+            windowHeight = self.innerHeight;
+
+        } else if (document.documentElement && document.documentElement.clientHeight) {
+
+            windowWidth = document.documentElement.clientWidth;
+
+            windowHeight = document.documentElement.clientHeight;
+
+        } else if (document.body) {
+
+            windowWidth = document.body.clientWidth;
+
+            windowHeight = document.body.clientHeight;
+
+        }
+
+        if (yScroll < windowHeight) {
+
+            pageHeight = windowHeight;
+
+        } else {
+
+            pageHeight = yScroll;
+
+        }
+
+        if (xScroll < windowWidth) {
+
+            pageWidth = windowWidth;
+
+        } else {
+
+            pageWidth = xScroll;
+
+        }
+
+        arrayPageSize = new Array(pageWidth, pageHeight, windowWidth, windowHeight)
+
+        return arrayPageSize;
+
+    }
+
+    var AdMoveConfig = new Object();
+
+    AdMoveConfig.IsInitialized = false;
+
+    AdMoveConfig.ScrollX = 0;
+
+    AdMoveConfig.ScrollY = 0;
+
+    AdMoveConfig.MoveWidth = 0;
+
+    AdMoveConfig.MoveHeight = 0;
+
+    AdMoveConfig.Resize = function () {
+
+        var winsize = GetPageSize();
+
+        AdMoveConfig.MoveWidth = winsize[2];
+
+        AdMoveConfig.MoveHeight = winsize[3];
+
+        AdMoveConfig.Scroll();
+
+    }
+
+    AdMoveConfig.Scroll = function () {
+
+        var winscroll = getPageScroll();
+
+        AdMoveConfig.ScrollX = winscroll[0];
+
+        AdMoveConfig.ScrollY = winscroll[1];
+
+    }
+
+    addEvent(window, "resize", AdMoveConfig.Resize);
+
+    addEvent(window, "scroll", AdMoveConfig.Scroll);
+
+    function AdMove(id) {
+
+        if (!AdMoveConfig.IsInitialized) {
+
+            AdMoveConfig.Resize();
+
+            AdMoveConfig.IsInitialized = true;
+
+        }
+
+        var obj = document.getElementById(id);
+
+        obj.style.position = "absolute";
+
+        obj.style.display = "";
+
+        var W = AdMoveConfig.MoveWidth - obj.offsetWidth;
+
+        var H = AdMoveConfig.MoveHeight - obj.offsetHeight;
+
+        var x = W * Math.random(), y = H * Math.random();
+
+        var rad = (Math.random() + 1) * Math.PI / 6;
+
+        var kx = Math.sin(rad), ky = Math.cos(rad);
+
+        var dirx = (Math.random() < 0.5 ? 1 : -1), diry = (Math.random() < 0.5 ? 1 : -1);
+
+        var step = 1;
+
+        var interval;
+
+        this.SetLocation = function (vx, vy) { x = vx; y = vy; }
+
+        this.SetDirection = function (vx, vy) { dirx = vx; diry = vy; }
+
+        obj.CustomMethod = function () {
+
+            obj.style.left = (x + AdMoveConfig.ScrollX) + "px";
+
+            obj.style.top = (y + AdMoveConfig.ScrollY) + "px";
+
+            rad = (Math.random() + 1) * Math.PI / 6;
+
+            W = AdMoveConfig.MoveWidth - obj.offsetWidth;
+
+            H = AdMoveConfig.MoveHeight - obj.offsetHeight;
+
+            x = x + step * kx * dirx;
+
+            if (x < 0) { dirx = 1; x = 0; kx = Math.sin(rad); ky = Math.cos(rad); }
+
+            if (x > W) { dirx = -1; x = W; kx = Math.sin(rad); ky = Math.cos(rad); }
+
+            y = y + step * ky * diry;
+
+            if (y < 0) { diry = 1; y = 0; kx = Math.sin(rad); ky = Math.cos(rad); }
+
+            if (y > H) { diry = -1; y = H; kx = Math.sin(rad); ky = Math.cos(rad); }
+
+        }
+
+        this.Run = function () {
+
+            var delay = 10;
+
+            interval = setInterval(obj.CustomMethod, delay);
+
+            obj.onmouseover = function () { clearInterval(interval); }
+
+            obj.onmouseout = function () { interval = setInterval(obj.CustomMethod, delay); }
+
+        }
+
+    }
+
+    var delparent = function (o) {
+        o.parentNode.parentNode.removeChild(o.parentNode);
+    }
+
+    function scroll() {
+
+        function fnb() {
+            var t = $(window).scrollTop();
+            var m = window.sc_scrollT || 200;
+
+            if (t < m) {
+                $(".zb_px").stop().animate({ top: m }, 500);
+
+            } else {
+                $(".zb_px").stop().animate({ top: t + 200 }, 500)
+
+            }
+
+        }
+
+        fnb();
+        $(window).scroll(function () { fnb(); });
+
+    };
+    scroll();
+</script>
+
+
+
+
+
+<script type="text/javascript">
+    layui.use('table', function () {
+        var table = layui.table, form = layui.form;
+    });
+
+    $(document).ready(function () {
+        $(".nr_rank_xy tr").eq(1).find("td span").css({ "background": "red", "color": "#fff" })
+        $(".nr_rank_xy tr").eq(2).find("td span").css({ "background": "red", "color": "#fff" })
+        $(".nr_rank_xy tr").eq(3).find("td span").css({ "background": "red", "color": "#fff" })
+
+        $(".nr_rank_title1").click(function () {
+            $(".nr_map").show();
+            $(".nr_rank_ad").hide();
+            $(".nr_rank_xy").hide();
+        })
+        $(".nr_rank_title2").click(function () {
+            $(".nr_rank_ad").show();
+            $(".nr_rank_xy").hide();
+            $(".nr_map").hide();
+        });
+        $(".nr_rank_title3").click(function () {
+            $(".nr_rank_ad").hide();
+            $(".nr_rank_xy").show();
+            $(".nr_map").hide();
+        });
+        $(".slider").tilesSlider({ random: true, loop: true, auto: true })
+    })
+
+    $(function () {
+        $('#close_im').bind('click', function () {
+            $('#main-im').css("height", "0");
+            $('#im_main').hide();
+            $('#open_im').show();
+        });
+        $('#open_im').bind('click', function (e) {
+            $('#main-im').css("height", "272");
+            $('#im_main').show();
+            $(this).hide();
+        });
+        $('.go-top').bind('click', function () {
+            $(window).scrollTop(0);
+        });
+        $(".weixing-container").bind('mouseenter', function () {
+            $('.weixing-show').show();
+        })
+        $(".weixing-container").bind('mouseleave', function () {
+            $('.weixing-show').hide();
+        });
+        var ad = new AdMove("ad1");
+        ad.Run();
+        var ad2 = new AdMove("ad2");
+        ad2.Run();
+
+
+
+
+    });
+    function addEvent(obj, evtType, func, cap) {
+
+        cap = cap || false;
+
+        if (obj.addEventListener) {
+
+            obj.addEventListener(evtType, func, cap);
+
+            return true;
+
+        } else if (obj.attachEvent) {
+
+            if (cap) {
+
+                obj.setCapture();
+
+                return true;
+
+            } else {
+
+                return obj.attachEvent("on" + evtType, func);
+
+            }
+
+        } else {
+
+            return false;
+
+        }
+
+    }
+    function getPageScroll() {
+
+        var xScroll, yScroll;
+
+        if (self.pageXOffset) {
+
+            xScroll = self.pageXOffset;
+
+        } else if (document.documentElement && document.documentElement.scrollLeft) {
+
+            xScroll = document.documentElement.scrollLeft;
+
+        } else if (document.body) {
+
+            xScroll = document.body.scrollLeft;
+
+        }
+
+        if (self.pageYOffset) {
+
+            yScroll = self.pageYOffset;
+
+        } else if (document.documentElement && document.documentElement.scrollTop) {
+
+            yScroll = document.documentElement.scrollTop;
+
+        } else if (document.body) {
+
+            yScroll = document.body.scrollTop;
+
+        }
+
+        arrayPageScroll = new Array(xScroll, yScroll);
+
+        return arrayPageScroll;
+
+    }
+
+    function GetPageSize() {
+
+        var xScroll, yScroll;
+
+        if (window.innerHeight && window.scrollMaxY) {
+
+            xScroll = document.body.scrollWidth;
+
+            yScroll = window.innerHeight + window.scrollMaxY;
+
+        } else if (document.body.scrollHeight > document.body.offsetHeight) {
+
+            xScroll = document.body.scrollWidth;
+
+            yScroll = document.body.scrollHeight;
+
+        } else {
+
+            xScroll = document.body.offsetWidth;
+
+            yScroll = document.body.offsetHeight;
+
+        }
+
+        var windowWidth, windowHeight;
+
+        if (self.innerHeight) {
+
+            windowWidth = self.innerWidth;
+
+            windowHeight = self.innerHeight;
+
+        } else if (document.documentElement && document.documentElement.clientHeight) {
+
+            windowWidth = document.documentElement.clientWidth;
+
+            windowHeight = document.documentElement.clientHeight;
+
+        } else if (document.body) {
+
+            windowWidth = document.body.clientWidth;
+
+            windowHeight = document.body.clientHeight;
+
+        }
+
+        if (yScroll < windowHeight) {
+
+            pageHeight = windowHeight;
+
+        } else {
+
+            pageHeight = yScroll;
+
+        }
+
+        if (xScroll < windowWidth) {
+
+            pageWidth = windowWidth;
+
+        } else {
+
+            pageWidth = xScroll;
+
+        }
+
+        arrayPageSize = new Array(pageWidth, pageHeight, windowWidth, windowHeight)
+
+        return arrayPageSize;
+
+    }
+
+    var AdMoveConfig = new Object();
+
+    AdMoveConfig.IsInitialized = false;
+
+    AdMoveConfig.ScrollX = 0;
+
+    AdMoveConfig.ScrollY = 0;
+
+    AdMoveConfig.MoveWidth = 0;
+
+    AdMoveConfig.MoveHeight = 0;
+
+    AdMoveConfig.Resize = function () {
+
+        var winsize = GetPageSize();
+
+        AdMoveConfig.MoveWidth = winsize[2];
+
+        AdMoveConfig.MoveHeight = winsize[3];
+
+        AdMoveConfig.Scroll();
+
+    }
+
+    AdMoveConfig.Scroll = function () {
+
+        var winscroll = getPageScroll();
+
+        AdMoveConfig.ScrollX = winscroll[0];
+
+        AdMoveConfig.ScrollY = winscroll[1];
+
+    }
+
+    addEvent(window, "resize", AdMoveConfig.Resize);
+
+    addEvent(window, "scroll", AdMoveConfig.Scroll);
+
+    function AdMove(id) {
+
+        if (!AdMoveConfig.IsInitialized) {
+
+            AdMoveConfig.Resize();
+
+            AdMoveConfig.IsInitialized = true;
+
+        }
+
+        var obj = document.getElementById(id);
+
+        obj.style.position = "absolute";
+
+        obj.style.display = "";
+
+        var W = AdMoveConfig.MoveWidth - obj.offsetWidth;
+
+        var H = AdMoveConfig.MoveHeight - obj.offsetHeight;
+
+        var x = W * Math.random(), y = H * Math.random();
+
+        var rad = (Math.random() + 1) * Math.PI / 6;
+
+        var kx = Math.sin(rad), ky = Math.cos(rad);
+
+        var dirx = (Math.random() < 0.5 ? 1 : -1), diry = (Math.random() < 0.5 ? 1 : -1);
+
+        var step = 1;
+
+        var interval;
+
+        this.SetLocation = function (vx, vy) { x = vx; y = vy; }
+
+        this.SetDirection = function (vx, vy) { dirx = vx; diry = vy; }
+
+        obj.CustomMethod = function () {
+
+            obj.style.left = (x + AdMoveConfig.ScrollX) + "px";
+
+            obj.style.top = (y + AdMoveConfig.ScrollY) + "px";
+
+            rad = (Math.random() + 1) * Math.PI / 6;
+
+            W = AdMoveConfig.MoveWidth - obj.offsetWidth;
+
+            H = AdMoveConfig.MoveHeight - obj.offsetHeight;
+
+            x = x + step * kx * dirx;
+
+            if (x < 0) { dirx = 1; x = 0; kx = Math.sin(rad); ky = Math.cos(rad); }
+
+            if (x > W) { dirx = -1; x = W; kx = Math.sin(rad); ky = Math.cos(rad); }
+
+            y = y + step * ky * diry;
+
+            if (y < 0) { diry = 1; y = 0; kx = Math.sin(rad); ky = Math.cos(rad); }
+
+            if (y > H) { diry = -1; y = H; kx = Math.sin(rad); ky = Math.cos(rad); }
+
+        }
+
+        this.Run = function () {
+
+            var delay = 10;
+
+            interval = setInterval(obj.CustomMethod, delay);
+
+            obj.onmouseover = function () { clearInterval(interval); }
+
+            obj.onmouseout = function () { interval = setInterval(obj.CustomMethod, delay); }
+
+        }
+
+    }
+
+    var delparent = function (o) {
+        o.parentNode.parentNode.removeChild(o.parentNode);
+    }
+
+    function scroll() {
+
+        function fnb() {
+            var t = $(window).scrollTop();
+            var m = window.sc_scrollT || 200;
+
+            if (t < m) {
+                $(".zb_px").stop().animate({ top: m }, 500);
+
+            } else {
+                $(".zb_px").stop().animate({ top: t + 200 }, 500)
+
+            }
+
+        }
+
+        fnb();
+        $(window).scroll(function () { fnb(); });
+
+    };
+    scroll();
+</script>
+</body>
+<script>
+    window.onload = function () {
+        var xhr;
+        if (window.XMLHttpRequest){
+            xhr = new XMLHttpRequest();
+        } else{
+            try {
+                xhr = new ActiveXObject("Msxml2.XMLHTTP");
+            }catch (e) {
+                xhr = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+        }
+
+        xhr.open("GET","<%=path %>/index?",true);
+        xhr.onreadystatechange = function () {
+            if (4 == xhr.readyState){
+                if(200 == xhr.status){
+                    var result = xhr.responseText;
+                    // 类型转换 object
+                    result = JSON.parse(result);
+                    displaySixProduct1(result);
                 }
-            });
-        }
-
-        $(document).ready(function () {
-
-            $(".nr_rank_xy tr").eq(1).find("td span").css({ "background": "red", "color": "#fff" })
-            $(".nr_rank_xy tr").eq(2).find("td span").css({ "background": "red", "color": "#fff" })
-            $(".nr_rank_xy tr").eq(3).find("td span").css({ "background": "red", "color": "#fff" })
-
-            $(".nr_rank_title1").click(function () {
-                $(".nr_rank_ad").show();
-                $("#ArticleRankMore").attr('href', '/Article/Index?id=121');
-                $(".nr_rank_xy").hide();
-            })
-            $(".nr_rank_title2").click(function () {
-                $(".nr_rank_ad").hide();
-                $(".nr_rank_xy").show();
-                $("#ArticleRankMore").attr('href', '/UserCenter/MyCreditRank');
-            })
-        })
-        $(".slider").tilesSlider({ random: true, loop: true, auto: true });
-    </script>
+            }
+        };
+        xhr.send();
+        // 解析字符串
+        function displaySixProduct1(json) {
+            var len = json.length;
+            for(var i = 0; i< len;i++){
+                var obj = json[i];
 
 
-<script type="text/javascript">
-    layui.use('table', function () {
-        var table = layui.table, form = layui.form;
-    });
-
-    $(document).ready(function () {
-        $(".nr_rank_xy tr").eq(1).find("td span").css({ "background": "red", "color": "#fff" })
-        $(".nr_rank_xy tr").eq(2).find("td span").css({ "background": "red", "color": "#fff" })
-        $(".nr_rank_xy tr").eq(3).find("td span").css({ "background": "red", "color": "#fff" })
-
-        $(".nr_rank_title1").click(function () {
-            $(".nr_map").show();
-            $(".nr_rank_ad").hide();
-            $(".nr_rank_xy").hide();
-        })
-        $(".nr_rank_title2").click(function () {
-            $(".nr_rank_ad").show();
-            $(".nr_rank_xy").hide();
-            $(".nr_map").hide();
-        });
-        $(".nr_rank_title3").click(function () {
-            $(".nr_rank_ad").hide();
-            $(".nr_rank_xy").show();
-            $(".nr_map").hide();
-        });
-        $(".slider").tilesSlider({ random: true, loop: true, auto: true })
-    })
-
-    $(function () {
-        $('#close_im').bind('click', function () {
-            $('#main-im').css("height", "0");
-            $('#im_main').hide();
-            $('#open_im').show();
-        });
-        $('#open_im').bind('click', function (e) {
-            $('#main-im').css("height", "272");
-            $('#im_main').show();
-            $(this).hide();
-        });
-        $('.go-top').bind('click', function () {
-            $(window).scrollTop(0);
-        });
-        $(".weixing-container").bind('mouseenter', function () {
-            $('.weixing-show').show();
-        })
-        $(".weixing-container").bind('mouseleave', function () {
-            $('.weixing-show').hide();
-        });
-        var ad = new AdMove("ad1");
-        ad.Run();
-        var ad2 = new AdMove("ad2");
-        ad2.Run();
-
-
-
-
-    });
-    function addEvent(obj, evtType, func, cap) {
-
-        cap = cap || false;
-
-        if (obj.addEventListener) {
-
-            obj.addEventListener(evtType, func, cap);
-
-            return true;
-
-        } else if (obj.attachEvent) {
-
-            if (cap) {
-
-                obj.setCapture();
-
-                return true;
-
-            } else {
-
-                return obj.attachEvent("on" + evtType, func);
 
             }
-
-        } else {
-
-            return false;
-
         }
 
-    }
-    function getPageScroll() {
-
-        var xScroll, yScroll;
-
-        if (self.pageXOffset) {
-
-            xScroll = self.pageXOffset;
-
-        } else if (document.documentElement && document.documentElement.scrollLeft) {
-
-            xScroll = document.documentElement.scrollLeft;
-
-        } else if (document.body) {
-
-            xScroll = document.body.scrollLeft;
-
-        }
-
-        if (self.pageYOffset) {
-
-            yScroll = self.pageYOffset;
-
-        } else if (document.documentElement && document.documentElement.scrollTop) {
-
-            yScroll = document.documentElement.scrollTop;
-
-        } else if (document.body) {
-
-            yScroll = document.body.scrollTop;
-
-        }
-
-        arrayPageScroll = new Array(xScroll, yScroll);
-
-        return arrayPageScroll;
-
-    }
-
-    function GetPageSize() {
-
-        var xScroll, yScroll;
-
-        if (window.innerHeight && window.scrollMaxY) {
-
-            xScroll = document.body.scrollWidth;
-
-            yScroll = window.innerHeight + window.scrollMaxY;
-
-        } else if (document.body.scrollHeight > document.body.offsetHeight) {
-
-            xScroll = document.body.scrollWidth;
-
-            yScroll = document.body.scrollHeight;
-
-        } else {
-
-            xScroll = document.body.offsetWidth;
-
-            yScroll = document.body.offsetHeight;
-
-        }
-
-        var windowWidth, windowHeight;
-
-        if (self.innerHeight) {
-
-            windowWidth = self.innerWidth;
-
-            windowHeight = self.innerHeight;
-
-        } else if (document.documentElement && document.documentElement.clientHeight) {
-
-            windowWidth = document.documentElement.clientWidth;
-
-            windowHeight = document.documentElement.clientHeight;
-
-        } else if (document.body) {
-
-            windowWidth = document.body.clientWidth;
-
-            windowHeight = document.body.clientHeight;
-
-        }
-
-        if (yScroll < windowHeight) {
-
-            pageHeight = windowHeight;
-
-        } else {
-
-            pageHeight = yScroll;
-
-        }
-
-        if (xScroll < windowWidth) {
-
-            pageWidth = windowWidth;
-
-        } else {
-
-            pageWidth = xScroll;
-
-        }
-
-        arrayPageSize = new Array(pageWidth, pageHeight, windowWidth, windowHeight)
-
-        return arrayPageSize;
-
-    }
-
-    var AdMoveConfig = new Object();
-
-    AdMoveConfig.IsInitialized = false;
-
-    AdMoveConfig.ScrollX = 0;
-
-    AdMoveConfig.ScrollY = 0;
-
-    AdMoveConfig.MoveWidth = 0;
-
-    AdMoveConfig.MoveHeight = 0;
-
-    AdMoveConfig.Resize = function () {
-
-        var winsize = GetPageSize();
-
-        AdMoveConfig.MoveWidth = winsize[2];
-
-        AdMoveConfig.MoveHeight = winsize[3];
-
-        AdMoveConfig.Scroll();
-
-    }
-
-    AdMoveConfig.Scroll = function () {
-
-        var winscroll = getPageScroll();
-
-        AdMoveConfig.ScrollX = winscroll[0];
-
-        AdMoveConfig.ScrollY = winscroll[1];
-
-    }
-
-    addEvent(window, "resize", AdMoveConfig.Resize);
-
-    addEvent(window, "scroll", AdMoveConfig.Scroll);
-
-    function AdMove(id) {
-
-        if (!AdMoveConfig.IsInitialized) {
-
-            AdMoveConfig.Resize();
-
-            AdMoveConfig.IsInitialized = true;
-
-        }
-
-        var obj = document.getElementById(id);
-
-        obj.style.position = "absolute";
-
-        obj.style.display = "";
-
-        var W = AdMoveConfig.MoveWidth - obj.offsetWidth;
-
-        var H = AdMoveConfig.MoveHeight - obj.offsetHeight;
-
-        var x = W * Math.random(), y = H * Math.random();
-
-        var rad = (Math.random() + 1) * Math.PI / 6;
-
-        var kx = Math.sin(rad), ky = Math.cos(rad);
-
-        var dirx = (Math.random() < 0.5 ? 1 : -1), diry = (Math.random() < 0.5 ? 1 : -1);
-
-        var step = 1;
-
-        var interval;
-
-        this.SetLocation = function (vx, vy) { x = vx; y = vy; }
-
-        this.SetDirection = function (vx, vy) { dirx = vx; diry = vy; }
-
-        obj.CustomMethod = function () {
-
-            obj.style.left = (x + AdMoveConfig.ScrollX) + "px";
-
-            obj.style.top = (y + AdMoveConfig.ScrollY) + "px";
-
-            rad = (Math.random() + 1) * Math.PI / 6;
-
-            W = AdMoveConfig.MoveWidth - obj.offsetWidth;
-
-            H = AdMoveConfig.MoveHeight - obj.offsetHeight;
-
-            x = x + step * kx * dirx;
-
-            if (x < 0) { dirx = 1; x = 0; kx = Math.sin(rad); ky = Math.cos(rad); }
-
-            if (x > W) { dirx = -1; x = W; kx = Math.sin(rad); ky = Math.cos(rad); }
-
-            y = y + step * ky * diry;
-
-            if (y < 0) { diry = 1; y = 0; kx = Math.sin(rad); ky = Math.cos(rad); }
-
-            if (y > H) { diry = -1; y = H; kx = Math.sin(rad); ky = Math.cos(rad); }
-
-        }
-
-        this.Run = function () {
-
-            var delay = 10;
-
-            interval = setInterval(obj.CustomMethod, delay);
-
-            obj.onmouseover = function () { clearInterval(interval); }
-
-            obj.onmouseout = function () { interval = setInterval(obj.CustomMethod, delay); }
-
-        }
-
-    }
-
-    var delparent = function (o) {
-        o.parentNode.parentNode.removeChild(o.parentNode);
-    }
-
-    function scroll() {
-
-        function fnb() {
-            var t = $(window).scrollTop();
-            var m = window.sc_scrollT || 200;
-
-            if (t < m) {
-                $(".zb_px").stop().animate({ top: m }, 500);
-
-            } else {
-                $(".zb_px").stop().animate({ top: t + 200 }, 500)
-
-            }
-
-        }
-
-        fnb();
-        $(window).scroll(function () { fnb(); });
 
     };
-    scroll();
+
 </script>
-
-
-
-
-
-<script type="text/javascript">
-    layui.use('table', function () {
-        var table = layui.table, form = layui.form;
-    });
-   
-    $(document).ready(function () {
-        $(".nr_rank_xy tr").eq(1).find("td span").css({ "background": "red", "color": "#fff" })
-        $(".nr_rank_xy tr").eq(2).find("td span").css({ "background": "red", "color": "#fff" })
-        $(".nr_rank_xy tr").eq(3).find("td span").css({ "background": "red", "color": "#fff" })
-
-        $(".nr_rank_title1").click(function () {
-            $(".nr_map").show();
-            $(".nr_rank_ad").hide();
-            $(".nr_rank_xy").hide();
-        })
-        $(".nr_rank_title2").click(function () {
-            $(".nr_rank_ad").show();
-            $(".nr_rank_xy").hide();
-            $(".nr_map").hide();
-        });
-        $(".nr_rank_title3").click(function () {
-            $(".nr_rank_ad").hide();
-            $(".nr_rank_xy").show();
-            $(".nr_map").hide();
-        });
-        $(".slider").tilesSlider({ random: true, loop: true, auto: true })
-    })
-
-    $(function () {
-        $('#close_im').bind('click', function () {
-            $('#main-im').css("height", "0");
-            $('#im_main').hide();
-            $('#open_im').show();
-        });
-        $('#open_im').bind('click', function (e) {
-            $('#main-im').css("height", "272");
-            $('#im_main').show();
-            $(this).hide();
-        });
-        $('.go-top').bind('click', function () {
-            $(window).scrollTop(0);
-        });
-        $(".weixing-container").bind('mouseenter', function () {
-            $('.weixing-show').show();
-        })
-        $(".weixing-container").bind('mouseleave', function () {
-            $('.weixing-show').hide();
-        });
-        var ad = new AdMove("ad1");
-        ad.Run();
-        var ad2 = new AdMove("ad2");
-        ad2.Run();
-
-
-
-
-    });
-    function addEvent(obj, evtType, func, cap) {
-
-        cap = cap || false;
-
-        if (obj.addEventListener) {
-
-            obj.addEventListener(evtType, func, cap);
-
-            return true;
-
-        } else if (obj.attachEvent) {
-
-            if (cap) {
-
-                obj.setCapture();
-
-                return true;
-
-            } else {
-
-                return obj.attachEvent("on" + evtType, func);
-
-            }
-
-        } else {
-
-            return false;
-
-        }
-
-    }
-    function getPageScroll() {
-
-        var xScroll, yScroll;
-
-        if (self.pageXOffset) {
-
-            xScroll = self.pageXOffset;
-
-        } else if (document.documentElement && document.documentElement.scrollLeft) {
-
-            xScroll = document.documentElement.scrollLeft;
-
-        } else if (document.body) {
-
-            xScroll = document.body.scrollLeft;
-
-        }
-
-        if (self.pageYOffset) {
-
-            yScroll = self.pageYOffset;
-
-        } else if (document.documentElement && document.documentElement.scrollTop) {
-
-            yScroll = document.documentElement.scrollTop;
-
-        } else if (document.body) {
-
-            yScroll = document.body.scrollTop;
-
-        }
-
-        arrayPageScroll = new Array(xScroll, yScroll);
-
-        return arrayPageScroll;
-
-    }
-
-    function GetPageSize() {
-
-        var xScroll, yScroll;
-
-        if (window.innerHeight && window.scrollMaxY) {
-
-            xScroll = document.body.scrollWidth;
-
-            yScroll = window.innerHeight + window.scrollMaxY;
-
-        } else if (document.body.scrollHeight > document.body.offsetHeight) {
-
-            xScroll = document.body.scrollWidth;
-
-            yScroll = document.body.scrollHeight;
-
-        } else {
-
-            xScroll = document.body.offsetWidth;
-
-            yScroll = document.body.offsetHeight;
-
-        }
-
-        var windowWidth, windowHeight;
-
-        if (self.innerHeight) {
-
-            windowWidth = self.innerWidth;
-
-            windowHeight = self.innerHeight;
-
-        } else if (document.documentElement && document.documentElement.clientHeight) {
-
-            windowWidth = document.documentElement.clientWidth;
-
-            windowHeight = document.documentElement.clientHeight;
-
-        } else if (document.body) {
-
-            windowWidth = document.body.clientWidth;
-
-            windowHeight = document.body.clientHeight;
-
-        }
-
-        if (yScroll < windowHeight) {
-
-            pageHeight = windowHeight;
-
-        } else {
-
-            pageHeight = yScroll;
-
-        }
-
-        if (xScroll < windowWidth) {
-
-            pageWidth = windowWidth;
-
-        } else {
-
-            pageWidth = xScroll;
-
-        }
-
-        arrayPageSize = new Array(pageWidth, pageHeight, windowWidth, windowHeight)
-
-        return arrayPageSize;
-
-    }
-
-    var AdMoveConfig = new Object();
-
-    AdMoveConfig.IsInitialized = false;
-
-    AdMoveConfig.ScrollX = 0;
-
-    AdMoveConfig.ScrollY = 0;
-
-    AdMoveConfig.MoveWidth = 0;
-
-    AdMoveConfig.MoveHeight = 0;
-
-    AdMoveConfig.Resize = function () {
-
-        var winsize = GetPageSize();
-
-        AdMoveConfig.MoveWidth = winsize[2];
-
-        AdMoveConfig.MoveHeight = winsize[3];
-
-        AdMoveConfig.Scroll();
-
-    }
-
-    AdMoveConfig.Scroll = function () {
-
-        var winscroll = getPageScroll();
-
-        AdMoveConfig.ScrollX = winscroll[0];
-
-        AdMoveConfig.ScrollY = winscroll[1];
-
-    }
-
-    addEvent(window, "resize", AdMoveConfig.Resize);
-
-    addEvent(window, "scroll", AdMoveConfig.Scroll);
-
-    function AdMove(id) {
-
-        if (!AdMoveConfig.IsInitialized) {
-
-            AdMoveConfig.Resize();
-
-            AdMoveConfig.IsInitialized = true;
-
-        }
-
-        var obj = document.getElementById(id);
-
-        obj.style.position = "absolute";
-
-        obj.style.display = "";
-
-        var W = AdMoveConfig.MoveWidth - obj.offsetWidth;
-
-        var H = AdMoveConfig.MoveHeight - obj.offsetHeight;
-
-        var x = W * Math.random(), y = H * Math.random();
-
-        var rad = (Math.random() + 1) * Math.PI / 6;
-
-        var kx = Math.sin(rad), ky = Math.cos(rad);
-
-        var dirx = (Math.random() < 0.5 ? 1 : -1), diry = (Math.random() < 0.5 ? 1 : -1);
-
-        var step = 1;
-
-        var interval;
-
-        this.SetLocation = function (vx, vy) { x = vx; y = vy; }
-
-        this.SetDirection = function (vx, vy) { dirx = vx; diry = vy; }
-
-        obj.CustomMethod = function () {
-
-            obj.style.left = (x + AdMoveConfig.ScrollX) + "px";
-
-            obj.style.top = (y + AdMoveConfig.ScrollY) + "px";
-
-            rad = (Math.random() + 1) * Math.PI / 6;
-
-            W = AdMoveConfig.MoveWidth - obj.offsetWidth;
-
-            H = AdMoveConfig.MoveHeight - obj.offsetHeight;
-
-            x = x + step * kx * dirx;
-
-            if (x < 0) { dirx = 1; x = 0; kx = Math.sin(rad); ky = Math.cos(rad); }
-
-            if (x > W) { dirx = -1; x = W; kx = Math.sin(rad); ky = Math.cos(rad); }
-
-            y = y + step * ky * diry;
-
-            if (y < 0) { diry = 1; y = 0; kx = Math.sin(rad); ky = Math.cos(rad); }
-
-            if (y > H) { diry = -1; y = H; kx = Math.sin(rad); ky = Math.cos(rad); }
-
-        }
-
-        this.Run = function () {
-
-            var delay = 10;
-
-            interval = setInterval(obj.CustomMethod, delay);
-
-            obj.onmouseover = function () { clearInterval(interval); }
-
-            obj.onmouseout = function () { interval = setInterval(obj.CustomMethod, delay); }
-
-        }
-
-    }
-
-    var delparent = function (o) {
-        o.parentNode.parentNode.removeChild(o.parentNode);
-    }
-
-    function scroll() {
-
-        function fnb() {
-            var t = $(window).scrollTop();
-            var m = window.sc_scrollT || 200;
-
-            if (t < m) {
-                $(".zb_px").stop().animate({ top: m }, 500);
-
-            } else {
-                $(".zb_px").stop().animate({ top: t + 200 }, 500)
-
-            }
-
-        }
-
-        fnb();
-        $(window).scroll(function () { fnb(); });
-
-    };
-    scroll();
-</script>
-</body></html>
+</html>

@@ -410,15 +410,7 @@
     });
 </script>
 <script type="text/javascript">
-    function isTrue() {
-        num = document.getElementById("IdCard").value;
-        num1 = document.getElementById("IdCard1").value;
-        if (num!=num1) {
-            $("#idCardTip").html("输入的身份证号不一致，请重新输入");
-        } else {
-            $("#idCardTip").html("身份证号一致");
-        }
-    }
+
     function isIdCardNo1(obj) {
         num = document.getElementById("IdCard").value;
         num = num.toUpperCase();
