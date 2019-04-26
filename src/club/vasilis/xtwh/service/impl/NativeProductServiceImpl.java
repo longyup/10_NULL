@@ -5,6 +5,7 @@ import club.vasilis.xtwh.dao.impl.NativeProductDaoImpl;
 import club.vasilis.xtwh.domain.NativeProduct;
 import club.vasilis.xtwh.service.NativeProductService;
 import net.sf.json.JSONArray;
+import org.junit.Test;
 
 import java.util.List;
 
@@ -21,5 +22,10 @@ public class NativeProductServiceImpl implements NativeProductService {
 
 
         return JSONArray.fromObject(list).toString();
+    }
+    @Test
+    public void test()throws Exception{
+        System.out.println(new NativeProductServiceImpl().findFiveindex());
+
     }
 }

@@ -11,6 +11,10 @@
     <% String path = request.getContextPath(); %>
     <meta charset="utf-8" />
 
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
     <meta name="viewport" content="width=device-width">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -79,26 +83,26 @@
         <ul>
                 <li>
                     <a href="http://www.yxzsxxw.com/" target="_blank"><img src="http://112.25.215.35:80/Resource/Images/Banner/Primary/24ff62e2-5ae6-4848-b4aa-eabfe0637999.jpg" /></a>
-																   
-																																											 
+
+
                 </li>
-													
-																																												 
+
+
                 <li>
-													
+
                     <a href="http://www.yxzsxxw.com/" target="_blank"><img src="http://112.25.215.35:80/Resource/Images/Banner/Primary/58a5b584-9f0d-43a4-bc44-623a69db0a5b.jpg" /></a>
                 </li>
                 <li>
                     <a href="http://www.yxzsxxw.com/" target="_blank"><img src="http://112.25.215.35:80/Resource/Images/Banner/Primary/db0fbd00-3035-457b-83b9-8044564fc1f6.jpg" /></a>
                 </li>
-           
-          
+
+
         </ul>
     </div>
 
-    
-    
-    
+
+
+
 </div>
 
 <!--新闻动态和排名-->
@@ -121,7 +125,9 @@
                     <ul>
                         <li>
                             <a href="file:///C:/Article/Details?id=7546" target="_blank">
+<%--
                                 <img src="Index_files/6e0fc38d-8548-4002-9567-b0f68a10bc39.jpg" onerror="this.src = &#39;/images/renwenxiuyang.jpg&#39;">
+--%>
                                 <div class="text">
                                     <p>乡愁不老 思念不改—...</p>
                                 </div>
@@ -129,7 +135,9 @@
                         </li>
                         <li>
                             <a href="file:///C:/Article/Details?id=7473" target="_blank">
+<%--
                                 <img src="Index_files/2510b36d-21f0-4421-8d3f-179c4e142f88.jpg" onerror="this.src = &#39;/images/renwenxiuyang.jpg&#39;">
+--%>
                                 <div class="text">
                                     <p>乡音嘹亮，唱响精彩万...</p>
                                 </div>
@@ -137,7 +145,9 @@
                         </li>
                         <li>
                             <a href="file:///C:/Article/Details?id=7354" target="_blank">
+<%--
                                 <img src="Index_files/a9f07aec-a1ad-48f4-81dc-8b6d2e2ba061.jpg" onerror="this.src = &#39;/images/renwenxiuyang.jpg&#39;">
+--%>
                                 <div class="text">
                                     <p>2018年度全国会计专业...</p>
                                 </div>
@@ -156,7 +166,7 @@
                         <li>通知公告</li>
                     </ul>
                 </div>
-                <a href="file:///C:/Article/Index" class="notice-more"><img src="<%= path%>/images/more.png"></a>
+                <a href="file:///C:/Article/Index" class="notice-more"><img src="images/more.png"></a>
             </div>
             <div class="notice-con">
                 <div class="ncl-first clearfix">
@@ -193,7 +203,7 @@
     </div>
     <div class="login l">
         <div class="login-title">
-            <img src="<%= path%>/images/login-icon1.png">登录
+            <img src="images/login-icon1.png">登录
         </div>
         <div class="logining">
             <div class="login-ac clearfix">
@@ -262,7 +272,7 @@
         </ul>
     </div>
     <div style="margin-left: 90px" class="cc-title3 l">
-        <a href="file:///C:/Course"><img src="<%= path%>/images/more.png"></a>
+        <a href="file:///C:/Course"><img src="images/more.png"></a>
     </div>
 
 </div>
@@ -285,7 +295,9 @@
                         <li>
                             <div class="pic">
                                 <a href="file:///C:/Course/Details?id=11541" target="_blank">
+<%--
                                     <img src="Index_files/2df0210e-b6bc-40ba-8591-c1f21254ec5b.jpg">
+--%>
                                 </a>
                             </div>
                             <div class="title">
@@ -296,7 +308,9 @@
                         <li>
                             <div class="pic">
                                 <a href="file:///C:/Course/Details?id=11542" target="_blank">
+<%--
                                     <img src="Index_files/8af8ca21-bb5e-43d8-9ace-38315d70ae9a.jpg">
+--%>
                                 </a>
                             </div>
                             <div class="title">
@@ -307,7 +321,9 @@
                         <li>
                             <div class="pic">
                                 <a href="file:///C:/Course/Details?id=11543" target="_blank">
+<%--
                                     <img src="Index_files/22d3db60-d9b3-4644-af64-18360550b8af.jpg">
+--%>
                                 </a>
                             </div>
                             <div class="title">
@@ -318,7 +334,9 @@
                         <li>
                             <div class="pic">
                                 <a href="file:///C:/Course/Details?id=11544" target="_blank">
+<%--
                                     <img src="Index_files/4a66b8c6-7cbb-4e9a-bb32-02669d374f8e.jpg">
+--%>
                                 </a>
                             </div>
                             <div class="title">
@@ -329,7 +347,9 @@
                         <li>
                             <div class="pic">
                                 <a href="file:///C:/Course/Details?id=11545" target="_blank">
+<%--
                                     <img src="Index_files/dcdf7fb6-2deb-4dc4-9862-a18ffda647a0.jpg">
+--%>
                                 </a>
                             </div>
                             <div class="title">
@@ -340,7 +360,9 @@
                         <li>
                             <div class="pic">
                                 <a href="file:///C:/Course/Details?id=11546" target="_blank">
+<%--
                                     <img src="Index_files/9c252126-f975-4928-8d5d-1b00f7190f71.jpg">
+--%>
                                 </a>
                             </div>
                             <div class="title">
@@ -351,7 +373,9 @@
                         <li>
                             <div class="pic">
                                 <a href="file:///C:/Course/Details?id=11547" target="_blank">
+<%--
                                     <img src="Index_files/612ecc7d-d104-48e2-9a0a-f90ac8d562c1.jpg">
+--%>
                                 </a>
                             </div>
                             <div class="title">
@@ -362,7 +386,9 @@
                         <li>
                             <div class="pic">
                                 <a href="file:///C:/Course/Details?id=11548" target="_blank">
+<%--
                                     <img src="Index_files/1954f1e1-2d5c-42ad-8d5a-8e83169ba4fb.jpg">
+--%>
                                 </a>
                             </div>
                             <div class="title">
@@ -373,7 +399,9 @@
                         <li>
                             <div class="pic">
                                 <a href="file:///C:/Course/Details?id=11549" target="_blank">
+<%--
                                     <img src="Index_files/aa931aa0-3a16-4a23-becd-82756b750cb7.jpg">
+--%>
                                 </a>
                             </div>
                             <div class="title">
@@ -384,7 +412,9 @@
                         <li>
                             <div class="pic">
                                 <a href="file:///C:/Course/Details?id=11550" target="_blank">
+<%--
                                     <img src="Index_files/1267df7e-ad2c-44e0-b7a4-f7847b98c6aa.jpg">
+--%>
                                 </a>
                             </div>
                             <div class="title">
@@ -401,7 +431,7 @@
     </div>
     <div class="prize r">
         <div class="prize-title clearfix">
-            <div class="pt1 clearfix"><img src="<%= path%>/images/prize-img2.png"><p>公布</p></div>
+            <div class="pt1 clearfix"><img src="images/prize-img2.png"><p>公布</p></div>
 
         </div>
         <div class="prize-con">
@@ -649,18 +679,18 @@
 </script>
 
 
-<script src="file:///C:/js/newjs/jquery-1.11.2.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="file:///C:/js/newjs/html5.js" type="text/javascript" charset="utf-8"></script>
-<script src="file:///C:/js/newjs/respond.js" type="text/javascript" charset="utf-8"></script>
-<script src="file:///C:/js/newjs/jquery.SuperSlide.2.1.1.js" type="text/javascript" charset="utf-8"></script>
-<script src="file:///C:/js/newjs/firstPage.js" type="text/javascript" charset="utf-8"></script>
+<script src="<%=path%>/js/jquery-1.11.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="<%=path%>/js/html5.js" type="text/javascript" charset="utf-8"></script>
+<script src="<%=path%>/js/respond.js" type="text/javascript" charset="utf-8"></script>
+<script src="<%=path%>/js/jquery.SuperSlide.2.1.1.js" type="text/javascript" charset="utf-8"></script>
+<script src="<%=path%>/js/firstPage.js" type="text/javascript" charset="utf-8"></script>
 
-<script src="file:///C:/Content/layui/src/layui.js"></script>
-<script src="file:///C:/js/jquery.tiles.js"></script>
+<script src="<%=path%>/Content/layui/src/layui.js"></script>
+<script src="<%=path%>/js/jquery.tiles.js"></script>
 <!---客服JS-->
 
 <!---课程模块JS-->
-<script type="text/javascript">
+<%--<script type="text/javascript">
     (function init() {
 
         //初始化加载课程信息
@@ -708,7 +738,7 @@
         }
         return s2;
     }
-</script>
+</script>--%>
 
 <!---社区新闻动态更多-->
 <script type="text/javascript">
@@ -778,6 +808,7 @@
     $(".slider").tilesSlider({ random: true, loop: true, auto: true });
 </script>
 
+<%--
 
 <script type="text/javascript">
     layui.use('table', function () {
@@ -1118,9 +1149,10 @@
     scroll();
 </script>
 
+--%>
 
 
-
+<%--
 
 <script type="text/javascript">
     layui.use('table', function () {
@@ -1459,10 +1491,11 @@
 
     };
     scroll();
-</script>
+</script>--%>
+
 </body>
 <script>
-    window.onload = function () {
+   window.onload =  function() {
         var xhr;
         if (window.XMLHttpRequest){
             xhr = new XMLHttpRequest();
@@ -1474,11 +1507,14 @@
             }
         }
 
-        xhr.open("GET","<%=path %>/index?",true);
+        xhr.open("GET","<%=path %>/index?method=CultrueNews",true);
+        alert(xhr.readyState);
         xhr.onreadystatechange = function () {
+            alert(xhr.readyState);
             if (4 == xhr.readyState){
                 if(200 == xhr.status){
                     var result = xhr.responseText;
+                    alert(typeof result);
                     // 类型转换 object
                     result = JSON.parse(result);
                     displaySixProduct1(result);
