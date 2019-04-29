@@ -9,8 +9,7 @@
 <html>
 <head>
     <% String path = request.getContextPath(); %>
-    <meta charset="utf-8" />
-
+    <meta charset="utf-8"/>
 
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -21,7 +20,7 @@
     <link rel="Shortcut Icon" href=/favicon.ico>
     <link rel="stylesheet" type="text/css" href="<%= path%>/css/reset.css">
     <link rel="stylesheet" type="text/css" href="<%= path%>/css/firstPage.css">
-    <link rel="stylesheet" type="text/css" href="<%= path%>/css/head.css" />
+    <link rel="stylesheet" type="text/css" href="<%= path%>/css/head.css"/>
     <title>乡土文化教育网</title>
 
     <link href="<%= path%>/Content/layui/src/css/layui.css" rel="stylesheet">
@@ -67,40 +66,41 @@
 
 
 <!--nav 导航-->
-<%@include file="head.jsp"%>
+<%@include file="head.jsp" %>
 
 
 <!--top-->
 <div class="banner_lb">
     <div class="hd">
         <ul class="clearfix">
-                <li></li>
-                <li></li>
-                <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
         </ul>
     </div>
     <div class="bd">
         <ul>
-                <li>
-                    <a href="http://www.yxzsxxw.com/" target="_blank"><img src="http://112.25.215.35:80/Resource/Images/Banner/Primary/24ff62e2-5ae6-4848-b4aa-eabfe0637999.jpg" /></a>
+            <li>
+                <a href="http://www.yxzsxxw.com/" target="_blank"><img
+                        src="http://112.25.215.35:80/Resource/Images/Banner/Primary/24ff62e2-5ae6-4848-b4aa-eabfe0637999.jpg"/></a>
 
 
-                </li>
+            </li>
 
 
-                <li>
+            <li>
 
-                    <a href="http://www.yxzsxxw.com/" target="_blank"><img src="http://112.25.215.35:80/Resource/Images/Banner/Primary/58a5b584-9f0d-43a4-bc44-623a69db0a5b.jpg" /></a>
-                </li>
-                <li>
-                    <a href="http://www.yxzsxxw.com/" target="_blank"><img src="http://112.25.215.35:80/Resource/Images/Banner/Primary/db0fbd00-3035-457b-83b9-8044564fc1f6.jpg" /></a>
-                </li>
+                <a href="http://www.yxzsxxw.com/" target="_blank"><img
+                        src="http://112.25.215.35:80/Resource/Images/Banner/Primary/58a5b584-9f0d-43a4-bc44-623a69db0a5b.jpg"/></a>
+            </li>
+            <li>
+                <a href="http://www.yxzsxxw.com/" target="_blank"><img
+                        src="http://112.25.215.35:80/Resource/Images/Banner/Primary/db0fbd00-3035-457b-83b9-8044564fc1f6.jpg"/></a>
+            </li>
 
 
         </ul>
     </div>
-
-
 
 
 </div>
@@ -122,37 +122,37 @@
                     </ul>
                 </div>
                 <div class="bd">
-                    <ul>
-                        <li>
-                            <a href="/Article/Details?id=7546" target="_blank">
-<%--
-                                <img src="http://112.25.215.35:80/Resource/Images/Article/6e0fc38d-8548-4002-9567-b0f68a10bc39.jpg" onerror="this.src = '/images/renwenxiuyang.jpg'" />
---%>
-                                <div class="text">
-                                    <p>乡愁不老 思念不改—...</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/Article/Details?id=7473" target="_blank">
-<%--
-                                <img src="Index_files/2510b36d-21f0-4421-8d3f-179c4e142f88.jpg" onerror="this.src = &#39;/images/renwenxiuyang.jpg&#39;">
---%>
-                                <div class="text">
-                                    <p>乡音嘹亮，唱响精彩万...</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/Article/Details?id=7354" target="_blank">
-<%--
-                                <img src="Index_files/a9f07aec-a1ad-48f4-81dc-8b6d2e2ba061.jpg" onerror="this.src = &#39;/images/renwenxiuyang.jpg&#39;">
---%>
-                                <div class="text">
-                                    <p>2018年度全国会计专业...</p>
-                                </div>
-                            </a>
-                        </li>
+                    <ul id="show">
+                        <%--                        <li>--%>
+                        <%--                            <a href="file:///C:/Article/Details?id=7546" target="_blank">--%>
+                        <%--&lt;%&ndash;--%>
+                        <%--                                <img src="Index_files/6e0fc38d-8548-4002-9567-b0f68a10bc39.jpg" onerror="this.src = &#39;/images/renwenxiuyang.jpg&#39;">--%>
+                        <%--&ndash;%&gt;--%>
+                        <%--                                <div class="text">--%>
+                        <%--                                    <p>乡愁不老 思念不改—...</p>--%>
+                        <%--                                </div>--%>
+                        <%--                            </a>--%>
+                        <%--                        </li>--%>
+                        <%--                        <li>--%>
+                        <%--                            <a href="file:///C:/Article/Details?id=7473" target="_blank">--%>
+                        <%--&lt;%&ndash;--%>
+                        <%--                                <img src="Index_files/2510b36d-21f0-4421-8d3f-179c4e142f88.jpg" onerror="this.src = &#39;/images/renwenxiuyang.jpg&#39;">--%>
+                        <%--&ndash;%&gt;--%>
+                        <%--                                <div class="text">--%>
+                        <%--                                    <p>乡音嘹亮，唱响精彩万...</p>--%>
+                        <%--                                </div>--%>
+                        <%--                            </a>--%>
+                        <%--                        </li>--%>
+                        <%--                        <li>--%>
+                        <%--                            <a href="file:///C:/Article/Details?id=7354" target="_blank">--%>
+                        <%--&lt;%&ndash;--%>
+                        <%--                                <img src="Index_files/a9f07aec-a1ad-48f4-81dc-8b6d2e2ba061.jpg" onerror="this.src = &#39;/images/renwenxiuyang.jpg&#39;">--%>
+                        <%--&ndash;%&gt;--%>
+                        <%--                                <div class="text">--%>
+                        <%--                                    <p>2018年度全国会计专业...</p>--%>
+                        <%--                                </div>--%>
+                        <%--                            </a>--%>
+                        <%--                        </li>--%>
                     </ul>
                 </div>
 
@@ -171,32 +171,34 @@
             <div class="notice-con">
                 <div class="ncl-first clearfix">
                     <p class="nclf-icon l"><img src="<%= path%>/images/new-up.png"></p>
-                    <p class="nclf-text l" style="cursor:pointer;" onclick="location.href = &#39;/Article/Details?id=7264&#39;">xx村被认定为国家级非物质文化教育示范村</p>
+                    <p class="nclf-text l" style="cursor:pointer;"
+                       onclick="location.href = &#39;/Article/Details?id=7264&#39;">xx村被认定为国家级非物质文化教育示范村</p>
                 </div>
-                <ul>
-                    <li><a href="/Article/Details?id=8194">【04-12】<span style="color:#FF9933">【荐】</span>西渚镇社区教育工作会议暨业务培训班顺利召开</a></li>
-                    <li><a href="/Article/Details?id=8193">【04-12】周铁镇隆重举办2019年竺山风筝节</a></li>
-                    <li><a href="/Article/Details?id=8192">【04-12】周铁社区教育中心举办《三国演义》图片展</a></li>
-                    <li><a href="/Article/Details?id=8183">【04-08】缅怀革命先烈 共筑远大理想——徐舍镇开展青少年清明...</a></li>
-                    <li><a href="/Article/Details?id=8182">【04-08】“追寻烈士足迹，重温入党誓词”祭扫烈士墓主题党日活...</a></li>
-                    <li><a href="/Article/Details?id=8181">【04-05】新时代文明实践在太华：红色热土传承红色精神，太华缅...</a></li>
-                    <li><a href="/Article/Details?id=8180">【04-03】缅怀先烈 牢记使命</a></li>
+                <ul id="news">
+                    <%--                    <li><a href="file:///C:/Article/Details?id=8194">【04-12】<span style="color:#FF9933">【荐】</span>西渚镇社区教育工作会议暨业务培训班顺利召开</a></li>--%>
+                    <%--                    <li><a href="file:///C:/Article/Details?id=8193">【04-12】周铁镇隆重举办2019年竺山风筝节</a></li>--%>
+                    <%--                    <li><a href="file:///C:/Article/Details?id=8192">【04-12】周铁社区教育中心举办《三国演义》图片展</a></li>--%>
+                    <%--                    <li><a href="file:///C:/Article/Details?id=8183">【04-08】缅怀革命先烈 共筑远大理想——徐舍镇开展青少年清明...</a></li>--%>
+                    <%--                    <li><a href="file:///C:/Article/Details?id=8182">【04-08】“追寻烈士足迹，重温入党誓词”祭扫烈士墓主题党日活...</a></li>--%>
+                    <%--                    <li><a href="file:///C:/Article/Details?id=8181">【04-05】新时代文明实践在太华：红色热土传承红色精神，太华缅...</a></li>--%>
+                    <%--                    <li><a href="file:///C:/Article/Details?id=8180">【04-03】缅怀先烈 牢记使命</a></li>--%>
                 </ul>
 
             </div>
             <div class="notice-con" style="display: none;">
                 <div class="ncl-first clearfix">
                     <p class="nclf-icon l"><img src="<%= path%>/images/new-up.png"></p>
-                    <p class="nclf-text l" style="cursor:pointer;" onclick="location.href = &#39;/Article/Details?id=7660&#39;">“乡土文化教育网”投稿文章发布规则(试行)</p>
+                    <p class="nclf-text l" style="cursor:pointer;"
+                       onclick="location.href = &#39;/Article/Details?id=7660&#39;">“乡土文化教育网”投稿文章发布规则(试行)</p>
 
                 </div>
-                <ul>
-                    <li><a href="/Article/Details?id=8190">【04-11】<span style="color:#FF9933">【荐】</span>“乡土文化教育网”2018年度奖励领取通知</a></li>                                                    <li><a href="/Article/Details?id=8076">【03-09】2018年度“乡土文化教育网”学习币兑换通知及年度奖励...</a></li>
-                    <li><a href="/Article/Details?id=6769">【03-21】“乡土文化教育网”2017年度奖励领取通知</a></li>
-                    <li><a href="/Article/Details?id=6606">【02-24】2017年度“乡土文化教育网”学习币兑换通知及年度奖励...</a></li>
-                    <li><a href="/Article/Details?id=6198">【10-09】关于禁封恶意刷分账号的公示(2017.10)</a></li>
-                    <li><a href="/Article/Details?id=5827">【04-28】关于组织召开民办教育新政解读培训会的预备通知</a></li>
-                    <li><a href="/Article/Details?id=5586">【03-03】“乡土文化教育网”2016年度奖励领取通知</a></li>
+                <ul id="news2">
+                    <%--                    <li><a href="file:///C:/Article/Details?id=8190">【04-11】<span style="color:#FF9933">【荐】</span>“乡土文化教育网”2018年度奖励领取通知</a></li>                                                    <li><a href="file:///C:/Article/Details?id=8076">【03-09】2018年度“乡土文化教育网”学习币兑换通知及年度奖励...</a></li>--%>
+                    <%--                    <li><a href="file:///C:/Article/Details?id=6769">【03-21】“乡土文化教育网”2017年度奖励领取通知</a></li>--%>
+                    <%--                    <li><a href="file:///C:/Article/Details?id=6606">【02-24】2017年度“乡土文化教育网”学习币兑换通知及年度奖励...</a></li>--%>
+                    <%--                    <li><a href="file:///C:/Article/Details?id=6198">【10-09】关于禁封恶意刷分账号的公示(2017.10)</a></li>--%>
+                    <%--                    <li><a href="file:///C:/Article/Details?id=5827">【04-28】关于组织召开民办教育新政解读培训会的预备通知</a></li>--%>
+                    <%--                    <li><a href="file:///C:/Article/Details?id=5586">【03-03】“乡土文化教育网”2016年度奖励领取通知</a></li>--%>
                 </ul>
             </div>
         </div>
@@ -207,13 +209,15 @@
         </div>
         <div class="logining">
             <div class="login-ac clearfix">
-                <img src="<%= path%>/images/account-img.png"><input type="text" name="" id="userName" value="" placeholder="请输入用户名或账号">
+                <img src="<%= path%>/images/account-img.png"><input type="text" name="" id="userName" value=""
+                                                                    placeholder="请输入用户名或账号">
             </div>
             <div class="login-pw">
-                <img src="<%= path%>/images/password-img.png"><input type="password" name="" id="pwd" value="" placeholder="请输入用户密码">
+                <img src="<%= path%>/images/password-img.png"><input type="password" name="" id="pwd" value=""
+                                                                     placeholder="请输入用户密码">
             </div>
             <div class="logining-text clearfix">
-                <p><a href="/User/Register">账号注册</a> </p>
+                <p><a href="/User/Register">账号注册</a></p>
                 <a href="/User/ForgetPwd">忘记密码？</a>
             </div>
             <div class="logining-bottom">
@@ -239,7 +243,6 @@
         </div>
     </div>
 </div>
-
 
 
 <!--乡土文化-->
@@ -432,7 +435,8 @@
     </div>
     <div class="prize r">
         <div class="prize-title clearfix">
-            <div class="pt1 clearfix"><img src="images/prize-img2.png"><p>公布</p></div>
+            <div class="pt1 clearfix"><img src="images/prize-img2.png">
+                <p>公布</p></div>
 
         </div>
         <div class="prize-con">
@@ -440,7 +444,8 @@
                 <li>
                     <a href="javascript:;" class="prize-nl clearfix">
                         <div class="prize-nl-img l">
-                            <img src="<%= path%>/images/prize-head.png" onerror="this.src =&#39;images/prize-head.png&#39;">
+                            <img src="<%= path%>/images/prize-head.png"
+                                 onerror="this.src =&#39;images/prize-head.png&#39;">
                         </div>
                         <div class="prize-nl-text l">
                             <p class="prize-nl-text1">用户名:qq1212</p>
@@ -452,7 +457,8 @@
                 <li>
                     <a href="javascript:;" class="prize-nl clearfix">
                         <div class="prize-nl-img l">
-                            <img src="<%= path%>/images/prize-head.png" onerror="this.src =&#39;images/prize-head.png&#39;">
+                            <img src="<%= path%>/images/prize-head.png"
+                                 onerror="this.src =&#39;images/prize-head.png&#39;">
                         </div>
                         <div class="prize-nl-text l">
                             <p class="prize-nl-text1">用户名:cheng1212</p>
@@ -464,7 +470,8 @@
                 <li>
                     <a href="javascript:;" class="prize-nl clearfix">
                         <div class="prize-nl-img l">
-                            <img src="<%= path%>/images/prize-head.png" onerror="this.src =&#39;images/prize-head.png&#39;">
+                            <img src="<%= path%>/images/prize-head.png"
+                                 onerror="this.src =&#39;images/prize-head.png&#39;">
                         </div>
                         <div class="prize-nl-text l">
                             <p class="prize-nl-text1">用户名:zqzqzq</p>
@@ -647,7 +654,7 @@
     </div>
 </div>
 <!-- 底部 -->
-<%@include file="foot.jsp"%>
+<%@include file="foot.jsp" %>
 
 <div style="position: fixed;">
 
@@ -660,7 +667,8 @@
     $(function () {
         search("课程");
     });
-    function search(types){
+
+    function search(types) {
         $("#Search").click(function () {
             var keyword = $("#SearchKeyword").val();
             if (keyword == '请输入搜索关键字' || keyword == "") {
@@ -678,8 +686,9 @@
             window.location.href = url;
         });
     }
+
     $(".footer-right").click(function () {
-        $("html,body").animate({ scrollTop: 0 }, 500);
+        $("html,body").animate({scrollTop: 0}, 500);
     });
 </script>
 
@@ -783,7 +792,7 @@
         var password = $.trim($("#pwd").val());
         var remember = $("input[type='checkbox']").is(':checked');
         //var Remeber = $("#Remeber").val();
-        $.post("/Home/Login", { userName: userName, password: password, remember: remember }, function (msg) {
+        $.post("/Home/Login", {userName: userName, password: password, remember: remember}, function (msg) {
             if (msg.success) {
 
                 window.location.reload();
@@ -795,9 +804,9 @@
 
     $(document).ready(function () {
 
-        $(".nr_rank_xy tr").eq(1).find("td span").css({ "background": "red", "color": "#fff" })
-        $(".nr_rank_xy tr").eq(2).find("td span").css({ "background": "red", "color": "#fff" })
-        $(".nr_rank_xy tr").eq(3).find("td span").css({ "background": "red", "color": "#fff" })
+        $(".nr_rank_xy tr").eq(1).find("td span").css({"background": "red", "color": "#fff"})
+        $(".nr_rank_xy tr").eq(2).find("td span").css({"background": "red", "color": "#fff"})
+        $(".nr_rank_xy tr").eq(3).find("td span").css({"background": "red", "color": "#fff"})
 
         $(".nr_rank_title1").click(function () {
             $(".nr_rank_ad").show();
@@ -810,7 +819,7 @@
             $("#ArticleRankMore").attr('href', '/UserCenter/MyCreditRank');
         })
     })
-    $(".slider").tilesSlider({ random: true, loop: true, auto: true });
+    $(".slider").tilesSlider({random: true, loop: true, auto: true});
 </script>
 
 <%--
@@ -1497,20 +1506,71 @@
     };
     scroll();
 </script>--%>
+
+</body>
 <script>
-    window.onload =  function() {
+    window.onload = function () {
         var xhr;
-        if (window.XMLHttpRequest){
+        if (window.XMLHttpRequest) {
             xhr = new XMLHttpRequest();
-        } else{
+        } else {
             try {
                 xhr = new ActiveXObject("Msxml2.XMLHTTP");
-            }catch (e) {
+            } catch (e) {
                 xhr = new ActiveXObject("Microsoft.XMLHTTP");
             }
         }
-        nativeproduct();
 
+
+        nativeproduct();
+        cultrueNews();
+
+        <!--新闻部分 -->
+        function cultrueNews() {
+            xhr.open("GET", "<%=path %>/index?method=CultrueNews", true);
+            // alert(xhr.readyState);
+            xhr.onreadystatechange = function () {
+                // alert(xhr.readyState);
+                if (4 == xhr.readyState) {
+                    if (200 == xhr.status) {
+                        var result = xhr.responseText;
+                        // alert(typeof result);
+                        // 类型转换 object
+                        result = JSON.parse(result);
+                        displayCultrueNews(result);
+                    }
+                }
+            };
+            xhr.send();
+
+            // 解析字符串
+            function displayCultrueNews(json) {
+
+                var show = document.getElementById("show");
+                show.innerHTML = "";
+
+                var news = document.getElementById("news");
+                news.innerHTML = "";
+
+                var news2 = document.getElementById("news2");
+                news2.innerHTML = "";
+
+                var len = json.length;
+                for (var i = 0; i < len; i++) {
+                    var obj = json[i];
+                    var id = obj.id;
+                    var img = obj.img;
+                    var consistent = obj.consistent;
+                    var time = obj.time;
+                    // alert(id+img+consistent+time);
+                    // alert(consistent);
+                    show.innerHTML += "<li><a href=\'file:///C:/Article/Details?id=" + id + "\' target=\'_blank\'><img src='" + img + "' ><div class=\"text\"><p>乡愁不老 思念不改—...</p></div></a></li>";
+                    news.innerHTML += "<li><a href=\'file:///C:/Article/Details?id=" + id + "\'>【" + time + "】" + consistent + "</a></li>";
+                    news2.innerHTML += "<li><a href=\"file:///C:/Article/Details?id=" + id + "\">【" + time + "】" + consistent + "</a></li>";
+                }
+            }
+
+        }
 
         function nativeproduct() {
             xhr.open("GET", "<%=path %>/index?method=NativeProduct", true);
@@ -1531,9 +1591,9 @@
             // 解析字符串
             function displaySixProduct1(json) {
                 var len = json.length;
-                var ul = document.getElementsByClassName("picList");
+                var picList = document.getElementsByClassName("picList");
                 //alert(ul.length);
-                ul[0].innerHTML ="";
+                picList[0].innerHTML = "";
                 for (var i = 0; i < len; i++) {
                     var obj = json[i];
                     var id = obj.id;
@@ -1545,22 +1605,18 @@
                        alert(img);*/
 
 
-                    ul[0].innerHTML +="<li><div class='pic'>" +
+                    picList[0].innerHTML += "<li><div class='pic'>" +
                         "<a href='/Course/Details?id=11541' target='_blank'>" +
-                        "<img src='images/product/119684567.jpeg'/>"+
+                        "<img src='images/product/119684567.jpeg'/>" +
                         "</a></div>" +
                         "<div class='title'>" +
                         "<a href='/Course/Details?id=11541'>" +
-                        name+id+
+                        name + id +
                         "</a></div></li>";
-
                 }
             }
-
         }
     };
 
 </script>
-</body>
-
 </html>
