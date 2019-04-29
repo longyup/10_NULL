@@ -122,37 +122,37 @@
                     </ul>
                 </div>
                 <div class="bd">
-                    <ul>
-                        <li>
-                            <a href="file:///C:/Article/Details?id=7546" target="_blank">
-<%--
-                                <img src="Index_files/6e0fc38d-8548-4002-9567-b0f68a10bc39.jpg" onerror="this.src = &#39;/images/renwenxiuyang.jpg&#39;">
---%>
-                                <div class="text">
-                                    <p>乡愁不老 思念不改—...</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="file:///C:/Article/Details?id=7473" target="_blank">
-<%--
-                                <img src="Index_files/2510b36d-21f0-4421-8d3f-179c4e142f88.jpg" onerror="this.src = &#39;/images/renwenxiuyang.jpg&#39;">
---%>
-                                <div class="text">
-                                    <p>乡音嘹亮，唱响精彩万...</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="file:///C:/Article/Details?id=7354" target="_blank">
-<%--
-                                <img src="Index_files/a9f07aec-a1ad-48f4-81dc-8b6d2e2ba061.jpg" onerror="this.src = &#39;/images/renwenxiuyang.jpg&#39;">
---%>
-                                <div class="text">
-                                    <p>2018年度全国会计专业...</p>
-                                </div>
-                            </a>
-                        </li>
+                    <ul id="show">
+<%--                        <li>--%>
+<%--                            <a href="file:///C:/Article/Details?id=7546" target="_blank">--%>
+<%--&lt;%&ndash;--%>
+<%--                                <img src="Index_files/6e0fc38d-8548-4002-9567-b0f68a10bc39.jpg" onerror="this.src = &#39;/images/renwenxiuyang.jpg&#39;">--%>
+<%--&ndash;%&gt;--%>
+<%--                                <div class="text">--%>
+<%--                                    <p>乡愁不老 思念不改—...</p>--%>
+<%--                                </div>--%>
+<%--                            </a>--%>
+<%--                        </li>--%>
+<%--                        <li>--%>
+<%--                            <a href="file:///C:/Article/Details?id=7473" target="_blank">--%>
+<%--&lt;%&ndash;--%>
+<%--                                <img src="Index_files/2510b36d-21f0-4421-8d3f-179c4e142f88.jpg" onerror="this.src = &#39;/images/renwenxiuyang.jpg&#39;">--%>
+<%--&ndash;%&gt;--%>
+<%--                                <div class="text">--%>
+<%--                                    <p>乡音嘹亮，唱响精彩万...</p>--%>
+<%--                                </div>--%>
+<%--                            </a>--%>
+<%--                        </li>--%>
+<%--                        <li>--%>
+<%--                            <a href="file:///C:/Article/Details?id=7354" target="_blank">--%>
+<%--&lt;%&ndash;--%>
+<%--                                <img src="Index_files/a9f07aec-a1ad-48f4-81dc-8b6d2e2ba061.jpg" onerror="this.src = &#39;/images/renwenxiuyang.jpg&#39;">--%>
+<%--&ndash;%&gt;--%>
+<%--                                <div class="text">--%>
+<%--                                    <p>2018年度全国会计专业...</p>--%>
+<%--                                </div>--%>
+<%--                            </a>--%>
+<%--                        </li>--%>
                     </ul>
                 </div>
 
@@ -173,14 +173,14 @@
                     <p class="nclf-icon l"><img src="<%= path%>/images/new-up.png"></p>
                     <p class="nclf-text l" style="cursor:pointer;" onclick="location.href = &#39;/Article/Details?id=7264&#39;">xx村被认定为国家级非物质文化教育示范村</p>
                 </div>
-                <ul>
-                    <li><a href="file:///C:/Article/Details?id=8194">【04-12】<span style="color:#FF9933">【荐】</span>西渚镇社区教育工作会议暨业务培训班顺利召开</a></li>
-                    <li><a href="file:///C:/Article/Details?id=8193">【04-12】周铁镇隆重举办2019年竺山风筝节</a></li>
-                    <li><a href="file:///C:/Article/Details?id=8192">【04-12】周铁社区教育中心举办《三国演义》图片展</a></li>
-                    <li><a href="file:///C:/Article/Details?id=8183">【04-08】缅怀革命先烈 共筑远大理想——徐舍镇开展青少年清明...</a></li>
-                    <li><a href="file:///C:/Article/Details?id=8182">【04-08】“追寻烈士足迹，重温入党誓词”祭扫烈士墓主题党日活...</a></li>
-                    <li><a href="file:///C:/Article/Details?id=8181">【04-05】新时代文明实践在太华：红色热土传承红色精神，太华缅...</a></li>
-                    <li><a href="file:///C:/Article/Details?id=8180">【04-03】缅怀先烈 牢记使命</a></li>
+                <ul id="news">
+<%--                    <li><a href="file:///C:/Article/Details?id=8194">【04-12】<span style="color:#FF9933">【荐】</span>西渚镇社区教育工作会议暨业务培训班顺利召开</a></li>--%>
+<%--                    <li><a href="file:///C:/Article/Details?id=8193">【04-12】周铁镇隆重举办2019年竺山风筝节</a></li>--%>
+<%--                    <li><a href="file:///C:/Article/Details?id=8192">【04-12】周铁社区教育中心举办《三国演义》图片展</a></li>--%>
+<%--                    <li><a href="file:///C:/Article/Details?id=8183">【04-08】缅怀革命先烈 共筑远大理想——徐舍镇开展青少年清明...</a></li>--%>
+<%--                    <li><a href="file:///C:/Article/Details?id=8182">【04-08】“追寻烈士足迹，重温入党誓词”祭扫烈士墓主题党日活...</a></li>--%>
+<%--                    <li><a href="file:///C:/Article/Details?id=8181">【04-05】新时代文明实践在太华：红色热土传承红色精神，太华缅...</a></li>--%>
+<%--                    <li><a href="file:///C:/Article/Details?id=8180">【04-03】缅怀先烈 牢记使命</a></li>--%>
                 </ul>
 
             </div>
@@ -190,13 +190,13 @@
                     <p class="nclf-text l" style="cursor:pointer;" onclick="location.href = &#39;/Article/Details?id=7660&#39;">“乡土文化教育网”投稿文章发布规则(试行)</p>
 
                 </div>
-                <ul>
-                    <li><a href="file:///C:/Article/Details?id=8190">【04-11】<span style="color:#FF9933">【荐】</span>“乡土文化教育网”2018年度奖励领取通知</a></li>                                                    <li><a href="file:///C:/Article/Details?id=8076">【03-09】2018年度“乡土文化教育网”学习币兑换通知及年度奖励...</a></li>
-                    <li><a href="file:///C:/Article/Details?id=6769">【03-21】“乡土文化教育网”2017年度奖励领取通知</a></li>
-                    <li><a href="file:///C:/Article/Details?id=6606">【02-24】2017年度“乡土文化教育网”学习币兑换通知及年度奖励...</a></li>
-                    <li><a href="file:///C:/Article/Details?id=6198">【10-09】关于禁封恶意刷分账号的公示(2017.10)</a></li>
-                    <li><a href="file:///C:/Article/Details?id=5827">【04-28】关于组织召开民办教育新政解读培训会的预备通知</a></li>
-                    <li><a href="file:///C:/Article/Details?id=5586">【03-03】“乡土文化教育网”2016年度奖励领取通知</a></li>
+                <ul id="new2">
+<%--                    <li><a href="file:///C:/Article/Details?id=8190">【04-11】<span style="color:#FF9933">【荐】</span>“乡土文化教育网”2018年度奖励领取通知</a></li>                                                    <li><a href="file:///C:/Article/Details?id=8076">【03-09】2018年度“乡土文化教育网”学习币兑换通知及年度奖励...</a></li>--%>
+<%--                    <li><a href="file:///C:/Article/Details?id=6769">【03-21】“乡土文化教育网”2017年度奖励领取通知</a></li>--%>
+<%--                    <li><a href="file:///C:/Article/Details?id=6606">【02-24】2017年度“乡土文化教育网”学习币兑换通知及年度奖励...</a></li>--%>
+<%--                    <li><a href="file:///C:/Article/Details?id=6198">【10-09】关于禁封恶意刷分账号的公示(2017.10)</a></li>--%>
+<%--                    <li><a href="file:///C:/Article/Details?id=5827">【04-28】关于组织召开民办教育新政解读培训会的预备通知</a></li>--%>
+<%--                    <li><a href="file:///C:/Article/Details?id=5586">【03-03】“乡土文化教育网”2016年度奖励领取通知</a></li>--%>
                 </ul>
             </div>
         </div>
@@ -1507,32 +1507,46 @@
             }
         }
 
-        xhr.open("GET","<%=path %>/index?method=CultrueNews",true);
-        alert(xhr.readyState);
-        xhr.onreadystatechange = function () {
-            alert(xhr.readyState);
-            if (4 == xhr.readyState){
-                if(200 == xhr.status){
-                    var result = xhr.responseText;
-                    alert(typeof result);
-                    // 类型转换 object
-                    result = JSON.parse(result);
-                    displaySixProduct1(result);
-                }
-            }
-        };
-        xhr.send();
-        // 解析字符串
-        function displaySixProduct1(json) {
-            var len = json.length;
-            for(var i = 0; i< len;i++){
-                var obj = json[i];
+       xhr.open("GET","<%=path %>/index?method=CultrueNews",true);
+       // alert(xhr.readyState);
+       xhr.onreadystatechange = function () {
+           // alert(xhr.readyState);
+           if (4 == xhr.readyState){
+               if(200 == xhr.status){
+                   var result = xhr.responseText;
+                   // alert(typeof result);
+                   // 类型转换 object
+                   result = JSON.parse(result);
+                   displayCultrueNews(result);
+               }
+           }
+       };
+       xhr.send();
+       // 解析字符串
+       function displayCultrueNews(json) {
+
+           var url = document.getElementById("show");
+           url.innerHTML="";
+
+           var url1 = document.getElementById("news");
+           url1.innerHTML="";
 
 
 
-            }
-        }
+           var len = json.length;
+           for(var i = 0; i< len;i++){
+               var obj = json[i];
+               var id =obj.id;
+               var img = obj.img;
+               var consistent =obj.consistent;
+               var time = obj.time;
+               // alert(id+img+consistent+time);
+               // alert(consistent);
 
+               url.innerHTML +="<li><a href=\'file:///C:/Article/Details?id="+id+"\' target=\'_blank\'><img src='"+img+"' ><div class=\"text\"><p>乡愁不老 思念不改—...</p></div></a></li>";
+               url1.innerHTML +="<li><a href=\'file:///C:/Article/Details?id="+id+"\'>"+consistent+"</a></li>";
+           }
+       };
 
     };
 
