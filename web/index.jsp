@@ -190,7 +190,7 @@
                     <p class="nclf-text l" style="cursor:pointer;" onclick="location.href = &#39;/Article/Details?id=7660&#39;">“乡土文化教育网”投稿文章发布规则(试行)</p>
 
                 </div>
-                <ul id="new2">
+                <ul id="news2">
 <%--                    <li><a href="file:///C:/Article/Details?id=8190">【04-11】<span style="color:#FF9933">【荐】</span>“乡土文化教育网”2018年度奖励领取通知</a></li>                                                    <li><a href="file:///C:/Article/Details?id=8076">【03-09】2018年度“乡土文化教育网”学习币兑换通知及年度奖励...</a></li>--%>
 <%--                    <li><a href="file:///C:/Article/Details?id=6769">【03-21】“乡土文化教育网”2017年度奖励领取通知</a></li>--%>
 <%--                    <li><a href="file:///C:/Article/Details?id=6606">【02-24】2017年度“乡土文化教育网”学习币兑换通知及年度奖励...</a></li>--%>
@@ -1531,6 +1531,9 @@
            var url1 = document.getElementById("news");
            url1.innerHTML="";
 
+           var url2 = document.getElementById("news2");
+           url2.innerHTML="";
+
 
 
            var len = json.length;
@@ -1544,7 +1547,8 @@
                // alert(consistent);
 
                url.innerHTML +="<li><a href=\'file:///C:/Article/Details?id="+id+"\' target=\'_blank\'><img src='"+img+"' ><div class=\"text\"><p>乡愁不老 思念不改—...</p></div></a></li>";
-               url1.innerHTML +="<li><a href=\'file:///C:/Article/Details?id="+id+"\'>"+consistent+"</a></li>";
+               url1.innerHTML +="<li><a href=\'file:///C:/Article/Details?id="+id+"\'>【"+time+"】"+consistent+"</a></li>";
+               url2.innerHTML +="<li><a href=\"file:///C:/Article/Details?id="+id+"\">【"+time+"】"+consistent+"</a></li>";
            }
        };
 
