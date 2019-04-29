@@ -62,67 +62,7 @@
 
 
 <!--nav 导航-->
-
-<div class="header">
-    <div class="section-top1">
-        您好,欢迎您进入XXXXXX网！<a href="#">登录</a><a href="#">注册</a>
-    </div>
-
-
-    <div class="header-con">
-        <div class="top clearfix">
-            <div class="top-logo l">
-                <img src="<%= path%>/images/logo-yx.png" />
-            </div>
-            <div class="top_2 r clearfix">
-                <div class="search_1 l">
-                    <div class="search_con">
-                        <div class="type">
-                            课程
-                        </div>
-                        <img src="<%= path%>/images/arrow-down.png" class="search_img">
-                    </div>
-                    <div class="type_con" id="SreachType">
-                        <ul>
-                            <li onclick="search('新闻')">新闻</li>
-                            <li onclick="search('课程')">课程</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <input type="text" id="SearchKeyword" value="" placeholder="请输入搜索关键字" class="l">
-                <div class="search_2 l">
-                    <a href="javascript:;" id="Search"><img src="<%= path%>/images/glass.png" /></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="nav">
-        <div class="nav-con">
-            <ul class="clearfix">
-                <li><a href="#" style="color:white;" class="nl-title">网站首页</a></li>
-                <li><a href="culture.html" style="color:white;" class="nl-title">文化遗址</a></li>
-                <li>
-                    <a href="culture.html" style="color:white;" class="nl-title">特色美食</a>
-
-                </li>
-                <li><a href="culture.html" style="color:white;" class="nl-title">名人风情</a></li>
-                <li><a href="culture.html" style="color:white;" class="nl-title">风情民俗</a></li>
-                <li><a href="culture.html" style="color:white;" class="nl-title">活动一览</a>
-                    <div class="list">
-                        <a href="/Course/Index?ChannelId=82" style="color:white;">遗址保护</a>
-                        <a href="/Course/Index?ChannelId=83" style="color:white;">美食保护</a>
-                        <a href="/Course/Index?ChannelId=84" style="color:white;">民俗保护</a>
-
-                    </div>
-                </li>
-                <li><a href="#" style="color:white;" class="nl-title">杂谈交流</a></li>
-                <li><a href="#" style="color:white;" class="nl-title">关于我们</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-
+<%@include file="../head.jsp"%>
 
 
 
@@ -175,33 +115,7 @@
 
 
 
-
-
-<div class="footer ">
-    <div class="footer-con clearfix">
-        <div class="footer-left">
-            <div class="footer-link">
-                <ul class="clearfix">
-                    <li><a href="#">首页</a></li>
-                    <li><a href="<%=path%>/CourseCenter.html">活动中心</a></li>
-                    <li><a href="<%=path%>/CourseCenter.html">个人中心</a></li>
-
-                </ul>
-            </div>
-            <div class="footer-text">
-                <!--  <p>主办单位：宜兴社区培训学院  版权归属：江苏省宜兴中等专业学校(宜兴开放大学)(江苏省宜兴高级技工学校、宜兴市旅游职业学校)</p>
-                <p>电话： 0510-87975061  客服QQ群：134806811   苏ICP备05002113号-3    学习访问人次：1182938   课程总数:8954</p> -->
-                <p> Copyright@ 10_NULL版权所有</p>
-            </div>
-        </div>
-        <div class="footer-right">
-            <img src="<%= path%>/images/back-top.png" />
-            <p>返回顶部</p>
-        </div>
-    </div>
-
-</div>
-
+<%@include file="../foot.jsp"%>
 
 
 <script src="<%= path%>/js/jquery-1.11.2.min.js" type="text/javascript"></script>

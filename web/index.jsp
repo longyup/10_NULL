@@ -124,9 +124,9 @@
                 <div class="bd">
                     <ul>
                         <li>
-                            <a href="file:///C:/Article/Details?id=7546" target="_blank">
+                            <a href="/Article/Details?id=7546" target="_blank">
 <%--
-                                <img src="Index_files/6e0fc38d-8548-4002-9567-b0f68a10bc39.jpg" onerror="this.src = &#39;/images/renwenxiuyang.jpg&#39;">
+                                <img src="http://112.25.215.35:80/Resource/Images/Article/6e0fc38d-8548-4002-9567-b0f68a10bc39.jpg" onerror="this.src = '/images/renwenxiuyang.jpg'" />
 --%>
                                 <div class="text">
                                     <p>乡愁不老 思念不改—...</p>
@@ -134,7 +134,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="file:///C:/Article/Details?id=7473" target="_blank">
+                            <a href="/Article/Details?id=7473" target="_blank">
 <%--
                                 <img src="Index_files/2510b36d-21f0-4421-8d3f-179c4e142f88.jpg" onerror="this.src = &#39;/images/renwenxiuyang.jpg&#39;">
 --%>
@@ -144,7 +144,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="file:///C:/Article/Details?id=7354" target="_blank">
+                            <a href="/Article/Details?id=7354" target="_blank">
 <%--
                                 <img src="Index_files/a9f07aec-a1ad-48f4-81dc-8b6d2e2ba061.jpg" onerror="this.src = &#39;/images/renwenxiuyang.jpg&#39;">
 --%>
@@ -166,7 +166,7 @@
                         <li>通知公告</li>
                     </ul>
                 </div>
-                <a href="file:///C:/Article/Index" class="notice-more"><img src="images/more.png"></a>
+                <a href="/Article/Index" class="notice-more"><img src="images/more.png"></a>
             </div>
             <div class="notice-con">
                 <div class="ncl-first clearfix">
@@ -174,13 +174,13 @@
                     <p class="nclf-text l" style="cursor:pointer;" onclick="location.href = &#39;/Article/Details?id=7264&#39;">xx村被认定为国家级非物质文化教育示范村</p>
                 </div>
                 <ul>
-                    <li><a href="file:///C:/Article/Details?id=8194">【04-12】<span style="color:#FF9933">【荐】</span>西渚镇社区教育工作会议暨业务培训班顺利召开</a></li>
-                    <li><a href="file:///C:/Article/Details?id=8193">【04-12】周铁镇隆重举办2019年竺山风筝节</a></li>
-                    <li><a href="file:///C:/Article/Details?id=8192">【04-12】周铁社区教育中心举办《三国演义》图片展</a></li>
-                    <li><a href="file:///C:/Article/Details?id=8183">【04-08】缅怀革命先烈 共筑远大理想——徐舍镇开展青少年清明...</a></li>
-                    <li><a href="file:///C:/Article/Details?id=8182">【04-08】“追寻烈士足迹，重温入党誓词”祭扫烈士墓主题党日活...</a></li>
-                    <li><a href="file:///C:/Article/Details?id=8181">【04-05】新时代文明实践在太华：红色热土传承红色精神，太华缅...</a></li>
-                    <li><a href="file:///C:/Article/Details?id=8180">【04-03】缅怀先烈 牢记使命</a></li>
+                    <li><a href="/Article/Details?id=8194">【04-12】<span style="color:#FF9933">【荐】</span>西渚镇社区教育工作会议暨业务培训班顺利召开</a></li>
+                    <li><a href="/Article/Details?id=8193">【04-12】周铁镇隆重举办2019年竺山风筝节</a></li>
+                    <li><a href="/Article/Details?id=8192">【04-12】周铁社区教育中心举办《三国演义》图片展</a></li>
+                    <li><a href="/Article/Details?id=8183">【04-08】缅怀革命先烈 共筑远大理想——徐舍镇开展青少年清明...</a></li>
+                    <li><a href="/Article/Details?id=8182">【04-08】“追寻烈士足迹，重温入党誓词”祭扫烈士墓主题党日活...</a></li>
+                    <li><a href="/Article/Details?id=8181">【04-05】新时代文明实践在太华：红色热土传承红色精神，太华缅...</a></li>
+                    <li><a href="/Article/Details?id=8180">【04-03】缅怀先烈 牢记使命</a></li>
                 </ul>
 
             </div>
@@ -191,12 +191,12 @@
 
                 </div>
                 <ul>
-                    <li><a href="file:///C:/Article/Details?id=8190">【04-11】<span style="color:#FF9933">【荐】</span>“乡土文化教育网”2018年度奖励领取通知</a></li>                                                    <li><a href="file:///C:/Article/Details?id=8076">【03-09】2018年度“乡土文化教育网”学习币兑换通知及年度奖励...</a></li>
-                    <li><a href="file:///C:/Article/Details?id=6769">【03-21】“乡土文化教育网”2017年度奖励领取通知</a></li>
-                    <li><a href="file:///C:/Article/Details?id=6606">【02-24】2017年度“乡土文化教育网”学习币兑换通知及年度奖励...</a></li>
-                    <li><a href="file:///C:/Article/Details?id=6198">【10-09】关于禁封恶意刷分账号的公示(2017.10)</a></li>
-                    <li><a href="file:///C:/Article/Details?id=5827">【04-28】关于组织召开民办教育新政解读培训会的预备通知</a></li>
-                    <li><a href="file:///C:/Article/Details?id=5586">【03-03】“乡土文化教育网”2016年度奖励领取通知</a></li>
+                    <li><a href="/Article/Details?id=8190">【04-11】<span style="color:#FF9933">【荐】</span>“乡土文化教育网”2018年度奖励领取通知</a></li>                                                    <li><a href="/Article/Details?id=8076">【03-09】2018年度“乡土文化教育网”学习币兑换通知及年度奖励...</a></li>
+                    <li><a href="/Article/Details?id=6769">【03-21】“乡土文化教育网”2017年度奖励领取通知</a></li>
+                    <li><a href="/Article/Details?id=6606">【02-24】2017年度“乡土文化教育网”学习币兑换通知及年度奖励...</a></li>
+                    <li><a href="/Article/Details?id=6198">【10-09】关于禁封恶意刷分账号的公示(2017.10)</a></li>
+                    <li><a href="/Article/Details?id=5827">【04-28】关于组织召开民办教育新政解读培训会的预备通知</a></li>
+                    <li><a href="/Article/Details?id=5586">【03-03】“乡土文化教育网”2016年度奖励领取通知</a></li>
                 </ul>
             </div>
         </div>
@@ -213,8 +213,8 @@
                 <img src="<%= path%>/images/password-img.png"><input type="password" name="" id="pwd" value="" placeholder="请输入用户密码">
             </div>
             <div class="logining-text clearfix">
-                <p><a href="file:///C:/User/Register">账号注册</a> </p>
-                <a href="file:///C:/User/ForgetPwd">忘记密码？</a>
+                <p><a href="/User/Register">账号注册</a> </p>
+                <a href="/User/ForgetPwd">忘记密码？</a>
             </div>
             <div class="logining-bottom">
                 <button type="submit" id="btnlogin" onclick="login()">
@@ -252,41 +252,42 @@
         <ul class="clearfix">
                             <li class="course_left_on" onmouseover="ShowCourse(242)">
                                 <input type="hidden" id="hdCourseId" value="242">
-                                <a target="_blank" href="file:///C:/Course/Index/242">文化遗产</a>
+                                <a target="_blank" href="/Course/Index/242">文化遗产</a>
                             </li>
                             <li onmouseover="ShowCourse(211)">
-                                <a target="_blank" href="file:///C:/Course/Index/211">特色美食</a>
+                                <a target="_blank" href="/Course/Index/211">特色美食</a>
                             </li>
                             <li onmouseover="ShowCourse(197)">
-                                <a target="_blank" href="file:///C:/Course/Index/197">名人趣事</a>
+                                <a target="_blank" href="/Course/Index/197">名人趣事</a>
                             </li>
                             <li onmouseover="ShowCourse(190)">
-                                <a target="_blank" href="file:///C:/Course/Index/190">民俗风情</a>
+                                <a target="_blank" href="/Course/Index/190">民俗风情</a>
                             </li>
                             <li onmouseover="ShowCourse(184)">
-                                <a target="_blank" href="file:///C:/Course/Index/184">文化遗址</a>
+                                <a target="_blank" href="/Course/Index/184">文化遗址</a>
                             </li>
                             <li onmouseover="ShowCourse(178)">
-                                <a target="_blank" href="file:///C:/Course/Index/178">文化讯息</a>
+                                <a target="_blank" href="/Course/Index/178">文化讯息</a>
                             </li>
         </ul>
     </div>
     <div style="margin-left: 90px" class="cc-title3 l">
-        <a href="file:///C:/Course"><img src="images/more.png"></a>
+        <a href="/Course"><img src="images/more.png"></a>
     </div>
 
 </div>
     <div class="cc-con" id="ChannelCourse">
         正在加载文化信息...
-    </div> -->
+    </div>
 </div>
 
+ -->
 <div class="tc-prize clearfix">
     <!--土特产轮播图topicCourse-->
     <div class="tc l">
         <div class="tc-title clearfix">
             <p>乡土特产</p>
-            <a href="file:///C:/Course/TopicIndex"><img src="<%= path%>/images/more.png"></a>
+            <a href="/Course/TopicIndex"><img src="<%= path%>/images/more.png"></a>
         </div>
         <div class="tc-con">
             <div class="tcl-lb">
@@ -294,131 +295,131 @@
                     <ul class="picList">
                         <li>
                             <div class="pic">
-                                <a href="file:///C:/Course/Details?id=11541" target="_blank">
-<%--
-                                    <img src="Index_files/2df0210e-b6bc-40ba-8591-c1f21254ec5b.jpg">
---%>
+                                <a href="/Course/Details?id=11541" target="_blank">
+                                    <img src="images/product/119684567.jpeg"/>
+
                                 </a>
                             </div>
                             <div class="title">
-                                <a href="file:///C:/Course/Details?id=11541">
+                                <a href="/Course/Details?id=11541">
                                     无痛英语01建立模型理...</a>
                             </div>
                         </li>
                         <li>
                             <div class="pic">
-                                <a href="file:///C:/Course/Details?id=11542" target="_blank">
-<%--
-                                    <img src="Index_files/8af8ca21-bb5e-43d8-9ace-38315d70ae9a.jpg">
---%>
+                                <a href="/Course/Details?id=11542" target="_blank">
+                                    <img src="images/product/119684567.jpeg"/>
+                                    <%--
+                                                                        <img src="Index_files/8af8ca21-bb5e-43d8-9ace-38315d70ae9a.jpg">
+                                    --%>
                                 </a>
                             </div>
                             <div class="title">
-                                <a href="file:///C:/Course/Details?id=11542">
+                                <a href="/Course/Details?id=11542">
                                     无痛英语02英汉排序差...</a>
                             </div>
                         </li>
                         <li>
                             <div class="pic">
-                                <a href="file:///C:/Course/Details?id=11543" target="_blank">
-<%--
-                                    <img src="Index_files/22d3db60-d9b3-4644-af64-18360550b8af.jpg">
---%>
+                                <a href="/Course/Details?id=11543" target="_blank">
+                                    <img src="images/product/119684567.jpeg"/>
                                 </a>
                             </div>
                             <div class="title">
-                                <a href="file:///C:/Course/Details?id=11543">
+                                <a href="/Course/Details?id=11543">
                                     无痛英语03主干定位</a>
                             </div>
                         </li>
                         <li>
                             <div class="pic">
-                                <a href="file:///C:/Course/Details?id=11544" target="_blank">
-<%--
-                                    <img src="Index_files/4a66b8c6-7cbb-4e9a-bb32-02669d374f8e.jpg">
---%>
+                                <a href="/Course/Details?id=11544" target="_blank">
+                                    <img src="images/product/119684567.jpeg"/>
+                                    <%--
+                                                                        <img src="Index_files/4a66b8c6-7cbb-4e9a-bb32-02669d374f8e.jpg">
+                                    --%>
                                 </a>
                             </div>
                             <div class="title">
-                                <a href="file:///C:/Course/Details?id=11544">
+                                <a href="/Course/Details?id=11544">
                                     无痛英语04英汉公式神...</a>
                             </div>
                         </li>
                         <li>
                             <div class="pic">
-                                <a href="file:///C:/Course/Details?id=11545" target="_blank">
-<%--
-                                    <img src="Index_files/dcdf7fb6-2deb-4dc4-9862-a18ffda647a0.jpg">
---%>
+                                <a href="/Course/Details?id=11545" target="_blank">
+                                    <img src="images/product/119684567.jpeg"/>
+                                    <%--
+                                                                        <img src="Index_files/dcdf7fb6-2deb-4dc4-9862-a18ffda647a0.jpg">
+                                    --%>
                                 </a>
                             </div>
                             <div class="title">
-                                <a href="file:///C:/Course/Details?id=11545">
+                                <a href="/Course/Details?id=11545">
                                     无痛英语05英汉公式神...</a>
                             </div>
                         </li>
                         <li>
                             <div class="pic">
-                                <a href="file:///C:/Course/Details?id=11546" target="_blank">
-<%--
-                                    <img src="Index_files/9c252126-f975-4928-8d5d-1b00f7190f71.jpg">
---%>
+                                <a href="/Course/Details?id=11546" target="_blank">
+                                    <%--
+                                                                        <img src="Index_files/9c252126-f975-4928-8d5d-1b00f7190f71.jpg">
+                                    --%>
                                 </a>
                             </div>
                             <div class="title">
-                                <a href="file:///C:/Course/Details?id=11546">
+                                <a href="/Course/Details?id=11546">
                                     无痛英语06修辞的排序...</a>
                             </div>
                         </li>
                         <li>
                             <div class="pic">
-                                <a href="file:///C:/Course/Details?id=11547" target="_blank">
-<%--
-                                    <img src="Index_files/612ecc7d-d104-48e2-9a0a-f90ac8d562c1.jpg">
---%>
+                                <a href="/Course/Details?id=11547" target="_blank">
+                                    <%--
+                                                                        <img src="Index_files/612ecc7d-d104-48e2-9a0a-f90ac8d562c1.jpg">
+                                    --%>
                                 </a>
                             </div>
                             <div class="title">
-                                <a href="file:///C:/Course/Details?id=11547">
+                                <a href="/Course/Details?id=11547">
                                     无痛英语07修辞的排序...</a>
                             </div>
                         </li>
                         <li>
                             <div class="pic">
-                                <a href="file:///C:/Course/Details?id=11548" target="_blank">
-<%--
-                                    <img src="Index_files/1954f1e1-2d5c-42ad-8d5a-8e83169ba4fb.jpg">
---%>
+                                <a href="/Course/Details?id=11548" target="_blank">
+                                    <%--
+                                                                        <img src="Index_files/1954f1e1-2d5c-42ad-8d5a-8e83169ba4fb.jpg">
+                                    --%>
                                 </a>
                             </div>
                             <div class="title">
-                                <a href="file:///C:/Course/Details?id=11548">
+                                <a href="/Course/Details?id=11548">
                                     无痛英语08并列不变序...</a>
                             </div>
                         </li>
                         <li>
                             <div class="pic">
-                                <a href="file:///C:/Course/Details?id=11549" target="_blank">
-<%--
-                                    <img src="Index_files/aa931aa0-3a16-4a23-becd-82756b750cb7.jpg">
---%>
+                                <a href="/Course/Details?id=11549" target="_blank">
+                                    <%--
+                                                                        <img src="Index_files/aa931aa0-3a16-4a23-becd-82756b750cb7.jpg">
+                                    --%>
                                 </a>
                             </div>
                             <div class="title">
-                                <a href="file:///C:/Course/Details?id=11549">
+                                <a href="/Course/Details?id=11549">
                                     无痛英语09并列不变序...</a>
                             </div>
                         </li>
                         <li>
                             <div class="pic">
-                                <a href="file:///C:/Course/Details?id=11550" target="_blank">
-<%--
-                                    <img src="Index_files/1267df7e-ad2c-44e0-b7a4-f7847b98c6aa.jpg">
---%>
+                                <a href="/Course/Details?id=11550" target="_blank">
+                                    <%--
+                                                                        <img src="Index_files/1267df7e-ad2c-44e0-b7a4-f7847b98c6aa.jpg">
+                                    --%>
                                 </a>
                             </div>
                             <div class="title">
-                                <a href="file:///C:/Course/Details?id=11550">
+                                <a href="/Course/Details?id=11550">
                                     无痛英语10公式大练兵</a>
                             </div>
                         </li>
@@ -481,88 +482,88 @@
     <div class="show l">
         <div class="show-title clearfix">
             <p>乡土文化</p>
-            <a href="file:///C:/Article/Index?id=127"><img src="f../../images/more.png"></a>
+            <a href="/Article/Index?id=127"><img src="f../../images/more.png"></a>
         </div>
         <div class="show-con clearfix">
             <div class="sc-list">
-                <a href="file:///C:/Article/Index?id=128" class="sc-list-img scl1">
+                <a href="/Article/Index?id=128" class="sc-list-img scl1">
                     <img src="f../../images/show-img1.png">
                     <p class="sc-list-text">民宿风情</p>
                 </a>
                 <ul>
                     <li>
-                        <a href="file:///C:/Article/Details?id=7208">
+                        <a href="/Article/Details?id=7208">
                             万石荟萃~快来这里赏...
                         </a>
                     </li>
                     <li>
-                        <a href="file:///C:/Article/Details?id=7071">
+                        <a href="/Article/Details?id=7071">
                             芹菜里谱写青春华章
                         </a>
                     </li>
                     <li>
-                        <a href="file:///C:/Article/Details?id=6803">
+                        <a href="/Article/Details?id=6803">
                             行业尖兵热血搏击——...
                         </a>
                     </li>
                     <li>
-                        <a href="file:///C:/Article/Details?id=6128">
+                        <a href="/Article/Details?id=6128">
                             相见甚是怀念！——『...
                         </a>
                     </li>
                 </ul>
             </div>
             <div class="sc-list">
-                <a href="file:///C:/Article/Index?id=129" class="sc-list-img scl2">
+                <a href="/Article/Index?id=129" class="sc-list-img scl2">
                     <img src="f../../images/show-img2.png">
                     <p class="sc-list-text">【名人趣事】</p>
                 </a>
                 <ul>
                     <li>
-                        <a href="file:///C:/Article/Details?id=6480">
+                        <a href="/Article/Details?id=6480">
                             曾经同枕漕桥河——致...
                         </a>
                     </li>
                     <li>
-                        <a href="file:///C:/Article/Details?id=5723">
+                        <a href="/Article/Details?id=5723">
                             东城人的骄傲—无线电...
                         </a>
                     </li>
                     <li>
-                        <a href="file:///C:/Article/Details?id=5327">
+                        <a href="/Article/Details?id=5327">
                             蛤蟆皮旧二胡成就辉煌...
                         </a>
                     </li>
                     <li>
-                        <a href="file:///C:/Article/Details?id=5324">
+                        <a href="/Article/Details?id=5324">
                             爱心荡漾送春风-----...
                         </a>
                     </li>
                 </ul>
             </div>
             <div class="sc-list">
-                <a href="file:///C:/Article/Index?id=131" class="sc-list-img scl3">
+                <a href="/Article/Index?id=131" class="sc-list-img scl3">
                     <img src="f../../images/show-img3.png">
                     <p class="sc-list-text">【文化遗产】</p>
                 </a>
                 <ul>
                     <li>
-                        <a href="file:///C:/Article/Details?id=15">
+                        <a href="/Article/Details?id=15">
                             清代茶贡终结和茶业起...
                         </a>
                     </li>
                     <li>
-                        <a href="file:///C:/Article/Details?id=14">
+                        <a href="/Article/Details?id=14">
                             清末民初宜兴茶业的艰...
                         </a>
                     </li>
                     <li>
-                        <a href="file:///C:/Article/Details?id=13">
+                        <a href="/Article/Details?id=13">
                             宜兴岕茶兴起和制茶工...
                         </a>
                     </li>
                     <li>
-                        <a href="file:///C:/Article/Details?id=12">
+                        <a href="/Article/Details?id=12">
                             明代宜兴茶贡和当时茶...
                         </a>
                     </li>
@@ -642,6 +643,7 @@
             </ul>
         </div>
 
+
     </div>
 </div>
 <!-- 底部 -->
@@ -650,6 +652,9 @@
 <div style="position: fixed;">
 
 </div>
+
+<!-- JS加载顺序的问题 会导致轮播图失效-->
+
 
 <script type="text/javascript">
     $(function () {
@@ -1492,10 +1497,8 @@
     };
     scroll();
 </script>--%>
-
-</body>
 <script>
-   window.onload =  function() {
+    window.onload =  function() {
         var xhr;
         if (window.XMLHttpRequest){
             xhr = new XMLHttpRequest();
@@ -1506,35 +1509,58 @@
                 xhr = new ActiveXObject("Microsoft.XMLHTTP");
             }
         }
+        nativeproduct();
 
-        xhr.open("GET","<%=path %>/index?method=CultrueNews",true);
-        alert(xhr.readyState);
-        xhr.onreadystatechange = function () {
-            alert(xhr.readyState);
-            if (4 == xhr.readyState){
-                if(200 == xhr.status){
-                    var result = xhr.responseText;
-                    alert(typeof result);
-                    // 类型转换 object
-                    result = JSON.parse(result);
-                    displaySixProduct1(result);
+
+        function nativeproduct() {
+            xhr.open("GET", "<%=path %>/index?method=NativeProduct", true);
+            xhr.onreadystatechange = function () {
+                if (4 == xhr.readyState) {
+                    if (200 == xhr.status) {
+                        var result = xhr.responseText;
+                        //   alert(typeof result);
+                        // 类型转换 object
+                        result = JSON.parse(result);
+                        //   alert(typeof result);
+                        displaySixProduct1(result);
+                    }
+                }
+            };
+            xhr.send();
+
+            // 解析字符串
+            function displaySixProduct1(json) {
+                var len = json.length;
+                var ul = document.getElementsByClassName("picList");
+                //alert(ul.length);
+                ul[0].innerHTML ="";
+                for (var i = 0; i < len; i++) {
+                    var obj = json[i];
+                    var id = obj.id;
+                    var name = obj.name;
+                    var img = obj.img;
+                    /*  // alert(obj);
+                       alert(id);
+                       alert(name);
+                       alert(img);*/
+
+
+                    ul[0].innerHTML +="<li><div class='pic'>" +
+                        "<a href='/Course/Details?id=11541' target='_blank'>" +
+                        "<img src='images/product/119684567.jpeg'/>"+
+                        "</a></div>" +
+                        "<div class='title'>" +
+                        "<a href='/Course/Details?id=11541'>" +
+                        name+id+
+                        "</a></div></li>";
+
                 }
             }
-        };
-        xhr.send();
-        // 解析字符串
-        function displaySixProduct1(json) {
-            var len = json.length;
-            for(var i = 0; i< len;i++){
-                var obj = json[i];
 
-
-
-            }
         }
-
-
     };
 
 </script>
+</body>
+
 </html>
