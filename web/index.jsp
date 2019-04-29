@@ -1495,7 +1495,11 @@
 
 </body>
 <script>
-   window.onload =  function() {
+
+    /**
+     * @author 石志林
+     */
+    window.onload =  function() {
         var xhr;
         if (window.XMLHttpRequest){
             xhr = new XMLHttpRequest();
