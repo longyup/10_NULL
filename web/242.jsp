@@ -71,84 +71,7 @@
 <!--nav 导航-->
 
 
-<div class="header">
-    <div class="section-top1">
-        您好,欢迎您进入XXXXXX网！<a href="#">登录</a><a href="#">注册</a>
-    </div>
-
-
-    <div class="header-con">
-        <div class="top clearfix">
-            <div class="top-logo l">
-                <img src="<%=path %>/images/logo-yx.png" />
-            </div>
-            <div class="top_2 r clearfix">
-                <div class="search_1 l">
-                    <div class="search_con">
-                        <div class="type">
-                            活动
-                        </div>
-                        <img src="<%=path %>/images/arrow-down.png" class="search_img">
-                    </div>
-                    <div class="type_con" id="SreachType">
-                        <ul>
-                            <li onclick="search('新闻')">新闻</li>
-                            <li onclick="search('活动')">活动</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <input type="text" id="SearchKeyword" value="" placeholder="请输入搜索关键字" class="l">
-                <div class="search_2 l">
-                    <a href="javascript:;" id="Search"><img src="images/glass.png" /></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="nav">
-        <div class="nav-con">
-            <ul class="clearfix">
-                <li><a href="#" style="color:white;" class="nl-title">网站首页</a></li>
-                <li><a href="#" style="color:white;" class="nl-title">文化遗址</a></li>
-                <li>
-                    <a href="/CourseSeminar/CourseCenter" style="color:white;" class="nl-title">特色美食</a>
-                    <!-- <div class="list">
-                            <a href="/Course/Index?ChannelId=82" style="color:white;">早教学堂</a>
-                            <a href="/Course/Index?ChannelId=83" style="color:white;">家庭生活</a>
-                            <a href="/Course/Index?ChannelId=84" style="color:white;">养身保健</a>
-                            <a href="/Course/Index?ChannelId=85" style="color:white;">人文修养</a>
-                            <a href="/Course/Index?ChannelId=86" style="color:white;">休闲健身</a>
-                            <a href="/Course/Index?ChannelId=87" style="color:white;">技能培训</a>
-                            <a href="/Course/Index?ChannelId=88" style="color:white;">企业管理</a>
-                            <a href="/Course/Index?ChannelId=89" style="color:white;">老年大学</a>
-                            <a href="/Course/Index?ChannelId=90" style="color:white;">干部学堂</a>
-                            <a href="/Course/Index?ChannelId=91" style="color:white;">专题培训</a>
-                            <a href="/Course/Index?ChannelId=92" style="color:white;">职场技能</a>
-                            <a href="/Course/Index?ChannelId=145" style="color:white;">旅游导航</a>
-                            <a href="/Course/Index?ChannelId=155" style="color:white;">其他</a>
-                            <a href="/Course/Index?ChannelId=173" style="color:white;">当前热点</a>
-                            <a href="/Course/Index?ChannelId=178" style="color:white;">执政能力</a>
-                            <a href="/Course/Index?ChannelId=184" style="color:white;">科学发展</a>
-                            <a href="/Course/Index?ChannelId=190" style="color:white;">岗位技能</a>
-                            <a href="/Course/Index?ChannelId=197" style="color:white;">专题学习</a>
-                            <a href="/Course/Index?ChannelId=211" style="color:white;">自然科学</a>
-                            <a href="/Course/Index?ChannelId=242" style="color:white;">会计专栏</a>
-
-                    </div> -->
-                </li>
-                <li><a href="#" style="color:white;" class="nl-title">名人风情</a></li>
-                <li><a href="#" style="color:white;" class="nl-title">风情民俗</a></li>
-                <li><a href="CourseCenter.html" style="color:white;" class="nl-title">活动一览</a></li>
-                <li><a href="#" style="color:white;" class="nl-title">杂谈交流</a></li>
-                <li><a href="#" style="color:white;" class="nl-title">关于我们</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-
-
-
+<%@include file="head.jsp"%>
 
 
 
@@ -1346,35 +1269,7 @@
 
 
 
-
-
-
-
-
-<div class="footer ">
-    <div class="footer-con clearfix">
-        <div class="footer-left">
-            <div class="footer-link">
-                <ul class="clearfix">
-                    <li><a href="/Home/Index">首页</a></li>
-                    <li><a href="/Course/Index">活动中心</a></li>
-                    <li><a href="/UserCenter/MyCourse">个人中心</a></li>
-
-                </ul>
-            </div>
-            <div class="footer-text">
-
-
-                <p> Copyright@ 10_NULL版权所有</p>
-            </div>
-        </div>
-        <div class="footer-right">
-            <img src="images/back-top.png" />
-            <p>返回顶部</p>
-        </div>
-    </div>
-
-</div>
+<%@include file="foot.jsp"%>
 
 
 

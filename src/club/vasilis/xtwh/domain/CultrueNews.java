@@ -8,16 +8,16 @@ package club.vasilis.xtwh.domain;
 public class CultrueNews {
     private Integer id;
     private String img;
-    private String CONSISTENT;
+    private String consistent;
     private String time;
 
     public CultrueNews() {
     }
 
-    public CultrueNews(Integer id, String img, String CONSISTENT, String time) {
+    public CultrueNews(Integer id, String img, String consistent, String time) {
         this.id = id;
         this.img = img;
-        this.CONSISTENT = CONSISTENT;
+        this.consistent = consistent;
         this.time = time;
     }
 
@@ -37,12 +37,12 @@ public class CultrueNews {
         this.img = img;
     }
 
-    public String getCONSISTENT() {
-        return CONSISTENT;
+    public String getConsistent() {
+        return consistent;
     }
 
-    public void setCONSISTENT(String CONSISTENT) {
-        this.CONSISTENT = CONSISTENT;
+    public void setConsistent(String consistent) {
+        this.consistent = consistent;
     }
 
     public String getTime() {
@@ -58,7 +58,7 @@ public class CultrueNews {
         return "CultrueNews{" +
                 "id=" + id +
                 ", img='" + img + '\'' +
-                ", CONSISTENT='" + CONSISTENT + '\'' +
+                ", consistent='" + consistent + '\'' +
                 ", time='" + time + '\'' +
                 '}';
     }
