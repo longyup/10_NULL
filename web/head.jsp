@@ -15,7 +15,7 @@
     <div class="header-con">
         <div class="top clearfix">
             <div class="top-logo l">
-                <img src="images/logo-yx.png" />
+                <img src="<%= path%>/images/logo-yx.png" />
             </div>
             <div class="top_2 r clearfix">
                 <div class="search_1 l">
@@ -23,7 +23,7 @@
                         <div class="type">
                             课程
                         </div>
-                        <img src="images/arrow-down.png" class="search_img">
+                        <img src="<%= path%>/images/arrow-down.png" class="search_img">
                     </div>
                     <div class="type_con" id="SreachType">
                         <ul>
@@ -35,7 +35,7 @@
 
                 <input type="text" id="SearchKeyword" value="" placeholder="请输入搜索关键字" class="l">
                 <div class="search_2 l">
-                    <a href="javascript:;" id="Search"><img src="images/glass.png" /></a>
+                    <a href="javascript:;" id="Search"><img src="<%= path%>/images/glass.png" /></a>
                 </div>
             </div>
         </div>
