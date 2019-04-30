@@ -1,7 +1,11 @@
 package club.vasilis.xtwh.servlet;
 
+import club.vasilis.xtwh.domain.CultureSites;
 import club.vasilis.xtwh.service.CultureNewsService;
+import club.vasilis.xtwh.service.CultureSitesService;
 import club.vasilis.xtwh.service.impl.CultureNewsServiceImpl;
+import club.vasilis.xtwh.service.impl.CultureSitesServiceImpl;
+import com.sun.deploy.net.HttpResponse;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -29,6 +33,8 @@ public class IndexServlet extends HttpServlet {
 
         }else if("CultrueNews".equals(method)){
             CultrueNews(request,response);
+        }else if ("CultureSites".equals(method)){
+            CultureSites(request,response);
         }
     }
 
@@ -39,6 +45,22 @@ public class IndexServlet extends HttpServlet {
             //获取JSON字符串
             CultureNewsService service = new CultureNewsServiceImpl();
             String json = service.getJsonCultrueNews();
+            //输出结果
+            response.getWriter().write(json);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void CultureSites(HttpServletRequest request, HttpServletResponse response){
+        try {
+            //设置输出格式
+            response.setContentType("text/json;charset=utf-8");
+            //获取JSON字符串
+            CultureSitesService service = new CultureSitesServiceImpl();
+            String json = service.getJsonCultrueSites();
             //输出结果
             response.getWriter().write(json);
         } catch (SQLException e) {
