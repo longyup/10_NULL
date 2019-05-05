@@ -3,9 +3,11 @@ package club.vasilis.xtwh.servlet;
 import club.vasilis.xtwh.domain.CultureSites;
 import club.vasilis.xtwh.service.CultureNewsService;
 import club.vasilis.xtwh.service.CultureSitesService;
+import club.vasilis.xtwh.service.NativeProductService;
 import club.vasilis.xtwh.service.impl.CultureNewsServiceImpl;
 import club.vasilis.xtwh.service.impl.CultureSitesServiceImpl;
 import com.sun.deploy.net.HttpResponse;
+import club.vasilis.xtwh.service.impl.NativeProductServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -50,6 +52,23 @@ public class IndexServlet extends HttpServlet {
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    private void nativeProduct(HttpServletRequest request, HttpServletResponse response){
+        try {
+            //设置输出格式
+            response.setContentType("text/json;charset=UTF-8");
+            //获取JSON字符串
+            NativeProductService service = new NativeProductServiceImpl();
+            String json = service.findFiveindex();
+            //输出结果
+            response.getWriter().write(json);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
