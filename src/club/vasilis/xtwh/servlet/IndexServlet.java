@@ -36,6 +36,7 @@ public class IndexServlet extends HttpServlet {
         }else if("NativeProduct".equals(method)){
             nativeProduct(request,response);
         }
+
     }
 
     private void cultrueNews(HttpServletRequest request, HttpServletResponse response) {
