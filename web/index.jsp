@@ -1509,32 +1509,35 @@
 
 </body>
 <script>
-    window.onload = function () {
         var xhr;
-        if (window.XMLHttpRequest) {
-            xhr = new XMLHttpRequest();
-        } else {
-            try {
-                xhr = new ActiveXObject("Msxml2.XMLHTTP");
-            } catch (e) {
-                xhr = new ActiveXObject("Microsoft.XMLHTTP");
+
+        function createXhr() {
+            if (window.XMLHttpRequest) {
+                xhr = new XMLHttpRequest();
+            } else {
+                try {
+                    xhr = new ActiveXObject("Msxml2.XMLHTTP");
+                } catch (e) {
+                    xhr = new ActiveXObject("Microsoft.XMLHTTP");
+                }
             }
+
         }
 
 
-        nativeproduct();
-        cultrueNews();
 
         <!--新闻部分 -->
         function cultrueNews() {
+            createXhr();
             xhr.open("GET", "<%=path %>/index?method=CultrueNews", true);
             // alert(xhr.readyState);
             xhr.onreadystatechange = function () {
-                // alert(xhr.readyState);
+
+               // alert(xhr.readyState);
                 if (4 == xhr.readyState) {
                     if (200 == xhr.status) {
                         var result = xhr.responseText;
-                        // alert(typeof result);
+                        alert(typeof result);
                         // 类型转换 object
                         result = JSON.parse(result);
                         displayCultrueNews(result);
@@ -1573,6 +1576,7 @@
         }
 
         function nativeproduct() {
+            createXhr();
             xhr.open("GET", "<%=path %>/index?method=NativeProduct", true);
             xhr.onreadystatechange = function () {
                 if (4 == xhr.readyState) {
@@ -1607,7 +1611,7 @@
 
                     picList[0].innerHTML += "<li><div class='pic'>" +
                         "<a href='/Course/Details?id=11541' target='_blank'>" +
-                        "<img src='images/product/119684567.jpeg'/>" +
+                        "<img src='<%=path%>/"+img+"'/>" +
                         "</a></div>" +
                         "<div class='title'>" +
                         "<a href='/Course/Details?id=11541'>" +
@@ -1616,7 +1620,11 @@
                 }
             }
         }
-    };
+
+
+
+        cultrueNews();
+        nativeproduct();
 
 </script>
 </html>
