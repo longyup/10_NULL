@@ -1175,5 +1175,24 @@
 <script src="<%= path%>/js/topicCourse.js" type="text/javascript" charset="utf-8"></script>
 
 
+
 </body>
+<script>
+    window.onload = function () {
+        var xhr;
+        if (window.XMLHttpRequest) {
+            xhr = new XMLHttpRequest();
+        } else {
+            try {
+                xhr = new ActiveXObject("Msxml2.XMLHTTP");
+            } catch (e) {
+                xhr = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+        }
+
+        //活动分类
+
+
+    };
+</script>
 </html>

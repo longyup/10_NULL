@@ -24,9 +24,18 @@ public class NativeProductDaoImpl implements NativeProductDao {
         return query;
     }
 
+    @Override
+    public List<NativeProduct> findAllProduct() throws Exception {
+        QueryRunner runner = new QueryRunner(DsUtils.getDataSource());
+        String sql = "select id,name,onlinetime from native_product  ORDER BY onlinetime ASC";
+        List<NativeProduct> query = runner.query(sql, new BeanListHandler<NativeProduct>(NativeProduct.class));
+
+        return query;
+    }
+
     @Test
     public void test() throws  Exception{
-        System.out.println(new NativeProductDaoImpl().findFiveindex());
+        System.out.println(new NativeProductDaoImpl().findAllProduct());
 
     }
 }

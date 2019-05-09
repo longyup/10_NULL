@@ -1649,7 +1649,7 @@
 
                     picList[0].innerHTML += "<li><div class='pic'>" +
                         "<a href='/Course/Details?id=11541' target='_blank'>" +
-                        "<img src='images/product/119684567.jpeg'/>" +
+                        "<img src='<%=path%>/"+img+"'/>" +
                         "</a></div>" +
                         "<div class='title'>" +
                         "<a href='/Course/Details?id=11541'>" +
@@ -1658,7 +1658,11 @@
                 }
             }
         }
-    };
+
+
+
+        cultrueNews();
+        nativeproduct();
 
 </script>
 </html>
