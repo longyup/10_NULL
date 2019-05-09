@@ -45,7 +45,7 @@
             <ul class="clearfix">
                 <li><a href="<%=path%>/index.jsp" style="color:white;" class="nl-title">网站首页</a></li>
                 <li><a href="<%=path%>/culture.jsp" style="color:white;" class="nl-title">文化遗址</a></li>
-                <li><a href="<%=path%>/culture.jsp" style="color:white;" class="nl-title">特色美食</a></li>
+                <li><a href="<%=path%>/product?method=topage" style="color:white;" class="nl-title">特色美食</a></li>
                 <li><a href="<%=path%>/culture.jsp" style="color:white;" class="nl-title">名人风情</a></li>
                 <li><a href="<%=path%>/culture.jsp" style="color:white;" class="nl-title">风情民俗</a></li>
                 <li><a href="<%=path%>/culture.jsp" style="color:white;" class="nl-title">活动一览</a></li>

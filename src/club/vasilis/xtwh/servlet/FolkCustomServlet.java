@@ -15,6 +15,6 @@ public class FolkCustomServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.err.println("风情民俗");
-        
+
     }
 }

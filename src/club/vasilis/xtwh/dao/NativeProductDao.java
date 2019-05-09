@@ -18,4 +18,20 @@ public interface NativeProductDao {
      */
     List<NativeProduct> findFiveindex() throws Exception;
 
+    /**
+     * 分栏下全部的展示
+     * @return
+     * @throws Exception
+     */
+    List<NativeProduct> findAllProduct() throws Exception;
+
+    /**
+     * 根据分类找信息
+     * @return
+     * @throws Exception
+     */
+    List<NativeProduct> findProductByType(String typeId) throws Exception;
+
+
+
 }
