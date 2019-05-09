@@ -34,15 +34,36 @@ public class ProductServlet extends HttpServlet {
         if ("".equals(method)){
 
         }else if ("topage".equals(method)){
-            topage(request,response);
+            toPage(request,response);
+        }else if("findbytype".equals(method)){
+            findByType(request,response);
         }
 
     }
 
-    private void topage(HttpServletRequest request, HttpServletResponse response) {
+    private void findByType(HttpServletRequest request, HttpServletResponse response) {
+        System.out.println("111");
+        String typeId = request.getParameter("id");
+        try {
+            //设置输出格式
+            response.setContentType("text/json;charset=utf-8");
+            //获取JSON字符串
+            NativeProductService service = new NativeProductServiceImpl();
+            String json = service.findProductByTypeJson(typeId);
+            //输出结果
+            response.getWriter().write(json);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private void toPage(HttpServletRequest request, HttpServletResponse response) {
+
         NativeProductCategoryService categoryService = new NativeProductCategoryServiceImpl();
         NativeProductService service = new NativeProductServiceImpl();
         try {
+
             // 类别
             List<NativeProductCategory> categoryList = categoryService.findAllCategory();
             request.setAttribute("categoryList",categoryList);
@@ -50,6 +71,8 @@ public class ProductServlet extends HttpServlet {
             List<NativeProduct> productList = service.findAllProduct();
             request.setAttribute("productList",productList);
             request.getRequestDispatcher("/product.jsp").forward(request,response);
+
+
         } catch (Exception e) {
             e.printStackTrace();
         }

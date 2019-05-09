@@ -23,4 +23,12 @@ public interface NativeProductService  {
      * @throws Exception
      */
     List<NativeProduct> findAllProduct() throws Exception;
+
+    /**
+     * 根据分类显示，并转成json
+     * @return
+     * @throws Exception
+     */
+    String findProductByTypeJson(String typeId) throws Exception;
+
 }
