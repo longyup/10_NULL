@@ -12,15 +12,15 @@
 <head>
 
     <% String path = request.getContextPath(); %>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="Shortcut Icon" href=/favicon.ico>
-    <link rel="stylesheet" type="text/css" href="<%= path%>/css/reset.css" />
-    <link rel="stylesheet" type="text/css" href="<%= path%>/css/head.css" />
-    <link rel="stylesheet" type="text/css" href="<%= path%>/css/article.css" />
-    <link href="<%= path%>/css/Page.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="<%= path%>/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="<%= path%>/css/head.css"/>
+    <link rel="stylesheet" type="text/css" href="<%= path%>/css/article.css"/>
+    <link href="<%= path%>/css/Page.css" type="text/css" rel="stylesheet"/>
 
 
     <title>宜兴终身学习网</title>
@@ -40,7 +40,6 @@
 
 </head>
 <body>
-
 
 
 <style>
@@ -68,14 +67,10 @@
 
 <!--nav 导航-->
 
-<%@include file="head.jsp"%>
-
-
+<%@include file="head.jsp" %>
 
 
 <div class="mainwidth1 mt20 clearfix">
-
-
 
 
     <div class="pc_left l">
@@ -89,10 +84,11 @@
                     for (NativeProductCategory category : categoryList) {
                 %>
                 <li class="c_menu_li">
-                    <a class="c_menu_main" href="/product?methood=findbytype&id=<%=category.getId()%>">
+                    <%----%>
+                    <a class="c_menu_main" id="type" href="javascript:void(0)" onclick="findType('<%=category.getId()%>');return false;">
                         <div class="c_menu_icon"></div>
                         <div class="c_menu_name">
-                           <%= category.getName()%>
+                            <%= category.getName()%>
 
                         </div>
                         <div class="c_menu_dot"></div>
@@ -145,44 +141,39 @@
     </div>
 
 
-
-
-
-
-
-
-
-
     <div class="pc_right r">
         <div class="pc-key">
             <div class="pc-key-show">
                 <div class="key-show-title l">
-                    文章标题： <input type="text" name="" id="ArticleName" value="" />
+                    文章标题： <input type="text" name="" id="ArticleName" value=""/>
                 </div>
                 <div class="key-show-date l clearfix">
                     <div class="show-date-p1 l">
                         发布日期：
                     </div>
                     <div class="show-date1 l">
-                        <img src="images/rili.png" class="starttime_img"><input type="text" id="starttime" placeholder="2017-01-10" class="starttime" />
+                        <img src="images/rili.png" class="starttime_img"><input type="text" id="starttime"
+                                                                                placeholder="2017-01-10"
+                                                                                class="starttime"/>
                     </div>
                     <div class="show-date-p2 l">-</div>
                     <div class="show-date2 l">
-                        <img src="images/rili.png" class="endtime_img"><input type="text" id="endtime" placeholder="2017-01-13" class="endtime" />
+                        <img src="images/rili.png" class="endtime_img"><input type="text" id="endtime"
+                                                                              placeholder="2017-01-13" class="endtime"/>
                     </div>
                     <div id='schedule-box' class="boxshaw"></div>
 
                     <div id='schedule-box1' class="boxshaw"></div>
                 </div>
                 <div class="key-show-search l">
-                    <a href="javascript:void();" onclick="SearchArticle();"><img src="images/search-img.png" />检索</a>
+                    <a href="javascript:void();" onclick="SearchArticle();"><img src="images/search-img.png"/>检索</a>
                 </div>
                 <div class="key-show-close r">
-                    <a href="javascript:;"><img src="images/close.png" /></a>
+                    <a href="javascript:;"><img src="images/close.png"/></a>
                 </div>
             </div>
             <div class="pc-key-hide">
-                <a href="javascript:;">打开索引 <img src="images/search-img.png" /></a>
+                <a href="javascript:;">打开索引 <img src="images/search-img.png"/></a>
             </div>
         </div>
 
@@ -192,14 +183,16 @@
                     全部文章
                 </div>
                 <div class="cm-lesson-top2 l">
-                    排序 <span id="span1" onclick="location.href = '/Article?Sort=1&amp;pageSize=20'">最新  <img src="images/arrow-down1.png" />
-                    </span> <span id="span2" onclick="location.href = '/Article?Sort=2&amp;pageSize=20'">最热  <img src="images/arrow-down.png" /> </span>
+                    排序 <span id="span1" onclick="location.href = '/Article?Sort=1&amp;pageSize=20'">最新  <img
+                        src="images/arrow-down1.png"/>
+                    </span> <span id="span2" onclick="location.href = '/Article?Sort=2&amp;pageSize=20'">最热  <img
+                        src="images/arrow-down.png"/> </span>
                 </div>
                 <div class="cm-lesson-top3 l">
                     <p class="l">视图</p>
                     <ul class="l">
-                        <li class="on" ><img src="images/sort2-img2.png" /></li>
-                        <li ><img src="images/sort3-img1.png" /></li>
+                        <li class="on"><img src="images/sort2-img2.png"/></li>
+                        <li><img src="images/sort3-img1.png"/></li>
                     </ul>
                 </div>
                 <div class="cm-lesson-top4 l">
@@ -227,24 +220,37 @@
                         for (NativeProduct product : productList) {
                     %>
                     <tr>
-                        <th width="107"><%= product.getId()%></th>
-                        <th width="418"><a href="/Article/Details?id=7264"><%= product.getName()%></a></th>
+                        <th width="107"><%= product.getId()%>
+                        </th>
+                        <th width="418"><a href="/Article/Details?id=7264"><%= product.getName()%>
+                        </a></th>
 
 
-                        <th width="180"><%= product.getOnlinetime()%></th>
+                        <th width="180"><%= product.getOnlinetime()%>
+                        </th>
                     </tr>
                     <%
                         }
                     %>
                 </table>
 
-                <ul class='pages'><li class='pgNext'><a href="/Article?page=1">首页</a></li><li class='pgNext'><a href="#">上一页</a></li><li class='page-number'><span>1</span><a href="/Article?page=2">2</a><a href="/Article?page=3">3</a><a href="/Article?page=4">4</a><a href="/Article?page=5">5</a><a href="/Article?page=6">6</a><a href="/Article?page=7">7</a><a href="/Article?page=8">8</a><a href="/Article?page=9">9</a><a href="/Article?page=10">10</a></li><li class='pgNext'><a href="/Article?page=2">下一页</a></li><li class='pgNext'><a href="/Article?page=289">末页</a></li></ul>
+                <ul class='pages'>
+                    <li class='pgNext'><a href="/Article?page=1">首页</a></li>
+                    <li class='pgNext'><a href="#">上一页</a></li>
+                    <li class='page-number'><span>1</span><a href="/Article?page=2">2</a><a href="/Article?page=3">3</a><a
+                            href="/Article?page=4">4</a><a href="/Article?page=5">5</a><a href="/Article?page=6">6</a><a
+                            href="/Article?page=7">7</a><a href="/Article?page=8">8</a><a href="/Article?page=9">9</a><a
+                            href="/Article?page=10">10</a></li>
+                    <li class='pgNext'><a href="/Article?page=2">下一页</a></li>
+                    <li class='pgNext'><a href="/Article?page=289">末页</a></li>
+                </ul>
             </div>
             <div class="cm-lesson-con" style="display:none;">
                 <ul>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Article/Details?id=7264"><img src="http://112.25.215.35:80/Resource/" onerror="this.src = 'images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Article/Details?id=7264"><img src="http://112.25.215.35:80/Resource/"
+                                                                    onerror="this.src = 'images/renwenxiuyang.jpg'"/></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -255,32 +261,39 @@
                                     </p>
                                 </div>
                                 <div class="lb2-right-hd3 ">
-                                    内容简介：2018年6月25日，教育部、科技部等五部门联合发文，公布第三批国家级农村职业教育和成人教育示范县，宜兴市榜上有名，成为无锡地区唯一入围县市。  宜兴市职成教事业跑出了“宜兴加速度”。宜兴市2009年8月2日被评为全国社区教育实验区，2009年11月21日被教育部确认为...
+                                    内容简介：2018年6月25日，教育部、科技部等五部门联合发文，公布第三批国家级农村职业教育和成人教育示范县，宜兴市榜上有名，成为无锡地区唯一入围县市。
+                                    宜兴市职成教事业跑出了“宜兴加速度”。宜兴市2009年8月2日被评为全国社区教育实验区，2009年11月21日被教育部确认为...
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Article/Details?id=8205"><img src="http://112.25.215.35:80/Resourceimages/Article/afdaafe1-adc9-49f6-8788-0f575b2a2819.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Article/Details?id=8205"><img
+                                    src="http://112.25.215.35:80/Resourceimages/Article/afdaafe1-adc9-49f6-8788-0f575b2a2819.jpg"
+                                    onerror="this.src = 'images/renwenxiuyang.jpg'"/></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
                                 <div class="lb2-right-hd1 ">
                                     <p class="lb2-right-hd1-p1 clearfix">
-                                        <a href="/Article/Details?id=8205" class="l"><span style='color:#FF9933'>【荐】</span>旅游服务公益培训，让农家乐、民宿更好地服务游客</a>
+                                        <a href="/Article/Details?id=8205" class="l"><span
+                                                style='color:#FF9933'>【荐】</span>旅游服务公益培训，让农家乐、民宿更好地服务游客</a>
                                         <span class="r">2019-04-15</span>
                                     </p>
                                 </div>
                                 <div class="lb2-right-hd3 ">
-                                    内容简介：随着太华乡村旅游的阔步前行，农家乐、民宿日益增多。为提升民宿、农家乐的服务意识、创新意识、品牌意识，太华成校、太华镇旅游办联合举办“乡村振兴，服务先行”系列公益培训，4月9日—11日，以 “餐饮创新，民宿布草”为主题的二期培训圆满举行，民宿、农家乐主人...
+                                    内容简介：随着太华乡村旅游的阔步前行，农家乐、民宿日益增多。为提升民宿、农家乐的服务意识、创新意识、品牌意识，太华成校、太华镇旅游办联合举办“乡村振兴，服务先行”系列公益培训，4月9日—11日，以
+                                    “餐饮创新，民宿布草”为主题的二期培训圆满举行，民宿、农家乐主人...
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Article/Details?id=8203"><img src="http://112.25.215.35:80/Resourceimages/Article/fb9f79ae-38fe-4667-b7ad-ef21fb700ae1.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Article/Details?id=8203"><img
+                                    src="http://112.25.215.35:80/Resourceimages/Article/fb9f79ae-38fe-4667-b7ad-ef21fb700ae1.jpg"
+                                    onerror="this.src = 'images/renwenxiuyang.jpg'"/></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -298,7 +311,9 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Article/Details?id=8202"><img src="http://112.25.215.35:80/Resourceimages/Article/45c5c5b7-e88d-4a42-b2d9-c6714820782c.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Article/Details?id=8202"><img
+                                    src="http://112.25.215.35:80/Resourceimages/Article/45c5c5b7-e88d-4a42-b2d9-c6714820782c.jpg"
+                                    onerror="this.src = 'images/renwenxiuyang.jpg'"/></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -316,7 +331,8 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Article/Details?id=8201"><img src="http://112.25.215.35:80/Resource/" onerror="this.src = 'images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Article/Details?id=8201"><img src="http://112.25.215.35:80/Resource/"
+                                                                    onerror="this.src = 'images/renwenxiuyang.jpg'"/></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -334,7 +350,8 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Article/Details?id=8198"><img src="http://112.25.215.35:80/Resource/" onerror="this.src = 'images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Article/Details?id=8198"><img src="http://112.25.215.35:80/Resource/"
+                                                                    onerror="this.src = 'images/renwenxiuyang.jpg'"/></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -345,14 +362,16 @@
                                     </p>
                                 </div>
                                 <div class="lb2-right-hd3 ">
-                                    内容简介：春光明媚，阳光温暖，花儿飘香，又是一年踏青时，桃红李白春暖人间。在这里，追忆大师的精神；在这里，聆听梦想的初心；在这里，碰撞民乐的激情！4月9日，万石社区新时代文明实践所联合宜兴市青少年活动中心二胡乐团，在闵惠芬文化公园开展“聆听梦想 追忆大师”爱国主...
+                                    内容简介：春光明媚，阳光温暖，花儿飘香，又是一年踏青时，桃红李白春暖人间。在这里，追忆大师的精神；在这里，聆听梦想的初心；在这里，碰撞民乐的激情！4月9日，万石社区新时代文明实践所联合宜兴市青少年活动中心二胡乐团，在闵惠芬文化公园开展“聆听梦想
+                                    追忆大师”爱国主...
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Article/Details?id=8196"><img src="http://112.25.215.35:80/Resource/" onerror="this.src = 'images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Article/Details?id=8196"><img src="http://112.25.215.35:80/Resource/"
+                                                                    onerror="this.src = 'images/renwenxiuyang.jpg'"/></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -370,7 +389,8 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Article/Details?id=8195"><img src="http://112.25.215.35:80/Resource/" onerror="this.src = 'images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Article/Details?id=8195"><img src="http://112.25.215.35:80/Resource/"
+                                                                    onerror="this.src = 'images/renwenxiuyang.jpg'"/></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -388,25 +408,31 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Article/Details?id=8194"><img src="http://112.25.215.35:80/Resourceimages/Article/0965ffbb-0f59-494b-be76-0859499c93e6.JPG" onerror="this.src = 'images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Article/Details?id=8194"><img
+                                    src="http://112.25.215.35:80/Resourceimages/Article/0965ffbb-0f59-494b-be76-0859499c93e6.JPG"
+                                    onerror="this.src = 'images/renwenxiuyang.jpg'"/></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
                                 <div class="lb2-right-hd1 ">
                                     <p class="lb2-right-hd1-p1 clearfix">
-                                        <a href="/Article/Details?id=8194" class="l"><span style='color:#FF9933'>【荐】</span>西渚镇社区教育工作会议暨业务培训班顺利召开</a>
+                                        <a href="/Article/Details?id=8194" class="l"><span
+                                                style='color:#FF9933'>【荐】</span>西渚镇社区教育工作会议暨业务培训班顺利召开</a>
                                         <span class="r">2019-04-12</span>
                                     </p>
                                 </div>
                                 <div class="lb2-right-hd3 ">
-                                    内容简介：4月11日下午，西渚镇社区教育工作会议暨业务培训班在溪东村村民业余学校顺利召开。会议由文教办主任雷远平主持，西渚镇人民政府副镇长徐煜、各村村主任、村社区教育工作联络员以及2018年宜兴市、西渚镇“百姓学习之星”和宜兴市首届老年书法获奖者约30人参加了会议。 会...
+                                    内容简介：4月11日下午，西渚镇社区教育工作会议暨业务培训班在溪东村村民业余学校顺利召开。会议由文教办主任雷远平主持，西渚镇人民政府副镇长徐煜、各村村主任、村社区教育工作联络员以及2018年宜兴市、西渚镇“百姓学习之星”和宜兴市首届老年书法获奖者约30人参加了会议。
+                                    会...
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Article/Details?id=8193"><img src="http://112.25.215.35:80/Resourceimages/Article/7b260b6a-1dd8-4f7a-acfd-85be33a1b52f.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Article/Details?id=8193"><img
+                                    src="http://112.25.215.35:80/Resourceimages/Article/7b260b6a-1dd8-4f7a-acfd-85be33a1b52f.jpg"
+                                    onerror="this.src = 'images/renwenxiuyang.jpg'"/></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -417,14 +443,17 @@
                                     </p>
                                 </div>
                                 <div class="lb2-right-hd3 ">
-                                    内容简介：4月10日，竺山风筝节暨社区（村）风筝邀请赛在周铁镇沙塘港村村民业余学校广场隆重举办。本次活动由周铁社区教育中心、宜兴市风筝协会、沙塘港村共同承办。 参加本次比赛的有来自周铁镇和周边乡镇的24支风筝代表队，代表队员计250余人，各带上20个项目风筝品种，前来参...
+                                    内容简介：4月10日，竺山风筝节暨社区（村）风筝邀请赛在周铁镇沙塘港村村民业余学校广场隆重举办。本次活动由周铁社区教育中心、宜兴市风筝协会、沙塘港村共同承办。
+                                    参加本次比赛的有来自周铁镇和周边乡镇的24支风筝代表队，代表队员计250余人，各带上20个项目风筝品种，前来参...
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Article/Details?id=8192"><img src="http://112.25.215.35:80/Resourceimages/Article/87d44609-e8b9-4db3-9e08-bda2f3f3cebf.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Article/Details?id=8192"><img
+                                    src="http://112.25.215.35:80/Resourceimages/Article/87d44609-e8b9-4db3-9e08-bda2f3f3cebf.jpg"
+                                    onerror="this.src = 'images/renwenxiuyang.jpg'"/></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -442,25 +471,29 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Article/Details?id=8190"><img src="http://112.25.215.35:80/Resource/" onerror="this.src = 'images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Article/Details?id=8190"><img src="http://112.25.215.35:80/Resource/"
+                                                                    onerror="this.src = 'images/renwenxiuyang.jpg'"/></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
                                 <div class="lb2-right-hd1 ">
                                     <p class="lb2-right-hd1-p1 clearfix">
-                                        <a href="/Article/Details?id=8190" class="l"><span style='color:#FF9933'>【荐】</span>“宜兴终身学习网”2018年度奖励领取通知</a>
+                                        <a href="/Article/Details?id=8190" class="l"><span
+                                                style='color:#FF9933'>【荐】</span>“宜兴终身学习网”2018年度奖励领取通知</a>
                                         <span class="r">2019-04-11</span>
                                     </p>
                                 </div>
                                 <div class="lb2-right-hd3 ">
-                                    内容简介：“宜兴终身学习网”2018年度学习币兑换及学分排名奖励领取已经开始，具体说明如下：1、  领奖时间：2019年4月15号—5月31号，过期不领自动作废；2、  领奖地点：教育西路29号（宜兴开放大学 成教处）2号楼204办公室；3、  领奖需获奖人本人凭身份证原件签名领取，我们将...
+                                    内容简介：“宜兴终身学习网”2018年度学习币兑换及学分排名奖励领取已经开始，具体说明如下：1、 领奖时间：2019年4月15号—5月31号，过期不领自动作废；2、
+                                    领奖地点：教育西路29号（宜兴开放大学 成教处）2号楼204办公室；3、 领奖需获奖人本人凭身份证原件签名领取，我们将...
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Article/Details?id=8183"><img src="http://112.25.215.35:80/Resource/" onerror="this.src = 'images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Article/Details?id=8183"><img src="http://112.25.215.35:80/Resource/"
+                                                                    onerror="this.src = 'images/renwenxiuyang.jpg'"/></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -478,7 +511,8 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Article/Details?id=8182"><img src="http://112.25.215.35:80/Resource/" onerror="this.src = 'images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Article/Details?id=8182"><img src="http://112.25.215.35:80/Resource/"
+                                                                    onerror="this.src = 'images/renwenxiuyang.jpg'"/></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -496,25 +530,30 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Article/Details?id=8181"><img src="http://112.25.215.35:80/Resource/" onerror="this.src = 'images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Article/Details?id=8181"><img src="http://112.25.215.35:80/Resource/"
+                                                                    onerror="this.src = 'images/renwenxiuyang.jpg'"/></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
                                 <div class="lb2-right-hd1 ">
                                     <p class="lb2-right-hd1-p1 clearfix">
-                                        <a href="/Article/Details?id=8181" class="l">新时代文明实践在太华：红色热土传承红色精神，太华缅怀英烈，牢...</a>
+                                        <a href="/Article/Details?id=8181"
+                                           class="l">新时代文明实践在太华：红色热土传承红色精神，太华缅怀英烈，牢...</a>
                                         <span class="r">2019-04-05</span>
                                     </p>
                                 </div>
                                 <div class="lb2-right-hd3 ">
-                                    内容简介：太华镇在太华山新四军和苏南抗日根据地纪念馆开展“缅怀英烈、牢记使命”清明主题活动。  太华镇机关党群代表、太华镇中小学学生代表、太华镇派出所代表以及太华山新四军纪念馆及社区教育中心全体工作人员参与该次活动。  深切缅怀革命先烈的丰功伟绩，铭记历史，坚定...
+                                    内容简介：太华镇在太华山新四军和苏南抗日根据地纪念馆开展“缅怀英烈、牢记使命”清明主题活动。
+                                    太华镇机关党群代表、太华镇中小学学生代表、太华镇派出所代表以及太华山新四军纪念馆及社区教育中心全体工作人员参与该次活动。
+                                    深切缅怀革命先烈的丰功伟绩，铭记历史，坚定...
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Article/Details?id=8180"><img src="http://112.25.215.35:80/Resource/" onerror="this.src = 'images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Article/Details?id=8180"><img src="http://112.25.215.35:80/Resource/"
+                                                                    onerror="this.src = 'images/renwenxiuyang.jpg'"/></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -525,14 +564,16 @@
                                     </p>
                                 </div>
                                 <div class="lb2-right-hd3 ">
-                                    内容简介：为进一步弘扬民族精神，祭奠革命先烈，缅怀英雄伟绩，4月3日上午，宜兴经济技术开发区管委会副主任、屺亭街道党工委书记刘英、屺亭街道办事处主任杨卓云等一行带领街道机关第六支部、七支部全体党员、五星社区定员干部，前往唐俊烈士墓开展清明集中祭扫烈士活动。  ...
+                                    内容简介：为进一步弘扬民族精神，祭奠革命先烈，缅怀英雄伟绩，4月3日上午，宜兴经济技术开发区管委会副主任、屺亭街道党工委书记刘英、屺亭街道办事处主任杨卓云等一行带领街道机关第六支部、七支部全体党员、五星社区定员干部，前往唐俊烈士墓开展清明集中祭扫烈士活动。
+                                    ...
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Article/Details?id=8178"><img src="http://112.25.215.35:80/Resource/" onerror="this.src = 'images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Article/Details?id=8178"><img src="http://112.25.215.35:80/Resource/"
+                                                                    onerror="this.src = 'images/renwenxiuyang.jpg'"/></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -550,7 +591,8 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Article/Details?id=8179"><img src="http://112.25.215.35:80/Resource/" onerror="this.src = 'images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Article/Details?id=8179"><img src="http://112.25.215.35:80/Resource/"
+                                                                    onerror="this.src = 'images/renwenxiuyang.jpg'"/></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -561,14 +603,16 @@
                                     </p>
                                 </div>
                                 <div class="lb2-right-hd3 ">
-                                    内容简介：弘扬中华传统文化，弘扬悲鸿精神，传承书画艺术，丰富辖区青少年精神文化生活，3月31日，奔马社区新时代文明实践站在奔马社区党建广场开展了“水墨奔马”青少年彩笔绘祖国现场书画展示活动。    活动现场挂满了孩子们的绘画、书法作品，老师、家长、孩子们人头攒动...
+                                    内容简介：弘扬中华传统文化，弘扬悲鸿精神，传承书画艺术，丰富辖区青少年精神文化生活，3月31日，奔马社区新时代文明实践站在奔马社区党建广场开展了“水墨奔马”青少年彩笔绘祖国现场书画展示活动。
+                                    活动现场挂满了孩子们的绘画、书法作品，老师、家长、孩子们人头攒动...
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Article/Details?id=8177"><img src="http://112.25.215.35:80/Resource/" onerror="this.src = 'images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Article/Details?id=8177"><img src="http://112.25.215.35:80/Resource/"
+                                                                    onerror="this.src = 'images/renwenxiuyang.jpg'"/></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -579,14 +623,16 @@
                                     </p>
                                 </div>
                                 <div class="lb2-right-hd3 ">
-                                    内容简介：2019年宜兴国际马拉松赛即将开跑，为盛情迎接各路体育健儿和八方宾朋的到来，营建更加整洁、卫生、靓丽的马拉松赛道，确保赛事的顺利进行。4月2日，东郊社区开展新时代文明实践志愿活动，针对赛道及周边进行环境整治。    活动中，志愿者们热情高涨，分工合作，默...
+                                    内容简介：2019年宜兴国际马拉松赛即将开跑，为盛情迎接各路体育健儿和八方宾朋的到来，营建更加整洁、卫生、靓丽的马拉松赛道，确保赛事的顺利进行。4月2日，东郊社区开展新时代文明实践志愿活动，针对赛道及周边进行环境整治。
+                                    活动中，志愿者们热情高涨，分工合作，默...
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Article/Details?id=8176"><img src="http://112.25.215.35:80/Resource/" onerror="this.src = 'images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Article/Details?id=8176"><img src="http://112.25.215.35:80/Resource/"
+                                                                    onerror="this.src = 'images/renwenxiuyang.jpg'"/></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -603,7 +649,16 @@
                         </div>
                     </li>
                 </ul>
-                <ul class='pages'><li class='pgNext'><a href="/Article?page=1">首页</a></li><li class='pgNext'><a href="#">上一页</a></li><li class='page-number'><span>1</span><a href="/Article?page=2">2</a><a href="/Article?page=3">3</a><a href="/Article?page=4">4</a><a href="/Article?page=5">5</a><a href="/Article?page=6">6</a><a href="/Article?page=7">7</a><a href="/Article?page=8">8</a><a href="/Article?page=9">9</a><a href="/Article?page=10">10</a></li><li class='pgNext'><a href="/Article?page=2">下一页</a></li><li class='pgNext'><a href="/Article?page=289">末页</a></li></ul>
+                <ul class='pages'>
+                    <li class='pgNext'><a href="/Article?page=1">首页</a></li>
+                    <li class='pgNext'><a href="#">上一页</a></li>
+                    <li class='page-number'><span>1</span><a href="/Article?page=2">2</a><a href="/Article?page=3">3</a><a
+                            href="/Article?page=4">4</a><a href="/Article?page=5">5</a><a href="/Article?page=6">6</a><a
+                            href="/Article?page=7">7</a><a href="/Article?page=8">8</a><a href="/Article?page=9">9</a><a
+                            href="/Article?page=10">10</a></li>
+                    <li class='pgNext'><a href="/Article?page=2">下一页</a></li>
+                    <li class='pgNext'><a href="/Article?page=289">末页</a></li>
+                </ul>
             </div>
 
         </div>
@@ -611,17 +666,10 @@
     </div>
 
 
-
-
 </div>
 
 
-
-
-
-
-<%@include file="foot.jsp"%>
-
+<%@include file="foot.jsp" %>
 
 
 <script src="<%= path%>/js/jquery-1.11.2.min.js" type="text/javascript"></script>
@@ -633,14 +681,12 @@
 <script src="<%= path%>/Content/layui/src/layui.js"></script>
 
 
-
-
-
 <script type="text/javascript">
 
     $(function () {
         search("课程");
     });
+
     function search(types) {
         $("#Search").click(function () {
             var keyword = $("#SearchKeyword").val();
@@ -659,6 +705,7 @@
             window.location.href = url;
         });
     }
+
     $(".search_con").click(function () {
         $(".type_con").show()
     });
@@ -667,10 +714,9 @@
         $(".type_con").hide()
     });
     $(".footer-right").click(function () {
-        $("html,body").animate({ scrollTop: 0 }, 500);
+        $("html,body").animate({scrollTop: 0}, 500);
     });
 </script>
-
 
 
 <script src="<%= path%>/js/article.js" type="text/javascript" charset="utf-8"></script>
@@ -688,22 +734,22 @@
         $(".cm-lesson-top2 span").find("img").attr("src", "images/arrow-down.png");
         $("#span1").find("img").attr("src", "images/arrow-down1.png");
 
-        $(".c_menu_li").mouseover(function(){
+        $(".c_menu_li").mouseover(function () {
             $(this).find(".c_submenu").show();
-        }).mouseleave(function  () {
+        }).mouseleave(function () {
             $(this).find(".c_submenu").hide();
         });
         //推荐课程
-        $(".menu-cul li").mouseover(function  () {
+        $(".menu-cul li").mouseover(function () {
             $(".menu-cul li").removeClass("on");
             $(this).addClass("on");
         });
 
-        $(".starttime").click(function  () {
+        $(".starttime").click(function () {
             $("#schedule-box").show();
         });
         //日历的选择
-        $(".starttime_img").click(function  () {
+        $(".starttime_img").click(function () {
             $("#schedule-box").show();
         });
         //$(".starttime").blur(function () {
@@ -712,29 +758,29 @@
         var mySchedule = new Schedule({
             el: '#schedule-box',
             //date: '2018-9-20',
-            clickCb: function (y,m,d) {
-                var aa = document.querySelector('.starttime').innerHTML = y+'-'+m+'-'+d;
+            clickCb: function (y, m, d) {
+                var aa = document.querySelector('.starttime').innerHTML = y + '-' + m + '-' + d;
                 $(".starttime").val(aa);
                 $("#schedule-box").hide();
             },
-            nextMonthCb: function (y,m,d) {
-                document.querySelector('.starttime').innerHTML = y+'-'+m+'-'+d
+            nextMonthCb: function (y, m, d) {
+                document.querySelector('.starttime').innerHTML = y + '-' + m + '-' + d
             },
-            nextYeayCb: function (y,m,d) {
-                document.querySelector('.starttime').innerHTML = y+'-'+m+'-'+d
+            nextYeayCb: function (y, m, d) {
+                document.querySelector('.starttime').innerHTML = y + '-' + m + '-' + d
             },
-            prevMonthCb: function (y,m,d) {
-                document.querySelector('.starttime').innerHTML = y+'-'+m+'-'+d
+            prevMonthCb: function (y, m, d) {
+                document.querySelector('.starttime').innerHTML = y + '-' + m + '-' + d
             },
-            prevYearCb: function (y,m,d) {
-                document.querySelector('.starttime').innerHTML = y+'-'+m+'-'+d
+            prevYearCb: function (y, m, d) {
+                document.querySelector('.starttime').innerHTML = y + '-' + m + '-' + d
             }
         });
 
-        $(".endtime").click(function  () {
+        $(".endtime").click(function () {
             $("#schedule-box1").show();
         });
-        $(".endtime_img").click(function  () {
+        $(".endtime_img").click(function () {
             $("#schedule-box1").show();
         });
         //$(".endtime").blur(function () {
@@ -744,82 +790,82 @@
         var mySchedule1 = new Schedule({
             el: '#schedule-box1',
             //date: '2018-9-20',
-            clickCb: function (y,m,d) {
-                var bb =  document.querySelector('.endtime').innerHTML = y+'-'+m+'-'+d;
+            clickCb: function (y, m, d) {
+                var bb = document.querySelector('.endtime').innerHTML = y + '-' + m + '-' + d;
                 $(".endtime").val(bb);
                 $("#schedule-box1").hide();
             },
-            nextMonthCb: function (y,m,d) {
-                document.querySelector('.endtime').innerHTML = y+'-'+m+'-'+d;
+            nextMonthCb: function (y, m, d) {
+                document.querySelector('.endtime').innerHTML = y + '-' + m + '-' + d;
             },
-            nextYeayCb: function (y,m,d) {
-                document.querySelector('.endtime').innerHTML = y+'-'+m+'-'+d;
+            nextYeayCb: function (y, m, d) {
+                document.querySelector('.endtime').innerHTML = y + '-' + m + '-' + d;
             },
-            prevMonthCb: function (y,m,d) {
-                document.querySelector('.endtime').innerHTML = y+'-'+m+'-'+d;
+            prevMonthCb: function (y, m, d) {
+                document.querySelector('.endtime').innerHTML = y + '-' + m + '-' + d;
             },
-            prevYearCb: function (y,m,d) {
-                document.querySelector('.endtime').innerHTML = y+'-'+m+'-'+d;
+            prevYearCb: function (y, m, d) {
+                document.querySelector('.endtime').innerHTML = y + '-' + m + '-' + d;
             }
         });
 
-        $(".pc-key-hide a").click(function  () {
+        $(".pc-key-hide a").click(function () {
             $(".pc-key-hide").hide();
             $(".pc-key-show").show();
         });
-        $(".key-show-close").click(function  () {
+        $(".key-show-close").click(function () {
             $(".pc-key-hide").show();
             $(".pc-key-show").hide();
         });
         //课程分类
-        $(".c_menu_li").mouseover(function(){
-            $(this).find(".c_menu_main").css({"color":"#fff"})
-        }).mouseleave(function  () {
-            $(this).find(".c_menu_main").css({"color":"#000"})
+        $(".c_menu_li").mouseover(function () {
+            $(this).find(".c_menu_main").css({"color": "#fff"})
+        }).mouseleave(function () {
+            $(this).find(".c_menu_main").css({"color": "#000"})
         })
         //导航
-        $(".nav ul li").mouseover(function  () {
-            $(this).find("a").css({"color":"#ffc617"})
-        }).mouseleave(function  () {
-            $(this).find("a").css({"color":"#fff"})
+        $(".nav ul li").mouseover(function () {
+            $(this).find("a").css({"color": "#ffc617"})
+        }).mouseleave(function () {
+            $(this).find("a").css({"color": "#fff"})
         });
         //排序最新最热
-        $(".cm-lesson-top2 span").on("click",function(){
+        $(".cm-lesson-top2 span").on("click", function () {
             $(this).addClass("on").siblings().removeClass("on");
-            $(".cm-lesson-top2 span").find("img").attr("src","images/arrow-down.png")
-            $(this).find("img").attr("src","images/arrow-down1.png")
+            $(".cm-lesson-top2 span").find("img").attr("src", "images/arrow-down.png")
+            $(this).find("img").attr("src", "images/arrow-down1.png")
         })
         //条目切换
-        $(".cm-lesson-top4 ul li").click(function  () {
+        $(".cm-lesson-top4 ul li").click(function () {
             $(".cm-lesson-top4 ul li").removeClass("on");
             $(this).addClass("on")
         });
-        $(".lesson-brief1").mouseover(function  () {
+        $(".lesson-brief1").mouseover(function () {
             $(this).find(".lb1-con-hd p").show();
-        }).mouseleave(function(){
+        }).mouseleave(function () {
             $(this).find(".lb1-con-hd p").hide();
         })
         //页面间的内部切换
-        $(".cm-lesson-top3 ul li").on("click",function  () {
-            var index=$(this).index();
+        $(".cm-lesson-top3 ul li").on("click", function () {
+            var index = $(this).index();
             var length = $(".cm-lesson-top3 ul li").length;
             $(".cm-lesson-top3 ul li").removeClass("on");
             $(this).addClass("on");
             $(".cm-lesson-con").hide();
             $(".cm-lesson-con").eq(index).show();
-            for ( var i=0;i<length;i++  ) {
+            for (var i = 0; i < length; i++) {
                 var src1 = $(".cm-lesson-top3 ul li").eq(i).find("img").attr("src");
-                var src2 = src1.slice(0,17);
-                $(".cm-lesson-top3 ul li").eq(i).find("img").attr("src",src2+"1.png")
+                var src2 = src1.slice(0, 17);
+                $(".cm-lesson-top3 ul li").eq(i).find("img").attr("src", src2 + "1.png")
             }
             var src3 = $(this).find("img").attr("src");
-            var src4 = src3.slice(0,17);
-            $(this).find("img").attr("src",src4+"2.png")
+            var src4 = src3.slice(0, 17);
+            $(this).find("img").attr("src", src4 + "2.png")
         });
         $(".cml-table tr").mouseover(function () {
-            $(this).find("a").css({ "color": "#5166d7" })
+            $(this).find("a").css({"color": "#5166d7"})
         }).mouseleave(function () {
-            $(this).find("a").css({ "color": "#000" })
+            $(this).find("a").css({"color": "#000"})
         });
         $(".c_menu_li ul li").mouseover(function () {
             $(this).find(".list").show()
@@ -832,6 +878,64 @@
 </script>
 
 </body>
+
+
+<script>
+    var findType = function (id) {
+
+        var xhr;
+        if (window.XMLHttpRequest) {
+            xhr = new XMLHttpRequest();
+        } else {
+            try {
+                xhr = new ActiveXObject("Msxml2.XMLHTTP");
+            } catch (e) {
+                xhr = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+        }
+
+        xhr.open("GET", "<%=path%>/product?method=findbytype&id=" + id, true);
+        // alert(xhr.readyState);
+        xhr.onreadystatechange = function () {
+            // alert(xhr.readyState);
+            if (4 == xhr.readyState) {
+                alert(xhr.readyState);
+                if (200 == xhr.status) {
+                    var result = xhr.responseText;
+                    alert(typeof result);
+                    // 类型转换 object
+                    result = JSON.parse(result);
+                    showtype(result);
+                }
+            }
+        };
+        xhr.send();
+
+        function showtype(json) {
+            var len = json.length;
+            var table = document.getElementsByClassName("cml-table");
+            //alert(ul.length);
+            table[0].innerHTML = "";
+            for (var i = 0; i < len; i++) {
+                var obj = json[i];
+                var id = obj.id;
+                var name = obj.name;
+                var type = obj.type;
+                var onlinetime = obj.onlinetime;
+                /*  // alert(obj);
+                   alert(id);
+                   alert(name);
+                   alert(img);*/
+
+
+                table[0].innerHTML += "<tr><th width='107'>" + id + "</th><th width='418'><a href='/product?&method=infor&id=" + id + "'>" + name + "</a></th><th width='180'>" + onlinetime + "</th></tr>";
+            }
+        }
+
+        return false;
+    }
+
+</script>
 </html>
 
 
