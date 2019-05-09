@@ -1,5 +1,7 @@
 <%@ page import="club.vasilis.xtwh.domain.CultureSites" %>
-<%@ page import="java.util.List" %><%--
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.Locale" %>
+<%@ page import="club.vasilis.xtwh.domain.Location" %><%--
   Created by IntelliJ IDEA.
   User: Vasilis
   Date: 2019/4/19
@@ -83,84 +85,23 @@
                 <p>文化遗产</p>
             </div>
             <ul class="c_left_menu">
+                <%
+                    List<Location> locationList = (List<Location>) request.getAttribute("locationList");
+                    for (Location location : locationList) {
+                %>
                 <li class="c_menu_li">
-                    <a class="c_menu_main" href="/Article/Index/140">
+                    <a class="c_menu_main" href="/product?methood=findbytype&id=<%=location.getId()%>">
                         <div class="c_menu_icon"></div>
                         <div class="c_menu_name">
-                            西湖区
+                            <%= location.getName()%>
 
                         </div>
                         <div class="c_menu_dot"></div>
                     </a>
-
-
                 </li>
-                <li class="c_menu_li">
-                    <a class="c_menu_main" href="/Article/Index/166">
-                        <div class="c_menu_icon"></div>
-                        <div class="c_menu_name">
-                            萧山区
-
-                        </div>
-                        <div class="c_menu_dot"></div>
-                    </a>
-
-
-                </li>
-                <li class="c_menu_li">
-                    <a class="c_menu_main" href="/Article/Index/141">
-                        <div class="c_menu_icon"></div>
-                        <div class="c_menu_name">
-                            余杭区
-
-                        </div>
-                        <div class="c_menu_dot"></div>
-                    </a>
-
-
-                </li>
-                <li class="c_menu_li">
-                    <a class="c_menu_main" href="/Article/Index/127">
-                        <div class="c_menu_icon"></div>
-                        <div class="c_menu_name">
-                            富阳区
-
-                        </div>
-                        <div class="c_menu_dot"></div>
-                    </a>
-
-
-                </li>
-                <li class="c_menu_li">
-                    <a class="c_menu_main" href="/Article/Index/150">
-                        <div class="c_menu_icon"></div>
-                        <div class="c_menu_name">
-                            上城区
-
-                        </div>
-                        <div class="c_menu_dot"></div>
-                    </a>
-
-
-                </li>
-                <li class="c_menu_li">
-                    <a class="c_menu_main" href="/Article/Index/152">
-                        <div class="c_menu_icon"></div>
-                        <div class="c_menu_name">
-                            其他
-
-                        </div>
-                        <div class="c_menu_dot"></div>
-                    </a>
-                    <ul class="c_submenu ">
-                        <input type="hidden" name="ctl00$ctl11$rpt_channel$ctl00$hid1" id="ctl11_rpt_channel_hid1_0" value="400">
-
-
-                    </ul>
-
-                </li>
-
-
+                <%
+                    }
+                %>
             </ul>
         </div>
         <div class="c_left_menu_wrapper2">
