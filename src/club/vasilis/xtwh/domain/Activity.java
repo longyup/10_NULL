@@ -1,71 +1,83 @@
 package club.vasilis.xtwh.domain;
 
 public class Activity {
-    private int activityId;
-    private String activityName;
-    private String StartTime;
-    private String EndTime;
-    private String place;
+
+    private int id;
+    private String name;
+    private String info;
+    private String launchTime;
+    private String startTime;
+    private String img;
 
     public Activity() {
     }
 
-    public Activity(int activityId, String activityName, String startTime, String endTime, String place) {
-        this.activityId = activityId;
-        this.activityName = activityName;
-        StartTime = startTime;
-        EndTime = endTime;
-        this.place = place;
+    public Activity(int id, String name, String info, String launchTime, String startTime, String img) {
+        this.id = id;
+        this.name = name;
+        this.info = info;
+        this.launchTime = launchTime;
+        this.startTime = startTime;
+        this.img = img;
     }
 
-    public int getActivityId() {
-        return activityId;
+    public int getId() {
+        return id;
     }
 
-    public void setActivityId(int activityId) {
-        this.activityId = activityId;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getActivityName() {
-        return activityName;
+    public String getName() {
+        return name;
     }
 
-    public void setActivityName(String activityName) {
-        this.activityName = activityName;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getInfo() {
+        return info;
+    }
+
+    public void setInfo(String info) {
+        this.info = info;
+    }
+
+    public String getLaunchTime() {
+        return launchTime;
+    }
+
+    public void setLaunchTime(String launchTime) {
+        this.launchTime = launchTime;
     }
 
     public String getStartTime() {
-        return StartTime;
+        return startTime;
     }
 
     public void setStartTime(String startTime) {
-        StartTime = startTime;
+        this.startTime = startTime;
     }
 
-    public String getEndTime() {
-        return EndTime;
+    public String getImg() {
+        return img;
     }
 
-    public void setEndTime(String endTime) {
-        EndTime = endTime;
-    }
-
-    public String getPlace() {
-        return place;
-    }
-
-    public void setPlace(String place) {
-        this.place = place;
+    public void setImg(String img) {
+        this.img = img;
     }
 
     @Override
     public String toString() {
         return "Activity{" +
-                "activityId=" + activityId +
-                ", activityName='" + activityName + '\'' +
-                ", StartTime='" + StartTime + '\'' +
-                ", EndTime='" + EndTime + '\'' +
-                ", place='" + place + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", info='" + info + '\'' +
+                ", launchTime='" + launchTime + '\'' +
+                ", startTime='" + startTime + '\'' +
+                ", img='" + img + '\'' +
                 '}';
     }
 }
