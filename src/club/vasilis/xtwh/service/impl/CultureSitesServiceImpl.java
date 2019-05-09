@@ -1,8 +1,11 @@
 package club.vasilis.xtwh.service.impl;
 
 import club.vasilis.xtwh.dao.CultureSitesDao;
+import club.vasilis.xtwh.dao.NativeProductDao;
 import club.vasilis.xtwh.dao.impl.CultureSitesDaoImpl;
+import club.vasilis.xtwh.dao.impl.NativeProductDaoImpl;
 import club.vasilis.xtwh.domain.CultureSites;
+import club.vasilis.xtwh.domain.NativeProduct;
 import club.vasilis.xtwh.service.CultureSitesService;
 import net.sf.json.JSONArray;
 import org.junit.Test;
@@ -23,6 +26,12 @@ public class CultureSitesServiceImpl implements CultureSitesService {
 
         return JSONArray.fromObject(list).toString();
 
+    }
+
+    @Override
+    public List<CultureSites> findAllCultureSites() throws Exception {
+        CultureSitesDao dao = new CultureSitesDaoImpl();
+        return dao.findAllCultureSites();
     }
 
     @Test

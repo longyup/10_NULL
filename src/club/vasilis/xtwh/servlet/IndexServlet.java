@@ -1,12 +1,10 @@
 package club.vasilis.xtwh.servlet;
 
-import club.vasilis.xtwh.domain.CultureSites;
 import club.vasilis.xtwh.service.CultureNewsService;
 import club.vasilis.xtwh.service.CultureSitesService;
 import club.vasilis.xtwh.service.NativeProductService;
 import club.vasilis.xtwh.service.impl.CultureNewsServiceImpl;
 import club.vasilis.xtwh.service.impl.CultureSitesServiceImpl;
-import com.sun.deploy.net.HttpResponse;
 import club.vasilis.xtwh.service.impl.NativeProductServiceImpl;
 
 import javax.servlet.ServletException;

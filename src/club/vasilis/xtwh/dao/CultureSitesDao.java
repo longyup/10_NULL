@@ -10,5 +10,18 @@ import java.util.List;
  * @create 2019-04-26 9:30
  */
 public interface CultureSitesDao {
-    public List<CultureSites> findCultrueSites() throws SQLException;
+    /**
+     * 首页
+     * @return
+     * @throws SQLException
+     */
+    List<CultureSites> findCultrueSites() throws SQLException;
+
+    /**
+     * 分栏下全部的展示
+     * @return
+     * @throws Exception
+     */
+    List<CultureSites> findAllCultureSites() throws Exception;
+
 }
