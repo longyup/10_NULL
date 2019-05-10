@@ -1,4 +1,7 @@
-<%--
+<%@ page import="club.vasilis.xtwh.domain.CultureSites" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.Locale" %>
+<%@ page import="club.vasilis.xtwh.domain.Location" %><%--
   Created by IntelliJ IDEA.
   User: Vasilis
   Date: 2019/4/19
@@ -82,84 +85,23 @@
                 <p>文化遗产</p>
             </div>
             <ul class="c_left_menu">
+                <%
+                    List<Location> locationList = (List<Location>) request.getAttribute("locationList");
+                    for (Location location : locationList) {
+                %>
                 <li class="c_menu_li">
-                    <a class="c_menu_main" href="/Article/Index/140">
+                    <a class="c_menu_main" href="/product?methood=findbytype&id=<%=location.getId()%>">
                         <div class="c_menu_icon"></div>
                         <div class="c_menu_name">
-                            西湖区
+                            <%= location.getName()%>
 
                         </div>
                         <div class="c_menu_dot"></div>
                     </a>
-
-
                 </li>
-                <li class="c_menu_li">
-                    <a class="c_menu_main" href="/Article/Index/166">
-                        <div class="c_menu_icon"></div>
-                        <div class="c_menu_name">
-                            萧山区
-
-                        </div>
-                        <div class="c_menu_dot"></div>
-                    </a>
-
-
-                </li>
-                <li class="c_menu_li">
-                    <a class="c_menu_main" href="/Article/Index/141">
-                        <div class="c_menu_icon"></div>
-                        <div class="c_menu_name">
-                            余杭区
-
-                        </div>
-                        <div class="c_menu_dot"></div>
-                    </a>
-
-
-                </li>
-                <li class="c_menu_li">
-                    <a class="c_menu_main" href="/Article/Index/127">
-                        <div class="c_menu_icon"></div>
-                        <div class="c_menu_name">
-                            富阳区
-
-                        </div>
-                        <div class="c_menu_dot"></div>
-                    </a>
-
-
-                </li>
-                <li class="c_menu_li">
-                    <a class="c_menu_main" href="/Article/Index/150">
-                        <div class="c_menu_icon"></div>
-                        <div class="c_menu_name">
-                            上城区
-
-                        </div>
-                        <div class="c_menu_dot"></div>
-                    </a>
-
-
-                </li>
-                <li class="c_menu_li">
-                    <a class="c_menu_main" href="/Article/Index/152">
-                        <div class="c_menu_icon"></div>
-                        <div class="c_menu_name">
-                            其他
-
-                        </div>
-                        <div class="c_menu_dot"></div>
-                    </a>
-                    <ul class="c_submenu ">
-                        <input type="hidden" name="ctl00$ctl11$rpt_channel$ctl00$hid1" id="ctl11_rpt_channel_hid1_0" value="400">
-
-
-                    </ul>
-
-                </li>
-
-
+                <%
+                    }
+                %>
             </ul>
         </div>
         <div class="c_left_menu_wrapper2">
@@ -277,7 +219,25 @@
                         <li class="cm-lesson-title4">上传时间</li>
                     </ul>
                 </div>
+
                 <table border="" cellspacing="" cellpadding="" class="cml-table">
+                    <%
+                        List<CultureSites> cultureSitesList = (List<CultureSites>) request.getAttribute("cultureSitesList");
+                        for (CultureSites cultureSites : cultureSitesList) {
+                    %>
+                    <tr>
+                        <th width="107"><%= cultureSites.getId()%></th>
+                        <th width="418"><a href="/Article/Details?id=7264"><%= cultureSites.getTitle()%></a></th>
+
+
+                        <th width="180"><%= cultureSites.getOnlinetime()%></th>
+                    </tr>
+                    <%
+                        }
+                    %>
+                </table>
+
+                <%--<table border="" cellspacing="" cellpadding="" class="cml-table">
                     <tr>
                         <th width="107">7264</th>
                         <th width="418"><a href="/Article/Details?id=7264">宜兴市被认定为国家级农村职业教育和成人教育示范县</a></th>
@@ -285,143 +245,7 @@
 
                         <th width="180">2018-07-30</th>
                     </tr>
-                    <tr>
-                        <th width="107">8205</th>
-                        <th width="418"><span style='color:#FF9933'>【荐】</span><a href="/Article/Details?id=8205">旅游服务公益培训，让农家乐、民宿更好地服务游客</a></th>
-
-
-                        <th width="180">2019-04-15</th>
-                    </tr>
-                    <tr>
-                        <th width="107">8203</th>
-                        <th width="418"><a href="/Article/Details?id=8203">“光明行动”走进徐舍•奖墅</a></th>
-
-
-                        <th width="180">2019-04-15</th>
-                    </tr>
-                    <tr>
-                        <th width="107">8202</th>
-                        <th width="418"><a href="/Article/Details?id=8202">芳桥社区开展“文明共创，志愿同行”活动</a></th>
-
-
-                        <th width="180">2019-04-15</th>
-                    </tr>
-                    <tr>
-                        <th width="107">8201</th>
-                        <th width="418"><a href="/Article/Details?id=8201">筝奇斗艳，放飞我的中国梦</a></th>
-
-
-                        <th width="180">2019-04-15</th>
-                    </tr>
-                    <tr>
-                        <th width="107">8198</th>
-                        <th width="418"><a href="/Article/Details?id=8198">新时代文明实践在万石——聆听湾斗里的音乐梦想！</a></th>
-
-
-                        <th width="180">2019-04-12</th>
-                    </tr>
-                    <tr>
-                        <th width="107">8196</th>
-                        <th width="418"><a href="/Article/Details?id=8196">弘扬志愿服务精神、助力推进乡村振兴！听听沈建书记说了啥？</a></th>
-
-
-                        <th width="180">2019-04-12</th>
-                    </tr>
-                    <tr>
-                        <th width="107">8195</th>
-                        <th width="418"><a href="/Article/Details?id=8195">周铁社区教育中心召开2019年老年工作会议</a></th>
-
-
-                        <th width="180">2019-04-12</th>
-                    </tr>
-                    <tr>
-                        <th width="107">8194</th>
-                        <th width="418"><span style='color:#FF9933'>【荐】</span><a href="/Article/Details?id=8194">西渚镇社区教育工作会议暨业务培训班顺利召开</a></th>
-
-
-                        <th width="180">2019-04-12</th>
-                    </tr>
-                    <tr>
-                        <th width="107">8193</th>
-                        <th width="418"><a href="/Article/Details?id=8193">周铁镇隆重举办2019年竺山风筝节</a></th>
-
-
-                        <th width="180">2019-04-12</th>
-                    </tr>
-                    <tr>
-                        <th width="107">8192</th>
-                        <th width="418"><a href="/Article/Details?id=8192">周铁社区教育中心举办《三国演义》图片展</a></th>
-
-
-                        <th width="180">2019-04-12</th>
-                    </tr>
-                    <tr>
-                        <th width="107">8190</th>
-                        <th width="418"><span style='color:#FF9933'>【荐】</span><a href="/Article/Details?id=8190">“宜兴终身学习网”2018年度奖励领取通知</a></th>
-
-
-                        <th width="180">2019-04-11</th>
-                    </tr>
-                    <tr>
-                        <th width="107">8183</th>
-                        <th width="418"><a href="/Article/Details?id=8183">缅怀革命先烈 共筑远大理想——徐舍镇开展青少年清明祭扫活动</a></th>
-
-
-                        <th width="180">2019-04-08</th>
-                    </tr>
-                    <tr>
-                        <th width="107">8182</th>
-                        <th width="418"><a href="/Article/Details?id=8182">“追寻烈士足迹，重温入党誓词”祭扫烈士墓主题党日活动</a></th>
-
-
-                        <th width="180">2019-04-08</th>
-                    </tr>
-                    <tr>
-                        <th width="107">8181</th>
-                        <th width="418"><a href="/Article/Details?id=8181">新时代文明实践在太华：红色热土传承红色精神，太华缅怀英烈，牢记使命</a></th>
-
-
-                        <th width="180">2019-04-05</th>
-                    </tr>
-                    <tr>
-                        <th width="107">8180</th>
-                        <th width="418"><a href="/Article/Details?id=8180">缅怀先烈 牢记使命</a></th>
-
-
-                        <th width="180">2019-04-03</th>
-                    </tr>
-                    <tr>
-                        <th width="107">8178</th>
-                        <th width="418"><a href="/Article/Details?id=8178">杜绝“祸从天降”，以行动登高</a></th>
-
-
-                        <th width="180">2019-04-03</th>
-                    </tr>
-                    <tr>
-                        <th width="107">8179</th>
-                        <th width="418"><a href="/Article/Details?id=8179">彩笔绘祖国</a></th>
-
-
-                        <th width="180">2019-04-03</th>
-                    </tr>
-                    <tr>
-                        <th width="107">8177</th>
-                        <th width="418"><a href="/Article/Details?id=8177">东郊志愿者在行动</a></th>
-
-
-                        <th width="180">2019-04-03</th>
-                    </tr>
-                    <tr>
-                        <th width="107">8176</th>
-                        <th width="418"><a href="/Article/Details?id=8176">高塍成校举办花卉园艺培训班</a></th>
-
-
-                        <th width="180">2019-04-03</th>
-                    </tr>
-
-
-
-                </table>
+                </table>--%>
 
                 <ul class='pages'><li class='pgNext'><a href="/Article?page=1">首页</a></li><li class='pgNext'><a href="#">上一页</a></li><li class='page-number'><span>1</span><a href="/Article?page=2">2</a><a href="/Article?page=3">3</a><a href="/Article?page=4">4</a><a href="/Article?page=5">5</a><a href="/Article?page=6">6</a><a href="/Article?page=7">7</a><a href="/Article?page=8">8</a><a href="/Article?page=9">9</a><a href="/Article?page=10">10</a></li><li class='pgNext'><a href="/Article?page=2">下一页</a></li><li class='pgNext'><a href="/Article?page=289">末页</a></li></ul>
             </div>

@@ -548,32 +548,17 @@
                     </li>
                 </ul>
             </div>
-            <div class="sc-list">
-                <a href="/Article/Index?id=131" class="sc-list-img scl3">
-                    <img src="f../../images/show-img3.png">
+            <div class="sc-list" >
+                <div id="sc_list_img_scl3">
+
+                </div>
+                <%--<a href="/Article/Index?id=131" class="sc-list-img scl3" >
+                    <img id="img3">
+                    &lt;%&ndash;<img src="f../../images/show-img3.png">&ndash;%&gt;
                     <p class="sc-list-text">【文化遗产】</p>
-                </a>
-                <ul>
-                    <li>
-                        <a href="/Article/Details?id=15">
-                            清代茶贡终结和茶业起...
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/Article/Details?id=14">
-                            清末民初宜兴茶业的艰...
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/Article/Details?id=13">
-                            宜兴岕茶兴起和制茶工...
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/Article/Details?id=12">
-                            明代宜兴茶贡和当时茶...
-                        </a>
-                    </li>
+                </a>--%>
+                <ul id="cs_show">
+
                 </ul>
             </div>
 
@@ -1509,35 +1494,34 @@
 
 </body>
 <script>
+    window.onload = function () {
         var xhr;
-
-        function createXhr() {
-            if (window.XMLHttpRequest) {
-                xhr = new XMLHttpRequest();
-            } else {
-                try {
-                    xhr = new ActiveXObject("Msxml2.XMLHTTP");
-                } catch (e) {
-                    xhr = new ActiveXObject("Microsoft.XMLHTTP");
-                }
+        if (window.XMLHttpRequest) {
+            xhr = new XMLHttpRequest();
+        } else {
+            try {
+                xhr = new ActiveXObject("Msxml2.XMLHTTP");
+            } catch (e) {
+                xhr = new ActiveXObject("Microsoft.XMLHTTP");
             }
-
         }
 
+
+        nativeproduct();
+        cultrueNews();
+        cultureSites();
 
 
         <!--新闻部分 -->
         function cultrueNews() {
-            createXhr();
             xhr.open("GET", "<%=path %>/index?method=CultrueNews", true);
             // alert(xhr.readyState);
             xhr.onreadystatechange = function () {
-
-               // alert(xhr.readyState);
+                // alert(xhr.readyState);
                 if (4 == xhr.readyState) {
                     if (200 == xhr.status) {
                         var result = xhr.responseText;
-                        alert(typeof result);
+                        // alert(typeof result);
                         // 类型转换 object
                         result = JSON.parse(result);
                         displayCultrueNews(result);
@@ -1575,8 +1559,62 @@
 
         }
 
+        <!--文化遗址 -->
+        function cultureSites() {
+            xhr.open("GET", "<%=path %>/index?method=CultureSites", true);
+            alert(xhr.readyState);
+            xhr.onreadystatechange = function () {
+                alert(xhr.readyState);
+                if (4 == xhr.readyState) {
+                    if (200 == xhr.status) {
+                        var result = xhr.responseText;
+                        // alert(typeof result);
+                        // 类型转换 object
+                        result = JSON.parse(result);
+                        displayCultureSites(result);
+                    }
+                }
+            };
+            xhr.send();
+
+            // 解析字符串
+            function displayCultureSites(json) {
+
+                /*var img3 = document.getElementById("img3");
+                img3.innerHTML = "";*/
+
+                var cs_show = document.getElementById("cs_show");
+                cs_show.innerHTML = "";
+
+                var sc_list_img_scl3 = document.getElementById("cs_show");
+                sc_list_img_scl3.innerHTML = "";
+
+                sc_list_img_scl3.innerHTML += "<a href='/Article/Index?id=131' class='sc-list-img scl3' >" +
+                    "<img src='images/sites/txgz.jpg'>" +
+                    "<p class=\"sc-list-text\">【文化遗产】</p>" +
+                    "</a>";
+                var len = json.length;
+                for (var i = 0; i < 4; i++) {
+                    var obj = json[i];
+                    var id = obj.id;
+                    var img = obj.img;
+                    var title = obj.title;
+                    var onlinetime = obj.onlinetime;
+                    var locationid = obj.locationid;
+                    // alert(id+img+consistent+time);
+                    // alert(consistent);
+                    cs_show.innerHTML += "<li><a href=\'file:///C:/Article/Details?id=" + id + "\'>" + title + "</a></li>";
+                }
+                //img3.innerHTML += "<img src='images/sites/txgz.jpg'>";
+
+
+
+
+            }
+
+        }
+
         function nativeproduct() {
-            createXhr();
             xhr.open("GET", "<%=path %>/index?method=NativeProduct", true);
             xhr.onreadystatechange = function () {
                 if (4 == xhr.readyState) {
@@ -1625,6 +1663,8 @@
 
         cultrueNews();
         nativeproduct();
+        cultureSites();
+    }
 
 </script>
 </html>

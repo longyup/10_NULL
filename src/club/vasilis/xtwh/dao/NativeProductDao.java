@@ -24,13 +24,14 @@ public interface NativeProductDao {
      * @throws Exception
      */
     List<NativeProduct> findAllProduct() throws Exception;
-
     /**
      * 根据分类找信息
      * @return
      * @throws Exception
      */
     List<NativeProduct> findProductByType(String typeId) throws Exception;
+
+
 
 
 
