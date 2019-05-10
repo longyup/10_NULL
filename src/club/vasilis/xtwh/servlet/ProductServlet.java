@@ -29,7 +29,6 @@ public class ProductServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.println("11111");
         String method = request.getParameter("method");
         if ("".equals(method)){
 
@@ -42,7 +41,6 @@ public class ProductServlet extends HttpServlet {
     }
 
     private void findByType(HttpServletRequest request, HttpServletResponse response) {
-        System.out.println("111");
         String typeId = request.getParameter("id");
         try {
             //设置输出格式

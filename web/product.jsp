@@ -234,7 +234,7 @@
                     %>
                 </table>
 
-                <ul class='pages'>
+               <%-- <ul class='pages'>
                     <li class='pgNext'><a href="/Article?page=1">首页</a></li>
                     <li class='pgNext'><a href="#">上一页</a></li>
                     <li class='page-number'><span>1</span><a href="/Article?page=2">2</a><a href="/Article?page=3">3</a><a
@@ -243,7 +243,7 @@
                             href="/Article?page=10">10</a></li>
                     <li class='pgNext'><a href="/Article?page=2">下一页</a></li>
                     <li class='pgNext'><a href="/Article?page=289">末页</a></li>
-                </ul>
+                </ul>--%>
             </div>
             <div class="cm-lesson-con" style="display:none;">
                 <ul>
@@ -895,14 +895,10 @@
         }
 
         xhr.open("GET", "<%=path%>/product?method=findbytype&id=" + id, true);
-        // alert(xhr.readyState);
         xhr.onreadystatechange = function () {
-            // alert(xhr.readyState);
             if (4 == xhr.readyState) {
-                alert(xhr.readyState);
                 if (200 == xhr.status) {
                     var result = xhr.responseText;
-                    alert(typeof result);
                     // 类型转换 object
                     result = JSON.parse(result);
                     showtype(result);
@@ -914,18 +910,12 @@
         function showtype(json) {
             var len = json.length;
             var table = document.getElementsByClassName("cml-table");
-            //alert(ul.length);
             table[0].innerHTML = "";
             for (var i = 0; i < len; i++) {
                 var obj = json[i];
                 var id = obj.id;
                 var name = obj.name;
-                var type = obj.type;
                 var onlinetime = obj.onlinetime;
-                /*  // alert(obj);
-                   alert(id);
-                   alert(name);
-                   alert(img);*/
 
 
                 table[0].innerHTML += "<tr><th width='107'>" + id + "</th><th width='418'><a href='/product?&method=infor&id=" + id + "'>" + name + "</a></th><th width='180'>" + onlinetime + "</th></tr>";
