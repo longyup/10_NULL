@@ -24,7 +24,7 @@
     <link href="<%= path%>/css/Page.css" type="text/css" rel="stylesheet" />
 
 
-    <title>宜兴终身学习网</title>
+    <title>乡土文化</title>
 
 
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_234130_nem7eskcrkpdgqfr.css">

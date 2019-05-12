@@ -48,8 +48,8 @@
                 <li><a href="<%=path%>/product?method=topage" style="color:white;" class="nl-title">特色美食</a></li>
                 <li><a href="<%=path%>/culture.jsp" style="color:white;" class="nl-title">名人风情</a></li>
                 <li><a href="<%=path%>/culture.jsp" style="color:white;" class="nl-title">风情民俗</a></li>
-                <li><a href="<%=path%>/activity" style="color:white;" class="nl-title">活动一览</a></li>
-                <li><a href="<%=path%>/242.jsp" style="color:white;" class="nl-title">杂谈交流</a></li>
+                <li><a href="<%=path%>/activity?method=activityMessage" style="color:white;" class="nl-title">活动一览</a></li>
+                <li><a href="<%=path%>/Activity.jsp" style="color:white;" class="nl-title">杂谈交流</a></li>
                 <li><a href="<%=path%>/user/login.jsp" style="color:white;" class="nl-title">关于我们</a></li>
             </ul>
         </div>

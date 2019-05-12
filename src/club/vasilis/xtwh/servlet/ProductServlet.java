@@ -56,6 +56,12 @@ public class ProductServlet extends HttpServlet {
 
     }
 
+    /**
+     * 第一次跳转用
+     * 数据放在request
+     * @param request
+     * @param response
+     */
     private void toPage(HttpServletRequest request, HttpServletResponse response) {
 
         NativeProductCategoryService categoryService = new NativeProductCategoryServiceImpl();
