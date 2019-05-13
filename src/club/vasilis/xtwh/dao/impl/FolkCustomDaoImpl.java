@@ -20,7 +20,7 @@ public class FolkCustomDaoImpl implements FolkCustomDao {
     @Override
     public List<FolkCustom> customPassage() throws Exception {
         QueryRunner runner = new QueryRunner(DsUtils.getDataSource());
-        String sql = "select id,name,name,img,brief,onlinetime,typeid from folk_custom_menu ORDER BY onlinetime DESC";
+        String sql = "select id,name,name,img,onlinetime,typeid from folk_custom_passage";
         List<FolkCustom> query = runner.query(sql, new BeanListHandler<FolkCustom>(FolkCustom.class));
         return query;
     }

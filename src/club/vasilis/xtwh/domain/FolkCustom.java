@@ -12,6 +12,11 @@ public class FolkCustom {
     public FolkCustom() {
     }
 
+    public FolkCustom(String id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
     public FolkCustom(String id, String name, String img, String brief, String onlinetime, String typeid) {
         this.id = id;
         this.name = name;
