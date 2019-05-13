@@ -29,7 +29,6 @@ public class NativeProductDaoImpl implements NativeProductDao {
         QueryRunner runner = new QueryRunner(DsUtils.getDataSource());
         String sql = "select id,name,onlinetime from native_product  ORDER BY onlinetime DESC";
         List<NativeProduct> query = runner.query(sql, new BeanListHandler<NativeProduct>(NativeProduct.class));
-
         return query;
     }
 
@@ -40,6 +39,7 @@ public class NativeProductDaoImpl implements NativeProductDao {
         List<NativeProduct> query = runner.query(sql, new BeanListHandler<NativeProduct>(NativeProduct.class),typeId);
         return query;
     }
+
 
     @Test
     public void test() throws  Exception{

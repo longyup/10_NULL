@@ -24,6 +24,7 @@ public interface NativeProductService  {
      */
     List<NativeProduct> findAllProduct() throws Exception;
 
+
     /**
      * 根据分类显示，并转成json
      * @return

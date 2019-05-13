@@ -29,13 +29,14 @@ public class NativeProductServiceImpl implements NativeProductService {
         NativeProductDao dao = new NativeProductDaoImpl();
         return dao.findAllProduct();
     }
-
     @Override
     public String findProductByTypeJson(String typeId) throws Exception {
         NativeProductDao dao = new NativeProductDaoImpl();
         List<NativeProduct> list = dao.findProductByType(typeId);
         return JSONArray.fromObject(list).toString();
     }
+
+
 
     @Test
     public void test()throws Exception{
