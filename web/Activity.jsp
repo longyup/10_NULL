@@ -336,7 +336,7 @@
                         %>
                     <li class="lesson-brief1">
                         <div class="lb1-con">
-                            <a href="/Course/Details?id="<%=activity.getId()%>">
+                            <a href="ActivityDails.jsp">
                             <div class="lb1-con-hd">
                                 <img src="http://112.25.215.35:80/Resource/Images/Course/" onerror="this.src = '<%=activity.getImg()%>'" class="lb1-con-hd-img" />
                                 <p class="clearfix"><span class="l"><img src="<%=path %>/images/eye-1.png" /><%=activity.getStartTime()%></span> <span class="r"><img src="images/clock.png" /><%=activity.getStartTime()%></span></p>
