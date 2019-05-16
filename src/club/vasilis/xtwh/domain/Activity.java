@@ -7,17 +7,19 @@ public class Activity {
     private String launchTime;
     private String startTime;
     private String img;
+    private String typeId;
 
     public Activity() {
     }
 
-    public Activity(int id, String name, String info, String launchTime, String startTime, String img) {
+    public Activity(int id, String name, String info, String launchTime, String startTime, String img,String typeId) {
         this.id = id;
         this.name = name;
         this.info = info;
         this.launchTime = launchTime;
         this.startTime = startTime;
         this.img = img;
+        this.typeId = typeId;
     }
 
     public int getId() {
@@ -68,6 +70,14 @@ public class Activity {
         this.img = img;
     }
 
+    public String getTypeId() {
+        return typeId;
+    }
+
+    public void setTypeId(String typeId) {
+        this.typeId = typeId;
+    }
+
     @Override
     public String toString() {
         return "Activity{" +
@@ -77,6 +87,7 @@ public class Activity {
                 ", launchTime='" + launchTime + '\'' +
                 ", startTime='" + startTime + '\'' +
                 ", img='" + img + '\'' +
+                ", typeId='" + typeId + '\'' +
                 '}';
     }
 }

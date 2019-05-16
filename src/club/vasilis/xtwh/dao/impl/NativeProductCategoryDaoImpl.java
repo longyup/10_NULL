@@ -5,6 +5,7 @@ import club.vasilis.xtwh.domain.NativeProductCategory;
 import club.vasilis.xtwh.util.DsUtils;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
+import org.junit.Test;
 
 import java.util.List;
 
@@ -21,4 +22,5 @@ public class NativeProductCategoryDaoImpl implements NativeProductCategoryDao {
         List<NativeProductCategory> query = runner.query(sql, new BeanListHandler<NativeProductCategory>(NativeProductCategory.class));
         return query;
     }
+
 }

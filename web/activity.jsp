@@ -1,5 +1,6 @@
 <%@ page import="club.vasilis.xtwh.domain.Activity" %>
-<%@ page import="java.util.List" %><%--
+<%@ page import="java.util.List" %>
+<%@ page import="club.vasilis.xtwh.domain.ActivityCategory" %><%--
   Created by IntelliJ IDEA.
   User: Zhilin
   Date: 2019/4/17
@@ -91,50 +92,54 @@
             <ul class="c_left_menu">
 
 
-                <%--                <%--%>
-                <%--                    List<ActivityCategory> activityCategoryList = (List<ActivityCategory>) request.getAttribute("activityCategoryList");--%>
-                <%--                    for (ActivityCategory activityCategory : activityCategoryList){--%>
-                <%--                %>--%>
+                                <%
+                                    List<ActivityCategory> categoryList = (List<ActivityCategory>) request.getAttribute("categoryList");
+                                    for (ActivityCategory category : categoryList){
+                                %>
                 <li class="c_menu_li">
-                    <a class="c_menu_main" href="/Course/Index/242" onmouseover="ShowChildrenChannel(242)">
+                    <a class="c_menu_main" >
                         <div class="c_menu_icon"></div>
                         <div class="c_menu_name">
-                            <%--                            <%=activityCategory.getName()%>--%>
-                            民俗保护
+                                                        <%=category.getName()%>
                         </div>
                         <div class="c_menu_dot"></div>
                     </a>
-                    <ul class="c_submenu" id="Channel_242">
-                        <input type="hidden" name="ctl00$ctl11$rpt_channel$ctl0(0)$hid1" id="ctl11_rpt_channel_hid1_0" value="400">
+                    <ul class="c_submenu" id="typeId" href="javascript:void(0)" onclick="findType('<%=category.getId()%>');return false;">
+                        <input type="hidden" name="ctl00$ctl11$rpt_channel$ctl0(0)$hid1" id="typeId" href="javascript:void(0)" onclick="findType('<%=category.getId()%>');return false;" value="400">
 
                     </ul>
                 </li>
-                <li class="c_menu_li">
-                    <a class="c_menu_main" href="/Course/Index/211" onmouseover="ShowChildrenChannel(211)">
-                        <div class="c_menu_icon"></div>
-                        <div class="c_menu_name">
-                            美食保护
-                        </div>
-                        <div class="c_menu_dot"></div>
-                    </a>
-                    <ul class="c_submenu" id="Channel_211">
-                        <input type="hidden" name="ctl00$ctl11$rpt_channel$ctl0(0)$hid1" id="ctl11_rpt_channel_hid1_0" value="400">
 
-                    </ul>
-                </li>
-                <li class="c_menu_li">
-                    <a class="c_menu_main" href="/Course/Index/197" onmouseover="ShowChildrenChannel(197)">
-                        <div class="c_menu_icon"></div>
-                        <div class="c_menu_name">
-                            民俗保护
-                        </div>
-                        <div class="c_menu_dot"></div>
-                    </a>
-                    <ul class="c_submenu" id="Channel_197">
-                        <input type="hidden" name="ctl00$ctl11$rpt_channel$ctl0(0)$hid1" id="ctl11_rpt_channel_hid1_0" value="400">
+                <%
+                    }
+                %>
 
-                    </ul>
-                </li>
+<%--                <li class="c_menu_li">--%>
+<%--                    <a class="c_menu_main" href="/Course/Index/211" onmouseover="ShowChildrenChannel(211)">--%>
+<%--                        <div class="c_menu_icon"></div>--%>
+<%--                        <div class="c_menu_name">--%>
+<%--                            美食保护--%>
+<%--                        </div>--%>
+<%--                        <div class="c_menu_dot"></div>--%>
+<%--                    </a>--%>
+<%--                    <ul class="c_submenu" id="Channel_211">--%>
+<%--                        <input type="hidden" name="ctl00$ctl11$rpt_channel$ctl0(0)$hid1" id="ctl11_rpt_channel_hid1_0" value="400">--%>
+
+<%--                    </ul>--%>
+<%--                </li>--%>
+<%--                <li class="c_menu_li">--%>
+<%--                    <a class="c_menu_main" href="/Course/Index/197" onmouseover="ShowChildrenChannel(197)">--%>
+<%--                        <div class="c_menu_icon"></div>--%>
+<%--                        <div class="c_menu_name">--%>
+<%--                            民俗保护--%>
+<%--                        </div>--%>
+<%--                        <div class="c_menu_dot"></div>--%>
+<%--                    </a>--%>
+<%--                    <ul class="c_submenu" id="Channel_197">--%>
+<%--                        <input type="hidden" name="ctl00$ctl11$rpt_channel$ctl0(0)$hid1" id="ctl11_rpt_channel_hid1_0" value="400">--%>
+
+<%--                    </ul>--%>
+<%--                </li>--%>
 
 
             </ul>
@@ -1207,6 +1212,56 @@
 
 
 </body>
+<script>
+    var findType = function (id) {
+
+        var xhr;
+        if (window.XMLHttpRequest) {
+            xhr = new XMLHttpRequest();
+        } else {
+            try {
+                xhr = new ActiveXObject("Msxml2.XMLHTTP");
+            } catch (e) {
+                xhr = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+        }
+
+        xhr.open("GET", "<%=path%>/product?method=findBytype&id=" + id, true);
+        xhr.onreadystatechange = function () {
+            if (4 == xhr.readyState) {
+                if (200 == xhr.status) {
+                    var result = xhr.responseText;
+                    // 类型转换 object
+                    result = JSON.parse(result);
+                    showtype(result);
+                }
+            }
+        };
+        xhr.send();
+
+        function showtype(json) {
+            var len = json.length;
+            var inner = document.getElementsByClassName("clearfix");
+            inner[0].innerHTML = "";
+            for (var i = 0; i < len; i++) {
+                var obj = json[i];
+                var id = obj.id;
+                var name = obj.name;
+                var startTime = obj.startTime;
+                var info = obj.info;
+                var launchTime = obj.launchTime;
+                var img = obj.img;
+                var typeId = obj.typeId;
+
+
+
+
+                inner[0].innerHTML+="<li class=\"lesson-brief1\"><div class=\"lb1-con\"><a href='/Activity?&method=infor&id'"+id+"><div class=\"lb1-con-hd\"><img src=\"http://112.25.215.35:80/Resource/Images/Course/\" onerror=\"this.src = '"+img+" class=\"lb1-con-hd-img\" /><p class=\"clearfix\"><span class=\"l\"><img src=\"<%=path %>/images/eye-1.png\" />"+startTime+"</span> <span class=\"r\"><img src=\"images/clock.png\" />"+startTime+"</span></p></div><div class=\"lb1-con-bd\"><p class=\"lb1-con-bd-p1\">"+launchTime+"</p><p class=\"lb1-con-bd-p2\">上传日期："+launchTime+"</p></div></a></div></li>";
+            }
+        }
+
+        return false;
+    }
+
+</script>
 </html>
-
-

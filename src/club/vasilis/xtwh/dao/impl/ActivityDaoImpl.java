@@ -19,6 +19,14 @@ public class ActivityDaoImpl implements ActivityDao {
         return list;
     }
 
+    @Override
+    public List<Activity> findActivityByType(String typeId) throws Exception {
+        QueryRunner runner = new QueryRunner(DsUtils.getDataSource());
+        String sql = "SELECT id,name,info,LaunchTime,StartTime,img FROM activity WHERE typeId = ? ORDER BY id DESC";
+
+        return runner.query(sql,new BeanListHandler<>(Activity.class),typeId);
+    }
+
     @Test
     public void test() throws SQLException {
         System.out.println(new ActivityDaoImpl().findActivityAll());

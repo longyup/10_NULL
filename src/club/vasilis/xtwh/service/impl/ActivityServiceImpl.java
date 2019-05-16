@@ -4,6 +4,7 @@ import club.vasilis.xtwh.dao.ActivityDao;
 import club.vasilis.xtwh.dao.impl.ActivityDaoImpl;
 import club.vasilis.xtwh.domain.Activity;
 import club.vasilis.xtwh.service.ActivityService;
+import net.sf.json.JSONArray;
 import org.junit.Test;
 
 import java.sql.SQLException;
@@ -21,6 +22,13 @@ public class ActivityServiceImpl implements ActivityService {
 
 
         return dao.findActivityAll();
+    }
+
+    @Override
+    public String findActivityByTypeJson(String typeId) throws Exception {
+        ActivityDao dao = new ActivityDaoImpl();
+        List<Activity> list = dao.findActivityByType(typeId);
+        return JSONArray.fromObject(list).toString();
     }
 
     @Test

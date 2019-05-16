@@ -12,4 +12,11 @@ import java.util.List;
 
 public interface ActivityService {
     List<Activity> findActivityAll() throws SQLException;
+
+    /**
+     * 根据分类显示，并转成json
+     * @return
+     * @throws Exception
+     */
+    String findActivityByTypeJson(String typeId) throws Exception;
 }
