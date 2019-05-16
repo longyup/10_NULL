@@ -884,7 +884,7 @@
 
 <script>
     var findType = function (id) {
-
+        alert(id);
         var xhr;
         if (window.XMLHttpRequest) {
             xhr = new XMLHttpRequest();

@@ -11,5 +11,8 @@ import java.util.List;
  */
 
 public interface ActivityCategoryDao {
+
     List<ActivityCategory> findActivityCatefory() throws SQLException;
+
+
 }
