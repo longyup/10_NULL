@@ -13,39 +13,32 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-@WebServlet(name = "ActivityServlet",urlPatterns = "/activity")
+@WebServlet(name = "ActivityServlet", urlPatterns = "/activity")
 public class ActivityServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        doGet(req,resp);
+        doGet(req, resp);
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String method = req.getParameter("method");
-        if ("".equals(method)){
+        if ("".equals(method)) {
 
-        }else if ("activityMessage".equals(method)){
-            getActivityMessage(req,resp);
+        } else if ("activityMessage".equals(method)) {
+            getActivityMessage(req, resp);
         }
     }
 
     private void getActivityMessage(HttpServletRequest req, HttpServletResponse resp) {
-        //测试
-        //System.out.println("222");
-        try {
 
+        System.out.println("222");
+        try {
             ActivityService activityService = new ActivityServiceImpl();
             List<Activity> activityList = activityService.findActivityAll();
             req.setAttribute("activityList", activityList);
-
-
-            //            ActivityCategoryService activityCategoryService = new ActivityCategoryServiceImpl();
-//            List<ActivityCategory> activityCategoryList = activityCategoryService.findActivityCategoryAll();
-//            req.setAttribute("activityCategoryList",activityCategoryList);
-
-            req.getRequestDispatcher("/Activity.jsp").forward(req,resp);
+            req.getRequestDispatcher("/activity.jsp").forward(req, resp);
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ServletException e) {

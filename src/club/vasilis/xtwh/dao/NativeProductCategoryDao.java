@@ -13,4 +13,6 @@ import java.util.List;
 public interface NativeProductCategoryDao {
 
     List<NativeProductCategory> findAllCategory() throws Exception;
+
+
 }

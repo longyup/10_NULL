@@ -1,7 +1,7 @@
-<%@ page import="club.vasilis.xtwh.domain.CultureSites" %>
+<%@ page import="club.vasilis.xtwh.domain.FolkCustom" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.Locale" %>
-<%@ page import="club.vasilis.xtwh.domain.Location" %><%--
+<%--
   Created by IntelliJ IDEA.
   User: Vasilis
   Date: 2019/4/19
@@ -24,7 +24,7 @@
     <link href="<%= path%>/css/Page.css" type="text/css" rel="stylesheet" />
 
 
-    <title>乡土文化</title>
+    <title>null_乡土文化</title>
 
 
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_234130_nem7eskcrkpdgqfr.css">
@@ -82,18 +82,18 @@
     <div class="pc_left l">
         <div class="c_left_menu_wrapper1">
             <div class="treetitle">
-                <p>文化遗产</p>
+                <p>风情民俗</p>
             </div>
             <ul class="c_left_menu">
                 <%
-                    List<Location> locationList = (List<Location>) request.getAttribute("locationList");
-                    for (Location location : locationList) {
+                    List<FolkCustom> customMenus = (List<FolkCustom>) request.getAttribute("customMenuList");
+                    for (FolkCustom customMenu : customMenus) {
                 %>
                 <li class="c_menu_li">
-                    <a class="c_menu_main" href="/product?methood=findbytype&id=<%=location.getId()%>">
+                    <a class="c_menu_main" href="/product?methood=findbytype&id=<%=customMenu.getId()%>">
                         <div class="c_menu_icon"></div>
                         <div class="c_menu_name">
-                            <%= location.getName()%>
+                            <%= customMenu.getName()%>
 
                         </div>
                         <div class="c_menu_dot"></div>
@@ -222,15 +222,15 @@
 
                 <table border="" cellspacing="" cellpadding="" class="cml-table">
                     <%
-                        List<CultureSites> cultureSitesList = (List<CultureSites>) request.getAttribute("cultureSitesList");
-                        for (CultureSites cultureSites : cultureSitesList) {
+                        List<FolkCustom> customPassageList = (List<FolkCustom>) request.getAttribute("customPassageList");
+                        for (FolkCustom customPassage : customPassageList) {
                     %>
                     <tr>
-                        <th width="107"><%= cultureSites.getId()%></th>
-                        <th width="418"><a href="/Article/Details?id=7264"><%= cultureSites.getTitle()%></a></th>
+                        <th width="107"><%= customPassage.getId()%></th>
+                        <th width="418"><a href="/Article/Details?id=7264"><%= customPassage.getName()%></a></th>
 
 
-                        <th width="180"><%= cultureSites.getOnlinetime()%></th>
+                        <th width="180"><%= customPassage.getOnlinetime()%></th>
                     </tr>
                     <%
                         }
