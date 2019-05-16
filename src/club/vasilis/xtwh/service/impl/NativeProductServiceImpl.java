@@ -29,6 +29,7 @@ public class NativeProductServiceImpl implements NativeProductService {
         NativeProductDao dao = new NativeProductDaoImpl();
         return dao.findAllProduct();
     }
+
     @Override
     public String findProductByTypeJson(String typeId) throws Exception {
         NativeProductDao dao = new NativeProductDaoImpl();
@@ -36,10 +37,15 @@ public class NativeProductServiceImpl implements NativeProductService {
         return JSONArray.fromObject(list).toString();
     }
 
+    @Override
+    public NativeProduct showDetails(String id) throws Exception {
+        NativeProductDao dao = new NativeProductDaoImpl();
+        return dao.showDetails(id);
+    }
 
 
     @Test
-    public void test()throws Exception{
+    public void test() throws Exception {
         System.out.println(new NativeProductServiceImpl().findFiveindex());
 
 
