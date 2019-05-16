@@ -90,7 +90,7 @@
                     for (FolkCustom customMenu : customMenus) {
                 %>
                 <li class="c_menu_li">
-                    <a class="c_menu_main" href="/product?methood=findbytype&id=<%=customMenu.getId()%>">
+                    <a class="c_menu_main" id="type" href="javascript:void(0)" onclick="findType('<%=customMenu.getId()%>');return false;">
                         <div class="c_menu_icon"></div>
                         <div class="c_menu_name">
                             <%= customMenu.getName()%>
@@ -227,7 +227,8 @@
                     %>
                     <tr>
                         <th width="107"><%= customPassage.getId()%></th>
-                        <th width="418"><a href="/Article/Details?id=7264"><%= customPassage.getName()%></a></th>
+                        <th width="418"><a href="<%=path%>/folk_custom?method=cusDetails&id=<%= customPassage.getId()%>"><%=customPassage.getName()%>
+                        </a></th>
 
 
                         <th width="180"><%= customPassage.getOnlinetime()%></th>
