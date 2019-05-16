@@ -23,4 +23,19 @@ public interface CultureSitesService {
      * @throws Exception
      */
     List<CultureSites> findAllCultureSites() throws Exception;
+
+    /**
+     * 根据分类刷新列表，并转成json
+     * @return
+     * @throws Exception
+     */
+    String findCultureSitesByTypeJson(String typeId) throws Exception;
+
+    /**
+     * 点击进入详情信息
+     * @param id
+     * @return
+     * @throws Exception
+     */
+    CultureSites showDetails(String id) throws Exception;
 }

@@ -24,4 +24,18 @@ public interface CultureSitesDao {
      */
     List<CultureSites> findAllCultureSites() throws Exception;
 
+    /**
+     * 根据分类的点击显示列表
+     * @return
+     * @throws Exception
+     */
+    List<CultureSites> findCultureSitesByType(String typeId) throws Exception;
+
+    /**
+     * 点击进入详情信息
+     * @param id
+     * @return
+     * @throws Exception
+     */
+    CultureSites showDetails(String id) throws Exception;
 }
