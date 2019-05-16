@@ -11,7 +11,7 @@ import java.util.List;
 
 public interface NativeProductService  {
     /**
-     * 对list封装成json数据
+     * 首页上对list封装成json数据
      * @return
      * @throws Exception
      */
@@ -26,10 +26,17 @@ public interface NativeProductService  {
 
 
     /**
-     * 根据分类显示，并转成json
+     * 根据分类刷新列表，并转成json
      * @return
      * @throws Exception
      */
     String findProductByTypeJson(String typeId) throws Exception;
 
+    /**
+     * 点击进入详情信息
+     * @param id
+     * @return
+     * @throws Exception
+     */
+    NativeProduct showDetails(String id) throws Exception;
 }

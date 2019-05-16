@@ -4,6 +4,7 @@ import club.vasilis.xtwh.dao.NativeProductDao;
 import club.vasilis.xtwh.domain.NativeProduct;
 import club.vasilis.xtwh.util.DsUtils;
 import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.junit.Test;
 
@@ -40,10 +41,19 @@ public class NativeProductDaoImpl implements NativeProductDao {
         return query;
     }
 
+    @Override
+    public NativeProduct showDetails(String id) throws Exception {
+        QueryRunner runner = new QueryRunner(DsUtils.getDataSource());
+        String sql = "select id,name,img,brief,onlinetime from native_product WHERE id = ?";
+        NativeProduct query = runner.query(sql, new BeanHandler<>(NativeProduct.class),id);
+        return query;
+
+    }
+
 
     @Test
     public void test() throws  Exception{
-        System.out.println(new NativeProductDaoImpl().findAllProduct());
+        System.out.println(new NativeProductDaoImpl().showDetails("G001"));
 
     }
 }

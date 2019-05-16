@@ -178,6 +178,7 @@
         </div>
 
         <div class="cm-lesson">
+
             <div class="cm-lesson-top clearfix">
                 <div class="cm-lesson-top1 l">
                     全部文章
@@ -204,7 +205,7 @@
                     </ul>
                 </div>
             </div>
-
+            <%--视图1--%>
             <div class="cm-lesson-con" style="display:block;">
                 <div class="cm-lesson-title">
                     <ul class="clearfix">
@@ -222,7 +223,7 @@
                     <tr>
                         <th width="107"><%= product.getId()%>
                         </th>
-                        <th width="418"><a href="/Article/Details?id=7264"><%= product.getName()%>
+                        <th width="418"><a href="<%=path%>/product?method=details&id=<%= product.getId()%>"><%= product.getName()%>
                         </a></th>
 
 
@@ -245,6 +246,7 @@
                     <li class='pgNext'><a href="/Article?page=289">末页</a></li>
                 </ul>--%>
             </div>
+            <%--视图2--%>
             <div class="cm-lesson-con" style="display:none;">
                 <ul>
                     <li class="lesson-brief2 clearfix">
@@ -918,7 +920,7 @@
                 var onlinetime = obj.onlinetime;
 
 
-                table[0].innerHTML += "<tr><th width='107'>" + id + "</th><th width='418'><a href='/product?&method=infor&id=" + id + "'>" + name + "</a></th><th width='180'>" + onlinetime + "</th></tr>";
+                table[0].innerHTML += "<tr><th width='107'>" + id + "</th><th width='418'><a href='/product?&method=details&id=" + id + "'>" + name + "</a></th><th width='180'>" + onlinetime + "</th></tr>";
             }
         }
 

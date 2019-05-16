@@ -36,10 +36,46 @@ public class ProductServlet extends HttpServlet {
             toPage(request,response);
         }else if("findbytype".equals(method)){
             findByType(request,response);
+        }else if ("details".equals(method)){
+            detail(request,response);
         }
 
     }
 
+    /**
+     * 点击进入详情页面,数据放在request
+     * @param request
+     * @param response
+     */
+    private void detail(HttpServletRequest request, HttpServletResponse response) {
+        System.err.println("详情页");
+        String id = request.getParameter("id");
+
+        NativeProductCategoryService categoryService = new NativeProductCategoryServiceImpl();
+        NativeProductService service = new NativeProductServiceImpl();
+
+        try {
+            // 类别
+            List<NativeProductCategory> categoryList = categoryService.findAllCategory();
+            request.setAttribute("categoryList",categoryList);
+
+            // 详细信息的显示
+
+            NativeProduct nativeProduct = service.showDetails(id);
+            System.err.println(nativeProduct);
+            request.setAttribute("productDetails",nativeProduct);
+            request.getRequestDispatcher("/productDetails.jsp").forward(request,response);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * 根据分类的点击用AJAX刷新列表
+     * @param request
+     * @param response
+     */
     private void findByType(HttpServletRequest request, HttpServletResponse response) {
         String typeId = request.getParameter("id");
         try {
@@ -68,7 +104,7 @@ public class ProductServlet extends HttpServlet {
         NativeProductService service = new NativeProductServiceImpl();
         try {
 
-            // 类别
+            // 左侧菜单类别
             List<NativeProductCategory> categoryList = categoryService.findAllCategory();
             request.setAttribute("categoryList",categoryList);
             // 详细的每一项
