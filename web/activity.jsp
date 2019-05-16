@@ -11,25 +11,23 @@
 <html>
 <head>
     <%
-        String path =request.getContextPath();
+        String path = request.getContextPath();
     %>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="Shortcut Icon" href=/favicon.ico>
-    <link rel="stylesheet" type="text/css" href="<%=path %>/css/reset.css" />
-    <link rel="stylesheet" type="text/css" href="<%=path %>/css/head.css" />
-    <link rel="stylesheet" type="text/css" href="<%=path %>/css/article.css" />
-    <link href="<%=path %>/css/Page.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="<%=path %>/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="<%=path %>/css/head.css"/>
+    <link rel="stylesheet" type="text/css" href="<%=path %>/css/article.css"/>
+    <link href="<%=path %>/css/Page.css" type="text/css" rel="stylesheet"/>
 
 
     <title>宜兴终身学习网</title>
 
 
-
-
-    <link href="css/Page.css" rel="stylesheet" />
+    <link href="css/Page.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_234130_nem7eskcrkpdgqfr.css">
 
     <script>
@@ -44,7 +42,6 @@
 
 </head>
 <body>
-
 
 
 <style>
@@ -73,39 +70,34 @@
 <!--nav 导航-->
 
 
-<%@include file="head.jsp"%>
-
-
+<%@include file="head.jsp" %>
 
 
 <div class="mainwidth1 mt20 clearfix">
 
 
-
-
-
-
     <div class="pc_left l">
 
         <div class="c_left_menu_wrapper1">
-            <div class="treetitle"> <p>活动分类</p></div>
+            <div class="treetitle"><p>活动分类</p></div>
             <ul class="c_left_menu">
 
 
-                                <%
-                                    List<ActivityCategory> categoryList = (List<ActivityCategory>) request.getAttribute("categoryList");
-                                    for (ActivityCategory category : categoryList){
-                                %>
+                <%
+                    List<ActivityCategory> categoryList = (List<ActivityCategory>) request.getAttribute("categoryList");
+                    for (ActivityCategory category : categoryList) {
+                %>
                 <li class="c_menu_li">
-                    <a class="c_menu_main" >
+                    <a class="c_menu_main" id="typeId" href="javascript:void(0)"
+                       onclick="findType('<%=category.getId()%>')">
                         <div class="c_menu_icon"></div>
                         <div class="c_menu_name">
-                                                        <%=category.getName()%>
+                            <%=category.getName()%>
                         </div>
                         <div class="c_menu_dot"></div>
                     </a>
-                    <ul class="c_submenu" id="typeId" href="javascript:void(0)" onclick="findType('<%=category.getId()%>');return false;">
-                        <input type="hidden" name="ctl00$ctl11$rpt_channel$ctl0(0)$hid1" id="typeId" href="javascript:void(0)" onclick="findType('<%=category.getId()%>');return false;" value="400">
+                    <ul class="c_submenu">
+                        <input type="hidden" name="ctl00$ctl11$rpt_channel$ctl0(0)$hid1">
 
                     </ul>
                 </li>
@@ -114,32 +106,32 @@
                     }
                 %>
 
-<%--                <li class="c_menu_li">--%>
-<%--                    <a class="c_menu_main" href="/Course/Index/211" onmouseover="ShowChildrenChannel(211)">--%>
-<%--                        <div class="c_menu_icon"></div>--%>
-<%--                        <div class="c_menu_name">--%>
-<%--                            美食保护--%>
-<%--                        </div>--%>
-<%--                        <div class="c_menu_dot"></div>--%>
-<%--                    </a>--%>
-<%--                    <ul class="c_submenu" id="Channel_211">--%>
-<%--                        <input type="hidden" name="ctl00$ctl11$rpt_channel$ctl0(0)$hid1" id="ctl11_rpt_channel_hid1_0" value="400">--%>
+                <%--                <li class="c_menu_li">--%>
+                <%--                    <a class="c_menu_main" href="/Course/Index/211" onmouseover="ShowChildrenChannel(211)">--%>
+                <%--                        <div class="c_menu_icon"></div>--%>
+                <%--                        <div class="c_menu_name">--%>
+                <%--                            美食保护--%>
+                <%--                        </div>--%>
+                <%--                        <div class="c_menu_dot"></div>--%>
+                <%--                    </a>--%>
+                <%--                    <ul class="c_submenu" id="Channel_211">--%>
+                <%--                        <input type="hidden" name="ctl00$ctl11$rpt_channel$ctl0(0)$hid1" id="ctl11_rpt_channel_hid1_0" value="400">--%>
 
-<%--                    </ul>--%>
-<%--                </li>--%>
-<%--                <li class="c_menu_li">--%>
-<%--                    <a class="c_menu_main" href="/Course/Index/197" onmouseover="ShowChildrenChannel(197)">--%>
-<%--                        <div class="c_menu_icon"></div>--%>
-<%--                        <div class="c_menu_name">--%>
-<%--                            民俗保护--%>
-<%--                        </div>--%>
-<%--                        <div class="c_menu_dot"></div>--%>
-<%--                    </a>--%>
-<%--                    <ul class="c_submenu" id="Channel_197">--%>
-<%--                        <input type="hidden" name="ctl00$ctl11$rpt_channel$ctl0(0)$hid1" id="ctl11_rpt_channel_hid1_0" value="400">--%>
+                <%--                    </ul>--%>
+                <%--                </li>--%>
+                <%--                <li class="c_menu_li">--%>
+                <%--                    <a class="c_menu_main" href="/Course/Index/197" onmouseover="ShowChildrenChannel(197)">--%>
+                <%--                        <div class="c_menu_icon"></div>--%>
+                <%--                        <div class="c_menu_name">--%>
+                <%--                            民俗保护--%>
+                <%--                        </div>--%>
+                <%--                        <div class="c_menu_dot"></div>--%>
+                <%--                    </a>--%>
+                <%--                    <ul class="c_submenu" id="Channel_197">--%>
+                <%--                        <input type="hidden" name="ctl00$ctl11$rpt_channel$ctl0(0)$hid1" id="ctl11_rpt_channel_hid1_0" value="400">--%>
 
-<%--                    </ul>--%>
-<%--                </li>--%>
+                <%--                    </ul>--%>
+                <%--                </li>--%>
 
 
             </ul>
@@ -152,41 +144,39 @@
                 <li class="on">
                     <a href="/Course/Details?id=7161">
                         <p><span>1</span>小企业会计准则...</p>
-                        <img src="http://112.25.215.35:80/Resource/Images/Course/2cf03829-425c-46a3-b661-a2bc6520b50a.jpg" />
+                        <img src="http://112.25.215.35:80/Resource/Images/Course/2cf03829-425c-46a3-b661-a2bc6520b50a.jpg"/>
                     </a>
                 </li>
                 <li class="">
                     <a href="/Course/Details?id=7161">
                         <p><span>1</span>小企业会计准则...</p>
-                        <img src="http://112.25.215.35:80/Resource/Images/Course/2cf03829-425c-46a3-b661-a2bc6520b50a.jpg" />
+                        <img src="http://112.25.215.35:80/Resource/Images/Course/2cf03829-425c-46a3-b661-a2bc6520b50a.jpg"/>
                     </a>
                 </li>
                 <li class="">
                     <a href="/Course/Details?id=5810">
                         <p><span>2</span>爵士舞（一）</p>
-                        <img src="http://112.25.215.35:80/Resource/Images/Course/dc39ccab-08e5-4572-8353-68df3d5bdc4c.jpg" />
+                        <img src="http://112.25.215.35:80/Resource/Images/Course/dc39ccab-08e5-4572-8353-68df3d5bdc4c.jpg"/>
                     </a>
                 </li>
                 <li class="">
                     <a href="/Course/Details?id=5834">
                         <p><span>3</span>合理饮食 远离慢...</p>
-                        <img src="http://112.25.215.35:80/Resource/Images/Course/2b68f6a6-e6d8-44da-8242-3bff5ba0a564.jpg" />
+                        <img src="http://112.25.215.35:80/Resource/Images/Course/2b68f6a6-e6d8-44da-8242-3bff5ba0a564.jpg"/>
                     </a>
                 </li>
                 <li class="">
                     <a href="/Course/Details?id=2711">
                         <p><span>4</span>紫砂艺术欣赏</p>
-                        <img src="http://112.25.215.35:80/Resource/Images/Course/ab36e2d2-7ae0-4068-a36e-65fab0ac4ae5.jpg" />
+                        <img src="http://112.25.215.35:80/Resource/Images/Course/ab36e2d2-7ae0-4068-a36e-65fab0ac4ae5.jpg"/>
                     </a>
                 </li>
                 <li class="">
                     <a href="/Course/Details?id=11389">
                         <p><span>5</span>迪士尼纪录片 我...</p>
-                        <img src="http://112.25.215.35:80/Resource/Images/Course/9b570d61-f275-4597-9fac-1a79ddc01467.jpg" />
+                        <img src="http://112.25.215.35:80/Resource/Images/Course/9b570d61-f275-4597-9fac-1a79ddc01467.jpg"/>
                     </a>
                 </li>
-
-
 
 
             </ul>
@@ -199,31 +189,31 @@
                 <li class="on">
                     <a href="/Course/Details?id=4641">
                         <p><span>1</span>乌龟的繁殖</p>
-                        <img src="http://112.25.215.35:80/Resource/Images/Course//乌龟的繁殖.jpg" />
+                        <img src="http://112.25.215.35:80/Resource/Images/Course//乌龟的繁殖.jpg"/>
                     </a>
                 </li>
                 <li class="">
                     <a href="/Course/Details?id=7281">
                         <p><span>2</span>社会关系的拓展...</p>
-                        <img src="http://112.25.215.35:80/Resource/Images/Course/" />
+                        <img src="http://112.25.215.35:80/Resource/Images/Course/"/>
                     </a>
                 </li>
                 <li class="">
                     <a href="/Course/Details?id=508">
                         <p><span>3</span>少儿美术快乐营3</p>
-                        <img src="http://112.25.215.35:80/Resource/Images/Course/a794b9c5-6287-4528-bc86-d375b50208ec.jpg" />
+                        <img src="http://112.25.215.35:80/Resource/Images/Course/a794b9c5-6287-4528-bc86-d375b50208ec.jpg"/>
                     </a>
                 </li>
                 <li class="">
                     <a href="/Course/Details?id=4619">
                         <p><span>4</span>篱笆形枣园</p>
-                        <img src="http://112.25.215.35:80/Resource/Images/Course//篱笆形枣园.jpg" />
+                        <img src="http://112.25.215.35:80/Resource/Images/Course//篱笆形枣园.jpg"/>
                     </a>
                 </li>
                 <li class="">
                     <a href="/Course/Details?id=4620">
                         <p><span>5</span>草地枣园</p>
-                        <img src="http://112.25.215.35:80/Resource/Images/Course//草地枣园.jpg" />
+                        <img src="http://112.25.215.35:80/Resource/Images/Course//草地枣园.jpg"/>
                     </a>
                 </li>
 
@@ -232,9 +222,6 @@
         </div>
 
     </div>
-
-
-
 
 
     <!---活动模块JS-->
@@ -277,32 +264,36 @@
         <div class="pc-key">
             <div class="pc-key-show">
                 <div class="key-show-title l">
-                    活动标题： <input type="text" name="" id="CourseName" value="" />
+                    活动标题： <input type="text" name="" id="CourseName" value=""/>
                 </div>
                 <div class="key-show-date l clearfix">
                     <div class="show-date-p1 l">
                         发布日期：
                     </div>
                     <div class="show-date1 l">
-                        <img src="<%=path %>/images/rili.png" class="starttime_img"><input type="text" placeholder="2017-01-10" class="starttime" />
+                        <img src="<%=path %>/images/rili.png" class="starttime_img"><input type="text"
+                                                                                           placeholder="2017-01-10"
+                                                                                           class="starttime"/>
                     </div>
                     <div class="show-date-p2 l">-</div>
                     <div class="show-date2 l">
-                        <img src="<%=path %>/images/rili.png" class="endtime_img"><input type="text" placeholder="2017-01-13" class="endtime" />
+                        <img src="<%=path %>/images/rili.png" class="endtime_img"><input type="text"
+                                                                                         placeholder="2017-01-13"
+                                                                                         class="endtime"/>
                     </div>
                     <div id='schedule-box' class="boxshaw"></div>
 
                     <div id='schedule-box1' class="boxshaw"></div>
                 </div>
                 <div class="key-show-search l">
-                    <a href="javascript:void();" onclick="SearchCourse();"><img src="<%=path %>/images/search-img.png" />检索</a>
+                    <a href="javascript:void();" onclick="SearchCourse();"><img src="<%=path %>/images/search-img.png"/>检索</a>
                 </div>
                 <div class="key-show-close r">
-                    <a href="javascript:;"><img src="<%=path %>/images/close.png" /></a>
+                    <a href="javascript:;"><img src="<%=path %>/images/close.png"/></a>
                 </div>
             </div>
             <div class="pc-key-hide">
-                <a href="javascript:;">打开索引 <img src="<%=path %>/images/search-img.png" /></a>
+                <a href="javascript:;">打开索引 <img src="<%=path %>/images/search-img.png"/></a>
             </div>
         </div>
         <div class="cm-lesson">
@@ -311,15 +302,17 @@
                     全部活动
                 </div>
                 <div class="cm-lesson-top2 l">
-                    排序 <span id="span1" onclick="location.href = '/Course/Index/242?type=1&amp;pageSize=20'">最新  <img src="<%=path %>/images/arrow-down1.png" /> </span>
-                    <span id="span2" onclick="location.href = '/Course/Index/242?type=2&amp;pageSize=20'">最热  <img src="<%=path %>/images/arrow-down.png" /> </span>
+                    排序 <span id="span1" onclick="location.href = '/Course/Index/242?type=1&amp;pageSize=20'">最新  <img
+                        src="<%=path %>/images/arrow-down1.png"/> </span>
+                    <span id="span2" onclick="location.href = '/Course/Index/242?type=2&amp;pageSize=20'">最热  <img
+                            src="<%=path %>/images/arrow-down.png"/> </span>
                 </div>
                 <div class="cm-lesson-top3 l">
                     <p class="l">视图</p>
                     <ul class="l">
-                        <li class="on"><img src="images/sort2-img2.png" /></li>
-                        <li><img src="images/sort3-img1.png" /></li>
-                        <li><img src="images/sort3-img1.png" /></li>
+                        <li class="on"><img src="images/sort2-img2.png"/></li>
+                        <li><img src="images/sort3-img1.png"/></li>
+                        <li><img src="images/sort3-img1.png"/></li>
                     </ul>
                 </div>
                 <div class="cm-lesson-top4 l">
@@ -333,23 +326,30 @@
             </div>
 
             <div class="cm-lesson-con">
-                <ul class="clearfix">
+                <ul class="clearfix" id="show01">
 
-                        <%
-                            List<Activity> activityList = (List<Activity>) request.getAttribute("activityList");
-                            for (Activity activity:activityList){
-                        %>
+
+                    <%
+                        List<Activity> activityList = (List<Activity>) request.getAttribute("activityList");
+                        for (Activity activity : activityList) {
+                    %>
                     <li class="lesson-brief1">
                         <div class="lb1-con">
                             <a href="ActivityDails.jsp">
-                            <div class="lb1-con-hd">
-                                <img src="http://112.25.215.35:80/Resource/Images/Course/" onerror="this.src = '<%=activity.getImg()%>'" class="lb1-con-hd-img" />
-                                <p class="clearfix"><span class="l"><img src="<%=path %>/images/eye-1.png" /><%=activity.getStartTime()%></span> <span class="r"><img src="images/clock.png" /><%=activity.getStartTime()%></span></p>
-                            </div>
-                            <div class="lb1-con-bd">
-                                <p class="lb1-con-bd-p1"><%=activity.getInfo()%></p>
-                                <p class="lb1-con-bd-p2">上传日期：<%=activity.getLaunchTime()%></p>
-                            </div>
+                                <div class="lb1-con-hd">
+                                    <img src="http://112.25.215.35:80/Resource/Images/Course/"
+                                         onerror="this.src = '<%=activity.getImg()%>'" class="lb1-con-hd-img"/>
+                                    <p class="clearfix"><span class="l"><img
+                                            src="<%=path %>/images/eye-1.png"/><%=activity.getStartTime()%></span> <span
+                                            class="r"><img src="images/clock.png"/><%=activity.getStartTime()%></span>
+                                    </p>
+                                </div>
+                                <div class="lb1-con-bd">
+                                    <p class="lb1-con-bd-p1"><%=activity.getInfo()%>
+                                    </p>
+                                    <p class="lb1-con-bd-p2">上传日期：<%=activity.getLaunchTime()%>
+                                    </p>
+                                </div>
                             </a>
                         </div>
                     </li>
@@ -357,7 +357,17 @@
                         }
                     %>
                 </ul>
-                <ul class='pages'><li class='pgNext'><a href="/Course/Index/242?page=1">首页</a></li><li class='pgNext'><a href="#">上一页</a></li><li class='page-number'><span>1</span><a href="/Course/Index/242?page=2">2</a><a href="/Course/Index/242?page=3">3</a><a href="/Course/Index/242?page=4">4</a><a href="/Course/Index/242?page=5">5</a><a href="/Course/Index/242?page=6">6</a><a href="/Course/Index/242?page=7">7</a><a href="/Course/Index/242?page=8">8</a><a href="/Course/Index/242?page=9">9</a><a href="/Course/Index/242?page=10">10</a></li><li class='pgNext'><a href="/Course/Index/242?page=2">下一页</a></li><li class='pgNext'><a href="/Course/Index/242?page=13">末页</a></li></ul>
+                <ul class='pages'>
+                    <li class='pgNext'><a href="/Course/Index/242?page=1">首页</a></li>
+                    <li class='pgNext'><a href="#">上一页</a></li>
+                    <li class='page-number'><span>1</span><a href="/Course/Index/242?page=2">2</a><a
+                            href="/Course/Index/242?page=3">3</a><a href="/Course/Index/242?page=4">4</a><a
+                            href="/Course/Index/242?page=5">5</a><a href="/Course/Index/242?page=6">6</a><a
+                            href="/Course/Index/242?page=7">7</a><a href="/Course/Index/242?page=8">8</a><a
+                            href="/Course/Index/242?page=9">9</a><a href="/Course/Index/242?page=10">10</a></li>
+                    <li class='pgNext'><a href="/Course/Index/242?page=2">下一页</a></li>
+                    <li class='pgNext'><a href="/Course/Index/242?page=13">末页</a></li>
+                </ul>
             </div>
             <div class="cm-lesson-con" style="display:none;">
                 <div class="cm-lesson-title">
@@ -511,13 +521,25 @@
                         <th width="180">2017-08-15</th>
                     </tr>
                 </table>
-                <ul class='pages'><li class='pgNext'><a href="/Course/Index/242?page=1">首页</a></li><li class='pgNext'><a href="#">上一页</a></li><li class='page-number'><span>1</span><a href="/Course/Index/242?page=2">2</a><a href="/Course/Index/242?page=3">3</a><a href="/Course/Index/242?page=4">4</a><a href="/Course/Index/242?page=5">5</a><a href="/Course/Index/242?page=6">6</a><a href="/Course/Index/242?page=7">7</a><a href="/Course/Index/242?page=8">8</a><a href="/Course/Index/242?page=9">9</a><a href="/Course/Index/242?page=10">10</a></li><li class='pgNext'><a href="/Course/Index/242?page=2">下一页</a></li><li class='pgNext'><a href="/Course/Index/242?page=13">末页</a></li></ul>
+                <ul class='pages'>
+                    <li class='pgNext'><a href="/Course/Index/242?page=1">首页</a></li>
+                    <li class='pgNext'><a href="#">上一页</a></li>
+                    <li class='page-number'><span>1</span><a href="/Course/Index/242?page=2">2</a><a
+                            href="/Course/Index/242?page=3">3</a><a href="/Course/Index/242?page=4">4</a><a
+                            href="/Course/Index/242?page=5">5</a><a href="/Course/Index/242?page=6">6</a><a
+                            href="/Course/Index/242?page=7">7</a><a href="/Course/Index/242?page=8">8</a><a
+                            href="/Course/Index/242?page=9">9</a><a href="/Course/Index/242?page=10">10</a></li>
+                    <li class='pgNext'><a href="/Course/Index/242?page=2">下一页</a></li>
+                    <li class='pgNext'><a href="/Course/Index/242?page=13">末页</a></li>
+                </ul>
             </div>
             <div class="cm-lesson-con" style="display:none;">
                 <ul>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Course/Details?id=10414"><img src="http://112.25.215.35:80/Resource/Images/Course/" onerror="this.src = 'images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Course/Details?id=10414"><img
+                                    src="http://112.25.215.35:80/Resource/Images/Course/"
+                                    onerror="this.src = 'images/renwenxiuyang.jpg'"/></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -541,7 +563,9 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Course/Details?id=10454"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Course/Details?id=10454"><img
+                                    src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg"
+                                    onerror="this.src = 'images/renwenxiuyang.jpg'"/></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -565,7 +589,9 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Course/Details?id=10455"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = 'images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Course/Details?id=10455"><img
+                                    src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg"
+                                    onerror="this.src = 'images/renwenxiuyang.jpg'"/></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -589,7 +615,9 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Course/Details?id=10456"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Course/Details?id=10456"><img
+                                    src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg"
+                                    onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'"/></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -613,7 +641,9 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Course/Details?id=10457"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Course/Details?id=10457"><img
+                                    src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg"
+                                    onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'"/></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -637,7 +667,9 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Course/Details?id=10458"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Course/Details?id=10458"><img
+                                    src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg"
+                                    onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'"/></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -661,12 +693,15 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Course/Details?id=10459"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Course/Details?id=10459"><img
+                                    src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg"
+                                    onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'"/></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
                                 <div class="lb2-right-hd1 l">
-                                    <p class="lb2-right-hd1-p1"><a href="/course/details?id=10459">会计政策、会计估计变更和差错更正1</a></p>
+                                    <p class="lb2-right-hd1-p1"><a href="/course/details?id=10459">会计政策、会计估计变更和差错更正1</a>
+                                    </p>
                                     <p class="lb2-right-hd1-p2">
 
                                         <span>分类：会计专栏</span>
@@ -685,12 +720,15 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Course/Details?id=10460"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Course/Details?id=10460"><img
+                                    src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg"
+                                    onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'"/></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
                                 <div class="lb2-right-hd1 l">
-                                    <p class="lb2-right-hd1-p1"><a href="/course/details?id=10460">会计政策、会计估计变更和差错更正2</a></p>
+                                    <p class="lb2-right-hd1-p1"><a href="/course/details?id=10460">会计政策、会计估计变更和差错更正2</a>
+                                    </p>
                                     <p class="lb2-right-hd1-p2">
 
                                         <span>分类：会计专栏</span>
@@ -709,7 +747,9 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Course/Details?id=10461"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Course/Details?id=10461"><img
+                                    src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg"
+                                    onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'"/></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -733,7 +773,9 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Course/Details?id=10462"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Course/Details?id=10462"><img
+                                    src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg"
+                                    onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'"/></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -757,7 +799,9 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Course/Details?id=10463"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Course/Details?id=10463"><img
+                                    src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg"
+                                    onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'"/></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -781,7 +825,9 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Course/Details?id=10464"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Course/Details?id=10464"><img
+                                    src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg"
+                                    onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'"/></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -805,7 +851,9 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Course/Details?id=10465"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Course/Details?id=10465"><img
+                                    src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg"
+                                    onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'"/></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -829,7 +877,9 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Course/Details?id=10480"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Course/Details?id=10480"><img
+                                    src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg"
+                                    onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'"/></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -853,7 +903,9 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Course/Details?id=10481"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Course/Details?id=10481"><img
+                                    src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg"
+                                    onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'"/></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -877,7 +929,9 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Course/Details?id=10482"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Course/Details?id=10482"><img
+                                    src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg"
+                                    onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'"/></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
@@ -901,12 +955,15 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Course/Details?id=10483"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Course/Details?id=10483"><img
+                                    src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg"
+                                    onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'"/></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
                                 <div class="lb2-right-hd1 l">
-                                    <p class="lb2-right-hd1-p1"><a href="/course/details?id=10483">新会计准则实施对上市公司的影响1</a></p>
+                                    <p class="lb2-right-hd1-p1"><a href="/course/details?id=10483">新会计准则实施对上市公司的影响1</a>
+                                    </p>
                                     <p class="lb2-right-hd1-p2">
 
                                         <span>分类：会计专栏</span>
@@ -925,12 +982,15 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Course/Details?id=10484"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Course/Details?id=10484"><img
+                                    src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg"
+                                    onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'"/></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
                                 <div class="lb2-right-hd1 l">
-                                    <p class="lb2-right-hd1-p1"><a href="/course/details?id=10484">新会计准则实施对上市公司的影响2</a></p>
+                                    <p class="lb2-right-hd1-p1"><a href="/course/details?id=10484">新会计准则实施对上市公司的影响2</a>
+                                    </p>
                                     <p class="lb2-right-hd1-p2">
 
                                         <span>分类：会计专栏</span>
@@ -949,12 +1009,15 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Course/Details?id=10485"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Course/Details?id=10485"><img
+                                    src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg"
+                                    onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'"/></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
                                 <div class="lb2-right-hd1 l">
-                                    <p class="lb2-right-hd1-p1"><a href="/course/details?id=10485">新会计准则实施对上市公司影响的案例分析1</a></p>
+                                    <p class="lb2-right-hd1-p1"><a
+                                            href="/course/details?id=10485">新会计准则实施对上市公司影响的案例分析1</a></p>
                                     <p class="lb2-right-hd1-p2">
 
                                         <span>分类：会计专栏</span>
@@ -973,12 +1036,15 @@
                     </li>
                     <li class="lesson-brief2 clearfix">
                         <div class="lb2-left l">
-                            <a href="/Course/Details?id=10486"><img src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg" onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'" /></a>
+                            <a href="/Course/Details?id=10486"><img
+                                    src="http://112.25.215.35:80/Resource/Images/Course/会计实务.jpg"
+                                    onerror="this.src = '<%=path %>/images/renwenxiuyang.jpg'"/></a>
                         </div>
                         <div class="lb2-right l">
                             <div class="lb2-right-hd clearfix">
                                 <div class="lb2-right-hd1 l">
-                                    <p class="lb2-right-hd1-p1"><a href="/course/details?id=10486">新会计准则实施对上市公司影响的案例分析2</a></p>
+                                    <p class="lb2-right-hd1-p1"><a
+                                            href="/course/details?id=10486">新会计准则实施对上市公司影响的案例分析2</a></p>
                                     <p class="lb2-right-hd1-p2">
 
                                         <span>分类：会计专栏</span>
@@ -996,16 +1062,24 @@
                         </div>
                     </li>
                 </ul>
-                <ul class='pages'><li class='pgNext'><a href="/Course/Index/242?page=1">首页</a></li><li class='pgNext'><a href="#">上一页</a></li><li class='page-number'><span>1</span><a href="/Course/Index/242?page=2">2</a><a href="/Course/Index/242?page=3">3</a><a href="/Course/Index/242?page=4">4</a><a href="/Course/Index/242?page=5">5</a><a href="/Course/Index/242?page=6">6</a><a href="/Course/Index/242?page=7">7</a><a href="/Course/Index/242?page=8">8</a><a href="/Course/Index/242?page=9">9</a><a href="/Course/Index/242?page=10">10</a></li><li class='pgNext'><a href="/Course/Index/242?page=2">下一页</a></li><li class='pgNext'><a href="/Course/Index/242?page=13">末页</a></li></ul>
+                <ul class='pages'>
+                    <li class='pgNext'><a href="/Course/Index/242?page=1">首页</a></li>
+                    <li class='pgNext'><a href="#">上一页</a></li>
+                    <li class='page-number'><span>1</span><a href="/Course/Index/242?page=2">2</a><a
+                            href="/Course/Index/242?page=3">3</a><a href="/Course/Index/242?page=4">4</a><a
+                            href="/Course/Index/242?page=5">5</a><a href="/Course/Index/242?page=6">6</a><a
+                            href="/Course/Index/242?page=7">7</a><a href="/Course/Index/242?page=8">8</a><a
+                            href="/Course/Index/242?page=9">9</a><a href="/Course/Index/242?page=10">10</a></li>
+                    <li class='pgNext'><a href="/Course/Index/242?page=2">下一页</a></li>
+                    <li class='pgNext'><a href="/Course/Index/242?page=13">末页</a></li>
+                </ul>
             </div>
         </div>
     </div>
 </div>
 
 
-
-<%@include file="foot.jsp"%>
-
+<%@include file="foot.jsp" %>
 
 
 <script src="<%=path %>/js/jquery-1.11.2.min.js" type="text/javascript"></script>
@@ -1017,14 +1091,12 @@
 <script src="<%=path %>/Content/layui/src/layui.js"></script>
 
 
-
-
-
 <script type="text/javascript">
 
     $(function () {
         search("活动");
     });
+
     function search(types) {
         $("#Search").click(function () {
             var keyword = $("#SearchKeyword").val();
@@ -1043,6 +1115,7 @@
             window.location.href = url;
         });
     }
+
     $(".search_con").click(function () {
         $(".type_con").show()
     });
@@ -1051,7 +1124,7 @@
         $(".type_con").hide()
     });
     $(".footer-right").click(function () {
-        $("html,body").animate({ scrollTop: 0 }, 500);
+        $("html,body").animate({scrollTop: 0}, 500);
     });
 </script>
 
@@ -1157,9 +1230,9 @@
         });
         //活动分类
         $(".c_menu_li").mouseover(function () {
-            $(this).find(".c_menu_main").css({ "color": "#fff" })
+            $(this).find(".c_menu_main").css({"color": "#fff"})
         }).mouseleave(function () {
-            $(this).find(".c_menu_main").css({ "color": "#000" })
+            $(this).find(".c_menu_main").css({"color": "#000"})
         })
         //导航
         //$(".nav ul li").mouseover(function () {
@@ -1201,20 +1274,18 @@
             $(this).find("img").attr("src", src4 + "2.png")
         });
         $(".cml-table tr").mouseover(function () {
-            $(this).find("a").css({ "color": "#5166d7" })
+            $(this).find("a").css({"color": "#5166d7"})
         }).mouseleave(function () {
-            $(this).find("a").css({ "color": "#000" })
+            $(this).find("a").css({"color": "#000"})
         })
 
     });
 </script>
 
 
-
 </body>
 <script>
     var findType = function (id) {
-
         var xhr;
         if (window.XMLHttpRequest) {
             xhr = new XMLHttpRequest();
@@ -1226,12 +1297,13 @@
             }
         }
 
-        xhr.open("GET", "<%=path%>/product?method=findBytype&id=" + id, true);
+        xhr.open("GET", "<%=path%>/activity?method=findByType&id=" + id, true);
         xhr.onreadystatechange = function () {
             if (4 == xhr.readyState) {
                 if (200 == xhr.status) {
                     var result = xhr.responseText;
                     // 类型转换 object
+
                     result = JSON.parse(result);
                     showtype(result);
                 }
@@ -1241,9 +1313,11 @@
 
         function showtype(json) {
             var len = json.length;
-            var inner = document.getElementsByClassName("clearfix");
-            inner[0].innerHTML = "";
+            var inner = document.getElementById("show01");
+            inner.innerHTML = "";
             for (var i = 0; i < len; i++) {
+                alert(i);
+
                 var obj = json[i];
                 var id = obj.id;
                 var name = obj.name;
@@ -1253,10 +1327,7 @@
                 var img = obj.img;
                 var typeId = obj.typeId;
 
-
-
-
-                inner[0].innerHTML+="<li class=\"lesson-brief1\"><div class=\"lb1-con\"><a href='/Activity?&method=infor&id'"+id+"><div class=\"lb1-con-hd\"><img src=\"http://112.25.215.35:80/Resource/Images/Course/\" onerror=\"this.src = '"+img+" class=\"lb1-con-hd-img\" /><p class=\"clearfix\"><span class=\"l\"><img src=\"<%=path %>/images/eye-1.png\" />"+startTime+"</span> <span class=\"r\"><img src=\"images/clock.png\" />"+startTime+"</span></p></div><div class=\"lb1-con-bd\"><p class=\"lb1-con-bd-p1\">"+launchTime+"</p><p class=\"lb1-con-bd-p2\">上传日期："+launchTime+"</p></div></a></div></li>";
+                inner.innerHTML += "<li class=\"lesson-brief1\"><div class=\"lb1-con\"><a href=\"ActivityDails.jsp\"><div class=\"lb1-con-hd\"><img src=\"http://112.25.215.35:80/Resource/Images/Course/\" onerror=\"this.src = '" + img + "'\" class=\"lb1-con-hd-img\" /><p class=\"clearfix\"><span class=\"l\"><img src=\"<%=path %>/images/eye-1.png\" />" + startTime + "</span> <span class=\"r\"><img src=\"images/clock.png\" />" + startTime + "</span></p></div><div class=\"lb1-con-bd\"><p class=\"lb1-con-bd-p1\">" + info + "</p><p class=\"lb1-con-bd-p2\">上传日期：" + launchTime + "</p></div></a></div></li>";
             }
         }
 

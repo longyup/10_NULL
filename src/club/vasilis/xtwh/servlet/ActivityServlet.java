@@ -39,16 +39,17 @@ public class ActivityServlet extends HttpServlet {
         }
     }
 
-    private void findByType(HttpServletRequest request, HttpServletResponse response) {
-        String typeId = request.getParameter("id");
+    private void findByType(HttpServletRequest req, HttpServletResponse resp) {
+        System.err.println("type");
+        String typeId = req.getParameter("id");
         try {
             //设置输出格式
-            response.setContentType("text/json;charset=utf-8");
+            resp.setContentType("text/json;charset=utf-8");
             //获取JSON字符串
             ActivityService service = new ActivityServiceImpl();
             String json = service.findActivityByTypeJson(typeId);
             //输出结果
-            response.getWriter().write(json);
+            resp.getWriter().write(json);
         } catch (Exception e) {
             e.printStackTrace();
         }
