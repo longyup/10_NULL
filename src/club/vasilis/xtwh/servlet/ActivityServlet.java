@@ -36,8 +36,37 @@ public class ActivityServlet extends HttpServlet {
             getActivityMessage(req, resp);
         }else if ("findByType".equals(method)){
             findByType(req,resp);
+        }else if("details".equals(method)){
+            detail(req,resp);
         }
     }
+
+    private void detail(HttpServletRequest req, HttpServletResponse resp) {
+        System.err.println("详情页");
+        String id = req.getParameter("id");
+
+        ActivityCategoryService categoryService = new ActivityCategoryServiceImpl();
+        ActivityService activityService = new ActivityServiceImpl();
+
+        try {
+            // 类别
+            List<ActivityCategory> categoryList = categoryService.findActivityCategoryAll();
+            req.setAttribute("categoryList",categoryList);
+
+            // 详细信息的显示
+
+            Activity activity = activityService.showDetails(id);
+            System.err.println(activity);
+            req.setAttribute("activity",activity);
+            req.getRequestDispatcher("/ActivityDails").forward(req,resp);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
 
     private void findByType(HttpServletRequest req, HttpServletResponse resp) {
         System.err.println("type");
