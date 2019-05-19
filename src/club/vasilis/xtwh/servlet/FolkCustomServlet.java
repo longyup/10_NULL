@@ -39,6 +39,11 @@ public class FolkCustomServlet extends HttpServlet {
         }
     }
 
+    /**
+     * 风情民俗页面
+     * @param request
+     * @param response
+     */
     private void topage(HttpServletRequest request, HttpServletResponse response) {
 
         System.err.println("风情民俗");
