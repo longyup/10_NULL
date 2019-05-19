@@ -19,4 +19,19 @@ public interface ActivityService {
      * @throws Exception
      */
     String findActivityByTypeJson(String typeId) throws Exception;
+
+    /**
+     * 点击进入详情信息
+     * @param id
+     * @return
+     * @throws Exception
+     */
+    Activity showDetails(String id) throws Exception;
+
+    /**
+     * 获取Activity的所有Json数据
+     * @return
+     * @throws SQLException
+     */
+    String getJsonActivityAll() throws SQLException;
 }

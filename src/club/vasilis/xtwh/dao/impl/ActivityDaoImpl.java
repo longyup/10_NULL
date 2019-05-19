@@ -4,6 +4,7 @@ import club.vasilis.xtwh.dao.ActivityDao;
 import club.vasilis.xtwh.domain.Activity;
 import club.vasilis.xtwh.util.DsUtils;
 import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.junit.Test;
 
@@ -27,9 +28,17 @@ public class ActivityDaoImpl implements ActivityDao {
         return runner.query(sql,new BeanListHandler<>(Activity.class),typeId);
     }
 
+    @Override
+    public Activity showDetails(String id) throws Exception {
+        QueryRunner runner = new QueryRunner(DsUtils.getDataSource());
+        String sql = "SELECT id,name,info,LaunchTime,StartTime,img,typeId FROM activity WHERE id = ?";
+        return runner.query(sql,new BeanHandler<>(Activity.class),id);
+    }
+
     @Test
     public void test() throws Exception {
         System.out.println(new ActivityDaoImpl().findActivityAll());
         System.out.println(new ActivityDaoImpl().findActivityByType("T001"));
+        System.out.println(new ActivityDaoImpl().showDetails("G001"));
     }
 }
