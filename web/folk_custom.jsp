@@ -843,7 +843,6 @@
 
 <script>
     var findType = function (id) {
-        alert(id);
         var xhr;
         if (window.XMLHttpRequest) {
             xhr = new XMLHttpRequest();
@@ -859,11 +858,9 @@
         xhr.onreadystatechange = function () {
             if (4 == xhr.readyState) {
                 if (200 == xhr.status) {
-                    alert("200")
                     var result = xhr.responseText;
                     // 类型转换 object
                     result = JSON.parse(result);
-                    alert(result);
                     showtype(result);
                 }
             }
@@ -875,6 +872,7 @@
             var len = json.length;
             var table = document.getElementsByClassName("cml-table");
             table[0].innerHTML = "";
+            alert(len);
             for (var i = 0; i < len; i++) {
                 var obj = json[i];
                 var id = obj.id;
