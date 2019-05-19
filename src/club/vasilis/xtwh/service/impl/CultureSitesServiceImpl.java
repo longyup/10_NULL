@@ -34,6 +34,22 @@ public class CultureSitesServiceImpl implements CultureSitesService {
         return dao.findAllCultureSites();
     }
 
+    @Override
+    public String findCultureSitesByTypeJson(String typeId) throws Exception {
+        CultureSitesDao dao = new CultureSitesDaoImpl();
+        List<CultureSites> list = dao.findCultureSitesByType(typeId);
+        return JSONArray.fromObject(list).toString();
+
+    }
+
+    @Override
+    public CultureSites showDetails(String id) throws Exception {
+        CultureSitesDao dao = new CultureSitesDaoImpl();
+        return dao.showDetails(id);
+    }
+
+
+
     @Test
     public void test() throws SQLException{
         System.err.println(new CultureSitesServiceImpl().getJsonCultrueSites());

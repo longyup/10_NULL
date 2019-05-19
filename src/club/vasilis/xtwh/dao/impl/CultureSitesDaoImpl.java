@@ -1,9 +1,12 @@
 package club.vasilis.xtwh.dao.impl;
 
 import club.vasilis.xtwh.dao.CultureSitesDao;
+import club.vasilis.xtwh.domain.Activity;
 import club.vasilis.xtwh.domain.CultureSites;
+import club.vasilis.xtwh.domain.NativeProduct;
 import club.vasilis.xtwh.util.DsUtils;
 import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.junit.Test;
 
@@ -40,6 +43,23 @@ public class CultureSitesDaoImpl implements CultureSitesDao {
         List<CultureSites> query = runner.query(sql,new BeanListHandler<CultureSites>(CultureSites.class));
         return query;
     }
+
+    @Override
+    public List<CultureSites> findCultureSitesByType(String typeId) throws Exception {
+        QueryRunner runner = new QueryRunner(DsUtils.getDataSource());
+        String sql = "select id,title,onlinetime from culture_sites WHERE locationid = ? ORDER BY onlinetime DESC ";
+        List<CultureSites> query = runner.query(sql,new BeanListHandler<CultureSites>(CultureSites.class),typeId);
+        return query;
+    }
+
+    @Override
+    public CultureSites showDetails(String id) throws Exception {
+        QueryRunner runner = new QueryRunner(DsUtils.getDataSource());
+        String sql = "select id,title,img,content,onlinetime from culture_sites WHERE id = ? ORDER BY onlinetime DESC ";
+        CultureSites query = runner.query(sql,new BeanHandler<>(CultureSites.class),id);
+        return query;
+    }
+
 
     @Test
     public void test() throws SQLException{
