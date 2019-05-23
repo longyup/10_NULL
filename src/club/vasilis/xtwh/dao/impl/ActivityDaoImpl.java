@@ -16,7 +16,7 @@ public class ActivityDaoImpl implements ActivityDao {
     public List<Activity> findActivityAll() throws SQLException {
         QueryRunner runner = new QueryRunner(DsUtils.getDataSource());
         String sql = "select id,name,info,LaunchTime,StartTime,img,typeId from activity";
-        List<Activity> list = runner.query(sql,new BeanListHandler<Activity>(Activity.class));
+        List<Activity> list = runner.query(sql,new BeanListHandler<>(Activity.class));
         return list;
     }
 

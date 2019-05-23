@@ -28,10 +28,12 @@ public interface ActivityService {
      */
     Activity showDetails(String id) throws Exception;
 
+
     /**
      * 获取Activity的所有Json数据
      * @return
      * @throws SQLException
      */
     String getJsonActivityAll() throws SQLException;
+
 }

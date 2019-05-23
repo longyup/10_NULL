@@ -27,6 +27,4 @@ public interface ActivityDao {
      */
     Activity showDetails(String id) throws Exception;
 
-
-
 }

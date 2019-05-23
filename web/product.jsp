@@ -911,7 +911,7 @@
 
         function showtype(json) {
             var len = json.length;
-            var table = document.getElementsByClassName("cml-table");
+            var table = document.getElementsByClassName("cml-table ");
             table[0].innerHTML = "";
             for (var i = 0; i < len; i++) {
                 var obj = json[i];
@@ -920,7 +920,7 @@
                 var onlinetime = obj.onlinetime;
 
 
-                table[0].innerHTML += "<tr><th width='107'>" + id + "</th><th width='418'><a href='/product?&method=details&id=" + id + "'>" + name + "</a></th><th width='180'>" + onlinetime + "</th></tr>";
+                table[0].innerHTML += "<tr><th width='107'>" + id + "</th><th width='418'><a href='/product?method=details&id=" + id + "'>" + name + "</a></th><th width='180'>" + onlinetime + "</th></tr>";
             }
         }
 

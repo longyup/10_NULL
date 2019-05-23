@@ -1,15 +1,9 @@
 package club.vasilis.xtwh.servlet;
 
 
-import club.vasilis.xtwh.domain.CultureSites;
-import club.vasilis.xtwh.domain.FolkCustom;
-import club.vasilis.xtwh.domain.Location;
-import club.vasilis.xtwh.service.CultureSitesService;
-import club.vasilis.xtwh.service.FolkCustomService;
-import club.vasilis.xtwh.service.LocationService;
-import club.vasilis.xtwh.service.impl.CultureSitesServiceImpl;
-import club.vasilis.xtwh.service.impl.FolkCustomServiceImpl;
-import club.vasilis.xtwh.service.impl.LocationServiceImpl;
+import club.vasilis.xtwh.domain.*;
+import club.vasilis.xtwh.service.*;
+import club.vasilis.xtwh.service.impl.*;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -38,9 +32,18 @@ public class FolkCustomServlet extends HttpServlet {
 
         } else if ("topage".equals(method)) {
             topage(request, response);
+        }else if ("cusDetails".equals(method)){
+            cusDetails(request,response);
+        }else if ("cusMenuDetails".equals(method)){
+            cusMenuDetails(request,response);
         }
     }
 
+    /**
+     * 风情民俗页面
+     * @param request
+     * @param response
+     */
     private void topage(HttpServletRequest request, HttpServletResponse response) {
 
         System.err.println("风情民俗");
@@ -61,5 +64,54 @@ public class FolkCustomServlet extends HttpServlet {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    /**
+     * 点击进入详情页面,数据放在request
+     * @param request
+     * @param response
+     */
+    private void cusDetails(HttpServletRequest request, HttpServletResponse response) {
+        System.err.println("详情页");
+        String id = request.getParameter("id");
+
+        FolkCustomService service = new FolkCustomServiceImpl();
+
+        try {
+            // 类别
+            List<FolkCustom> categoryList = service.customMenu();
+            request.setAttribute("categoryList",categoryList);
+
+            // 详细信息的显示
+
+            FolkCustom cusPassgaeDetails = service.customPassageDetailsShow(id);
+            System.err.println(cusPassgaeDetails);
+            request.setAttribute("cusPassageDetails",cusPassgaeDetails);
+            request.getRequestDispatcher("/folk_custom_passage_details.jsp").forward(request,response);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * 根据分类的点击用AJAX刷新列表
+     * @param request
+     * @param response
+     */
+    private void cusMenuDetails(HttpServletRequest request, HttpServletResponse response) {
+        String typeId = request.getParameter("id");
+        try {
+            //设置输出格式
+            response.setContentType("text/json;charset=utf-8");
+            //获取JSON字符串
+            FolkCustomService service = new FolkCustomServiceImpl();
+            String json = service.cusMenuDetailsJson(typeId);
+            //输出结果
+            response.getWriter().write(json);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 }

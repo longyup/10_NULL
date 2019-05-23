@@ -1,5 +1,7 @@
 <%@ page import="java.util.List" %>
 <%@ page import="club.vasilis.xtwh.domain.ActivityCategory" %>
+<%@ page import="club.vasilis.xtwh.domain.ActivityCategory" %>
+<%@ page import="java.util.List" %>
 <%@ page import="club.vasilis.xtwh.domain.Activity" %><%--
   Created by IntelliJ IDEA.
   User: Zhilin
@@ -95,13 +97,11 @@
                     for (ActivityCategory category : categoryList){
 
                 %>
-
                 <li class="c_menu_li">
-                    <a class="c_menu_main" href="javascript:void(0)">
+                    <a class="c_menu_main" href="javascript:void(0)"onclick="findType('<%=category.getId()%>');return false;">
                         <div class="c_menu_icon"></div>
                         <div class="c_menu_name">
                             <%=category.getName()%>
-
                         </div>
                         <div class="c_menu_dot"></div>
                     </a>
@@ -110,174 +110,7 @@
                 <%
                     }
                 %>
-<%--                <li class="c_menu_li">--%>
-<%--                    <a class="c_menu_main" href="/Article/Index/166">--%>
-<%--                        <div class="c_menu_icon"></div>--%>
-<%--                        <div class="c_menu_name">--%>
-<%--                            民社协会--%>
 
-<%--                        </div>--%>
-<%--                        <div class="c_menu_dot"></div>--%>
-<%--                    </a>--%>
-<%--                    <ul class="c_submenu ">--%>
-<%--                        <input type="hidden" name="ctl00$ctl11$rpt_channel$ctl00$hid1" id="ctl11_rpt_channel_hid1_0" value="400">--%>
-
-<%--                        <li>--%>
-<%--                            <a href="/Article/Index/171">诚信公示</a>--%>
-<%--                            <div class="list">--%>
-<%--                                <a href="/Article/Index/183">诚信记录</a>--%>
-<%--                                <a href="/Article/Index/182">会费缴纳</a>--%>
-<%--                                <a href="/Article/Index/181">公告</a>--%>
-<%--                                <a href="/Article/Index/180">星级认定</a>--%>
-<%--                                <a href="/Article/Index/179">先进发布</a>--%>
-
-<%--                            </div>--%>
-
-<%--                        </li>--%>
-<%--                        <li>--%>
-<%--                            <a href="/Article/Index/170">教科研工作</a>--%>
-<%--                            <div class="list">--%>
-<%--                                <a href="/Article/Index/178">研究成果</a>--%>
-<%--                                <a href="/Article/Index/177">研究动态</a>--%>
-
-<%--                            </div>--%>
-
-<%--                        </li>--%>
-<%--                        <li>--%>
-<%--                            <a href="/Article/Index/169">会员之窗</a>--%>
-<%--                            <div class="list">--%>
-<%--                                <a href="/Article/Index/176">会员风采</a>--%>
-<%--                                <a href="/Article/Index/175">会员单位</a>--%>
-
-<%--                            </div>--%>
-
-<%--                        </li>--%>
-<%--                        <li>--%>
-<%--                            <a href="/Article/Index/168">协会动态</a>--%>
-<%--                            <div class="list">--%>
-<%--                                <a href="/Article/Index/174">专题报道</a>--%>
-<%--                                <a href="/Article/Index/173">文件通知</a>--%>
-<%--                                <a href="/Article/Index/172">工作动态</a>--%>
-
-<%--                            </div>--%>
-
-<%--                        </li>--%>
-<%--                        <li>--%>
-<%--                            <a href="/Article/Index/167">协会设置</a>--%>
-<%--                            <div class="list">--%>
-<%--                                <a href="/Article/Index/185">组织机构</a>--%>
-<%--                                <a href="/Article/Index/184">协会简介</a>--%>
-
-<%--                            </div>--%>
-
-<%--                        </li>--%>
-
-<%--                    </ul>--%>
-
-<%--                </li>--%>
-<%--                <li class="c_menu_li">--%>
-<%--                    <a class="c_menu_main" href="/Article/Index/141">--%>
-<%--                        <div class="c_menu_icon"></div>--%>
-<%--                        <div class="c_menu_name">--%>
-<%--                            通知公告--%>
-
-<%--                        </div>--%>
-<%--                        <div class="c_menu_dot"></div>--%>
-<%--                    </a>--%>
-<%--                    <ul class="c_submenu ">--%>
-<%--                        <input type="hidden" name="ctl00$ctl11$rpt_channel$ctl00$hid1" id="ctl11_rpt_channel_hid1_0" value="400">--%>
-
-<%--                        <li>--%>
-<%--                            <a href="/Article/Index/146">通知及帮助</a>--%>
-
-<%--                        </li>--%>
-<%--                        <li>--%>
-<%--                            <a href="/Article/Index/145">培训信息</a>--%>
-
-<%--                        </li>--%>
-
-<%--                    </ul>--%>
-
-<%--                </li>--%>
-<%--                <li class="c_menu_li">--%>
-<%--                    <a class="c_menu_main" href="/Article/Index/127">--%>
-<%--                        <div class="c_menu_icon"></div>--%>
-<%--                        <div class="c_menu_name">--%>
-<%--                            魅力宜兴--%>
-
-<%--                        </div>--%>
-<%--                        <div class="c_menu_dot"></div>--%>
-<%--                    </a>--%>
-<%--                    <ul class="c_submenu ">--%>
-<%--                        <input type="hidden" name="ctl00$ctl11$rpt_channel$ctl00$hid1" id="ctl11_rpt_channel_hid1_0" value="400">--%>
-
-<%--                        <li>--%>
-<%--                            <a href="/Article/Index/131">阳羡贡茶</a>--%>
-
-<%--                        </li>--%>
-<%--                        <li>--%>
-<%--                            <a href="/Article/Index/130">紫砂文化</a>--%>
-
-<%--                        </li>--%>
-<%--                        <li>--%>
-<%--                            <a href="/Article/Index/129">知名人物</a>--%>
-<%--                            <div class="list">--%>
-<%--                                <a href="/Article/Index/139">陶艺人物</a>--%>
-<%--                                <a href="/Article/Index/138">侨寓人物</a>--%>
-<%--                                <a href="/Article/Index/137">近现代人物</a>--%>
-<%--                                <a href="/Article/Index/136">古代人物</a>--%>
-
-<%--                            </div>--%>
-
-<%--                        </li>--%>
-<%--                        <li>--%>
-<%--                            <a href="/Article/Index/128">宜兴风情</a>--%>
-<%--                            <div class="list">--%>
-<%--                                <a href="/Article/Index/147">乡镇展播</a>--%>
-<%--                                <a href="/Article/Index/135">民间传说</a>--%>
-<%--                                <a href="/Article/Index/134">旅游胜境</a>--%>
-<%--                                <a href="/Article/Index/133">地方特产</a>--%>
-<%--                                <a href="/Article/Index/132">风俗方言</a>--%>
-
-<%--                            </div>--%>
-
-<%--                        </li>--%>
-
-<%--                    </ul>--%>
-
-<%--                </li>--%>
-<%--                <li class="c_menu_li">--%>
-<%--                    <a class="c_menu_main" href="/Article/Index/150">--%>
-<%--                        <div class="c_menu_icon"></div>--%>
-<%--                        <div class="c_menu_name">--%>
-<%--                            乡镇视频--%>
-
-<%--                        </div>--%>
-<%--                        <div class="c_menu_dot"></div>--%>
-<%--                    </a>--%>
-<%--                    <ul class="c_submenu ">--%>
-<%--                        <input type="hidden" name="ctl00$ctl11$rpt_channel$ctl00$hid1" id="ctl11_rpt_channel_hid1_0" value="400">--%>
-
-
-<%--                    </ul>--%>
-
-<%--                </li>--%>
-<%--                <li class="c_menu_li">--%>
-<%--                    <a class="c_menu_main" href="/Article/Index/152">--%>
-<%--                        <div class="c_menu_icon"></div>--%>
-<%--                        <div class="c_menu_name">--%>
-<%--                            其他--%>
-
-<%--                        </div>--%>
-<%--                        <div class="c_menu_dot"></div>--%>
-<%--                    </a>--%>
-<%--                    <ul class="c_submenu ">--%>
-<%--                        <input type="hidden" name="ctl00$ctl11$rpt_channel$ctl00$hid1" id="ctl11_rpt_channel_hid1_0" value="400">--%>
-
-
-<%--                    </ul>--%>
-
-<%--                </li>--%>
 
 
             </ul>
@@ -370,7 +203,7 @@
                 Activity activity = (Activity) request.getAttribute("activityDetails");
             %>
             <div class="centent_title">
-                <span title="标题"><%=activity.getName()%></span>
+                <span title=""><%=activity.getName()%></span>
             </div>
             <div class="article_ori">
                 <p><%=activity.getLaunchTime()%> </p>
@@ -383,9 +216,6 @@
                 <tbody>
                 <tr id="ctl00_ctl00_ctl00_cp_cp_Left_cp_tr_pre">
                     <td><%=activity.getInfo()%></td>
-
-                </tr>
-                <tr id="ctl00_ctl00_ctl00_cp_cp_Left_cp_tr_next">
 
                 </tr>
                 </tbody>

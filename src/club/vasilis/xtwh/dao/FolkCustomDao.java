@@ -17,9 +17,23 @@ public interface FolkCustomDao {
     List<FolkCustom> customMenu() throws Exception;
 
     /**
-     * 风情民俗标题文章内容
+     * 风情民俗标题文章
      * @return
      * @throws Exception
      */
     List<FolkCustom> customPassage() throws  Exception;
+
+    /**
+     * 风情民俗菜单栏列表详情
+     * @return
+     * @throws Exception
+     */
+    List<FolkCustom> customMenuDetails(String typeId) throws Exception;
+
+    /**
+     * 风情民俗标题文章内容
+     * @return
+     * @throws Exception
+     */
+    FolkCustom customPassageDetails(String id) throws  Exception;
 }

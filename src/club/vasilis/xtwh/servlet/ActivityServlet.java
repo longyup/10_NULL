@@ -1,10 +1,6 @@
 package club.vasilis.xtwh.servlet;
-
-import club.vasilis.xtwh.dao.ActivityCategoryDao;
 import club.vasilis.xtwh.domain.Activity;
 import club.vasilis.xtwh.domain.ActivityCategory;
-import club.vasilis.xtwh.domain.NativeProduct;
-import club.vasilis.xtwh.domain.NativeProductCategory;
 import club.vasilis.xtwh.service.*;
 import club.vasilis.xtwh.service.impl.*;
 
@@ -34,7 +30,7 @@ public class ActivityServlet extends HttpServlet {
             getActivityMessage(req, resp);
         }else if ("findByType".equals(method)){
             findByType(req,resp);
-        }else if ("detail".equals(method)){
+        }else if ("details".equals(method)){
             detail(req,resp);
         }else if ("getJsonActivityAll".equals(method)){
             getJsonActivityAll(req,resp);
@@ -84,8 +80,12 @@ public class ActivityServlet extends HttpServlet {
 
         } catch (Exception e) {
             e.printStackTrace();
+
+
         }
     }
+
+
 
     private void findByType(HttpServletRequest req, HttpServletResponse resp) {
         System.err.println("type");
