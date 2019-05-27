@@ -1,4 +1,8 @@
-<%--
+<%@ page import="java.util.List" %>
+<%@ page import="club.vasilis.xtwh.domain.ActivityCategory" %>
+<%@ page import="club.vasilis.xtwh.domain.ActivityCategory" %>
+<%@ page import="java.util.List" %>
+<%@ page import="club.vasilis.xtwh.domain.Activity" %><%--
   Created by IntelliJ IDEA.
   User: Zhilin
   Date: 2019/5/15
@@ -87,222 +91,26 @@
                 <p>活动分类</p>
             </div>
             <ul class="c_left_menu">
+
+                <%
+                    List<ActivityCategory> categoryList = (List<ActivityCategory>) request.getAttribute("categoryList");
+                    for (ActivityCategory category : categoryList){
+
+                %>
                 <li class="c_menu_li">
-                    <a class="c_menu_main" href="/Article/Index/140">
+                    <a class="c_menu_main" href="javascript:void(0)"onclick="findType('<%=category.getId()%>');return false;">
                         <div class="c_menu_icon"></div>
                         <div class="c_menu_name">
-                            社区教育
-
+                            <%=category.getName()%>
                         </div>
                         <div class="c_menu_dot"></div>
                     </a>
-                    <ul class="c_submenu ">
-                        <input type="hidden" name="ctl00$ctl11$rpt_channel$ctl00$hid1" id="ctl11_rpt_channel_hid1_0" value="400">
-
-                        <li>
-                            <a href="/Article/Index/158">图片新闻</a>
-
-                        </li>
-                        <li>
-                            <a href="/Article/Index/156">最新公告</a>
-
-                        </li>
-                        <li>
-                            <a href="/Article/Index/155">社教风采</a>
-
-                        </li>
-                        <li>
-                            <a href="/Article/Index/151">资源集萃</a>
-
-                        </li>
-                        <li>
-                            <a href="/Article/Index/148">社教研究</a>
-
-                        </li>
-                        <li>
-                            <a href="/Article/Index/144">社区动态</a>
-
-                        </li>
-                        <li>
-                            <a href="/Article/Index/143">特色推介</a>
-
-                        </li>
-                        <li>
-                            <a href="/Article/Index/142">办事指南</a>
-
-                        </li>
-
-                    </ul>
-
                 </li>
-                <li class="c_menu_li">
-                    <a class="c_menu_main" href="/Article/Index/166">
-                        <div class="c_menu_icon"></div>
-                        <div class="c_menu_name">
-                            民社协会
 
-                        </div>
-                        <div class="c_menu_dot"></div>
-                    </a>
-                    <ul class="c_submenu ">
-                        <input type="hidden" name="ctl00$ctl11$rpt_channel$ctl00$hid1" id="ctl11_rpt_channel_hid1_0" value="400">
+                <%
+                    }
+                %>
 
-                        <li>
-                            <a href="/Article/Index/171">诚信公示</a>
-                            <div class="list">
-                                <a href="/Article/Index/183">诚信记录</a>
-                                <a href="/Article/Index/182">会费缴纳</a>
-                                <a href="/Article/Index/181">公告</a>
-                                <a href="/Article/Index/180">星级认定</a>
-                                <a href="/Article/Index/179">先进发布</a>
-
-                            </div>
-
-                        </li>
-                        <li>
-                            <a href="/Article/Index/170">教科研工作</a>
-                            <div class="list">
-                                <a href="/Article/Index/178">研究成果</a>
-                                <a href="/Article/Index/177">研究动态</a>
-
-                            </div>
-
-                        </li>
-                        <li>
-                            <a href="/Article/Index/169">会员之窗</a>
-                            <div class="list">
-                                <a href="/Article/Index/176">会员风采</a>
-                                <a href="/Article/Index/175">会员单位</a>
-
-                            </div>
-
-                        </li>
-                        <li>
-                            <a href="/Article/Index/168">协会动态</a>
-                            <div class="list">
-                                <a href="/Article/Index/174">专题报道</a>
-                                <a href="/Article/Index/173">文件通知</a>
-                                <a href="/Article/Index/172">工作动态</a>
-
-                            </div>
-
-                        </li>
-                        <li>
-                            <a href="/Article/Index/167">协会设置</a>
-                            <div class="list">
-                                <a href="/Article/Index/185">组织机构</a>
-                                <a href="/Article/Index/184">协会简介</a>
-
-                            </div>
-
-                        </li>
-
-                    </ul>
-
-                </li>
-                <li class="c_menu_li">
-                    <a class="c_menu_main" href="/Article/Index/141">
-                        <div class="c_menu_icon"></div>
-                        <div class="c_menu_name">
-                            通知公告
-
-                        </div>
-                        <div class="c_menu_dot"></div>
-                    </a>
-                    <ul class="c_submenu ">
-                        <input type="hidden" name="ctl00$ctl11$rpt_channel$ctl00$hid1" id="ctl11_rpt_channel_hid1_0" value="400">
-
-                        <li>
-                            <a href="/Article/Index/146">通知及帮助</a>
-
-                        </li>
-                        <li>
-                            <a href="/Article/Index/145">培训信息</a>
-
-                        </li>
-
-                    </ul>
-
-                </li>
-                <li class="c_menu_li">
-                    <a class="c_menu_main" href="/Article/Index/127">
-                        <div class="c_menu_icon"></div>
-                        <div class="c_menu_name">
-                            魅力宜兴
-
-                        </div>
-                        <div class="c_menu_dot"></div>
-                    </a>
-                    <ul class="c_submenu ">
-                        <input type="hidden" name="ctl00$ctl11$rpt_channel$ctl00$hid1" id="ctl11_rpt_channel_hid1_0" value="400">
-
-                        <li>
-                            <a href="/Article/Index/131">阳羡贡茶</a>
-
-                        </li>
-                        <li>
-                            <a href="/Article/Index/130">紫砂文化</a>
-
-                        </li>
-                        <li>
-                            <a href="/Article/Index/129">知名人物</a>
-                            <div class="list">
-                                <a href="/Article/Index/139">陶艺人物</a>
-                                <a href="/Article/Index/138">侨寓人物</a>
-                                <a href="/Article/Index/137">近现代人物</a>
-                                <a href="/Article/Index/136">古代人物</a>
-
-                            </div>
-
-                        </li>
-                        <li>
-                            <a href="/Article/Index/128">宜兴风情</a>
-                            <div class="list">
-                                <a href="/Article/Index/147">乡镇展播</a>
-                                <a href="/Article/Index/135">民间传说</a>
-                                <a href="/Article/Index/134">旅游胜境</a>
-                                <a href="/Article/Index/133">地方特产</a>
-                                <a href="/Article/Index/132">风俗方言</a>
-
-                            </div>
-
-                        </li>
-
-                    </ul>
-
-                </li>
-                <li class="c_menu_li">
-                    <a class="c_menu_main" href="/Article/Index/150">
-                        <div class="c_menu_icon"></div>
-                        <div class="c_menu_name">
-                            乡镇视频
-
-                        </div>
-                        <div class="c_menu_dot"></div>
-                    </a>
-                    <ul class="c_submenu ">
-                        <input type="hidden" name="ctl00$ctl11$rpt_channel$ctl00$hid1" id="ctl11_rpt_channel_hid1_0" value="400">
-
-
-                    </ul>
-
-                </li>
-                <li class="c_menu_li">
-                    <a class="c_menu_main" href="/Article/Index/152">
-                        <div class="c_menu_icon"></div>
-                        <div class="c_menu_name">
-                            其他
-
-                        </div>
-                        <div class="c_menu_dot"></div>
-                    </a>
-                    <ul class="c_submenu ">
-                        <input type="hidden" name="ctl00$ctl11$rpt_channel$ctl00$hid1" id="ctl11_rpt_channel_hid1_0" value="400">
-
-
-                    </ul>
-
-                </li>
 
 
             </ul>
@@ -390,23 +198,24 @@
         </div>
 
         <div class="pr_detail">
+
+            <%
+                Activity activity = (Activity) request.getAttribute("activityDetails");
+            %>
             <div class="centent_title">
-                <span title="标题">关爱残疾人 让我们与爱同行 ------- 新时代文明实践在新庄</span>
+                <span title=""><%=activity.getName()%></span>
             </div>
             <div class="article_ori">
-                <p>来源：xzadmin(新庄街道) 发布时间：2019/5/9 作者：xzadmin(新庄街道) 阅读次数：76  </p>
-                <a onclick="javascript:CreateCollection(8285,2);" style="cursor: pointer;">收藏</a>
+                <p><%=activity.getLaunchTime()%> </p>
             </div>
             <div class="article_content">
-                <p style="text-align: justify; text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;"><span style="font-family: 宋体, SimSun;">残疾人是社会上的弱势群体，关爱残疾人是全社会的责任。</span>5<span style="font-family: 宋体, SimSun;">月7日，新庄成校与街道残联联合举办了残疾人烘焙培训，来自街道各村</span>30<span style="font-family: 宋体, SimSun;">多个残疾朋友参加了此次培训。</span></span></p><p style="text-align: justify; text-indent: 2em;"><span style="font-size: 16px;"><span style="font-family: 宋体, SimSun; font-size: 14px; text-indent: 2em;">&nbsp;</span><span style="font-size: 16px; text-indent: 2em; font-family: 宋体;">初入烘焙的人，烘焙师周老师教大家做的就是戚风蛋糕，打发蛋白，搅拌面糊，看似简单，殊不知，这入门功课，其实在操作过程中却特别讲究。因为一不小心，就会失败。每个步骤都有严格要求，否则做出来的蛋糕或会塌腰，或会像</span><span style="font-family: 宋体, SimSun; font-size: 14px; text-indent: 2em;">“蘑菇云”。</span><span style="font-size: 16px; text-indent: 2em; font-family: 宋体;">学员们经过不断地重复操作，试验之后，做出了满意的成品。</span></span></p><p style="text-align: justify; text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;">扶贫助残是中华民族的传统美德，新时代文明实践的重要内容。我们应常怀助人之心，全社会每个人都能伸出自己关爱的手，奉献自己的爱心，让每个残疾人都能感受到人间的温暖。</span></p><p style="text-align: justify; text-indent: 2em;"><span style="font-family: 宋体, SimSun; font-size: 16px;"><br/></span></p><p style="text-align: center"><img src="/upload/image/20190509/6369300797922054733184524.jpg" title="IMG_20190507_133754.jpg" alt="IMG_20190507_133754.jpg"/></p><p style="text-align: center"><img src="/upload/image/20190509/6369300799088067926689684.jpg" title="0.jpg" alt="0.jpg"/></p><p><br/></p>
+                <p style="text-align: justify; text-indent: 2em;"></p>
+                <img src="<%=activity.getImg()%>"/>
             </div>
             <table width="100%" cellspacing="0" cellpadding="0" class="page_context">
                 <tbody>
                 <tr id="ctl00_ctl00_ctl00_cp_cp_Left_cp_tr_pre">
-                    <td>上一篇：<a href="/Article/Details/8284">&quot;五四&quot;青年红色革命精神诵读会</a></td>
-
-                </tr>
-                <tr id="ctl00_ctl00_ctl00_cp_cp_Left_cp_tr_next">
+                    <td><%=activity.getInfo()%></td>
 
                 </tr>
                 </tbody>

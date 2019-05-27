@@ -1,7 +1,5 @@
-<%@ page import="club.vasilis.xtwh.domain.NativeProductCategory" %>
-<%@ page import="java.util.List" %>
-<%@ page import="club.vasilis.xtwh.domain.NativeProduct" %>
-<%@ page import="club.vasilis.xtwh.domain.FolkCustom" %><%--
+<%@ page import="club.vasilis.xtwh.domain.FolkCustom" %>
+<%@ page import="java.util.List" %>><%--
   Created by IntelliJ IDEA.
   User: Vasilis
   Date: 2019/5/16
@@ -81,8 +79,8 @@
             </div>
             <ul class="c_left_menu">
                 <%
-                    List<NativeProductCategory> categoryList = (List<NativeProductCategory>) request.getAttribute("categoryList");
-                    for (NativeProductCategory category : categoryList) {
+                    List<FolkCustom> categoryList = (List<FolkCustom>) request.getAttribute("categoryList");
+                    for (FolkCustom category : categoryList) {
                 %>
                 <li class="c_menu_li">
                     <%----%>
@@ -182,20 +180,20 @@
         <div class="pr_detail">
 
             <%
-                NativeProduct product = (NativeProduct) request.getAttribute("productDetails");
+                FolkCustom cusPassageDetails = (FolkCustom) request.getAttribute("cusPassageDetails");
             %>
             <div class="centent_title">
-                <span title="标题"><%= product.getName()%></span>
+                <span title="标题"><%= cusPassageDetails.getName()%></span>
             </div>
             <div class="article_ori">
                 <%--  <p>来源：宜兴社区培训学院 发布时间：2019/4/10 作者：jyadmin 阅读次数：127  </p>--%>
-                <p>发布时间：<%= product.getOnlinetime()%>
+                <p>发布时间：<%= cusPassageDetails.getOnlinetime()%>
                 </p>
                 <a onclick="javascript:CreateCollection(7264,2);" style="cursor: pointer;">收藏</a>
             </div>
             <div class="article_content">
-                <img src="<%=product.getImg()%>">
-                <p><span style="font-family: 宋体, SimSun;">&nbsp; <%=product.getBrief()%></span></p>
+                <img src="<%=cusPassageDetails.getImg()%>">
+                <p><span style="font-family: 宋体, SimSun;">&nbsp; <%=cusPassageDetails.getDetails()%></span></p>
             </div>
             <table width="100%" cellspacing="0" cellpadding="0" class="page_context">
                 <tbody>

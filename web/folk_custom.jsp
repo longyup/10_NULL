@@ -90,7 +90,7 @@
                     for (FolkCustom customMenu : customMenus) {
                 %>
                 <li class="c_menu_li">
-                    <a class="c_menu_main" href="/product?methood=findbytype&id=<%=customMenu.getId()%>">
+                    <a class="c_menu_main" id="type" href="javascript:void(0)" onclick="findType('<%=customMenu.getId()%>');return false;">
                         <div class="c_menu_icon"></div>
                         <div class="c_menu_name">
                             <%= customMenu.getName()%>
@@ -227,7 +227,8 @@
                     %>
                     <tr>
                         <th width="107"><%= customPassage.getId()%></th>
-                        <th width="418"><a href="/Article/Details?id=7264"><%= customPassage.getName()%></a></th>
+                        <th width="418"><a href="<%=path%>/folk_custom?method=cusDetails&id=<%= customPassage.getId()%>"><%=customPassage.getName()%>
+                        </a></th>
 
 
                         <th width="180"><%= customPassage.getOnlinetime()%></th>
@@ -840,6 +841,54 @@
 
 </script>
 
+<script>
+    var findType = function (id) {
+        var xhr;
+        if (window.XMLHttpRequest) {
+            xhr = new XMLHttpRequest();
+        } else {
+            try {
+                xhr = new ActiveXObject("Msxml2.XMLHTTP");
+            } catch (e) {
+                xhr = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+        }
+
+        xhr.open("GET", "<%=path%>/folk_custom?method=cusMenuDetails&id=" + id, true);
+        xhr.onreadystatechange = function () {
+            if (4 == xhr.readyState) {
+                if (200 == xhr.status) {
+                    var result = xhr.responseText;
+                    // 类型转换 object
+                    result = JSON.parse(result);
+                    showtype(result);
+                }
+            }
+        };
+        xhr.send();
+
+        function showtype(json) {
+            alert("json")
+            var len = json.length;
+            var table = document.getElementsByClassName("cml-table");
+            table[0].innerHTML = "";
+            alert(len);
+            for (var i = 0; i < len; i++) {
+                var obj = json[i];
+                var id = obj.id;
+                var name = obj.name;
+                var onlinetime = obj.onlinetime;
+
+
+                table[0].innerHTML += "<tr><th width='107'>" + id + "</th><th width='418'><a href='/folk_custom?&method=cusDetails&id=" + id + "'>" + name + "</a></th><th width='180'>" + onlinetime + "</th></tr>";
+            }
+            alert("1111111");
+        }
+
+        return false;
+    }
+
+</script>
 </body>
 </html>
 

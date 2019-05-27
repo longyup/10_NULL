@@ -19,4 +19,19 @@ public interface FolkCustomService {
      * @throws Exception
      */
     List<FolkCustom> customPassage() throws Exception;
+
+    /**
+     * 根据分类刷新列表，并转成json
+     * @return
+     * @throws Exception
+     */
+    String cusMenuDetailsJson(String typeId) throws Exception;
+
+    /**
+     * 点击进入详情页
+     * @param id
+     * @return
+     * @throws Exception
+     */
+    FolkCustom customPassageDetailsShow(String id) throws Exception;
 }

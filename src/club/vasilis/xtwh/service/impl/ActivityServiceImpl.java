@@ -31,6 +31,21 @@ public class ActivityServiceImpl implements ActivityService {
         return JSONArray.fromObject(list).toString();
     }
 
+    @Override
+    public Activity showDetails(String id) throws Exception {
+        ActivityDao dao = new ActivityDaoImpl();
+
+        return dao.showDetails(id);
+    }
+
+    @Override
+    public String getJsonActivityAll() throws SQLException {
+        ActivityDao dao = new ActivityDaoImpl();
+        List<Activity> list = dao.findActivityAll();
+
+        return JSONArray.fromObject(list).toString();
+    }
+
     @Test
     public void test() throws SQLException {
         System.out.println(new ActivityServiceImpl().findActivityAll());

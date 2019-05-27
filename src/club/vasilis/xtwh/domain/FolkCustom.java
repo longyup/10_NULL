@@ -5,7 +5,7 @@ public class FolkCustom {
     private String id;
     private String name;
     private String img;
-    private String brief;
+    private String details;
     private String onlinetime;
     private String typeid;
 
@@ -17,11 +17,11 @@ public class FolkCustom {
         this.name = name;
     }
 
-    public FolkCustom(String id, String name, String img, String brief, String onlinetime, String typeid) {
+    public FolkCustom(String id, String name, String img, String details, String onlinetime, String typeid) {
         this.id = id;
         this.name = name;
         this.img = img;
-        this.brief = brief;
+        this.details = details;
         this.onlinetime = onlinetime;
         this.typeid = typeid;
     }
@@ -32,10 +32,18 @@ public class FolkCustom {
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", img='" + img + '\'' +
-                ", brief='" + brief + '\'' +
+                ", details='" + details + '\'' +
                 ", onlinetime='" + onlinetime + '\'' +
                 ", typeid='" + typeid + '\'' +
                 '}';
+    }
+
+    public String getDetails() {
+        return details;
+    }
+
+    public void setDetails(String details) {
+        this.details = details;
     }
 
     public String getId() {
@@ -60,14 +68,6 @@ public class FolkCustom {
 
     public void setImg(String img) {
         this.img = img;
-    }
-
-    public String getBrief() {
-        return brief;
-    }
-
-    public void setBrief(String brief) {
-        this.brief = brief;
     }
 
     public String getOnlinetime() {

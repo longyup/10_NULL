@@ -523,7 +523,7 @@
                 var onlinetime = obj.onlinetime;
 
 
-                table[0].innerHTML += "<tr><th width='107'>" + id + "</th><th width='418'><a href='/cultureSites?&method=details&id=" + id + "'>" + title + "</a></th><th width='180'>" + onlinetime + "</th></tr>";
+                table[0].innerHTML += "<tr><th width='107'>" + id + "</th><th width='418'><a href='/cultureSites?method=details&id=" + id + "'>" + title + "</a></th><th width='180'>" + onlinetime + "</th></tr>";
             }
         }
 
