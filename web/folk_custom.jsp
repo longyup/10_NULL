@@ -880,7 +880,7 @@
                 var onlinetime = obj.onlinetime;
 
 
-                table[0].innerHTML += "<tr><th width='107'>" + id + "</th><th width='418'><a href='/folk_custom?&method=cusDetails&id=" + id + "'>" + name + "</a></th><th width='180'>" + onlinetime + "</th></tr>";
+                table[0].innerHTML += "<tr><th width='107'>" + id + "</th><th width='418'><a href='/folk_custom?method=cusDetails&id=" + id + "'>" + name + "</a></th><th width='180'>" + onlinetime + "</th></tr>";
             }
             alert("1111111");
         }
