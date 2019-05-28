@@ -35,8 +35,15 @@ public class FolkCustomServiceImpl implements FolkCustomService {
         return dao.customPassageDetails(id);
     }
 
+    @Override
+    public String customFindAllJson() throws Exception {
+        FolkCustomDao dao = new FolkCustomDaoImpl();
+        List<FolkCustom> list = dao.customAllJson();
+        return JSONArray.fromObject(list).toString();
+    }
+
     @Test
     public void test() throws Exception {
-        System.err.println(new FolkCustomServiceImpl().customPassage());
+        System.err.println(new FolkCustomServiceImpl().customFindAllJson());
     }
 }
