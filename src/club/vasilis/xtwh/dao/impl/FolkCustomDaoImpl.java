@@ -43,9 +43,18 @@ public class FolkCustomDaoImpl implements FolkCustomDao {
         return query;
     }
 
+    @Override
+    public List<FolkCustom> customAllJson() throws Exception {
+        QueryRunner runner = new QueryRunner(DsUtils.getDataSource());
+        String sql = "select id,name,img,onlinetime,typeid,details from folk_custom_passage";
+        List<FolkCustom> query = runner.query(sql, new BeanListHandler<FolkCustom>(FolkCustom.class));
+        return query;
+    }
+
     @Test
     public void test() throws Exception {
-        System.out.println(new FolkCustomDaoImpl().customPassageDetails("1"));
-        System.out.println(new FolkCustomDaoImpl().customMenuDetails("cus001"));
+//        System.out.println(new FolkCustomDaoImpl().customPassageDetails("1"));
+//        System.out.println(new FolkCustomDaoImpl().customMenuDetails("cus001"));
+        System.err.println(new FolkCustomDaoImpl().customAllJson());
     }
 }

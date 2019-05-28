@@ -34,4 +34,11 @@ public interface FolkCustomService {
      * @throws Exception
      */
     FolkCustom customPassageDetailsShow(String id) throws Exception;
+
+    /**
+     * 展示所有的Json数据
+     * @return
+     * @throws Exception
+     */
+    String customFindAllJson() throws Exception;
 }
