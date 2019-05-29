@@ -19,8 +19,8 @@ import java.util.List;
  */
 @WebServlet(name = "FolkCustomServlet", urlPatterns = "/folk_custom")
 public class FolkCustomServlet extends HttpServlet {
-    @Override
 
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request, response);
     }
@@ -36,6 +36,8 @@ public class FolkCustomServlet extends HttpServlet {
             cusDetails(request,response);
         }else if ("cusMenuDetails".equals(method)){
             cusMenuDetails(request,response);
+        }else if ("cusShowAllJson".equals(method)){
+            cusShowAllJson(request,response);
         }
     }
 
@@ -107,6 +109,27 @@ public class FolkCustomServlet extends HttpServlet {
             //获取JSON字符串
             FolkCustomService service = new FolkCustomServiceImpl();
             String json = service.cusMenuDetailsJson(typeId);
+            //输出结果
+            response.getWriter().write(json);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    /**
+     * 展示所有的标题Json数据
+     * @param request
+     * @param response
+     */
+    private void cusShowAllJson(HttpServletRequest request, HttpServletResponse response) {
+        try {
+            //设置输出格式
+            response.setContentType("text/json;charset=utf-8");
+            //获取JSON字符串
+            FolkCustomService service = new FolkCustomServiceImpl();
+            String json = service.customFindAllJson();
+            System.out.println(json);
             //输出结果
             response.getWriter().write(json);
         } catch (Exception e) {

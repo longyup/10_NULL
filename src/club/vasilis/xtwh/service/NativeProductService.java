@@ -39,4 +39,8 @@ public interface NativeProductService  {
      * @throws Exception
      */
     NativeProduct showDetails(String id) throws Exception;
+
+    String findAllJson() throws Exception;
+
+    String detailsbyjson(String id) throws Exception;
 }

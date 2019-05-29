@@ -36,4 +36,12 @@ public interface FolkCustomDao {
      * @throws Exception
      */
     FolkCustom customPassageDetails(String id) throws  Exception;
+
+    /**
+     * 展示所有的标题
+     * @return
+     * @throws Exception
+     */
+    List<FolkCustom> customAllJson() throws Exception;
+
 }

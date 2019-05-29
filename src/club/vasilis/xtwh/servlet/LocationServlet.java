@@ -4,16 +4,8 @@ package club.vasilis.xtwh.servlet;
 import club.vasilis.xtwh.domain.CultureSites;
 import club.vasilis.xtwh.domain.Location;
 
-import club.vasilis.xtwh.domain.NativeProduct;
-import club.vasilis.xtwh.domain.NativeProductCategory;
-import club.vasilis.xtwh.service.CultureSitesService;
-import club.vasilis.xtwh.service.LocationService;
-import club.vasilis.xtwh.service.NativeProductCategoryService;
-import club.vasilis.xtwh.service.NativeProductService;
-import club.vasilis.xtwh.service.impl.CultureSitesServiceImpl;
-import club.vasilis.xtwh.service.impl.LocationServiceImpl;
-import club.vasilis.xtwh.service.impl.NativeProductCategoryServiceImpl;
-import club.vasilis.xtwh.service.impl.NativeProductServiceImpl;
+import club.vasilis.xtwh.service.*;
+import club.vasilis.xtwh.service.impl.*;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -21,6 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.List;
 
 /**
@@ -48,8 +41,27 @@ public class LocationServlet extends HttpServlet {
         else if ("details".equals(method)){
             detail(request,response);
         }
+        else if ("getJsonCultureSitesAll".equals(method)){
+            getJsonCultureSitesAll(request,response);
+        }
     }
 
+    private void getJsonCultureSitesAll(HttpServletRequest req, HttpServletResponse resp) {
+        System.out.println("123456789");
+        try {
+            //设置输出格式
+            resp.setContentType("text/json;charset=utf-8");
+            //获取JSON字符串
+            CultureSitesService service = new CultureSitesServiceImpl();
+            String json = service.getJsonCultrueSites();
+            //输出结果
+            resp.getWriter().write(json);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     /**
      * 点击进入详情页面,数据放在request

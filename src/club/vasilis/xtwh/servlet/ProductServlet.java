@@ -38,8 +38,51 @@ public class ProductServlet extends HttpServlet {
             findByType(request,response);
         }else if ("details".equals(method)){
             detail(request,response);
+        }else if ("findAll".equals(method)){
+            findAll(request,response);
+        }else if ("detailsbyjson".equals(method)){
+            detailsbyjson(request,response);
         }
 
+    }
+
+    /**
+     * 详情信息以json显示
+     * @param request
+     * @param response
+     */
+    private void detailsbyjson(HttpServletRequest request, HttpServletResponse response) {
+        String id = request.getParameter("id");
+        try {
+            //设置输出格式
+            response.setContentType("text/json;charset=utf-8");
+            //获取JSON字符串
+            NativeProductService service = new NativeProductServiceImpl();
+            String json = service.detailsbyjson(id);
+            //输出结果
+            response.getWriter().write(json);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * 所有的生成json
+     * @param request
+     * @param response
+     */
+    private void findAll(HttpServletRequest request, HttpServletResponse response) {
+        try {
+            //设置输出格式
+            response.setContentType("text/json;charset=utf-8");
+            //获取JSON字符串
+            NativeProductService service = new NativeProductServiceImpl();
+            String json = service.findAllJson();
+            //输出结果
+            response.getWriter().write(json);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     /**
