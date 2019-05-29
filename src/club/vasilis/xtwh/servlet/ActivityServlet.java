@@ -3,7 +3,6 @@ import club.vasilis.xtwh.domain.Activity;
 import club.vasilis.xtwh.domain.ActivityCategory;
 import club.vasilis.xtwh.service.*;
 import club.vasilis.xtwh.service.impl.*;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -38,7 +37,7 @@ public class ActivityServlet extends HttpServlet {
     }
 
     private void getJsonActivityAll(HttpServletRequest req, HttpServletResponse resp) {
-        System.out.println("123456789");
+
         try {
             //设置输出格式
             resp.setContentType("text/json;charset=utf-8");
@@ -60,7 +59,6 @@ public class ActivityServlet extends HttpServlet {
      * @param response
      */
     private void detail(HttpServletRequest request, HttpServletResponse response) {
-        System.err.println("详情页");
         String id = request.getParameter("id");
 
         ActivityCategoryService categoryService = new ActivityCategoryServiceImpl();
@@ -88,7 +86,6 @@ public class ActivityServlet extends HttpServlet {
 
 
     private void findByType(HttpServletRequest req, HttpServletResponse resp) {
-        System.err.println("type");
         String typeId = req.getParameter("id");
         try {
             //设置输出格式
@@ -104,8 +101,6 @@ public class ActivityServlet extends HttpServlet {
     }
 
     private void getActivityMessage(HttpServletRequest req, HttpServletResponse resp) {
-
-        System.out.println("222");
 
         ActivityCategoryService categoryService = new ActivityCategoryServiceImpl();
 

@@ -1299,11 +1299,8 @@
                 var img = obj.img;
                 var typeId = obj.typeId;
 
-<<<<<<< HEAD
-                <%--inner.innerHTML += "<li class='lesson-brief1'><div class='lb1-con'><a href='activity?method=detail'><div class='lb1-con-hd'><img src='http://112.25.215.35:80/Resource/Images/Course/' onerror='this.src = '" + img + " class='lb1-con-hd-img' /><p class='clearfix'><span class='l'><img src=\"<%=path %>/images/eye-1.png' />" + startTime + "</span> <span class='r'><img src='images/clock.png' />" + startTime + "</span></p></div><div class='lb1-con-bd'><p class='lb1-con-bd-p1'>" + info + "</p><p class='lb1-con-bd-p2'>上传日期：" + launchTime + "</p></div></a></div></li>";--%>
-=======
                 inner.innerHTML += "<li class=\"lesson-brief1\"><div class=\"lb1-con\"><a href=\"activity?method=details&id=\" + id + \"\"><div class=\"lb1-con-hd\"><img src=\"http://112.25.215.35:80/Resource/Images/Course/\" onerror=\"this.src = '" + img + "'\" class=\"lb1-con-hd-img\" /><p class=\"clearfix\"><span class=\"l\"><img src=\"<%=path %>/images/eye-1.png\" />" + startTime + "</span> <span class=\"r\"><img src=\"images/clock.png\" />" + startTime + "</span></p></div><div class=\"lb1-con-bd\"><p class=\"lb1-con-bd-p1\">" + info + "</p><p class=\"lb1-con-bd-p2\">上传日期：" + launchTime + "</p></div></a></div></li>";
->>>>>>> 1a5c2c4b2b51c7782916e5ec04441129d6db520c
+
             }
         }
 
