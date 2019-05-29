@@ -5,6 +5,7 @@ import club.vasilis.xtwh.dao.impl.NativeProductDaoImpl;
 import club.vasilis.xtwh.domain.NativeProduct;
 import club.vasilis.xtwh.service.NativeProductService;
 import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
 import org.junit.Test;
 
 import java.util.List;
@@ -41,6 +42,20 @@ public class NativeProductServiceImpl implements NativeProductService {
     public NativeProduct showDetails(String id) throws Exception {
         NativeProductDao dao = new NativeProductDaoImpl();
         return dao.showDetails(id);
+    }
+
+    @Override
+    public String findAllJson() throws Exception {
+        NativeProductDao dao = new NativeProductDaoImpl();
+        List<NativeProduct> productList = dao.findAllProduct();
+        return JSONArray.fromObject(productList).toString();
+    }
+
+    @Override
+    public String detailsbyjson(String id) throws Exception {
+        NativeProductDao dao = new NativeProductDaoImpl();
+        NativeProduct nativeProduct = dao.showDetails(id);
+        return JSONObject.fromObject(nativeProduct).toString();
     }
 
 
