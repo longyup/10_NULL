@@ -29,7 +29,7 @@ public class UserServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.err.println("登陆");
+
         // 1.设置响应头
         response.setContentType("text/html;charset=UTF-8");
         // 设置响应头,解决用户输入出错问题
@@ -48,7 +48,7 @@ public class UserServlet extends HttpServlet {
             // 封装对象
             User user = new User();
             BeanUtils.populate(user, request.getParameterMap());
-            System.err.println(user);
+
             // 3:查询数据库
             user = service.login(user);
 
@@ -86,12 +86,12 @@ public class UserServlet extends HttpServlet {
             user.setPassword(pwd);
             //3.查询数据库
             user = service.login(user);
-            System.err.println(user);
+
             // 4.判断是否成功
             if (user == null) {
                 System.out.println("登陆失败" + user);
                 // 请求转发 可以携带数据，路径直接写.是服务端发出的，浏览器捕获不到，所以是在一次请求之内的
-                request.setAttribute("name", name);
+                request.setAttribute("account", name);
                 request.setAttribute("msg", "登陸失敗！，請檢查用戶名或密碼");
                 request.getRequestDispatcher("/user/login.jsp").forward(request, response);
             } else {

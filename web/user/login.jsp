@@ -75,7 +75,7 @@
                     </div>
                 </div>
                 <!--未登录-->
-                <form aloginction="<%=request.getContextPath()%>/user" class="layui-form" method="post">
+                <form action="<%=request.getContextPath()%>/user" class="layui-form" method="post">
                     <input name="__RequestVerificationToken" type="hidden"
                            value="wSIPt1PRSeo9hlM5QXGrcTFQ40LfcRujI9ITnTDIrX55esUpL1L-CxQZ0INBrY5u3bm2tqYzVcg-jjrp0L_-5fbjgCdYpiTFYt0zb_bntp81"/>
                     <div class="nnl_logining" style="display: block;">
@@ -84,7 +84,13 @@
                                 <img src="<%= path%>/images/user_img1.png"/>
                             </div>
                             <input type="text" id="userName" name="account" lay-verify="userName" autocomplete="off"
-                                   placeholder="用户名"/>
+                                   placeholder="用户" value="<%
+                                   Object account = request.getAttribute("account");
+                                    if(account != null){
+                                        out.print(account);
+                                    }
+                                   %>"
+                            />
                         </div>
                         <div class="login_dh_password">
                             <div class="login_dh_passwordimg">
@@ -100,6 +106,7 @@
                         <div class="login_dl">
                             <input type="submit" value="登陆">
                         </div>
+                        <div>${msg}</div>
                     </div>
                 </form>
             </div>
