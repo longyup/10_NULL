@@ -100,7 +100,7 @@
                                    placeholder="密码"/>
                         </div>
                         <div class="sign_forget">
-                            <a href="/User/Register" class="sign_forget1">注册新账号</a>|
+                            <a href="<%=request.getContextPath()%>/user/Register.jsp" class="sign_forget1">注册新账号</a>|
                             <a href="/User/ForgetPwd" class="sign_forget2">找回账号</a>
                         </div>
                         <div class="login_dl">
