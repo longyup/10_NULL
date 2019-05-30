@@ -14,6 +14,13 @@ import org.junit.Test;
 
 public class UserServiceImpl implements UserService {
     private UserDao dao = new UserDaoImpl();
+
+    /**
+     * 用户登陆
+     * @param user
+     * @return
+     * @throws Exception
+     */
     @Override
     public User login(User user) throws Exception {
         // 此处加密
@@ -32,8 +39,8 @@ public class UserServiceImpl implements UserService {
     @Test
     public void Test() throws Exception {
         User user = new User();
-        user.setAccount("lp63247");
-        user.setPassword("wasdwe132~");
+        user.setAccount("admin");
+        user.setPassword("1234");
         user = login(user);
         System.out.println(user);
     }

@@ -10,17 +10,17 @@
 <head>
     <title>登陆</title>
     <% String path = request.getContextPath(); %>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="Shortcut Icon" href=/favicon.ico>
-    <link rel="stylesheet" type="text/css" href="<%= path%>/css/reset.css" />
-    <link rel="stylesheet" type="text/css" href="<%= path%>/css/head.css" />
-    <link rel="stylesheet" type="text/css" href="<%= path%>/css/article.css" />
-    <link href="<%= path%>/css/Page.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="<%= path%>/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="<%= path%>/css/head.css"/>
+    <link rel="stylesheet" type="text/css" href="<%= path%>/css/article.css"/>
+    <link href="<%= path%>/css/Page.css" type="text/css" rel="stylesheet"/>
 
-    <link rel="stylesheet" type="text/css" href="<%= path%>/css/loginm.css" />
+    <link rel="stylesheet" type="text/css" href="<%= path%>/css/loginm.css"/>
 
 
     <script>
@@ -35,7 +35,6 @@
 
 </head>
 <body>
-
 
 
 <style>
@@ -62,9 +61,7 @@
 
 
 <!--nav 导航-->
-<%@include file="../head.jsp"%>
-
-
+<%@include file="../head.jsp" %>
 
 
 <!--登录主页-->
@@ -78,33 +75,34 @@
                     </div>
                 </div>
                 <!--未登录-->
-                <form action="<%=request.getContextPath()%>/user/login" class="layui-form" method="post">
-                    <input name="__RequestVerificationToken" type="hidden" value="wSIPt1PRSeo9hlM5QXGrcTFQ40LfcRujI9ITnTDIrX55esUpL1L-CxQZ0INBrY5u3bm2tqYzVcg-jjrp0L_-5fbjgCdYpiTFYt0zb_bntp81" />
+                <form aloginction="<%=request.getContextPath()%>/user" class="layui-form" method="post">
+                    <input name="__RequestVerificationToken" type="hidden"
+                           value="wSIPt1PRSeo9hlM5QXGrcTFQ40LfcRujI9ITnTDIrX55esUpL1L-CxQZ0INBrY5u3bm2tqYzVcg-jjrp0L_-5fbjgCdYpiTFYt0zb_bntp81"/>
                     <div class="nnl_logining" style="display: block;">
-                    <div class="login_dh_user">
-                        <div class="login_dh_userimg">
-                            <img src="<%= path%>/images/user_img1.png"/>
+                        <div class="login_dh_user">
+                            <div class="login_dh_userimg">
+                                <img src="<%= path%>/images/user_img1.png"/>
+                            </div>
+                            <input type="text" id="userName" name="account" lay-verify="userName" autocomplete="off"
+                                   placeholder="用户名"/>
                         </div>
-                        <input type="text" id="userName" name="account" lay-verify="userName" autocomplete="off" placeholder="用户名" />
-                    </div>
-                    <div class="login_dh_password">
-                        <div class="login_dh_passwordimg">
-                            <img src="<%= path%>/images/password_img.png"/>
+                        <div class="login_dh_password">
+                            <div class="login_dh_passwordimg">
+                                <img src="<%= path%>/images/password_img.png"/>
+                            </div>
+                            <input type="password" id="ps_wd" name="password" lay-verify="password" autocomplete="off"
+                                   placeholder="密码"/>
                         </div>
-                        <input type="password" id="ps_wd" name="password" lay-verify="password" autocomplete="off" placeholder="密码" />
+                        <div class="sign_forget">
+                            <a href="/User/Register" class="sign_forget1">注册新账号</a>|
+                            <a href="/User/ForgetPwd" class="sign_forget2">找回账号</a>
+                        </div>
+                        <div class="login_dl">
+                            <input type="submit" value="登陆">
+                        </div>
                     </div>
-                    <div class="sign_forget">
-                        <a href="/User/Register" class="sign_forget1">注册新账号</a>|
-                        <a href="/User/ForgetPwd" class="sign_forget2">找回账号</a>
-                    </div>
-                    <div class="login_dl">
-                        <input type="submit" value="登陆">
-<%--
-                        <a href="javascript:void(0)" id="UserLogin" lay-submit lay-filter="login">登录</a>
---%>
-                    </div>
-                </div>
-                </form>            </div>
+                </form>
+            </div>
 
         </div>
 
@@ -112,22 +110,18 @@
 </div>
 
 
-
-
-
-<%@include file="../foot.jsp"%>
+<%@include file="../foot.jsp" %>
 
 
 <script src="<%= path%>/js/jquery-1.11.2.min.js" type="text/javascript"></script>
 
 <script src="<%= path%>/js/html5.js" type="text/javascript" charset="utf-8"></script>
-<script src="<%= path%>/js/respond.js" type="text/javascript" charset="utf-8"></script>
+<%--<script src="<%= path%>/js/respond.js" type="text/javascript" charset="utf-8"></script>--%>
 <script src="<%= path%>/js/schedule.js" type="text/javascript" charset="utf-8"></script>
 <script src="<%= path%>/js/jquery.tiles.js"></script>
+<%--
 <script src="<%= path%>/Content/layui/src/layui.js"></script>
-
-
-
+--%>
 
 
 <script type="text/javascript">
@@ -135,6 +129,7 @@
     $(function () {
         search("课程");
     });
+
     function search(types) {
         $("#Search").click(function () {
             var keyword = $("#SearchKeyword").val();
@@ -153,6 +148,7 @@
             window.location.href = url;
         });
     }
+
     $(".search_con").click(function () {
         $(".type_con").show()
     });
@@ -161,13 +157,14 @@
         $(".type_con").hide()
     });
     $(".footer-right").click(function () {
-        $("html,body").animate({ scrollTop: 0 }, 500);
+        $("html,body").animate({scrollTop: 0}, 500);
     });
 </script>
 
 
-<script src="<%= path%>/Content/layui/src/layui.js"></script>
-
+<%--<script src="<%= path%>/Content/layui/src/layui.js"></script>
+--%>
+<%--
 <script type="text/javascript">
 
     layui.use(['layer', 'form'], function() {
@@ -201,7 +198,7 @@
 
     function submit($, params) {
 
-        $.post('<%= path%>/user/login', params, function () {
+        $.post('<%= path%>/user', params, function () {
             if (${"login"}) {
                 layer.msg(res.message, { icon: 2 });
             } else {
@@ -211,8 +208,7 @@
         });
     };
 </script>
-
-
+--%>
 
 
 </body>
