@@ -91,7 +91,8 @@ public class AdminDaoImpl implements AdminDao {
 //        Admin admin = new Admin(0,"admin","9b2f9dd7c60267f3c0f69bc061f6cbaf",0);
         Admin admin = new Admin(0,"tom","1c92d084961cfabc21be413626210035",0);
         AdminDao dao = new AdminDaoImpl();
-        admin = dao.login(admin);
+//        admin = dao.login(admin);
+        dao.save(admin);
         System.out.println(admin);
     }
 

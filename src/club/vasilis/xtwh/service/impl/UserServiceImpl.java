@@ -49,7 +49,8 @@ public class UserServiceImpl implements UserService {
         user.setUUID("uuid123456");
         user.setAccount("admin");
         user.setPassword("1234");
-        user = login(user);
+//        user = login(user);
+        new UserServiceImpl().save(user);
         System.out.println(user);
     }
 }

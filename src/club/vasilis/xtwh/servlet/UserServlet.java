@@ -4,6 +4,7 @@ import club.vasilis.xtwh.domain.User;
 import club.vasilis.xtwh.service.UserService;
 import club.vasilis.xtwh.service.impl.UserServiceImpl;
 import org.apache.commons.beanutils.BeanUtils;
+import org.junit.Test;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -56,7 +57,7 @@ public class UserServlet extends HttpServlet {
         try {
             User user = new User();
             BeanUtils.populate(user,request.getParameterMap());
-            service.login(user);
+            service.save(user);
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (InvocationTargetException e) {
@@ -134,4 +135,6 @@ public class UserServlet extends HttpServlet {
             request.getRequestDispatcher("/jsp/msg.jsp").forward(request, response);
         }
     }
+
+
 }
