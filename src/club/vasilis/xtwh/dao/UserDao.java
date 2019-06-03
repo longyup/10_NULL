@@ -11,9 +11,25 @@ import java.util.List;
 
 public interface UserDao {
 
+    /**
+     * 用户登录
+     * @param user
+     * @return
+     * @throws Exception
+     */
     User login(User user) throws Exception;
 
+    /**
+     * 查询所有的管理员
+     * @return
+     * @throws Exception
+     */
     List<User> queryAll() throws Exception;
 
+    /**
+     * 保存用户信息
+     * @param user
+     * @throws Exception
+     */
     void save(User user) throws Exception;
 }

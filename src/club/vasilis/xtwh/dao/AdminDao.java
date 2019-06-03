@@ -11,9 +11,9 @@ import java.util.List;
 
 public interface AdminDao {
 
-    public Admin login(Admin admin) throws Exception;
+    Admin login(Admin admin) throws Exception;
 
-    public List<Admin> queryAll() throws Exception;
+    List<Admin> queryAll() throws Exception;
 
-    public void save(Admin admin) throws Exception;
+    void save(Admin admin) throws Exception;
 }
