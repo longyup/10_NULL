@@ -4,6 +4,7 @@ import club.vasilis.xtwh.domain.User;
 import club.vasilis.xtwh.service.UserService;
 import club.vasilis.xtwh.service.impl.UserServiceImpl;
 import org.apache.commons.beanutils.BeanUtils;
+import org.junit.Test;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 
 /**
  * @author Vasilis
@@ -39,10 +41,39 @@ public class UserServlet extends HttpServlet {
             //web页的登陆,m没有参数，或者参数为null;
             login(request, response);
         } else if ("loginA".equals(method)) {
+            //Android端的登录
             loginA(request, response);
+        }else if ("registerA".equals(method)){
+            registerA(request, response);
         }
     }
 
+    /**
+     * 安卓端注册
+     * @param request
+     * @param response
+     */
+    private void registerA(HttpServletRequest request, HttpServletResponse response) {
+        try {
+            User user = new User();
+            BeanUtils.populate(user,request.getParameterMap());
+            service.save(user);
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * 安卓端登录
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException
+     */
     private void loginA(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
         try {
             // 封装对象
@@ -104,4 +135,6 @@ public class UserServlet extends HttpServlet {
             request.getRequestDispatcher("/jsp/msg.jsp").forward(request, response);
         }
     }
+
+
 }
