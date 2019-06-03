@@ -21,8 +21,8 @@ public class UserDaoImpl implements UserDao {
     @Override
     public User login(User user) throws Exception {
         QueryRunner runner = new QueryRunner(DsUtils.getDataSource());
-        String sql = "select * from user where UUID=? and account=? and password=? limit 1";
-        user = runner.query(sql, new BeanHandler<User>(User.class),user.getUUID(),user.getAccount(),user.getPassword());
+        String sql = "select * from user where account=? and password=? limit 1";
+        user = runner.query(sql, new BeanHandler<User>(User.class),user.getAccount(),user.getPassword());
         return user;
     }
 
