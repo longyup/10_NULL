@@ -1537,7 +1537,7 @@
                 if (4 == xhr.readyState) {
                     if (200 == xhr.status) {
                         var result = xhr.responseText;
-                        alert(typeof result);
+                        // alert(typeof result);
                         // 类型转换 object
                         result = JSON.parse(result);
                         displayCultrueNews(result);
