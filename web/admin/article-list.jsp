@@ -50,16 +50,17 @@
 				<tr class="text-c">
 					<th width="40"><input type="checkbox" name="" value=""></th>
 					<th width="100">ID</th>
-					<th>标题</th>
+                    <th width="75">缩略图</th>
+					<th width="150" style="text-align:-webkit-center">标题</th>
 					<th width="100">分类</th>
 					<th width="140">上传时间</th>
 					<th width="80">发布状态</th>
 					<th width="140">操作</th>
 				</tr>
 			</thead>
-			<tbody>
+			<tbody id="showActivity">
 
-			<tr class="text-c">
+			<%--<tr class="text-c">
 				<td><input type="checkbox" value="" name=""></td>
 				<td>10002</td>
 				<td class="text-l">资讯标题</td>
@@ -67,7 +68,7 @@
 				<td>2014-6-11 11:11:42</td>
 				<td class="td-status"><span class="label label-success radius">草稿</span></td>
 				<td class="f-14 td-manage"><a style="text-decoration:none" onClick="article_shenhe(this,'10001')" href="javascript:;" title="审核">审核</a> <a style="text-decoration:none" class="ml-5" onClick="article_edit('资讯编辑','article-add.html','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="article_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
-			</tr>
+			</tr>--%>
 
 				<!--<tr class="text-c">
 					<td><input type="checkbox" value="" name=""></td>
@@ -191,53 +192,70 @@ function article_shenqing(obj,id){
 </body>
 
 <script>
-	<!--资讯 -->
-	function information() {
-		createXhr();
-		xhr.open("GET", "<%=path %>/index?method=CultrueSites", true);
-		// alert(xhr.readyState);
-		xhr.onreadystatechange = function () {
+    var xhr;
 
-			// alert(xhr.readyState);
-			if (4 == xhr.readyState) {
-				if (200 == xhr.status) {
-					var result = xhr.responseText;
-					// alert(typeof result);
-					// 类型转换 object
-					result = JSON.parse(result);
-					displayCultrueSites(result);
-				}
-			}
-		};
-		xhr.send();
+    function createXhr() {
+        if (window.XMLHttpRequest) {
+            xhr = new XMLHttpRequest();
+        } else {
+            try {
+                xhr = new ActiveXObject("Msxml2.XMLHTTP");
+            } catch (e) {
+                xhr = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+        }
 
-		// 解析字符串
-		function displayCultrueSites(json) {
+    }
+    function ActivityShow() {
+        createXhr();
+        xhr.open("GET", "<%=path %>/cultureSites?method=getJsonCultureSitesAll", true);
+         //alert(xhr.readyState);
+        xhr.onreadystatechange = function () {
 
-			var show = document.getElementById("show");
-			show.innerHTML = "";
+             //alert(xhr.readyState);
+            if (4 == xhr.readyState) {
+                if (200 == xhr.status) {
+                    var result = xhr.responseText;
+                    // alert(typeof result);
+                    // 类型转换 object
+                    result = JSON.parse(result);
+                    displayActivity(result);
+                }
+            }
+        };
+        xhr.send();
 
-			var news = document.getElementById("news");
-			news.innerHTML = "";
+        // 解析字符串
+        function displayActivity(json) {
 
-			var news2 = document.getElementById("news2");
-			news2.innerHTML = "";
+            var show = document.getElementById("showActivity");
+            show.innerHTML = "";
 
-			var len = json.length;
-			for (var i = 0; i < len; i++) {
-				var obj = json[i];
-				var id = obj.id;
-				var img = obj.img;
-				var consistent = obj.consistent;
-				var time = obj.time;
-				// alert(id+img+consistent+time);
-				// alert(consistent);
-				show.innerHTML += "<li><a href=\'file:///C:/Article/Details?id=" + id + "\' target=\'_blank\'><img src='" + img + "' ><div class=\"text\"><p>乡愁不老 思念不改—...</p></div></a></li>";
-				news.innerHTML += "<li><a href=\'file:///C:/Article/Details?id=" + id + "\'>【" + time + "】" + consistent + "</a></li>";
-				news2.innerHTML += "<li><a href=\"file:///C:/Article/Details?id=" + id + "\">【" + time + "】" + consistent + "</a></li>";
-			}
-		}
+            var len = json.length;
+            for (var i = 0; i < len; i++) {
+                var obj = json[i];
+                var id = obj.id;
+                var img = obj.img;
+                var title = obj.title;
+                var content = obj.content;
+                var onlinetime = obj.onlinetime;
+                var classification = obj.classification;
 
-	}
+                show.innerHTML +="<tr class=\"text-c\">" +
+                "<td><input type=\"checkbox\" value=\"\" name=\"\"></td>"+
+                "<td>"+id+"</td>"+
+                "<td><img width=\"60\" class=\"product-thumb\" src=<%=path%>/"+img+"></a></td>" +
+                "<td class=\"text-l\">"+title+"</td>"+
+                "<td>"+classification+"</td>"+
+                "<td>"+onlinetime+"</td>"+
+                "<td class=\"td-status\"><span class=\"label label-success radius\">草稿</span></td>"+
+                "<td class=\"f-14 td-manage\"><a style=\"text-decoration:none\" onClick=\"article_shenhe(this,'10001')\" href=\"javascript:;\" title=\"审核\">审核</a> <a style=\"text-decoration:none\" class=\"ml-5\" onClick=\"article_edit('资讯编辑','article-add.html','10001')\" href=\"javascript:;\" title=\"编辑\"><i class=\"Hui-iconfont\">&#xe6df;</i></a> <a style=\"text-decoration:none\" class=\"ml-5\" onClick=\"article_del(this,'10001')\" href=\"javascript:;\"title=\"删除\"><i class=\"Hui-iconfont\">&#xe6e2;</i></a></td>"+
+                "</tr>";
+
+            }
+        }
+    }
+    ActivityShow();
 </script>
 </html>
+
