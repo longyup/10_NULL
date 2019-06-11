@@ -1,4 +1,6 @@
-﻿<!DOCTYPE HTML>
+﻿<%@ page import="club.vasilis.xtwh.domain.CultureSites" %>
+<%@ page import="java.util.List" %>
+<!DOCTYPE HTML>
 <html>
 <head>
 <meta charset="utf-8">
@@ -20,6 +22,8 @@
 <script>DD_belatedPNG.fix('*');</script>
 <![endif]-->
 <title>资讯列表</title>
+
+	<% String path = request.getContextPath(); %>
 </head>
 <body>
 <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 资讯管理 <span class="c-gray en">&gt;</span> 资讯列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
@@ -44,30 +48,28 @@
 		<table class="table table-border table-bordered table-bg table-hover table-sort table-responsive">
 			<thead>
 				<tr class="text-c">
-					<th width="25"><input type="checkbox" name="" value=""></th>
-					<th width="80">ID</th>
+					<th width="40"><input type="checkbox" name="" value=""></th>
+					<th width="100">ID</th>
 					<th>标题</th>
-					<th width="80">分类</th>
-					<th width="80">来源</th>
-					<th width="120">更新时间</th>
-					<th width="75">浏览次数</th>
-					<th width="60">发布状态</th>
-					<th width="120">操作</th>
+					<th width="100">分类</th>
+					<th width="140">上传时间</th>
+					<th width="80">发布状态</th>
+					<th width="140">操作</th>
 				</tr>
 			</thead>
 			<tbody>
-				<tr class="text-c">
-					<td><input type="checkbox" value="" name=""></td>
-					<td>10001</td>
-					<td class="text-l"><u style="cursor:pointer" class="text-primary" onClick="article_edit('查看','article-zhang.html','10001')" title="查看">资讯标题</u></td>
-					<td>行业动态</td>
-					<td>H-ui</td>
-					<td>2014-6-11 11:11:42</td>
-					<td>21212</td>
-					<td class="td-status"><span class="label label-success radius">已发布</span></td>
-					<td class="f-14 td-manage"><a style="text-decoration:none" onClick="article_stop(this,'10001')" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6de;</i></a> <a style="text-decoration:none" class="ml-5" onClick="article_edit('资讯编辑','article-add.html','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="article_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
-				</tr>
-				<tr class="text-c">
+
+			<tr class="text-c">
+				<td><input type="checkbox" value="" name=""></td>
+				<td>10002</td>
+				<td class="text-l">资讯标题</td>
+				<td>行业动态</td>
+				<td>2014-6-11 11:11:42</td>
+				<td class="td-status"><span class="label label-success radius">草稿</span></td>
+				<td class="f-14 td-manage"><a style="text-decoration:none" onClick="article_shenhe(this,'10001')" href="javascript:;" title="审核">审核</a> <a style="text-decoration:none" class="ml-5" onClick="article_edit('资讯编辑','article-add.html','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="article_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
+			</tr>
+
+				<!--<tr class="text-c">
 					<td><input type="checkbox" value="" name=""></td>
 					<td>10002</td>
 					<td class="text-l"><u style="cursor:pointer" class="text-primary" onClick="article_edit('查看','article-zhang.html','10002')" title="查看">资讯标题</u></td>
@@ -77,7 +79,7 @@
 					<td>21212</td>
 					<td class="td-status"><span class="label label-success radius">草稿</span></td>
 					<td class="f-14 td-manage"><a style="text-decoration:none" onClick="article_shenhe(this,'10001')" href="javascript:;" title="审核">审核</a> <a style="text-decoration:none" class="ml-5" onClick="article_edit('资讯编辑','article-add.html','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="article_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
-				</tr>
+				</tr>-->
 			</tbody>
 		</table>
 	</div>
@@ -187,4 +189,55 @@ function article_shenqing(obj,id){
 
 </script> 
 </body>
+
+<script>
+	<!--资讯 -->
+	function information() {
+		createXhr();
+		xhr.open("GET", "<%=path %>/index?method=CultrueSites", true);
+		// alert(xhr.readyState);
+		xhr.onreadystatechange = function () {
+
+			// alert(xhr.readyState);
+			if (4 == xhr.readyState) {
+				if (200 == xhr.status) {
+					var result = xhr.responseText;
+					// alert(typeof result);
+					// 类型转换 object
+					result = JSON.parse(result);
+					displayCultrueSites(result);
+				}
+			}
+		};
+		xhr.send();
+
+		// 解析字符串
+		function displayCultrueSites(json) {
+
+			var show = document.getElementById("show");
+			show.innerHTML = "";
+
+			var news = document.getElementById("news");
+			news.innerHTML = "";
+
+			var news2 = document.getElementById("news2");
+			news2.innerHTML = "";
+
+			var len = json.length;
+			for (var i = 0; i < len; i++) {
+				var obj = json[i];
+				var id = obj.id;
+				var img = obj.img;
+				var consistent = obj.consistent;
+				var time = obj.time;
+				// alert(id+img+consistent+time);
+				// alert(consistent);
+				show.innerHTML += "<li><a href=\'file:///C:/Article/Details?id=" + id + "\' target=\'_blank\'><img src='" + img + "' ><div class=\"text\"><p>乡愁不老 思念不改—...</p></div></a></li>";
+				news.innerHTML += "<li><a href=\'file:///C:/Article/Details?id=" + id + "\'>【" + time + "】" + consistent + "</a></li>";
+				news2.innerHTML += "<li><a href=\"file:///C:/Article/Details?id=" + id + "\">【" + time + "】" + consistent + "</a></li>";
+			}
+		}
+
+	}
+</script>
 </html>
