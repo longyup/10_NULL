@@ -3,12 +3,17 @@ import club.vasilis.xtwh.domain.Activity;
 import club.vasilis.xtwh.domain.ActivityCategory;
 import club.vasilis.xtwh.service.*;
 import club.vasilis.xtwh.service.impl.*;
+import org.apache.commons.fileupload.FileItem;
+import org.apache.commons.fileupload.FileUploadException;
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
+import org.apache.commons.fileupload.servlet.ServletFileUpload;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
+import java.io.*;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -33,7 +38,21 @@ public class ActivityServlet extends HttpServlet {
             detail(req,resp);
         }else if ("getJsonActivityAll".equals(method)){
             getJsonActivityAll(req,resp);
+        }else if ("downLoadsFile".equals(method)){
+            downLoadsFile(req,resp);
+        }else if ("addActivitys".equals(method)){
+            addActivitys(req,resp);
         }
+    }
+
+    private void addActivitys(HttpServletRequest req, HttpServletResponse resp) {
+
+        
+
+    }
+
+    private void downLoadsFile(HttpServletRequest req, HttpServletResponse resp) {
+
     }
 
     private void getJsonActivityAll(HttpServletRequest req, HttpServletResponse resp) {
@@ -120,5 +139,9 @@ public class ActivityServlet extends HttpServlet {
             e.printStackTrace();
         }
     }
+
+
+
+
 
 }
