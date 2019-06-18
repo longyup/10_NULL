@@ -47,7 +47,6 @@ public class LocationServlet extends HttpServlet {
     }
 
     private void getJsonCultureSitesAll(HttpServletRequest req, HttpServletResponse resp)   {
-        System.out.println("123456789");
         try {
             //设置输出格式
             resp.setContentType("text/json;charset=utf-8");

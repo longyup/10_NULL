@@ -28,11 +28,11 @@ public class CommunityDaoImpl implements CommunityDao {
     @Override
     public List<Community> findTwenty(int offset) throws Exception {
         QueryRunner runner = new QueryRunner(DsUtils.getDataSource());
-        String sqlCommunity = "SELECT id,UUID,date,content FROM community limit 20 offset ?";
+        String sqlCommunity = "SELECT id,UUID,date,content FROM community  order by date DESC limit 20 offset ? ";
         List<Community> communityList = runner.query(sqlCommunity, new BeanListHandler<>(Community.class), offset);
         for (Community community : communityList) {
             //根据uuid查询发送说说的用户
-            String sqlUser = "select nickName FROM `user` WHERE UUID = ?";
+            String sqlUser = "select nickName,headImg FROM `user` WHERE UUID = ?";
             User user = runner.query(sqlUser, new BeanHandler<>(User.class),community.getUUID());
             community.setUser(user);
 

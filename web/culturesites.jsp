@@ -225,6 +225,7 @@
 
                 <table border="" cellspacing="" cellpadding="" class="cml-table">
                     <%
+
                         List<CultureSites> cultureSitesList = (List<CultureSites>) request.getAttribute("cultureSitesList");
                         for (CultureSites cultureSites : cultureSitesList) {
                     %>
