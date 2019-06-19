@@ -27,6 +27,7 @@
 
 <link href="lib/webuploader/0.1.5/webuploader.css" rel="stylesheet" type="text/css" />
 </head>
+<%String path = request.getContextPath();%>
 <%--<%--%>
 <%--	String code = DsUtils.getCode();--%>
 <%--	//将code放入session中，后台需要验证--%>
