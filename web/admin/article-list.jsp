@@ -1,4 +1,4 @@
-﻿<!--_meta 作为公共模版分离出去-->
+<!--_meta 作为公共模版分离出去-->
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -107,7 +107,7 @@
 
 <!--_menu 作为公共模版分离出去-->
 <aside class="Hui-aside">
-	
+
 	<div class="menu_dropdown bk_2">
 		<dl id="menu-article">
 			<dt class="selected"><i class="Hui-iconfont">&#xe616;</i> 资讯管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>

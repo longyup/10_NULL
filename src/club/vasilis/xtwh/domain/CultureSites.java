@@ -11,17 +11,19 @@ public class CultureSites {
     private String img;
     private String onlinetime;
     private String locationid;
+    private String classification;
 
     public CultureSites() {
     }
 
-    public CultureSites(String id, String title, String content, String img, String onlinetime, String locationid) {
+    public CultureSites(String id, String title, String content, String img, String onlinetime, String locationid, String classification) {
         this.id = id;
         this.title = title;
         this.content = content;
         this.img = img;
         this.onlinetime = onlinetime;
         this.locationid = locationid;
+        this.classification = classification;
     }
 
     public String getId() {
@@ -72,6 +74,14 @@ public class CultureSites {
         this.locationid = locationid;
     }
 
+    public String getClassification() {
+        return classification;
+    }
+
+    public void setClassification(String classification) {
+        this.classification = classification;
+    }
+
     @Override
     public String toString() {
         return "CultureSites{" +
@@ -81,6 +91,7 @@ public class CultureSites {
                 ", img='" + img + '\'' +
                 ", onlinetime='" + onlinetime + '\'' +
                 ", locationid='" + locationid + '\'' +
+                ", classification='" + classification + '\'' +
                 '}';
     }
 }
