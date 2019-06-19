@@ -153,7 +153,7 @@
 						<a href="http://h-ui.duoshuo.com/admin/" title="评论列表">评论列表</a>
 					</li>
 					<li>
-						<a href="feedback-list.html" title="意见反馈">意见反馈</a>
+						<a href="feedback-list.jsp" title="意见反馈">意见反馈</a>
 					</li>
 				</ul>
 			</dd>

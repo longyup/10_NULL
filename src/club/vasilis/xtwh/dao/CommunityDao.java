@@ -37,4 +37,11 @@ public interface CommunityDao {
      * @throws Exception
      */
     boolean phraseCreateItem(Phrase phrase) throws Exception;
+
+    /**
+     * 删除说说
+     * @param id
+     * @throws Exception
+     */
+    void deleteItem(int id)throws Exception;
 }

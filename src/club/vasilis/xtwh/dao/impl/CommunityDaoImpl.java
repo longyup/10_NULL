@@ -78,6 +78,13 @@ public class CommunityDaoImpl implements CommunityDao {
         return true;
     }
 
+    @Override
+    public void deleteItem(int id) throws Exception {
+        QueryRunner runner = new QueryRunner(DsUtils.getDataSource());
+        String sql = "DELETE FROM community where id = ?";
+        int rows = runner.update(sql,id);
+    }
+
     @Test
     public void test() throws Exception {
         Community community = new Community();
