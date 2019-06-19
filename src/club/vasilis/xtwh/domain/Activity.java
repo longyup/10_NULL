@@ -1,5 +1,7 @@
 package club.vasilis.xtwh.domain;
 
+import java.util.Date;
+
 public class Activity {
     private String id;
     private String name;
@@ -11,6 +13,14 @@ public class Activity {
 
     public Activity() {
     }
+
+    public Activity(String id, String name, String info,String startTime) {
+        this.id = id;
+        this.name = name;
+        this.info = info;
+        this.startTime = startTime;
+    }
+
 
     public Activity(String id, String name, String info, String launchTime, String startTime, String img,String typeId) {
         this.id = id;

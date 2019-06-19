@@ -27,4 +27,11 @@ public interface ActivityDao {
      */
     Activity showDetails(String id) throws Exception;
 
+    public void save(Activity activity) throws SQLException;
+
+    Activity getActivityById(String id) throws SQLException;
+
+    int updateActivity(Activity activity) throws SQLException;
+
+    void deleteActivityById(String id) throws SQLException;
 }

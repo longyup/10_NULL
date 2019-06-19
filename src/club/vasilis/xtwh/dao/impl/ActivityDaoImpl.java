@@ -9,9 +9,12 @@ import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.junit.Test;
 
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 
 public class ActivityDaoImpl implements ActivityDao {
+
+
     @Override
     public List<Activity> findActivityAll() throws SQLException {
         QueryRunner runner = new QueryRunner(DsUtils.getDataSource());
@@ -35,10 +38,43 @@ public class ActivityDaoImpl implements ActivityDao {
         return runner.query(sql,new BeanHandler<>(Activity.class),id);
     }
 
+    @Override
+    public void save(Activity activity) throws SQLException {
+        QueryRunner runner = new QueryRunner(DsUtils.getDataSource());
+        String sql = "insert into activity(id,name,info,StartTime) values(?,?,?,?)";
+        Object[] parms = {activity.getId(),activity.getName(),activity.getInfo(),activity.getStartTime()};
+        System.out.println("有访问到DAO吗？");
+        runner.update(sql,parms);
+    }
+
+    @Override
+    public Activity getActivityById(String id) throws SQLException {
+        QueryRunner runner = new QueryRunner(DsUtils.getDataSource());
+        String sql = "SELECT id,name,info,LaunchTime,StartTime,img,typeId FROM activity WHERE id = ?";
+        return runner.query(sql,new BeanHandler<>(Activity.class),id);
+    }
+
+    @Override
+    public int updateActivity(Activity activity) throws SQLException {
+        QueryRunner runner = new QueryRunner(DsUtils.getDataSource());
+        String sql = "update activity set name =?,info =?,StartTime =? where id=?";
+        return runner.update(sql,activity.getName(),activity.getInfo(),activity.getStartTime(),activity.getId());
+    }
+
+    @Override
+    public void deleteActivityById(String id) throws SQLException {
+            QueryRunner runner = new QueryRunner(DsUtils.getDataSource());
+            String sql = "delete FROM activity WHERE id = ?";
+            System.out.println("有删除到DAO吗？");
+            runner.update(sql,id);
+
+    }
+
+
     @Test
     public void test() throws Exception {
-        System.out.println(new ActivityDaoImpl().findActivityAll());
-        System.out.println(new ActivityDaoImpl().findActivityByType("T001"));
-        System.out.println(new ActivityDaoImpl().showDetails("G001"));
+//        System.out.println(new ActivityDaoImpl().findActivityAll());
+//        System.out.println(new ActivityDaoImpl().findActivityByType("T001"));
+//        System.out.println(new ActivityDaoImpl().showDetails("G001"));
     }
 }

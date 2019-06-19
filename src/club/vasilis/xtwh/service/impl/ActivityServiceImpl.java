@@ -46,10 +46,33 @@ public class ActivityServiceImpl implements ActivityService {
         return JSONArray.fromObject(list).toString();
     }
 
-    @Test
-    public void test() throws SQLException {
-        System.out.println(new ActivityServiceImpl().findActivityAll());
+    @Override
+    public void sava(Activity activity) throws SQLException {
+        new ActivityDaoImpl().save(activity);
+    }
 
+    @Override
+    public Activity getActivityById(String id) throws SQLException {
+        return new ActivityDaoImpl().getActivityById(id);
+    }
+
+    @Override
+    public int updateActivity(Activity activity) throws SQLException {
+        return new ActivityDaoImpl().updateActivity(activity);
+    }
+
+    @Override
+    public void deleteActivityById(String id) throws SQLException {
+        new ActivityDaoImpl().deleteActivityById(id);
+        System.out.println("有删除到serviceimpl吗？");
+    }
+
+
+    @Test
+    public void test() throws Exception {
+//        System.out.println(new ActivityServiceImpl().findActivityAll());
+        System.out.println(new ActivityServiceImpl().getJsonActivityAll());
+        System.out.println(new ActivityServiceImpl().getActivityById("G001"));
     }
 
 }
