@@ -110,10 +110,10 @@ public class DsUtils {
     }
 
     /**
-     * 随机生成随机码
+     * 随机生成随机码(令牌)
      * @return
      */
     public static String getCode(){
-        return getCode();
+        return getUUID();
     }
 }

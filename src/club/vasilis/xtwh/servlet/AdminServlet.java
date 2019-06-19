@@ -53,7 +53,7 @@ public class AdminServlet extends HttpServlet {
               //  response.getWriter().print("<span style='color:green'>登陆成功</span>");
                 // 挑去后台管理界面
                // request.getRequestDispatcher("/jsp/msg.jsp").forward(request,response);
-                response.sendRedirect(request.getContextPath()+ "/admin/index.html");
+                response.sendRedirect(request.getContextPath()+ "/admin/index.jsp");
             }
         }catch (Exception e){
             request.setAttribute("msg","錯誤!");

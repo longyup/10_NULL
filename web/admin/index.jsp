@@ -1,5 +1,5 @@
-<!--_meta 作为公共模版分离出去-->
-<!DOCTYPE HTML>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!--<!DOCTYPE HTML>-->
 <html>
 <head>
 <meta charset="utf-8">
@@ -28,6 +28,9 @@
 <meta name="keywords" content="H-ui.admin v3.0,H-ui网站后台模版,后台模版下载,后台管理系统模版,HTML后台模版下载">
 <meta name="description" content="H-ui.admin v3.0，是一款由国人开发的轻量级扁平化网站后台模板，完全免费开源的网站后台管理系统模版，适合中小型CMS后台系统。">
 </head>
+<%
+	String path = request.getContextPath();
+%>
 <body>
 <!--_header 作为公共模版分离出去-->
 <header class="navbar-wrapper">
@@ -41,7 +44,7 @@
 						<ul class="dropDown-menu menu radius box-shadow">
 							<li><a href="javascript:;" onclick="article_add('添加资讯','article-add.html')"><i class="Hui-iconfont">&#xe616;</i> 资讯</a></li>
 							<li><a href="javascript:;" onclick="picture_add('添加资讯','picture-add.html')"><i class="Hui-iconfont">&#xe613;</i> 图片</a></li>
-							<li><a href="javascript:;" onclick="product_add('添加资讯','product-add.html')"><i class="Hui-iconfont">&#xe620;</i> 产品</a></li>
+							<li><a href="javascript:;" onclick="product_add('添加资讯','product-add.jsp')"><i class="Hui-iconfont">&#xe620;</i> 产品</a></li>
 							<li><a href="javascript:;" onclick="member_add('添加用户','member-add.html','','510')"><i class="Hui-iconfont">&#xe60d;</i> 用户</a></li>
 				</ul>
 			</li>
@@ -101,7 +104,7 @@
 				<ul>
 					<li><a href="product-brand.html" title="品牌管理">品牌管理</a></li>
 					<li><a href="product-category.html" title="分类管理">分类管理</a></li>
-					<li><a href="product-list.jsp" title="产品管理">产品管理</a></li>
+					<li><a href="<%=path%>/activity?method=getAdminActivityAll" title="产品管理">产品管理</a></li>
 		</ul>
 	</dd>
 </dl>

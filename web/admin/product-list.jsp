@@ -1,5 +1,5 @@
 ﻿<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!--<!DOCTYPE HTML>-->
 <html>
 <head>
@@ -14,19 +14,22 @@
 <script type="text/javascript" src="lib/html5.js"></script>
 <script type="text/javascript" src="lib/respond.min.js"></script>
 <![endif]-->
-<link rel="stylesheet" type="text/css" href="static/h-ui/css/H-ui.min.css" />
-<link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/H-ui.admin.css" />
-<link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.8/iconfont.css" />
-<link rel="stylesheet" type="text/css" href="static/h-ui.admin/skin/default/skin.css" id="skin" />
-<link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/style.css" />
+<link rel="stylesheet" type="text/css" href="admin/static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="admin/static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="admin/lib/Hui-iconfont/1.0.8/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="admin/static/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="admin/static/h-ui.admin/css/style.css" />
 <!--[if IE 6]>
 <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script><![endif]-->
 <!--/meta 作为公共模版分离出去-->
 
 <title>建材列表</title>
-<link rel="stylesheet" href="lib/zTree/v3/css/zTreeStyle/zTreeStyle.css" type="text/css">
+<link rel="stylesheet" href="admin/lib/zTree/v3/css/zTreeStyle/zTreeStyle.css" type="text/css">
 </head>
+<%
+    String path = request.getContextPath();
+%>
 <body>
 <!--_header 作为公共模版分离出去-->
 <header class="navbar-wrapper">
@@ -38,7 +41,7 @@
 						<ul class="dropDown-menu menu radius box-shadow">
 							<li><a href="javascript:;" onclick="article_add('添加资讯','article-add.html')"><i class="Hui-iconfont">&#xe616;</i> 资讯</a></li>
 							<li><a href="javascript:;" onclick="picture_add('添加资讯','picture-add.html')"><i class="Hui-iconfont">&#xe613;</i> 图片</a></li>
-							<li><a href="javascript:;" onclick="product_add('添加资讯','product-add.html')"><i class="Hui-iconfont">&#xe620;</i> 产品</a></li>
+							<li><a href="javascript:;" onclick="product_add('添加资讯','product-add.jsp')"><i class="Hui-iconfont">&#xe620;</i> 产品</a></li>
 							<li><a href="javascript:;" onclick="member_add('添加用户','member-add.html','','510')"><i class="Hui-iconfont">&#xe60d;</i> 用户</a></li>
 						</ul>
 					</li>
@@ -182,12 +185,12 @@
 					<input type="text" name="" id="" placeholder=" 产品名称" style="width:250px" class="input-text">
 					<button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜产品</button>
 				</div>
-				<div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> <a class="btn btn-primary radius" onclick="product_add('添加产品','product-add.html')" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加产品</a></span> <span class="r">共有数据：<strong>54</strong> 条</span> </div>
+				<div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> <input type="button" value="批量删除"></a> <a class="btn btn-primary radius" onclick="product_add('添加产品','product-add.jsp')" href="admin/product-add.jsp"><i class="Hui-iconfont">&#xe600;</i> 添加产品</a></span> <span class="r">共有数据：<strong>54</strong> 条</span> </div>
 				<div class="mt-20">
 					<table class="table table-border table-bordered table-bg table-hover table-sort">
 						<thead>
 							<tr class="text-c">
-								<th width="40"><input name="" type="checkbox" value=""></th>
+								<th width="40"><input name="" type="checkbox" onclick="checkAll(this)" value="全选"></th>
 								<th width="40">ID</th>
 								<th width="60">缩略图</th>
 								<th width="100">产品名称</th>
@@ -198,16 +201,20 @@
 							</tr>
 						</thead>
 						<tbody>
+                        <form action="<%=path%>/activity?method=deleteCheckedActivity" method="post">
+                        <c:forEach items="${list}" var="activity">
 							<tr class="text-c va-m">
-								<td><input name="" type="checkbox" value=""></td>
-								<td>001</td>
-								<td><a onClick="product_show('哥本哈根橡木地板','product-show.html','10001')" href="javascript:;"><img width="60" class="product-thumb" src="pic/product/Thumb/6204.jpg"></a></td>
-								<td class="text-l"><a style="text-decoration:none" onClick="product_show('哥本哈根橡木地板','product-show.html','10001')" href="javascript:;"><img title="国内品牌" src="static/h-ui/images/gq/cn.gif"> <b class="text-success">圣象</b> 哥本哈根橡木地板KS8373</a></td>
-								<td class="text-l">原木的外在,实木条形结构,色泽花纹自然,写意;款式设计吸取实木地板的天然去雕饰之美,在视觉上给人带来深邃联想.多款产品适合搭配不同的风格的室内装饰;功能流露出尊贵典雅的大气韵味。</td>
-								<td><span class="price">356.0</span> 元/平米</td>
+								<td><input name="id" type="checkbox" value="${activity.id}"></td>
+								<td>${activity.id}</td>
+								<td><a onClick="product_show('哥本哈根橡木地板','product-show.html','10001')" href="javascript:;"><img width="60" class="product-thumb" src="${activity.img}"></a></td>
+								<td class="text-l"><a style="text-decoration:none" onClick="product_show('哥本哈根橡木地板','product-show.html','10001')" href="javascript:;">${activity.name}</a></td>
+								<td class="text-l">${activity.info}</td>
+								<td><span class="price">${activity.startTime}</span> </td>
 								<td class="td-status"><span class="label label-success radius">已发布</span></td>
-								<td class="td-manage"><a style="text-decoration:none" onClick="product_stop(this,'10001')" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6de;</i></a> <a style="text-decoration:none" class="ml-5" onClick="product_edit('产品编辑','product-add.html','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="product_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
+								<td class="td-manage"><a style="text-decoration:none" onClick="product_stop(this,'10001')" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6de;</i></a> <a style="text-decoration:none" class="ml-5" onClick="product_edit('产品编辑','product-add.jsp','10001')" href="<%=path%>/activity?method=getActivityById&id=${activity.id}" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="product_del()" href="<%=path%>/activity?method=deleteActivityById&id=${activity.id}" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
 							</tr>
+                        </c:forEach>
+                        </form>
 						</tbody>
 					</table>
 				</div>
@@ -366,12 +373,15 @@ function product_edit(title,url,id){
 	layer.full(index);
 }
 /*图片-删除*/
-function product_del(obj,id){
-	layer.confirm('确认要删除吗？',function(index){
-		$(obj).parents("tr").remove();
-		layer.msg('已删除!',{icon:1,time:1000});
-	});
+function product_del(){
+   alert("你想要删除吗？")
 }
+
+function checkAll(obj) {
+    //获取所有的复选框
+    document.getEl
+}
+
 </script>
 <!--/请在上方写此页面业务相关的脚本-->
 </body>

@@ -3,6 +3,7 @@ import club.vasilis.xtwh.domain.Activity;
 import club.vasilis.xtwh.domain.ActivityCategory;
 import club.vasilis.xtwh.service.*;
 import club.vasilis.xtwh.service.impl.*;
+import club.vasilis.xtwh.util.DsUtils;
 import com.mysql.cj.log.Log;
 import org.apache.commons.beanutils.BeanUtils;
 
@@ -46,6 +47,43 @@ public class ActivityServlet extends HttpServlet {
             deleteActivityById(req,resp);
         }else if ("getAdminActivityAll".equals(method)){
             getAdminActivityAll(req,resp);
+        }else if ("addActivity".equals(method)){
+            addActivity(req,resp);
+        }
+    }
+
+    private void addActivity(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+        req.setCharacterEncoding("UTF-8");
+
+//        //扩展令牌机制
+//        //获取session中的和提交过来的令牌
+//        String s_lingpai = req.getParameter("s_lingpai");
+//        //移出session中的令牌
+//        String r_lingpai= (String) req.getSession().getAttribute("r_lingpai");
+//        //比较两个令牌
+//        if (s_lingpai == null || !s_lingpai.equals(r_lingpai)){
+//            //已经提交过了，生成错误信息，放入request域中，到msg.jsp
+//            req.setAttribute("msg","商品已经保存！");
+//            req.getRequestDispatcher("admin/product-list.jsp").forward(req,resp);
+//            return;
+//
+//        }
+
+        Activity activity = new Activity();
+
+        try {
+            BeanUtils.populate(activity,req.getParameterMap());
+            activity.setId(DsUtils.getUUID());
+            new ActivityServiceImpl().sava(activity);
+            req.getRequestDispatcher("/activity?method=getAdminActivityAll").forward(req,resp);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            req.setAttribute("msg","添加商品失败！");
+            req.getRequestDispatcher("/msg.jsp").forward(req,resp);
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
         }
     }
 
@@ -74,7 +112,7 @@ public class ActivityServlet extends HttpServlet {
             req.setAttribute("msg","商品删除失败！");
             req.getRequestDispatcher("msg.jsp").forward(req,resp);
         }
-//        resp.sendRedirect("admin/index.jsp");
+        resp.sendRedirect("/10_NULL_war_exploded/activity?method=getAdminActivityAll");
 
     }
 
@@ -98,10 +136,10 @@ public class ActivityServlet extends HttpServlet {
         if (rs>0){
             req.getSession().setAttribute("msg","修改活动成功！");
             System.out.println("修改成功");
-            resp.sendRedirect("admin/product-list.jsp");
+            resp.sendRedirect("/10_NULL_war_exploded/activity?method=getAdminActivityAll");
         }else {
             req.getSession().setAttribute("msg", "修改商品失败");
-            resp.sendRedirect("admin/product-list.jsp");
+            resp.sendRedirect("msg.jsp");
             System.out.println("修改失败");
 
         }
@@ -119,7 +157,6 @@ public class ActivityServlet extends HttpServlet {
             activity = new ActivityServiceImpl().getActivityById(id);
             //将activity放到request域中，请求转发到product-add。jsp
             req.setAttribute("bean",activity);
-            log("123456"+activity);
             req.getRequestDispatcher("admin/edit.jsp").forward(req,resp);
         } catch (ServletException e) {
             e.printStackTrace();
