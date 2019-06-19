@@ -36,4 +36,12 @@ public interface ActivityService {
      */
     String getJsonActivityAll() throws SQLException;
 
+
+    public void sava(Activity activity) throws SQLException;
+
+    Activity getActivityById(String id) throws SQLException;
+
+    int updateActivity(Activity activity) throws SQLException;
+
+    void deleteActivityById(String id) throws SQLException;
 }

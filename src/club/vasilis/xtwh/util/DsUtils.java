@@ -5,6 +5,7 @@ import org.junit.Test;
 
 import javax.sql.DataSource;
 import java.sql.*;
+import java.util.UUID;
 
 /**
  * @author Vasilis
@@ -97,4 +98,22 @@ public class DsUtils {
             rs = null;
         }
     }*/
+
+    /**
+     * 获得一个UUID
+     * @return String UUID
+     */
+    public static String getUUID(){
+        String uuid = UUID.randomUUID().toString();
+        //去掉“-”符号
+        return uuid.replaceAll("-", "");
+    }
+
+    /**
+     * 随机生成随机码
+     * @return
+     */
+    public static String getCode(){
+        return getCode();
+    }
 }
