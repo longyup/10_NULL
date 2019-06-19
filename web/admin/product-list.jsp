@@ -1,5 +1,6 @@
-﻿<!--_meta 作为公共模版分离出去-->
-<!DOCTYPE HTML>
+﻿<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<
+<!--<!DOCTYPE HTML>-->
 <html>
 <head>
 <meta charset="utf-8">
@@ -97,7 +98,7 @@
 				<ul>
 					<li><a href="product-brand.html" title="品牌管理">品牌管理</a></li>
 					<li><a href="product-category.html" title="分类管理">分类管理</a></li>
-					<li class="current"><a href="product-list.html" title="产品管理">产品管理</a></li>
+					<li class="current"><a href="product-list.jsp" title="产品管理">产品管理</a></li>
 				</ul>
 			</dd>
 		</dl>

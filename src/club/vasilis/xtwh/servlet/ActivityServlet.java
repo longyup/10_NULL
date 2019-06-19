@@ -53,7 +53,7 @@ public class ActivityServlet extends HttpServlet {
         try {
             List<Activity> activities = new ActivityServiceImpl().findActivityAll();
             req.setAttribute("list",activities);
-            req.getRequestDispatcher("/admin/index.html").forward(req,resp);
+            req.getRequestDispatcher("/admin/product-list.jsp").forward(req,resp);
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ServletException e) {
