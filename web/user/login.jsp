@@ -75,7 +75,7 @@
                     </div>
                 </div>
                 <!--未登录-->
-                <form action="<%=request.getContextPath()%>/user" class="layui-form" method="post">
+                <form action="<%=request.getContextPath()%>/user?method=loginW" class="layui-form" method="post">
                     <input name="__RequestVerificationToken" type="hidden"
                            value="wSIPt1PRSeo9hlM5QXGrcTFQ40LfcRujI9ITnTDIrX55esUpL1L-CxQZ0INBrY5u3bm2tqYzVcg-jjrp0L_-5fbjgCdYpiTFYt0zb_bntp81"/>
                     <div class="nnl_logining" style="display: block;">

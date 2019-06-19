@@ -37,14 +37,37 @@ public class UserServlet extends HttpServlet {
         // 设置响应头,解决用户输入出错问题
         request.setCharacterEncoding("utf-8");
         String method = request.getParameter("method");
-        if (method == null || "".equals(method)) {
+        if (method == null || "loginW".equals(method)) {
             //web页的登陆,m没有参数，或者参数为null;
-            login(request, response);
+            loginW(request, response);
+        }else if ("registerW".equals(method)){
+            //web端的注册
+            registerW(request,response);
         } else if ("loginA".equals(method)) {
             //Android端的登录
             loginA(request, response);
         }else if ("registerA".equals(method)){
             registerA(request, response);
+        }else if ("modifyMsg".equals(method)){
+            modifyMsg(request,response);
+        }
+    }
+
+    /**
+     * 安卓端修改个人信息
+     * @param request
+     * @param response
+     */
+    private void modifyMsg(HttpServletRequest request, HttpServletResponse response) {
+        try{
+            //创建对象
+            User user = new User();
+            BeanUtils.populate(user,request.getParameterMap());
+            service.motify(user);
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
         }
     }
 
@@ -106,7 +129,7 @@ public class UserServlet extends HttpServlet {
      * @throws ServletException
      * @throws IOException
      */
-    private void login(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    private void loginW(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
             //1.封装对象
             User user = new User();
@@ -136,5 +159,37 @@ public class UserServlet extends HttpServlet {
         }
     }
 
+    /**
+     * web端注册
+     * 为用户提供注册的用户界面
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException
+     */
+    private void registerW(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
+        //1.封装对象
+        //创建一个user对象，使用beanutils封装对象
+        User user = new User();
+        try {
+            BeanUtils.populate(user, request.getParameterMap());
+
+            //2.调用userservice。register 返回类型:int
+            int i = new UserServiceImpl().registerUser(user);
+
+            //3.判断int，将信息请求转发到login
+            if (i == 1){
+                System.err.println("注册成功！");
+//                request.setAttribute("msg","注册成功！");
+                response.getWriter().print("注册成功！正在跳转登录界面...");
+                request.getRequestDispatcher("/login.jsp").forward(request,response);
+            }else {
+                System.err.println("注册失败！");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
 
 }

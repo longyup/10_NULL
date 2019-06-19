@@ -87,14 +87,14 @@
     </div>
     <div class="login_con">
         <div class="regist_input">
-
-            <div class="regmain black" id="writeInfoDiv">
+            <form action="/user?method=registerW" method="post">
+                <div class="regmain black" id="writeInfoDiv">
                 <ul class="regform">
                     <li>
                         <div class="regtitle"><b>*</b> 用户名：
                         </div>
                         <div class="texlist">
-                            <input name="UserAcount" type="text" id="UserAcount" class="tex" onkeyup="value = value.replace(/\s/g, '');" />
+                            <input name="account" type="text" id="UserAcount" class="tex" onkeyup="value = value.replace(/\s/g, '');" />
                             <i class="i-name"></i>
                         </div>
                         <span id="userAcountTip"></span>
@@ -103,7 +103,7 @@
                         <div class="regtitle"><b>*</b> 密码：
                         </div>
                         <div class="texlist">
-                            <input name="UserPwd" type="password" id="UserPwd" class="tex"/>
+                            <input name="password" type="password" id="UserPwd" class="tex"/>
                             <i class="i-password"></i>
                         </div>
                         <span id="userPwdTip"></span>
@@ -122,22 +122,22 @@
                         <div class="regtitle"><b>*</b> 性别：
                         </div>
                         <select name="Sex" id="Sex" style="width: 248px;">
-                            <option value="1" selected="selected">男</option>
-                            <option value="0">女</option>
+                            <option name="sex" value="1" selected="selected">男</option>
+                            <option name="sex" value="0">女</option>
                         </select>
                         <span id="sexTip"></span>
                     </li>
                     <li>
                         <div class="regtitle"><b>*</b>联系电话：</div>
                         <div class="texlist">
-                            <input name="Mobile" type="text" id="Mobile" class="tex"/>
+                            <input name="phone" type="text" id="Mobile" class="tex"/>
                         </div>
                         <span id="mobileTip"></span>
                     </li>
                     <li>
                         <div class="regtitle"><b>*</b>姓名：</div>
                         <div class="texlist">
-                            <input name="UserName" type="text" id="UserName" class="tex" onkeyup="value = value.replace(/\s/g, '');" />
+                            <input name="name" type="text" id="UserName" class="tex" onkeyup="value = value.replace(/\s/g, '');" />
                         </div>
 
                         <span id="userNameTip"></span>
@@ -190,25 +190,22 @@
                             联系地址：
                         </div>
                         <div class="texlist">
-                            <input name="Address" type="text" id="Address" class="tex"/>
+                            <input name="address" type="text" id="Address" class="tex"/>
                         </div>
                         <span id="AddressTip">选填项</span>
                     </li>
-
-
-
                 </ul>
 
                 <ul class="regform">
 
                     <li class="btn" style="text-align: center;">
                             <span class="regitst_bnt">
-                            <input type="button" name="btnsubmit2" value="注册提交" id="btnsubmit2" class="register_btn" onclick="return register_onclick();" />
+                            <input type="submit" name="btnsubmit2" value="注册提交" id="btnsubmit2" class="register_btn" onclick="return register_onclick();" />
                         </span>
                     </li>
                 </ul>
             </div>
-
+            </form>
         </div>
     </div>
 </div>

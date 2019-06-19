@@ -20,7 +20,7 @@ public interface UserDao {
     User login(User user) throws Exception;
 
     /**
-     * 查询所有的管理员
+     * 查询所有的用户及其信息
      * @return
      * @throws Exception
      */
@@ -32,4 +32,11 @@ public interface UserDao {
      * @throws Exception
      */
     void save(User user) throws Exception;
+
+    /**
+     * 修改个人信息
+     * @param user
+     * @throws Exception
+     */
+    void motifyMsg(User user) throws Exception;
 }
