@@ -329,17 +329,17 @@
                         }
                     %>
                 </ul>
-                <ul class='pages'>
-                    <li class='pgNext'><a href="/Course/Index/242?page=1">首页</a></li>
-                    <li class='pgNext'><a href="#">上一页</a></li>
-                    <li class='page-number'><span>1</span><a href="/Course/Index/242?page=2">2</a><a
-                            href="/Course/Index/242?page=3">3</a><a href="/Course/Index/242?page=4">4</a><a
-                            href="/Course/Index/242?page=5">5</a><a href="/Course/Index/242?page=6">6</a><a
-                            href="/Course/Index/242?page=7">7</a><a href="/Course/Index/242?page=8">8</a><a
-                            href="/Course/Index/242?page=9">9</a><a href="/Course/Index/242?page=10">10</a></li>
-                    <li class='pgNext'><a href="/Course/Index/242?page=2">下一页</a></li>
-                    <li class='pgNext'><a href="/Course/Index/242?page=13">末页</a></li>
-                </ul>
+<%--                <ul class='pages'>--%>
+<%--                    <li class='pgNext'><a href="/Course/Index/242?page=1">首页</a></li>--%>
+<%--                    <li class='pgNext'><a href="#">上一页</a></li>--%>
+<%--                    <li class='page-number'><span>1</span><a href="/Course/Index/242?page=2">2</a><a--%>
+<%--                            href="/Course/Index/242?page=3">3</a><a href="/Course/Index/242?page=4">4</a><a--%>
+<%--                            href="/Course/Index/242?page=5">5</a><a href="/Course/Index/242?page=6">6</a><a--%>
+<%--                            href="/Course/Index/242?page=7">7</a><a href="/Course/Index/242?page=8">8</a><a--%>
+<%--                            href="/Course/Index/242?page=9">9</a><a href="/Course/Index/242?page=10">10</a></li>--%>
+<%--                    <li class='pgNext'><a href="/Course/Index/242?page=2">下一页</a></li>--%>
+<%--                    <li class='pgNext'><a href="/Course/Index/242?page=13">末页</a></li>--%>
+<%--                </ul>--%>
             </div>
             <div class="cm-lesson-con" style="display:none;">
                 <div class="cm-lesson-title">
@@ -1288,7 +1288,7 @@
             var inner = document.getElementById("show01");
             inner.innerHTML = "";
             for (var i = 0; i < len; i++) {
-                alert(i);
+
 
                 var obj = json[i];
                 var id = obj.id;

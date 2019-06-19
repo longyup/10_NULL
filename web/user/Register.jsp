@@ -207,6 +207,12 @@
             </div>
             </form>
         </div>
+
+
+
+
+
+
     </div>
 </div>
 
@@ -630,5 +636,24 @@
 </script>
 
 </body>
+
+<%--<script>--%>
+<%--    --%>
+<%--    function validateForm() {--%>
+<%--        var UserAcount = document.getElementById("UserAcount");--%>
+<%--        if (UserAcount == ""){--%>
+<%--            alert("用户名不能为空");--%>
+<%--            return false;--%>
+<%--        }--%>
+
+<%--        var UserPwd = document.getElementById("UserPwd");--%>
+<%--        if (UserPwd == ""){--%>
+<%--            alert("密码不能为空");--%>
+<%--            return false;--%>
+<%--        }--%>
+<%--    }--%>
+<%--    --%>
+<%--</script>--%>
+
 </html>
 
