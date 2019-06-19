@@ -15,7 +15,7 @@ public class PasswordUtils {
 
 
     public static void main(String[] args) {
-        String pwd = PasswordUtils.md5("123456","vasilis");
+        String pwd = PasswordUtils.md5("111111","lihua");
         System.out.println(pwd);
     }
 }

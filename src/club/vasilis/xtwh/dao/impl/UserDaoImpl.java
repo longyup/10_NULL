@@ -22,7 +22,7 @@ public class UserDaoImpl implements UserDao {
     public User login(User user) throws Exception {
         QueryRunner runner = new QueryRunner(DsUtils.getDataSource());
         String sql = "select * from user where account=? and password=? limit 1";
-        user = runner.query(sql, new BeanHandler<User>(User.class),user.getAccount(),user.getPassword());
+        user = runner.query(sql, new BeanHandler<>(User.class),user.getAccount(),user.getPassword());
         return user;
     }
 

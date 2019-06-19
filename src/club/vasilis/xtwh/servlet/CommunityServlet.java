@@ -18,20 +18,20 @@ import java.io.IOException;
 public class CommunityServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request,response);
+        doGet(request, response);
     }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String method = request.getParameter("method");
-        if ("getInfo".equals(method)){
-            getInfo(request,response);
+        if ("getInfo".equals(method)) {
+            getInfo(request, response);
         }
     }
 
-    private void getInfo(HttpServletRequest request, HttpServletResponse response){
+    private void getInfo(HttpServletRequest request, HttpServletResponse response) {
         // 从第几条
-        int offset = Integer.parseInt(request.getParameter("offset"));
+        int offset = request.getParameter("offset") != null ? Integer.parseInt(request.getParameter("offset")) : 0;
         CommunityService service = new CommunityServiceImpl();
         try {
             String json = service.findTwentyByJson(offset);

@@ -3,8 +3,8 @@ package club.vasilis.xtwh.servlet;
 import club.vasilis.xtwh.domain.User;
 import club.vasilis.xtwh.service.UserService;
 import club.vasilis.xtwh.service.impl.UserServiceImpl;
+import net.sf.json.JSONObject;
 import org.apache.commons.beanutils.BeanUtils;
-import org.junit.Test;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -90,8 +90,11 @@ public class UserServlet extends HttpServlet {
                 response.getWriter().print("0");
             } else {
                 System.out.println("Android端 登陆成功：" + user);
-                // 成功输出 1
-                response.getWriter().print("1");
+                // 成功返回json
+                response.setContentType("text/json;charset=utf-8");
+                JSONObject json = JSONObject.fromObject(user);
+                response.getWriter().write(json.toString());
+
             }
         } catch (Exception e) {
             e.printStackTrace();
