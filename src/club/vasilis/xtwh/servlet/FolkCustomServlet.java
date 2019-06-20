@@ -51,7 +51,7 @@ public class FolkCustomServlet extends HttpServlet {
             addcustom(request,response);
         }else if ("getcustomById".equals(method)){
             getcustomById(request,response);
-        }else if ("updatecustom".equals(method)){
+        }else if ("updateCustom".equals(method)){
             updateCustom(request,response);
         }
     }
@@ -77,7 +77,7 @@ public class FolkCustomServlet extends HttpServlet {
         if (rs>0){
             request.getSession().setAttribute("msg","修改活动成功！");
             System.out.println("修改成功");
-            response.sendRedirect("admin/picture-list.jsp");
+            response.sendRedirect("/folk_custom?method=getAllCustom");
         }else {
             request.getSession().setAttribute("msg", "修改信息失败");
             response.sendRedirect("msg.jsp");
@@ -97,7 +97,7 @@ public class FolkCustomServlet extends HttpServlet {
             folkCustom = new FolkCustomServiceImpl().getcustomById(id);
             //将activity放到request域中，请求转发到product-add。jsp
             request.setAttribute("bean",folkCustom);
-            request.getRequestDispatcher("/folk_custom?method=getAllCustom").forward(request,response);
+            request.getRequestDispatcher("admin/pictureEdit.jsp").forward(request,response);
         } catch (ServletException e) {
             e.printStackTrace();
         } catch (IOException e) {
