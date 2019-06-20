@@ -8,7 +8,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div class="header">
     <div class="section-top1">
-        您好,欢迎您进入XXXXXX网！<a href="#">登录</a><a href="#">注册</a>
+        您好,欢迎您进入乡土文化教育志愿网！
+        <a href="<%=path%>/user/login.jsp" style="color:white;" class="nl-title">登录</a>
+        <a href="<%=path%>/user/Register.jsp" style="color:white;" class="nl-title">注册</a>
     </div>
 
 

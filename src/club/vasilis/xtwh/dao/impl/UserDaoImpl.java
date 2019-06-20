@@ -42,6 +42,19 @@ public class UserDaoImpl implements UserDao {
         runner.update(sql,user.getUUID(),user.getAccount(),user.getPassword());
     }
 
+    @Override
+    public void motifyMsg(User user) throws Exception {
+        QueryRunner runner = new QueryRunner(DsUtils.getDataSource());
+        String sql = "update user set nickName='"+user.getNickName()+"',name='"+user.getName()+
+                "',password='"+user.getPassword()+"',sex='"+user.getSex()+
+                "',phone='"+user.getPhone()+"',e_mail='"+user.getE_mail()+
+                "',birthday='"+user.getBirthday()+"',signature='"+user.getSignature()+
+                "',localPlace='"+user.getLocalPlace()+"',idCard='"+user.getIdCard()+
+                "' where account='"+user.getAccount()+"'";
+        runner.update(sql,user.getNickName(),user.getName(),user.getPassword(),user.getSex(),user.getPhone(),user.getE_mail(),
+                user.getBirthday(),user.getSignature(),user.getLocalPlace(),user.getIdCard());
+    }
+
 
     @Test
     public void Test() throws Exception {

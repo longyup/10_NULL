@@ -217,8 +217,8 @@
                                                                      placeholder="请输入用户密码">
             </div>
             <div class="logining-text clearfix">
-                <p><a href="/User/Register">账号注册</a></p>
-                <a href="/User/ForgetPwd">忘记密码？</a>
+                <p><a href="<%= path%>/user/Register.jsp">账号注册</a></p>
+                <a href="<%= path%>/user/ForgetPwd.html">忘记密码？</a>
             </div>
             <div class="logining-bottom">
                 <button type="submit" id="btnlogin" onclick="login()">
@@ -495,7 +495,7 @@
             <div class="sc-list">
                 <a href="/Article/Index?id=128" class="sc-list-img scl1">
                     <img src="f../../images/show-img1.png">
-                    <p class="sc-list-text">民宿风情</p>
+                    <p class="sc-list-text">民俗风情</p>
                 </a>
                 <ul>
                     <li>
