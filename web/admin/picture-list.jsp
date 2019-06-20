@@ -200,12 +200,12 @@
 						<tr class="text-c">
 							<td><input name="" type="checkbox" value=""></td>
 							<td>${custom.id}</td>
-							<td>${custom.name}</td>
+							<td>${custom.details}</td>
 							<td class="text-l"><a class="maincolor" href="javascript:;" onClick="picture_edit('图库编辑','picture-show.html','10001')">${custom.onlinetime}</a></td>
-							<td class="text-c">标签</td>
+							<td class="text-c">${custom.name}</td>
 							<td>2014-6-11 11:11:42</td>
 							<td class="td-status"><span class="label label-success radius">已发布</span></td>
-							<td class="td-manage"><a style="text-decoration:none" onClick="picture_stop(this,'10001')" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6de;</i></a> <a style="text-decoration:none" class="ml-5" onClick="picture_edit('图库编辑','picture-add.jsp','10001')" href="<%=path%>/folk_custom?method=getcustomById&id=${custom.id}" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="picture_del(this,'10001')" href="<%=path%>/folk_custom?method=deletecustom&id=${custom.id}" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
+							<td class="td-manage"><a style="text-decoration:none" onClick="picture_stop(this,'10001')" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6de;</i></a> <a style="text-decoration:none" class="ml-5" onClick="picture_edit('图库编辑','picture-add.jsp','10001')" href="<%=path%>/folk_custom?method=getCustomById&id=${custom.id}" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="picture_del(this,'10001')" href="<%=path%>/folk_custom?method=deleteCustom&id=${custom.id}" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
 						</tr>
                     </c:forEach>
 					</tbody>

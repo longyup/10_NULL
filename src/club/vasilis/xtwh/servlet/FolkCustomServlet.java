@@ -43,14 +43,14 @@ public class FolkCustomServlet extends HttpServlet {
             cusMenuDetails(request,response);
         }else if ("cusShowAllJson".equals(method)){
             cusShowAllJson(request,response);
-        }else if ("getAllcustom".equals(method)){
-            getAllcustom(request,response);
-        }else if ("deletecustom".equals(method)){
-            deletecustom(request,response);
-        }else if ("addcustom".equals(method)){
-            addcustom(request,response);
-        }else if ("getcustomById".equals(method)){
-            getcustomById(request,response);
+        }else if ("getAllCustom".equals(method)){
+            getAllCustom(request,response);
+        }else if ("deleteCustom".equals(method)){
+            deleteCustom(request,response);
+        }else if ("addCustom".equals(method)){
+            addCustom(request,response);
+        }else if ("getCustomById".equals(method)){
+            getCustomById(request,response);
         }else if ("updateCustom".equals(method)){
             updateCustom(request,response);
         }
@@ -77,7 +77,7 @@ public class FolkCustomServlet extends HttpServlet {
         if (rs>0){
             request.getSession().setAttribute("msg","修改活动成功！");
             System.out.println("修改成功");
-            response.sendRedirect("/folk_custom?method=getAllCustom");
+            response.sendRedirect("/10_NULL_war_exploded/folk_custom?method=getAllCustom");
         }else {
             request.getSession().setAttribute("msg", "修改信息失败");
             response.sendRedirect("msg.jsp");
@@ -86,7 +86,7 @@ public class FolkCustomServlet extends HttpServlet {
         }
     }
 
-    private void getcustomById(HttpServletRequest request, HttpServletResponse response) {
+    private void getCustomById(HttpServletRequest request, HttpServletResponse response) {
         FolkCustom folkCustom;
         try {
             //设置输出格式
@@ -94,7 +94,7 @@ public class FolkCustomServlet extends HttpServlet {
             //获取活动Id
             String id =request.getParameter("id");
             //调用service，通过id获取活动，返回值request
-            folkCustom = new FolkCustomServiceImpl().getcustomById(id);
+            folkCustom = new FolkCustomServiceImpl().getCustomById(id);
             //将activity放到request域中，请求转发到product-add。jsp
             request.setAttribute("bean",folkCustom);
             request.getRequestDispatcher("admin/pictureEdit.jsp").forward(request,response);
@@ -107,7 +107,7 @@ public class FolkCustomServlet extends HttpServlet {
         }
     }
 
-    private void addcustom(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    private void addCustom(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         FolkCustom folkCustom = new FolkCustom();
 
@@ -131,11 +131,11 @@ public class FolkCustomServlet extends HttpServlet {
         }
     }
 
-    private void deletecustom(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    private void deleteCustom(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/json;charset=utf-8");
         String id = request.getParameter("id");
         try {
-            new FolkCustomServiceImpl().deletecustom(id);
+            new FolkCustomServiceImpl().deleteCustom(id);
             System.out.println("这里有删除到吗？");
         } catch (Exception e) {
             e.printStackTrace();
@@ -152,7 +152,7 @@ public class FolkCustomServlet extends HttpServlet {
 
     }
 
-    private void getAllcustom(HttpServletRequest request, HttpServletResponse response) {
+    private void getAllCustom(HttpServletRequest request, HttpServletResponse response) {
         List<FolkCustom> folkCustoms = null;
         try {
             folkCustoms = new FolkCustomServiceImpl().findAllCustoms();

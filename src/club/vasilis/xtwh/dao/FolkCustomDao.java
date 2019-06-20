@@ -47,11 +47,11 @@ public interface FolkCustomDao {
 
     List<FolkCustom> findAllCustoms() throws SQLException;
 
-    void deletecustom(String id) throws SQLException;
+    void deleteCustom(String id) throws SQLException;
 
     void save(FolkCustom folkCustom) throws SQLException;
 
-    FolkCustom getcustomById(String id) throws SQLException;
+    FolkCustom getCustomById(String id) throws SQLException;
 
     int updateCustom(FolkCustom folkCustom) throws SQLException;
 }

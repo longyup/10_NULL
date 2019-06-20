@@ -45,11 +45,11 @@ public interface FolkCustomService {
 
     List<FolkCustom> findAllCustoms() throws SQLException;
 
-    void deletecustom(String id) throws SQLException;
+    void deleteCustom(String id) throws SQLException;
 
     void sava(FolkCustom folkCustom) throws SQLException;
 
-    FolkCustom getcustomById(String id) throws SQLException;
+    FolkCustom getCustomById(String id) throws SQLException;
 
     int updateCustom(FolkCustom folkCustom) throws SQLException;
 }

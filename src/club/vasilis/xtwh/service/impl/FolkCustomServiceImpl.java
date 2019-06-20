@@ -49,8 +49,8 @@ public class FolkCustomServiceImpl implements FolkCustomService {
     }
 
     @Override
-    public void deletecustom(String id) throws SQLException {
-        new FolkCustomDaoImpl().deletecustom(id);
+    public void deleteCustom(String id) throws SQLException {
+        new FolkCustomDaoImpl().deleteCustom(id);
     }
 
     @Override
@@ -59,8 +59,8 @@ public class FolkCustomServiceImpl implements FolkCustomService {
     }
 
     @Override
-    public FolkCustom getcustomById(String id) throws SQLException {
-        return new FolkCustomDaoImpl().getcustomById(id);
+    public FolkCustom getCustomById(String id) throws SQLException {
+        return new FolkCustomDaoImpl().getCustomById(id);
     }
 
     @Override

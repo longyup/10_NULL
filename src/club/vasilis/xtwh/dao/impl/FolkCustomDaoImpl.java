@@ -61,7 +61,7 @@ public class FolkCustomDaoImpl implements FolkCustomDao {
     }
 
     @Override
-    public void deletecustom(String id) throws SQLException {
+    public void deleteCustom(String id) throws SQLException {
         QueryRunner runner = new QueryRunner(DsUtils.getDataSource());
         String sql = "delete FROM folk_custom_passage WHERE id = ?";
         runner.update(sql,id);
@@ -77,7 +77,7 @@ public class FolkCustomDaoImpl implements FolkCustomDao {
     }
 
     @Override
-    public FolkCustom getcustomById(String id) throws SQLException {
+    public FolkCustom getCustomById(String id) throws SQLException {
         QueryRunner runner = new QueryRunner(DsUtils.getDataSource());
         String sql = "select id,name,img,onlinetime,typeid,details from folk_custom_passage WHERE id = ?";
         return runner.query(sql,new BeanHandler<>(FolkCustom.class),id);
