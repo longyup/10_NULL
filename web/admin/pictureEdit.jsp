@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!--<!DOCTYPE HTML>-->
 <html>
 <head>
     <meta charset="utf-8">
@@ -15,6 +16,7 @@
     <link rel="stylesheet" type="text/css" href="static/h-ui/css/H-ui.min.css" />
     <link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/H-ui.admin.css" />
     <link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.8/iconfont.css" />
+
     <link rel="stylesheet" type="text/css" href="static/h-ui.admin/skin/default/skin.css" id="skin" />
     <link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/style.css" />
     <!--[if IE 6]>
@@ -22,98 +24,88 @@
     <script>DD_belatedPNG.fix('*');</script><![endif]-->
     <!--/meta 作为公共模版分离出去-->
 
+    <title>新增图片</title>
     <link href="lib/webuploader/0.1.5/webuploader.css" rel="stylesheet" type="text/css" />
 </head>
+<%
+    String path = request.getContextPath();
+%>
 <body>
 <div class="page-container">
-    <form action="${pageContext.request.contextPath}/activity?method=updateActivity" method="post" accept-charset="UTF-8"  class="form form-horizontal" id="form-article-add">
-        <input type="hidden" name="id" value="${bean.id}">
+    <form method="post" action="<%=path%>/folk_custom?method=updateCustom" class="form form-horizontal" id="form-article-add">
         <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>产品标题：</label>
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>标题：</label>
             <div class="formControls col-xs-8 col-sm-9">
-                <input type="text" class="input-text" value="${bean.name}" name="name">
+                <input type="text" class="input-text" value="${bean.name}" placeholder="" id="" name="name">
             </div>
         </div>
         <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-2">简略标题：</label>
+            <label class="form-label col-xs-4 col-sm-2">详情：</label>
             <div class="formControls col-xs-8 col-sm-9">
-                <input type="text" class="input-text" value="${bean.info}" name="info">
+                <input type="text" class="input-text" value="${bean.details}" placeholder="" id="" name="details">
             </div>
         </div>
         <%--		<div class="row cl">--%>
-        <%--			<label class="form-label col-xs-4 col-sm-2">排序值：</label>--%>
+        <%--			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>分类栏目：</label>--%>
         <%--			<div class="formControls col-xs-8 col-sm-9">--%>
-        <%--				<input type="text" class="input-text" value="0" name="">--%>
+        <%--				<span class="select-box">--%>
+        <%--				<select name="" class="select">--%>
+        <%--					<option value="0">全部栏目</option>--%>
+        <%--					<option value="1">新闻资讯</option>--%>
+        <%--					<option value="11">├行业动态</option>--%>
+        <%--					<option value="12">├行业资讯</option>--%>
+        <%--					<option value="13">├行业新闻</option>--%>
+        <%--				</select>--%>
+        <%--				</span>--%>
         <%--			</div>--%>
-        <%--		</div>--%>
-        <%--		<div class="row cl">--%>
-        <%--			<label class="form-label col-xs-4 col-sm-2">产地：</label>--%>
-        <%--			<div class="formControls col-xs-8 col-sm-9">--%>
-        <%--				<input type="text" name="" id="" placeholder="" value="" class="input-text">--%>
-        <%--			</div>--%>
-        <%--		</div>--%>
-        <%--		<div class="row cl">--%>
-        <%--			<label class="form-label col-xs-4 col-sm-2">材质：</label>--%>
-        <%--			<div class="formControls col-xs-8 col-sm-9">--%>
-        <%--				<input type="text" name="" id="" placeholder="" value="" class="input-text">--%>
-        <%--			</div>--%>
-        <%--		</div>--%>
-        <%--		<div class="row cl">--%>
-        <%--			<label class="form-label col-xs-4 col-sm-2">所属供应商：</label>--%>
-        <%--			<div class="formControls col-xs-8 col-sm-9">--%>
-        <%--				<input type="text" name="" id="" placeholder="" value="" class="input-text">--%>
-        <%--			</div>--%>
-        <%--		</div>--%>
-        <%--		<div class="row cl">--%>
-        <%--			<label class="form-label col-xs-4 col-sm-2">产品重量：</label>--%>
-        <%--			<div class="formControls col-xs-8 col-sm-9">--%>
-        <%--				<input type="text" name="" id="" placeholder="" value="" class="input-text" style="width:90%">--%>
-        <%--				kg</div>--%>
-        <%--		</div>--%>
-        <%--		<div class="row cl">--%>
-        <%--			<label class="form-label col-xs-4 col-sm-2">产品展示价格：</label>--%>
-        <%--			<div class="formControls col-xs-8 col-sm-9">--%>
-        <%--				<input type="text" name="" id="" placeholder="" value="" class="input-text" style="width:90%">--%>
-        <%--				元</div>--%>
-        <%--		</div>--%>
-        <%--		<div class="row cl">--%>
-        <%--			<label class="form-label col-xs-4 col-sm-2">市场价格：</label>--%>
-        <%--			<div class="formControls col-xs-8 col-sm-9">--%>
-        <%--				<input type="text" name="" id="" placeholder="" value="" class="input-text" style="width:90%">--%>
-        <%--				元</div>--%>
-        <%--		</div>--%>
-        <%--		<div class="row cl">--%>
-        <%--			<label class="form-label col-xs-4 col-sm-2">成本价格：</label>--%>
-        <%--			<div class="formControls col-xs-8 col-sm-9">--%>
-        <%--				<input type="text" name="" id="" placeholder="" value="" class="input-text" style="width:90%">--%>
-        <%--				元</div>--%>
-        <%--		</div>--%>
-        <%--		<div class="row cl">--%>
-        <%--			<label class="form-label col-xs-4 col-sm-2">最低销售价格：</label>--%>
-        <%--			<div class="formControls col-xs-8 col-sm-9">--%>
-        <%--				<input type="text" name="" id="" placeholder="" value="" class="input-text" style="width:90%">--%>
-        <%--				元</div>--%>
         <%--		</div>--%>
 <%--        <div class="row cl">--%>
-<%--            <label class="form-label col-xs-4 col-sm-2">销售开始时间：</label>--%>
+<%--            <label class="form-label col-xs-4 col-sm-2">排序值：</label>--%>
 <%--            <div class="formControls col-xs-8 col-sm-9">--%>
-<%--                <input type="text" name="startTime" value="${bean.startTime}" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',maxDate:'#F{$dp.$D(\'datemax\')||\'%y-%M-%d\'}'})" id="datemin" class="input-text Wdate" style="width:180px;">--%>
+<%--                <input type="text" class="input-text" value="0" placeholder="" id="" name="typeid">--%>
 <%--            </div>--%>
 <%--        </div>--%>
         <%--		<div class="row cl">--%>
-        <%--			<label class="form-label col-xs-4 col-sm-2">销售结束时间：</label>--%>
-        <%--			<div class="formControls col-xs-8 col-sm-9">--%>
-        <%--				<input type="text" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',minDate:'#F{$dp.$D(\'datemin\')}'})" id="datemax" class="input-text Wdate" style="width:180px;">--%>
+        <%--			<label class="form-label col-xs-4 col-sm-2">允许评论：</label>--%>
+        <%--			<div class="formControls col-xs-8 col-sm-9 skin-minimal">--%>
+        <%--				<div class="check-box">--%>
+        <%--					<input type="checkbox" id="checkbox-1">--%>
+        <%--					<label for="checkbox-1">&nbsp;</label>--%>
+        <%--				</div>--%>
         <%--			</div>--%>
         <%--		</div>--%>
         <%--		<div class="row cl">--%>
-        <%--			<label class="form-label col-xs-4 col-sm-2">产品关键字：</label>--%>
+        <%--			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>发布日期：</label>--%>
         <%--			<div class="formControls col-xs-8 col-sm-9">--%>
-        <%--				<input type="text" name="" id="" placeholder="多个关键字用英文逗号隔开，限10个关键字" value="" class="input-text">--%>
+        <%--				<input type="text" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',maxDate:'#F{$dp.$D(\'datemax\')||\'%y-%M-%d\'}'})" id="datemin" class="input-text Wdate">--%>
         <%--			</div>--%>
         <%--		</div>--%>
         <%--		<div class="row cl">--%>
-        <%--			<label class="form-label col-xs-4 col-sm-2">产品摘要：</label>--%>
+        <%--			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>结束日期：</label>--%>
+        <%--			<div class="formControls col-xs-8 col-sm-9">--%>
+        <%--				<input type="text" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',minDate:'#F{$dp.$D(\'datemin\')}'})" id="datemax" class="input-text Wdate">--%>
+        <%--			</div>--%>
+        <%--		</div>--%>
+        <%--		<div class="row cl">--%>
+        <%--			<label class="form-label col-xs-4 col-sm-2">图片作者：</label>--%>
+        <%--			<div class="formControls col-xs-8 col-sm-9">--%>
+        <%--				<input type="text" class="input-text" value="0" placeholder="" id="" name="">--%>
+        <%--			</div>--%>
+        <%--		</div>--%>
+        <%--		<div class="row cl">--%>
+        <%--			<label class="form-label col-xs-4 col-sm-2">图片来源：</label>--%>
+        <%--			<div class="formControls col-xs-8 col-sm-9">--%>
+        <%--				<input type="text" class="input-text" value="0" placeholder="" id="" name="">--%>
+        <%--			</div>--%>
+        <%--		</div>--%>
+        <%--		<div class="row cl">--%>
+        <%--			<label class="form-label col-xs-4 col-sm-2">关键词：</label>--%>
+        <%--			<div class="formControls col-xs-8 col-sm-9">--%>
+        <%--				<input type="text" class="input-text" value="0" placeholder="" id="" name="">--%>
+        <%--			</div>--%>
+        <%--		</div>--%>
+        <%--		<div class="row cl">--%>
+        <%--			<label class="form-label col-xs-4 col-sm-2">图片摘要：</label>--%>
         <%--			<div class="formControls col-xs-8 col-sm-9">--%>
         <%--				<textarea name="" cols="" rows="" class="textarea"  placeholder="说点什么...最少输入10个字符" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="textarealength(this,200)"></textarea>--%>
         <%--				<p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>--%>
@@ -132,7 +124,7 @@
         <%--		<div class="row cl">--%>
         <%--			<label class="form-label col-xs-4 col-sm-2">图片上传：</label>--%>
         <%--			<div class="formControls col-xs-8 col-sm-9">--%>
-        <%--				<div class="uploader-list-container">--%>
+        <%--				<div class="uploader-list-container"> --%>
         <%--					<div class="queueList">--%>
         <%--						<div id="dndArea" class="placeholder">--%>
         <%--							<div id="filePicker-2"></div>--%>
@@ -150,12 +142,6 @@
         <%--				</div>--%>
         <%--			</div>--%>
         <%--		</div>--%>
-        <%--		<div class="row cl">--%>
-        <%--			<label class="form-label col-xs-4 col-sm-2">详细内容：</label>--%>
-        <%--			<div class="formControls col-xs-8 col-sm-9"> --%>
-        <%--				<script id="editor" type="text/plain" style="width:100%;height:400px;"></script> --%>
-        <%--			</div>--%>
-        <%--		</div>--%>
         <div class="row cl">
             <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
                 <button onClick="article_save_submit();" class="btn btn-primary radius" type="submit"><i class="Hui-iconfont">&#xe632;</i> 保存并提交审核</button>
@@ -165,22 +151,22 @@
         </div>
     </form>
 </div>
+</div>
 
 <!--_footer 作为公共模版分离出去-->
 <script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="lib/layer/2.4/layer.js"></script>
-<script type="text/javascript" src="static/h-ui/js/H-ui.js"></script>
-<script type="text/javascript" src="static/h-ui.admin/js/H-ui.admin.page.js"></script>
-<!--/_footer /作为公共模版分离出去-->
 
-<!--请在下方写此页面业务相关的脚本-->
 <script type="text/javascript" src="lib/jquery.validation/1.14.0/jquery.validate.js"></script>
 <script type="text/javascript" src="lib/jquery.validation/1.14.0/validate-methods.js"></script>
 <script type="text/javascript" src="lib/jquery.validation/1.14.0/messages_zh.js"></script>
+<script type="text/javascript" src="static/h-ui/js/H-ui.js"></script>
+<script type="text/javascript" src="static/h-ui.admin/js/H-ui.admin.page.js"></script>
+
+<!--/_footer /作为公共模版分离出去-->
+
+<!--请在下方写此页面业务相关的脚本-->
 <script type="text/javascript" src="lib/webuploader/0.1.5/webuploader.min.js"></script>
-<script type="text/javascript" src="lib/ueditor/1.4.3/ueditor.config.js"></script>
-<script type="text/javascript" src="lib/ueditor/1.4.3/ueditor.all.min.js"> </script>
-<script type="text/javascript" src="lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
 <script type="text/javascript">
     $(function(){
         $('.skin-minimal input').iCheck({
@@ -863,10 +849,6 @@
         });
 
     })( jQuery );
-
-    $(function(){
-        var ue = UE.getEditor('editor');
-    });
 </script>
 </body>
 </html>

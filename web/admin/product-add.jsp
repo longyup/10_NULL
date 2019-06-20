@@ -1,4 +1,3 @@
-<%@ page import="club.vasilis.xtwh.util.DsUtils" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!--<!DOCTYPE HTML>-->
@@ -36,7 +35,7 @@
 <%--%>--%>
 <body>
 <div class="page-container">
-	<form action="${pageContext.request.contextPath}/activity?method=addActivity" method="post"  class="form form-horizontal" id="form-article-add">
+	<form action="${pageContext.request.contextPath}/activity?method=addActivity" method="post"  class="form form-horizontal" accept-charset="UTF-8" id="form-article-add">
 <%--		<input type="hidden" name="r_lingpai" value="${r_code}">--%>
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>产品标题：</label>
@@ -50,12 +49,12 @@
 				<input type="text" class="input-text" value="" name="info">
 			</div>
 		</div>
-<%--		<div class="row cl">--%>
-<%--			<label class="form-label col-xs-4 col-sm-2">排序值：</label>--%>
-<%--			<div class="formControls col-xs-8 col-sm-9">--%>
-<%--				<input type="text" class="input-text" value="0" name="">--%>
-<%--			</div>--%>
-<%--		</div>--%>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">图片：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="file" class="input-text" value="0" name="img">
+			</div>
+		</div>
 <%--		<div class="row cl">--%>
 <%--			<label class="form-label col-xs-4 col-sm-2">产地：</label>--%>
 <%--			<div class="formControls col-xs-8 col-sm-9">--%>
@@ -104,12 +103,12 @@
 <%--				<input type="text" name="" id="" placeholder="" value="" class="input-text" style="width:90%">--%>
 <%--				元</div>--%>
 <%--		</div>--%>
-		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">销售开始时间：</label>
-			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" name="startTime" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',maxDate:'#F{$dp.$D(\'datemax\')||\'%y-%M-%d\'}'})" id="datemin" class="input-text Wdate" style="width:180px;">
-			</div>
-		</div>
+<%--		<div class="row cl">--%>
+<%--			<label class="form-label col-xs-4 col-sm-2">销售开始时间：</label>--%>
+<%--			<div class="formControls col-xs-8 col-sm-9">--%>
+<%--				<input type="text" name="startTime" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',maxDate:'#F{$dp.$D(\'datemax\')||\'%y-%M-%d\'}'})" id="datemin" class="input-text Wdate" style="width:180px;">--%>
+<%--			</div>--%>
+<%--		</div>--%>
 <%--		<div class="row cl">--%>
 <%--			<label class="form-label col-xs-4 col-sm-2">销售结束时间：</label>--%>
 <%--			<div class="formControls col-xs-8 col-sm-9">--%>

@@ -40,7 +40,7 @@
 					<li class="dropDown dropDown_hover"><a href="javascript:;" class="dropDown_A"><i class="Hui-iconfont">&#xe600;</i> 新增 <i class="Hui-iconfont">&#xe6d5;</i></a>
 						<ul class="dropDown-menu menu radius box-shadow">
 							<li><a href="javascript:;" onclick="article_add('添加资讯','article-add.html')"><i class="Hui-iconfont">&#xe616;</i> 资讯</a></li>
-							<li><a href="javascript:;" onclick="picture_add('添加资讯','picture-add.html')"><i class="Hui-iconfont">&#xe613;</i> 图片</a></li>
+							<li><a href="javascript:;" onclick="picture_add('添加资讯','picture-add.jsp')"><i class="Hui-iconfont">&#xe613;</i> 图片</a></li>
 							<li><a href="javascript:;" onclick="product_add('添加资讯','product-add.jsp')"><i class="Hui-iconfont">&#xe620;</i> 产品</a></li>
 							<li><a href="javascript:;" onclick="member_add('添加用户','member-add.html','','510')"><i class="Hui-iconfont">&#xe60d;</i> 用户</a></li>
 						</ul>
@@ -91,7 +91,7 @@
 			<dt><i class="Hui-iconfont">&#xe613;</i> 图片管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a href="picture-list.html" title="图片管理">图片管理</a></li>
+					<li><a href="<%=path%>/folk_custom?method=getAllcustom" title="图片管理">图片管理</a></li>
 				</ul>
 			</dd>
 		</dl>
@@ -99,9 +99,9 @@
 			<dt class="selected"><i class="Hui-iconfont">&#xe620;</i> 产品管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd style="display: block;">
 				<ul>
-					<li><a href="product-brand.html" title="品牌管理">品牌管理</a></li>
-					<li><a href="product-category.html" title="分类管理">分类管理</a></li>
-					<li class="current"><a href="product-list.jsp" title="产品管理">产品管理</a></li>
+<%--					<li><a href="product-brand.html" title="品牌管理">品牌管理</a></li>--%>
+<%--					<li><a href="product-category.html" title="分类管理">分类管理</a></li>--%>
+					<li class="current"><a href="<%=path%>/activity?method=getAdminActivityAll" title="产品管理">产品管理</a></li>
 				</ul>
 			</dd>
 		</dl>
@@ -109,61 +109,61 @@
 			<dt><i class="Hui-iconfont">&#xe622;</i> 评论管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a href="http://h-ui.duoshuo.com/admin/" title="评论列表">评论列表</a></li>
+<%--					<li><a href="http://h-ui.duoshuo.com/admin/" title="评论列表">评论列表</a></li>--%>
 					<li><a href="feedback-list.html" title="意见反馈">意见反馈</a></li>
 				</ul>
 			</dd>
 		</dl>
-		<dl id="menu-member">
-			<dt><i class="Hui-iconfont">&#xe60d;</i> 会员管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
-			<dd>
-				<ul>
-					<li><a href="member-list.html" title="会员列表">会员列表</a></li>
-					<li><a href="member-del.html" title="删除的会员">删除的会员</a></li>
-					<li><a href="member-level.html" title="等级管理">等级管理</a></li>
-					<li><a href="member-scoreoperation.html" title="积分管理">积分管理</a></li>
-					<li><a href="member-record-browse.html" title="浏览记录">浏览记录</a></li>
-					<li><a href="member-record-download.html" title="下载记录">下载记录</a></li>
-					<li><a href="member-record-share.html" title="分享记录">分享记录</a></li>
-				</ul>
-			</dd>
-		</dl>
-		<dl id="menu-admin">
-			<dt><i class="Hui-iconfont">&#xe62d;</i> 管理员管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
-			<dd>
-				<ul>
-					<li><a href="admin-role.html" title="角色管理">角色管理</a></li>
-					<li><a href="admin-permission.html" title="权限管理">权限管理</a></li>
-					<li><a href="admin-list.html" title="管理员列表">管理员列表</a></li>
-				</ul>
-			</dd>
-		</dl>
-		<dl id="menu-tongji">
-			<dt><i class="Hui-iconfont">&#xe61a;</i> 系统统计<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
-			<dd>
-				<ul>
-					<li><a href="charts-1.html" title="折线图">折线图</a></li>
-					<li><a href="charts-2.html" title="时间轴折线图">时间轴折线图</a></li>
-					<li><a href="charts-3.html" title="区域图">区域图</a></li>
-					<li><a href="charts-4.html" title="柱状图">柱状图</a></li>
-					<li><a href="charts-5.html" title="饼状图">饼状图</a></li>
-					<li><a href="charts-6.html" title="3D柱状图">3D柱状图</a></li>
-					<li><a href="charts-7.html" title="3D饼状图">3D饼状图</a></li>
-				</ul>
-			</dd>
-		</dl>
-		<dl id="menu-system">
-			<dt><i class="Hui-iconfont">&#xe62e;</i> 系统管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
-			<dd>
-				<ul>
-					<li><a href="system-base.html" title="系统设置">系统设置</a></li>
-					<li><a href="system-category.html" title="栏目管理">栏目管理</a></li>
-					<li><a href="system-data.html" title="数据字典">数据字典</a></li>
-					<li><a href="system-shielding.html" title="屏蔽词">屏蔽词</a></li>
-					<li><a href="system-log.html" title="系统日志">系统日志</a></li>
-				</ul>
-			</dd>
-		</dl>
+<%--		<dl id="menu-member">--%>
+<%--			<dt><i class="Hui-iconfont">&#xe60d;</i> 会员管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>--%>
+<%--			<dd>--%>
+<%--				<ul>--%>
+<%--					<li><a href="member-list.html" title="会员列表">会员列表</a></li>--%>
+<%--					<li><a href="member-del.html" title="删除的会员">删除的会员</a></li>--%>
+<%--					<li><a href="member-level.html" title="等级管理">等级管理</a></li>--%>
+<%--					<li><a href="member-scoreoperation.html" title="积分管理">积分管理</a></li>--%>
+<%--					<li><a href="member-record-browse.html" title="浏览记录">浏览记录</a></li>--%>
+<%--					<li><a href="member-record-download.html" title="下载记录">下载记录</a></li>--%>
+<%--					<li><a href="member-record-share.html" title="分享记录">分享记录</a></li>--%>
+<%--				</ul>--%>
+<%--			</dd>--%>
+<%--		</dl>--%>
+<%--		<dl id="menu-admin">--%>
+<%--			<dt><i class="Hui-iconfont">&#xe62d;</i> 管理员管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>--%>
+<%--			<dd>--%>
+<%--				<ul>--%>
+<%--					<li><a href="admin-role.html" title="角色管理">角色管理</a></li>--%>
+<%--					<li><a href="admin-permission.html" title="权限管理">权限管理</a></li>--%>
+<%--					<li><a href="admin-list.html" title="管理员列表">管理员列表</a></li>--%>
+<%--				</ul>--%>
+<%--			</dd>--%>
+<%--		</dl>--%>
+<%--		<dl id="menu-tongji">--%>
+<%--			<dt><i class="Hui-iconfont">&#xe61a;</i> 系统统计<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>--%>
+<%--			<dd>--%>
+<%--				<ul>--%>
+<%--					<li><a href="charts-1.html" title="折线图">折线图</a></li>--%>
+<%--					<li><a href="charts-2.html" title="时间轴折线图">时间轴折线图</a></li>--%>
+<%--					<li><a href="charts-3.html" title="区域图">区域图</a></li>--%>
+<%--					<li><a href="charts-4.html" title="柱状图">柱状图</a></li>--%>
+<%--					<li><a href="charts-5.html" title="饼状图">饼状图</a></li>--%>
+<%--					<li><a href="charts-6.html" title="3D柱状图">3D柱状图</a></li>--%>
+<%--					<li><a href="charts-7.html" title="3D饼状图">3D饼状图</a></li>--%>
+<%--				</ul>--%>
+<%--			</dd>--%>
+<%--		</dl>--%>
+<%--		<dl id="menu-system">--%>
+<%--			<dt><i class="Hui-iconfont">&#xe62e;</i> 系统管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>--%>
+<%--			<dd>--%>
+<%--				<ul>--%>
+<%--					<li><a href="system-base.html" title="系统设置">系统设置</a></li>--%>
+<%--					<li><a href="system-category.html" title="栏目管理">栏目管理</a></li>--%>
+<%--					<li><a href="system-data.html" title="数据字典">数据字典</a></li>--%>
+<%--					<li><a href="system-shielding.html" title="屏蔽词">屏蔽词</a></li>--%>
+<%--					<li><a href="system-log.html" title="系统日志">系统日志</a></li>--%>
+<%--				</ul>--%>
+<%--			</dd>--%>
+<%--		</dl>--%>
 	</div>
 </aside>
 <div class="dislpayArrow hidden-xs"><a class="pngfix" href="javascript:void(0);" onClick="displaynavbar(this)"></a></div>
@@ -185,7 +185,7 @@
 					<input type="text" name="" id="" placeholder=" 产品名称" style="width:250px" class="input-text">
 					<button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜产品</button>
 				</div>
-				<div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> <input type="button" value="批量删除"></a> <a class="btn btn-primary radius" onclick="product_add('添加产品','product-add.jsp')" href="admin/product-add.jsp"><i class="Hui-iconfont">&#xe600;</i> 添加产品</a></span> <span class="r">共有数据：<strong>54</strong> 条</span> </div>
+				<div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"> <a class="btn btn-primary radius" onclick="product_add('添加产品','product-add.jsp')" href="admin/product-add.jsp"><i class="Hui-iconfont">&#xe600;</i> 添加产品</a></span> <span class="r">共有数据：<strong>54</strong> 条</span> </div>
 				<div class="mt-20">
 					<table class="table table-border table-bordered table-bg table-hover table-sort">
 						<thead>
@@ -193,15 +193,15 @@
 								<th width="40"><input name="" type="checkbox" onclick="checkAll(this)" value="全选"></th>
 								<th width="40">ID</th>
 								<th width="60">缩略图</th>
-								<th width="100">产品名称</th>
+								<th width="100">活动名称</th>
 								<th>描述</th>
-								<th width="100">单价</th>
+								<th width="100">发布时间</th>
 								<th width="60">发布状态</th>
 								<th width="100">操作</th>
 							</tr>
 						</thead>
 						<tbody>
-                        <form action="<%=path%>/activity?method=deleteCheckedActivity" method="post">
+                        <form id="formId" action="<%=path%>/activity?method=deleteCheckedActivity" method="post">
                         <c:forEach items="${list}" var="activity">
 							<tr class="text-c va-m">
 								<td><input name="id" type="checkbox" value="${activity.id}"></td>
@@ -224,17 +224,17 @@
 	</div>
 </section>
 <!--_footer 作为公共模版分离出去-->
-<script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script>
-<script type="text/javascript" src="lib/layer/2.4/layer.js"></script>
-<script type="text/javascript" src="static/h-ui/js/H-ui.js"></script>
-<script type="text/javascript" src="static/h-ui.admin/js/H-ui.admin.page.js"></script>
+<script type="text/javascript" src="admin/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="admin/lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="admin/static/h-ui/js/H-ui.js"></script>
+<script type="text/javascript" src="admin/static/h-ui.admin/js/H-ui.admin.page.js"></script>
 <!--/_footer /作为公共模版分离出去-->
 
 <!--请在下方写此页面业务相关的脚本-->
-<script type="text/javascript" src="lib/My97DatePicker/4.8/WdatePicker.js"></script>
-<script type="text/javascript" src="lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="lib/laypage/1.2/laypage.js"></script>
-<script type="text/javascript" src="lib/zTree/v3/js/jquery.ztree.all-3.5.min.js"></script>
+<script type="text/javascript" src="admin/lib/My97DatePicker/4.8/WdatePicker.js"></script>
+<script type="text/javascript" src="admin/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="admin/lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript" src="admin/lib/zTree/v3/js/jquery.ztree.all-3.5.min.js"></script>
 <script type="text/javascript">
 var setting = {
 	view: {
@@ -379,7 +379,15 @@ function product_del(){
 
 function checkAll(obj) {
     //获取所有的复选框
-    document.getEl
+    var arr = document.getElementsByName("id");
+    //遍历数组，修改选中状态
+    for (var i=0;i<arr.length;i++){
+        arr[i].checked = obj.checked;
+    }
+}
+function deleteCheck() {
+    //提交表单
+    document.getElementById("formId").onsubmit;
 }
 
 </script>

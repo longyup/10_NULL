@@ -2,6 +2,7 @@ package club.vasilis.xtwh.service;
 
 import club.vasilis.xtwh.domain.FolkCustom;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public interface FolkCustomService {
@@ -41,4 +42,14 @@ public interface FolkCustomService {
      * @throws Exception
      */
     String customFindAllJson() throws Exception;
+
+    List<FolkCustom> findAllCustoms() throws SQLException;
+
+    void deletecustom(String id) throws SQLException;
+
+    void sava(FolkCustom folkCustom) throws SQLException;
+
+    FolkCustom getcustomById(String id) throws SQLException;
+
+    int updateCustom(FolkCustom folkCustom) throws SQLException;
 }

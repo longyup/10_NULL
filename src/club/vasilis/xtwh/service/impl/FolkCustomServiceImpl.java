@@ -7,6 +7,7 @@ import club.vasilis.xtwh.service.FolkCustomService;
 import net.sf.json.JSONArray;
 import org.junit.Test;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public class FolkCustomServiceImpl implements FolkCustomService {
@@ -40,6 +41,31 @@ public class FolkCustomServiceImpl implements FolkCustomService {
         FolkCustomDao dao = new FolkCustomDaoImpl();
         List<FolkCustom> list = dao.customAllJson();
         return JSONArray.fromObject(list).toString();
+    }
+
+    @Override
+    public List<FolkCustom> findAllCustoms() throws SQLException {
+        return new FolkCustomDaoImpl().findAllCustoms();
+    }
+
+    @Override
+    public void deletecustom(String id) throws SQLException {
+        new FolkCustomDaoImpl().deletecustom(id);
+    }
+
+    @Override
+    public void sava(FolkCustom folkCustom) throws SQLException {
+        new FolkCustomDaoImpl().save(folkCustom);
+    }
+
+    @Override
+    public FolkCustom getcustomById(String id) throws SQLException {
+        return new FolkCustomDaoImpl().getcustomById(id);
+    }
+
+    @Override
+    public int updateCustom(FolkCustom folkCustom) throws SQLException {
+        return new FolkCustomDaoImpl().updateCustom(folkCustom);
     }
 
     @Test

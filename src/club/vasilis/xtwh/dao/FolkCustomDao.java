@@ -2,6 +2,7 @@ package club.vasilis.xtwh.dao;
 
 import club.vasilis.xtwh.domain.FolkCustom;
 
+import java.sql.SQLException;
 import java.util.List;
 
 /**
@@ -44,4 +45,13 @@ public interface FolkCustomDao {
      */
     List<FolkCustom> customAllJson() throws Exception;
 
+    List<FolkCustom> findAllCustoms() throws SQLException;
+
+    void deletecustom(String id) throws SQLException;
+
+    void save(FolkCustom folkCustom) throws SQLException;
+
+    FolkCustom getcustomById(String id) throws SQLException;
+
+    int updateCustom(FolkCustom folkCustom) throws SQLException;
 }

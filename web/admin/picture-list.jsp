@@ -1,5 +1,6 @@
-﻿<!--_meta 作为公共模版分离出去-->
-<!DOCTYPE HTML>
+﻿<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!--<!DOCTYPE HTML>-->
 <html>
 <head>
 <meta charset="utf-8">
@@ -10,14 +11,14 @@
 <link rel="Bookmark" href="favicon.ico" >
 <link rel="Shortcut Icon" href="favicon.ico" />
 <!--[if lt IE 9]>
-<script type="text/javascript" src="lib/html5.js"></script>
-<script type="text/javascript" src="lib/respond.min.js"></script>
+<script type="text/javascript" src="admin/lib/html5.js"></script>
+<script type="text/javascript" src="admin/lib/respond.min.js"></script>
 <![endif]-->
-<link rel="stylesheet" type="text/css" href="static/h-ui/css/H-ui.min.css" />
-<link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/H-ui.admin.css" />
-<link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.8/iconfont.css" />
-<link rel="stylesheet" type="text/css" href="static/h-ui.admin/skin/default/skin.css" id="skin" />
-<link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/style.css" />
+<link rel="stylesheet" type="text/css" href="admin/static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="admin/static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="admin/lib/Hui-iconfont/1.0.8/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="admin/static/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="admin/static/h-ui.admin/css/style.css" />
 <!--[if IE 6]>
 <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script><![endif]-->
@@ -25,6 +26,9 @@
 
 <title>图片列表</title>
 </head>
+<%
+	String path = request.getContextPath();
+%>
 <body>
 <!--_header 作为公共模版分离出去-->
 <header class="navbar-wrapper">
@@ -35,7 +39,7 @@
 					<li class="dropDown dropDown_hover"><a href="javascript:;" class="dropDown_A"><i class="Hui-iconfont">&#xe600;</i> 新增 <i class="Hui-iconfont">&#xe6d5;</i></a>
 						<ul class="dropDown-menu menu radius box-shadow">
 							<li><a href="javascript:;" onclick="article_add('添加资讯','article-add.html')"><i class="Hui-iconfont">&#xe616;</i> 资讯</a></li>
-							<li><a href="javascript:;" onclick="picture_add('添加资讯','picture-add.html')"><i class="Hui-iconfont">&#xe613;</i> 图片</a></li>
+							<li><a href="javascript:;" onclick="picture_add('添加资讯','picture-add.jsp')"><i class="Hui-iconfont">&#xe613;</i> 图片</a></li>
 							<li><a href="javascript:;" onclick="product_add('添加资讯','product-add.html')"><i class="Hui-iconfont">&#xe620;</i> 产品</a></li>
 							<li><a href="javascript:;" onclick="member_add('添加用户','member-add.html','','510')"><i class="Hui-iconfont">&#xe60d;</i> 用户</a></li>
 						</ul>
@@ -86,7 +90,7 @@
 			<dt class="selected"><i class="Hui-iconfont">&#xe613;</i> 图片管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd style="display:block">
 				<ul>
-					<li class="current"><a href="picture-list.html" title="图片管理">图片管理</a></li>
+					<li class="current"><a href="<%=path%>/folk_custom?method=getAllcustom" title="图片管理">图片管理</a></li>
 				</ul>
 			</dd>
 		</dl>
@@ -94,9 +98,9 @@
 			<dt><i class="Hui-iconfont">&#xe620;</i> 产品管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a href="product-brand.html" title="品牌管理">品牌管理</a></li>
-					<li><a href="product-category.html" title="分类管理">分类管理</a></li>
-					<li><a href="product-list.jsp" title="产品管理">产品管理</a></li>
+<%--					<li><a href="product-brand.html" title="品牌管理">品牌管理</a></li>--%>
+<%--					<li><a href="product-category.html" title="分类管理">分类管理</a></li>--%>
+					<li><a href="<%=path%>/activity?method=getAdminActivityAll" title="产品管理">产品管理</a></li>
 				</ul>
 			</dd>
 		</dl>
@@ -104,61 +108,61 @@
 			<dt><i class="Hui-iconfont">&#xe622;</i> 评论管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a href="http://h-ui.duoshuo.com/admin/" title="评论列表">评论列表</a></li>
+<%--					<li><a href="http://h-ui.duoshuo.com/admin/" title="评论列表">评论列表</a></li>--%>
 					<li><a href="feedback-list.html" title="意见反馈">意见反馈</a></li>
 				</ul>
 			</dd>
 		</dl>
-		<dl id="menu-member">
-			<dt><i class="Hui-iconfont">&#xe60d;</i> 会员管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
-			<dd>
-				<ul>
-					<li><a href="member-list.html" title="会员列表">会员列表</a></li>
-					<li><a href="member-del.html" title="删除的会员">删除的会员</a></li>
-					<li><a href="member-level.html" title="等级管理">等级管理</a></li>
-					<li><a href="member-scoreoperation.html" title="积分管理">积分管理</a></li>
-					<li><a href="member-record-browse.html" title="浏览记录">浏览记录</a></li>
-					<li><a href="member-record-download.html" title="下载记录">下载记录</a></li>
-					<li><a href="member-record-share.html" title="分享记录">分享记录</a></li>
-				</ul>
-			</dd>
-		</dl>
-		<dl id="menu-admin">
-			<dt><i class="Hui-iconfont">&#xe62d;</i> 管理员管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
-			<dd>
-				<ul>
-					<li><a href="admin-role.html" title="角色管理">角色管理</a></li>
-					<li><a href="admin-permission.html" title="权限管理">权限管理</a></li>
-					<li><a href="admin-list.html" title="管理员列表">管理员列表</a></li>
-				</ul>
-			</dd>
-		</dl>
-		<dl id="menu-tongji">
-			<dt><i class="Hui-iconfont">&#xe61a;</i> 系统统计<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
-			<dd>
-				<ul>
-					<li><a href="charts-1.html" title="折线图">折线图</a></li>
-					<li><a href="charts-2.html" title="时间轴折线图">时间轴折线图</a></li>
-					<li><a href="charts-3.html" title="区域图">区域图</a></li>
-					<li><a href="charts-4.html" title="柱状图">柱状图</a></li>
-					<li><a href="charts-5.html" title="饼状图">饼状图</a></li>
-					<li><a href="charts-6.html" title="3D柱状图">3D柱状图</a></li>
-					<li><a href="charts-7.html" title="3D饼状图">3D饼状图</a></li>
-				</ul>
-			</dd>
-		</dl>
-		<dl id="menu-system">
-			<dt><i class="Hui-iconfont">&#xe62e;</i> 系统管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
-			<dd>
-				<ul>
-					<li><a href="system-base.html" title="系统设置">系统设置</a></li>
-					<li><a href="system-category.html" title="栏目管理">栏目管理</a></li>
-					<li><a href="system-data.html" title="数据字典">数据字典</a></li>
-					<li><a href="system-shielding.html" title="屏蔽词">屏蔽词</a></li>
-					<li><a href="system-log.html" title="系统日志">系统日志</a></li>
-				</ul>
-			</dd>
-		</dl>
+<%--		<dl id="menu-member">--%>
+<%--			<dt><i class="Hui-iconfont">&#xe60d;</i> 会员管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>--%>
+<%--			<dd>--%>
+<%--				<ul>--%>
+<%--					<li><a href="member-list.html" title="会员列表">会员列表</a></li>--%>
+<%--					<li><a href="member-del.html" title="删除的会员">删除的会员</a></li>--%>
+<%--					<li><a href="member-level.html" title="等级管理">等级管理</a></li>--%>
+<%--					<li><a href="member-scoreoperation.html" title="积分管理">积分管理</a></li>--%>
+<%--					<li><a href="member-record-browse.html" title="浏览记录">浏览记录</a></li>--%>
+<%--					<li><a href="member-record-download.html" title="下载记录">下载记录</a></li>--%>
+<%--					<li><a href="member-record-share.html" title="分享记录">分享记录</a></li>--%>
+<%--				</ul>--%>
+<%--			</dd>--%>
+<%--		</dl>--%>
+<%--		<dl id="menu-admin">--%>
+<%--			<dt><i class="Hui-iconfont">&#xe62d;</i> 管理员管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>--%>
+<%--			<dd>--%>
+<%--				<ul>--%>
+<%--					<li><a href="admin-role.html" title="角色管理">角色管理</a></li>--%>
+<%--					<li><a href="admin-permission.html" title="权限管理">权限管理</a></li>--%>
+<%--					<li><a href="admin-list.html" title="管理员列表">管理员列表</a></li>--%>
+<%--				</ul>--%>
+<%--			</dd>--%>
+<%--		</dl>--%>
+<%--		<dl id="menu-tongji">--%>
+<%--			<dt><i class="Hui-iconfont">&#xe61a;</i> 系统统计<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>--%>
+<%--			<dd>--%>
+<%--				<ul>--%>
+<%--					<li><a href="charts-1.html" title="折线图">折线图</a></li>--%>
+<%--					<li><a href="charts-2.html" title="时间轴折线图">时间轴折线图</a></li>--%>
+<%--					<li><a href="charts-3.html" title="区域图">区域图</a></li>--%>
+<%--					<li><a href="charts-4.html" title="柱状图">柱状图</a></li>--%>
+<%--					<li><a href="charts-5.html" title="饼状图">饼状图</a></li>--%>
+<%--					<li><a href="charts-6.html" title="3D柱状图">3D柱状图</a></li>--%>
+<%--					<li><a href="charts-7.html" title="3D饼状图">3D饼状图</a></li>--%>
+<%--				</ul>--%>
+<%--			</dd>--%>
+<%--		</dl>--%>
+<%--		<dl id="menu-system">--%>
+<%--			<dt><i class="Hui-iconfont">&#xe62e;</i> 系统管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>--%>
+<%--			<dd>--%>
+<%--				<ul>--%>
+<%--					<li><a href="system-base.html" title="系统设置">系统设置</a></li>--%>
+<%--					<li><a href="system-category.html" title="栏目管理">栏目管理</a></li>--%>
+<%--					<li><a href="system-data.html" title="数据字典">数据字典</a></li>--%>
+<%--					<li><a href="system-shielding.html" title="屏蔽词">屏蔽词</a></li>--%>
+<%--					<li><a href="system-log.html" title="系统日志">系统日志</a></li>--%>
+<%--				</ul>--%>
+<%--			</dd>--%>
+<%--		</dl>--%>
 	</div>
 </aside>
 <div class="dislpayArrow hidden-xs"><a class="pngfix" href="javascript:void(0);" onClick="displaynavbar(this)"></a></div>
@@ -175,7 +179,7 @@
 				<input type="text" name="" id="" placeholder=" 图片名称" style="width:250px" class="input-text">
 				<button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜图片</button>
 			</div>
-			<div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> <a class="btn btn-primary radius" onclick="picture_add('添加图片','picture-add.html')" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加图片</a></span> <span class="r">共有数据：<strong>54</strong> 条</span> </div>
+			<div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a class="btn btn-primary radius" onclick="picture_add('添加图片','picture-add.jsp')" href="admin/picture-add.jsp"><i class="Hui-iconfont">&#xe600;</i> 添加数据</a></span> <span class="r">共有数据：<strong>54</strong> 条</span> </div>
 			<div class="mt-20">
 				<table class="table table-border table-bordered table-bg table-hover table-sort">
 					<thead>
@@ -192,17 +196,18 @@
 						</tr>
 					</thead>
 					<tbody>
+                    <c:forEach items="${list}" var="custom">
 						<tr class="text-c">
 							<td><input name="" type="checkbox" value=""></td>
-							<td>001</td>
-							<td>分类名称</td>
-							<td><a href="javascript:;" onClick="picture_edit('图库编辑','picture-show.html','10001')"><img width="100" class="picture-thumb" src="pic/200x150.jpg"></a></td>
-							<td class="text-l"><a class="maincolor" href="javascript:;" onClick="picture_edit('图库编辑','picture-show.html','10001')">现代简约 白色 餐厅</a></td>
+							<td>${custom.id}</td>
+							<td>${custom.name}</td>
+							<td class="text-l"><a class="maincolor" href="javascript:;" onClick="picture_edit('图库编辑','picture-show.html','10001')">${custom.onlinetime}</a></td>
 							<td class="text-c">标签</td>
 							<td>2014-6-11 11:11:42</td>
 							<td class="td-status"><span class="label label-success radius">已发布</span></td>
-							<td class="td-manage"><a style="text-decoration:none" onClick="picture_stop(this,'10001')" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6de;</i></a> <a style="text-decoration:none" class="ml-5" onClick="picture_edit('图库编辑','picture-add.html','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="picture_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
+							<td class="td-manage"><a style="text-decoration:none" onClick="picture_stop(this,'10001')" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6de;</i></a> <a style="text-decoration:none" class="ml-5" onClick="picture_edit('图库编辑','picture-add.jsp','10001')" href="<%=path%>/folk_custom?method=getcustomById&id=${custom.id}" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="picture_del(this,'10001')" href="<%=path%>/folk_custom?method=deletecustom&id=${custom.id}" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
 						</tr>
+                    </c:forEach>
 					</tbody>
 				</table>
 			</div>

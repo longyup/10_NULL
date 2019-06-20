@@ -3,18 +3,18 @@ package club.vasilis.xtwh.domain;
 import java.util.Date;
 
 public class Activity {
-    private String id;
+    private int id;
     private String name;
     private String info;
-    private String launchTime;
-    private String startTime;
+    private Date launchTime;
+    private Date startTime;
     private String img;
     private String typeId;
 
     public Activity() {
     }
 
-    public Activity(String id, String name, String info,String startTime) {
+    public Activity(int id, String name, String info,Date startTime) {
         this.id = id;
         this.name = name;
         this.info = info;
@@ -22,7 +22,7 @@ public class Activity {
     }
 
 
-    public Activity(String id, String name, String info, String launchTime, String startTime, String img,String typeId) {
+    public Activity(int id, String name, String info, Date launchTime, Date startTime, String img,String typeId) {
         this.id = id;
         this.name = name;
         this.info = info;
@@ -32,11 +32,11 @@ public class Activity {
         this.typeId = typeId;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -56,19 +56,19 @@ public class Activity {
         this.info = info;
     }
 
-    public String getLaunchTime() {
+    public Date getLaunchTime() {
         return launchTime;
     }
 
-    public void setLaunchTime(String launchTime) {
+    public void setLaunchTime(Date launchTime) {
         this.launchTime = launchTime;
     }
 
-    public String getStartTime() {
+    public Date getStartTime() {
         return startTime;
     }
 
-    public void setStartTime(String startTime) {
+    public void setStartTime(Date startTime) {
         this.startTime = startTime;
     }
 

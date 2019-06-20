@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.lang.reflect.InvocationTargetException;
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -56,24 +57,25 @@ public class ActivityServlet extends HttpServlet {
         req.setCharacterEncoding("UTF-8");
 
 //        //扩展令牌机制
-//        //获取session中的和提交过来的令牌
-//        String s_lingpai = req.getParameter("s_lingpai");
-//        //移出session中的令牌
-//        String r_lingpai= (String) req.getSession().getAttribute("r_lingpai");
-//        //比较两个令牌
-//        if (s_lingpai == null || !s_lingpai.equals(r_lingpai)){
-//            //已经提交过了，生成错误信息，放入request域中，到msg.jsp
-//            req.setAttribute("msg","商品已经保存！");
-//            req.getRequestDispatcher("admin/product-list.jsp").forward(req,resp);
-//            return;
-//
-//        }
+////        //获取session中的和提交过来的令牌
+////        String s_lingpai = req.getParameter("s_lingpai");
+////        //移出session中的令牌
+////        String r_lingpai= (String) req.getSession().getAttribute("r_lingpai");
+////        //比较两个令牌
+////        if (s_lingpai == null || !s_lingpai.equals(r_lingpai)){
+////            //已经提交过了，生成错误信息，放入request域中，到msg.jsp
+////            req.setAttribute("msg","商品已经保存！");
+////            req.getRequestDispatcher("admin/product-list.jsp").forward(req,resp);
+////            return;
+////
+////        }
 
         Activity activity = new Activity();
 
         try {
             BeanUtils.populate(activity,req.getParameterMap());
-            activity.setId(DsUtils.getUUID());
+//            activity.setId(DsUtils.getUUID());
+            activity.setStartTime(new Date());
             new ActivityServiceImpl().sava(activity);
             req.getRequestDispatcher("/activity?method=getAdminActivityAll").forward(req,resp);
         } catch (SQLException e) {

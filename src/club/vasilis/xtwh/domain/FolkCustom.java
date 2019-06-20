@@ -1,23 +1,25 @@
 package club.vasilis.xtwh.domain;
 
+import java.util.Date;
+
 public class FolkCustom {
 
-    private String id;
+    private int id;
     private String name;
     private String img;
     private String details;
-    private String onlinetime;
+    private Date onlinetime;
     private String typeid;
 
     public FolkCustom() {
     }
 
-    public FolkCustom(String id, String name) {
+    public FolkCustom(int id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public FolkCustom(String id, String name, String img, String details, String onlinetime, String typeid) {
+    public FolkCustom(int id, String name, String img, String details, Date onlinetime, String typeid) {
         this.id = id;
         this.name = name;
         this.img = img;
@@ -46,11 +48,11 @@ public class FolkCustom {
         this.details = details;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -70,11 +72,11 @@ public class FolkCustom {
         this.img = img;
     }
 
-    public String getOnlinetime() {
+    public Date getOnlinetime() {
         return onlinetime;
     }
 
-    public void setOnlinetime(String onlinetime) {
+    public void setOnlinetime(Date onlinetime) {
         this.onlinetime = onlinetime;
     }
 

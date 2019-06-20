@@ -57,8 +57,8 @@ public class ActivityDaoImpl implements ActivityDao {
     @Override
     public int updateActivity(Activity activity) throws SQLException {
         QueryRunner runner = new QueryRunner(DsUtils.getDataSource());
-        String sql = "update activity set name =?,info =?,StartTime =? where id=?";
-        return runner.update(sql,activity.getName(),activity.getInfo(),activity.getStartTime(),activity.getId());
+        String sql = "update activity set name =?,info =?where id=?";
+        return runner.update(sql,activity.getName(),activity.getInfo(),activity.getId());
     }
 
     @Override

@@ -103,10 +103,10 @@ public class DsUtils {
      * 获得一个UUID
      * @return String UUID
      */
-    public static String getUUID(){
+    public static int getUUID(){
         String uuid = UUID.randomUUID().toString();
         //去掉“-”符号
-        return uuid.replaceAll("-", "");
+        return Integer.parseInt(uuid.replaceAll("-", ""));
     }
 
     /**
@@ -114,6 +114,6 @@ public class DsUtils {
      * @return
      */
     public static String getCode(){
-        return getUUID();
+        return String.valueOf(getUUID());
     }
 }

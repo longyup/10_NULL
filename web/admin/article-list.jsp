@@ -45,7 +45,7 @@
 								<a href="javascript:;" onclick="article_add('添加资讯','article-add.html')"><i class="Hui-iconfont">&#xe616;</i> 资讯</a>
 							</li>
 							<li>
-								<a href="javascript:;" onclick="picture_add('添加资讯','picture-add.html')"><i class="Hui-iconfont">&#xe613;</i> 图片</a>
+								<a href="javascript:;" onclick="picture_add('添加资讯','picture-add.jsp')"><i class="Hui-iconfont">&#xe613;</i> 图片</a>
 							</li>
 							<li>
 								<a href="javascript:;" onclick="product_add('添加资讯','product-add.jsp')"><i class="Hui-iconfont">&#xe620;</i> 产品</a>
@@ -124,7 +124,7 @@
 			<dd>
 				<ul>
 					<li>
-						<a href="picture-list.html" title="图片管理">图片管理</a>
+						<a href="picture-list.jsp" title="图片管理">图片管理</a>
 					</li>
 				</ul>
 			</dd>
