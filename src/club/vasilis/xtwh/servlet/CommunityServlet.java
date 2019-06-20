@@ -58,9 +58,9 @@ public class CommunityServlet extends HttpServlet {
 
         CommunityService service = new CommunityServiceImpl();
         // 从第几条
-        int offset = request.getParameter("offset") != null ? Integer.parseInt(request.getParameter("offset")) : 0;
+       // int offset = request.getParameter("offset") != null ? Integer.parseInt(request.getParameter("offset")) : 0;
         try {
-            List<Community> communityList = service.getAdminCommunity(offset);
+            List<Community> communityList = service.getAdminCommunityAll();
             request.setAttribute("communityList", communityList);
             request.getRequestDispatcher("/admin/feedback-list.jsp").forward(request, response);
 

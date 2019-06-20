@@ -14,6 +14,8 @@ public interface CommunityDao {
 
     List<Community> findTwenty(int offset) throws Exception;
 
+    List<Community> getAdminCommunityAll() throws Exception;
+
     /**
      * 添加说说
      * @param community

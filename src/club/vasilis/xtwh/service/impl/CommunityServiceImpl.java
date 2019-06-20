@@ -23,9 +23,9 @@ public class CommunityServiceImpl implements CommunityService {
     }
 
     @Override
-    public List<Community> getAdminCommunity(int offset) throws Exception {
+    public List<Community> getAdminCommunityAll() throws Exception {
         CommunityDao dao = new CommunityDaoImpl();
-        return dao.findTwenty(offset);
+        return dao.getAdminCommunityAll();
     }
 
     @Override

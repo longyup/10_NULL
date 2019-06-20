@@ -49,6 +49,20 @@ public class CommunityDaoImpl implements CommunityDao {
     }
 
     @Override
+    public List<Community> getAdminCommunityAll() throws Exception {
+        QueryRunner runner = new QueryRunner(DsUtils.getDataSource());
+        String sqlCommunity = "SELECT id,UUID,date,content FROM community order by date DESC";
+        List<Community> communityList = runner.query(sqlCommunity, new BeanListHandler<>(Community.class));
+        for (Community community : communityList) {
+            //根据uuid查询发送说说的用户
+            String sqlUser = "select nickName,headImg FROM user WHERE UUID = ?";
+            User user = runner.query(sqlUser, new BeanHandler<>(User.class), community.getUUID());
+            community.setUser(user);
+        }
+        return communityList;
+    }
+
+    @Override
     public int updateItem(Community community) throws Exception {
         QueryRunner runner = new QueryRunner(DsUtils.getDataSource());
         String sql = "INSERT INTO community(UUID, date, content) VALUES (?, ?, ?)";
@@ -82,7 +96,7 @@ public class CommunityDaoImpl implements CommunityDao {
     public void deleteItem(int id) throws Exception {
         QueryRunner runner = new QueryRunner(DsUtils.getDataSource());
         String sql = "DELETE FROM community where id = ?";
-        int rows = runner.update(sql,id);
+        int rows = runner.update(sql, id);
     }
 
     @Test

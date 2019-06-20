@@ -62,9 +62,12 @@
                     搜意见
                 </button>
             </div>
+            <%
+                List<Community> communityList = (List<Community>) request.getAttribute("communityList");
+            %>
             <div class="cl pd-5 bg-1 bk-gray mt-20"><span class="l"><a href="javascript:;" onclick="datadel()"
                                                                        class="btn btn-danger radius"><i
-                    class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> </span> <span class="r">共有数据：<strong>88</strong> 条</span>
+                    class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> </span> <span class="r">共有数据：<strong><%= communityList.size()%></strong> 条</span>
             </div>
             <div class="mt-20">
                 <table class="table table-border table-bordered table-hover table-bg table-sort">
@@ -79,8 +82,8 @@
                     </thead>
                     <tbody>
 
+
                     <%
-                        List<Community> communityList = (List<Community>) request.getAttribute("communityList");
                         for (Community Community : communityList) {
                     %>
                     <tr class="text-c">

@@ -37,9 +37,9 @@ public class UserDaoImpl implements UserDao {
     @Override
     public void save(User user) throws Exception {
         QueryRunner runner = new QueryRunner(DsUtils.getDataSource());
-        String sql = "insert into user (UUID,account,password) values (?,?,?)";
+        String sql = "insert into user (UUID,account,password,headImg,nickName) values (?,?,?,?,?)";
 //        runner.insert(sql,new BeanHandler<User>(User.class),user.getUUID(),user.getAccount(),user.getPassword());
-        runner.update(sql,user.getUUID(),user.getAccount(),user.getPassword());
+        runner.update(sql,user.getUUID(),user.getAccount(),user.getPassword(),user.getHeadImg(),user.getNickName());
     }
 
     @Override

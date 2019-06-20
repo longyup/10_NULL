@@ -15,7 +15,7 @@ public interface CommunityService {
 
     void deleteItem(int id)throws Exception;
 
-    List<Community> getAdminCommunity(int offset) throws Exception;
+    List<Community> getAdminCommunityAll() throws Exception;
      /**
      * 分页查询数据
      * @param offset
