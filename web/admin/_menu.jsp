@@ -24,7 +24,7 @@
 				<ul>
 					<li><a href="product-brand.html" title="品牌管理">品牌管理</a></li>
 					<li><a href="product-category.html" title="分类管理">分类管理</a></li>
-					<li><a href="product-list.jsp" title="产品管理">产品管理</a></li>
+					<li><a href="<%=path%>/activity?method=getAdminActivityAll" title="产品管理">产品管理</a></li>
 				</ul>
 			</dd>
 		</dl>
