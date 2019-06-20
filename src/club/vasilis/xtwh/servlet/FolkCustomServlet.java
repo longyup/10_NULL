@@ -36,7 +36,7 @@ public class FolkCustomServlet extends HttpServlet {
         if ("".equals(method)) {
 
         } else if ("topage".equals(method)) {
-            topage(request, response);
+            toPage(request, response);
         }else if ("cusDetails".equals(method)){
             cusDetails(request,response);
         }else if ("cusMenuDetails".equals(method)){
@@ -61,12 +61,22 @@ public class FolkCustomServlet extends HttpServlet {
         response.setContentType("text/json;charset=utf-8");
         Map<String,String[]> map = request.getParameterMap();
         FolkCustom folkCustom = new FolkCustom();
-        int rs = 0;
+        int rs;
 
         try {
             BeanUtils.populate(folkCustom,map);
             rs = new FolkCustomServiceImpl().updateCustom(folkCustom);
             System.out.println("1111111");
+            if (rs>0){
+                request.getSession().setAttribute("msg","修改活动成功！");
+                System.out.println("修改成功");
+                response.sendRedirect("/10_NULL_war_exploded/folk_custom?method=getAllCustom");
+            }else {
+                request.getSession().setAttribute("msg", "修改信息失败");
+                response.sendRedirect("msg.jsp");
+                System.out.println("修改失败");
+
+            }
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (InvocationTargetException e) {
@@ -74,16 +84,7 @@ public class FolkCustomServlet extends HttpServlet {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        if (rs>0){
-            request.getSession().setAttribute("msg","修改活动成功！");
-            System.out.println("修改成功");
-            response.sendRedirect("/10_NULL_war_exploded/folk_custom?method=getAllCustom");
-        }else {
-            request.getSession().setAttribute("msg", "修改信息失败");
-            response.sendRedirect("msg.jsp");
-            System.out.println("修改失败");
 
-        }
     }
 
     private void getCustomById(HttpServletRequest request, HttpServletResponse response) {
@@ -115,7 +116,7 @@ public class FolkCustomServlet extends HttpServlet {
             BeanUtils.populate(folkCustom,request.getParameterMap());
             folkCustom.setOnlinetime(new Date());
             new FolkCustomServiceImpl().sava(folkCustom);
-            request.getRequestDispatcher("/folk_custom?method=getAllcustom").forward(request,response);
+            request.getRequestDispatcher("/folk_custom?method=getAllCustom").forward(request,response);
         } catch (SQLException e) {
             e.printStackTrace();
             request.setAttribute("msg","添加商品失败！");
@@ -148,7 +149,7 @@ public class FolkCustomServlet extends HttpServlet {
                 ex.printStackTrace();
             }
         }
-        response.sendRedirect("/10_NULL_war_exploded/folk_custom?method=getAllcustom");
+        response.sendRedirect("/10_NULL_war_exploded/folk_custom?method=getAllCustom");
 
     }
 
@@ -175,7 +176,7 @@ public class FolkCustomServlet extends HttpServlet {
      * @param request
      * @param response
      */
-    private void topage(HttpServletRequest request, HttpServletResponse response) {
+    private void toPage(HttpServletRequest request, HttpServletResponse response) {
 
         System.err.println("风情民俗");
         FolkCustomService service = new FolkCustomServiceImpl();

@@ -70,8 +70,8 @@ public class FolkCustomDaoImpl implements FolkCustomDao {
     @Override
     public void save(FolkCustom folkCustom) throws SQLException {
         QueryRunner runner = new QueryRunner(DsUtils.getDataSource());
-        String sql = "insert into folk_custom_passage(id,name,img,onlinetime,typeid,details) values(?,?,?,?,?,?)";
-        Object[] parms = {folkCustom.getId(),folkCustom.getName(),folkCustom.getImg(),folkCustom.getOnlinetime(),folkCustom.getDetails(),folkCustom.getTypeid()};
+        String sql = "insert into folk_custom_passage(id,name,img,onlinetime,details) values(?,?,?,?,?)";
+        Object[] parms = {folkCustom.getId(),folkCustom.getName(),folkCustom.getImg(),folkCustom.getOnlinetime(),folkCustom.getDetails(),folkCustom};
         System.out.println("有访问到DAO吗？");
         runner.update(sql,parms);
     }
@@ -86,7 +86,7 @@ public class FolkCustomDaoImpl implements FolkCustomDao {
     @Override
     public int updateCustom(FolkCustom folkCustom) throws SQLException {
         QueryRunner runner = new QueryRunner(DsUtils.getDataSource());
-        String sql = "update folk_custom_passage set name =?,details =?where id=?";
+        String sql = "update folk_custom_passage set name =?,details =? where id=?";
         System.out.println("这里访问到了吗？");
         return runner.update(sql,folkCustom.getName(),folkCustom.getDetails(),folkCustom.getId());
     }

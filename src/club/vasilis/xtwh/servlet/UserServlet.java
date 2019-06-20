@@ -68,6 +68,8 @@ public class UserServlet extends HttpServlet {
             e.printStackTrace();
         } catch (InvocationTargetException e) {
             e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 

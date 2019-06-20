@@ -49,7 +49,7 @@
                 <li><a href="<%=path%>/cultureSites?method=topage" style="color:white;" class="nl-title">文化遗址</a></li>
                 <li><a href="<%=path%>/product?method=topage" style="color:white;" class="nl-title">特色美食</a></li>
                 <li><a href="<%=path%>/location.jsp" style="color:white;" class="nl-title">名人趣事</a></li>
-                <li><a href="<%=path%>/folk_custom?method=topage" style="color:white;" class="nl-title">风情民俗</a></li>
+                <li><a href="<%=path%>/folk_custom?method=toPage" style="color:white;" class="nl-title">风情民俗</a></li>
                 <li><a href="<%=path%>/activity?method=activityMessage" style="color:white;" class="nl-title">活动一览</a></li>
                 <li><a href="<%=path%>/242.jsp" style="color:white;" class="nl-title">杂谈交流</a></li>
                 <li><a href="<%=path%>/user/login.jsp" style="color:white;" class="nl-title">关于我们</a></li>

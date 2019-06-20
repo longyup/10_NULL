@@ -14,7 +14,7 @@
 			<dt><i class="Hui-iconfont">&#xe613;</i> 图片管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a href="picture-list.jsp" title="图片管理">图片管理</a></li>
+					<li><a href="<%=path%>/folk_custom?method=getAllCustom" title="图片管理">图片管理</a></li>
 				</ul>
 			</dd>
 		</dl>
