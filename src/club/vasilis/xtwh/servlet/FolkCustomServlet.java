@@ -35,7 +35,7 @@ public class FolkCustomServlet extends HttpServlet {
         String method = request.getParameter("method");
         if ("".equals(method)) {
 
-        } else if ("topage".equals(method)) {
+        } else if ("toPage".equals(method)) {
             toPage(request, response);
         }else if ("cusDetails".equals(method)){
             cusDetails(request,response);
@@ -177,12 +177,8 @@ public class FolkCustomServlet extends HttpServlet {
      * @param response
      */
     private void toPage(HttpServletRequest request, HttpServletResponse response) {
-
         System.err.println("风情民俗");
         FolkCustomService service = new FolkCustomServiceImpl();
-
-
-
         try {
             //菜单栏
             List<FolkCustom> customMenuList = service.customMenu();
