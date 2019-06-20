@@ -12,9 +12,10 @@ public class Community {
     private int id;
     private String UUID;
     private User user;
-    private String date;
+    private long date;
     private String content;
     private List<Phrase> phraseList;
+    private List<Comment> commentList;
 
     public int getId() {
         return id;
@@ -40,11 +41,11 @@ public class Community {
         this.user = user;
     }
 
-    public String getDate() {
+    public long getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(long date) {
         this.date = date;
     }
 
@@ -64,15 +65,24 @@ public class Community {
         this.phraseList = phraseList;
     }
 
+    public List<Comment> getCommentList() {
+        return commentList;
+    }
+
+    public void setCommentList(List<Comment> commentList) {
+        this.commentList = commentList;
+    }
+
     @Override
     public String toString() {
         return "Community{" +
                 "id=" + id +
                 ", UUID='" + UUID + '\'' +
                 ", user=" + user +
-                ", date='" + date + '\'' +
+                ", date=" + date +
                 ", content='" + content + '\'' +
                 ", phraseList=" + phraseList +
+                ", commentList=" + commentList +
                 '}';
     }
 }

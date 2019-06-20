@@ -1,6 +1,5 @@
-﻿<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!--<!DOCTYPE HTML>-->
+﻿<!--_meta 作为公共模版分离出去-->
+<!DOCTYPE HTML>
 <html>
 <head>
 <meta charset="utf-8">
