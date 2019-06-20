@@ -8,7 +8,6 @@ import club.vasilis.xtwh.util.PasswordUtils;
 import org.junit.Test;
 
 import java.util.List;
-import java.util.Map;
 
 /**
  * @author Vasilis
@@ -28,11 +27,12 @@ public class UserServiceImpl implements UserService {
     public int registerUser(User user) throws Exception {
         List<User> userList = dao.queryAll();
         for (int i = 0; i < userList.size(); i++){
-            if (user.getAccount() == userList.get(i).getAccount()){
+            if (user.getAccount().equals(userList.get(i).getAccount())){
                 System.err.println("该用户名已注册！");
                 return -1;
             }
         }
+
         dao.save(user);
         return 1;
     }
@@ -63,6 +63,12 @@ public class UserServiceImpl implements UserService {
         String pwd = PasswordUtils.md5(user.getPassword(),user.getAccount());
         //将密文，放回对象中
         user.setPassword(pwd);
+        if (user.getNickName() == null || "".equals(user.getNickName())){
+            user.setNickName(user.getAccount());
+        }
+        if (user.getHeadImg() == null || "".equals(user.getHeadImg())){
+            user.setHeadImg("images/head/3973881764.jpg");
+        }
         //实例化dao
         UserDao dao = new UserDaoImpl();
         //调dao来保存
