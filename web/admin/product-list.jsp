@@ -56,7 +56,7 @@
 					<input type="text" name="" id="" placeholder=" 产品名称" style="width:250px" class="input-text">
 					<button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜产品</button>
 				</div>
-				<div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"> <a class="btn btn-primary radius" onclick="product_add('添加产品','product-add.jsp')" href="admin/product-add.jsp"><i class="Hui-iconfont">&#xe600;</i> 添加产品</a></span> <span class="r">共有数据：<strong>54</strong> 条</span> </div>
+				<div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"> <a class="btn btn-primary radius" onclick="product_add('添加活动','product-add.jsp')" href="<%=path%>/admin/product-add.jsp"><i class="Hui-iconfont">&#xe600;</i> 添加活动</a></span> <span class="r">共有数据：<strong>54</strong> 条</span> </div>
 				<div class="mt-20">
 					<table class="table table-border table-bordered table-bg table-hover table-sort">
 						<thead>
@@ -156,14 +156,14 @@ function showCode(str) {
 	code.append("<li>"+str+"</li>");
 }
 
-$(document).ready(function(){
-	var t = $("#treeDemo");
-	t = $.fn.zTree.init(t, setting, zNodes);
-	demoIframe = $("#testIframe");
-	demoIframe.bind("load", loadReady);
-	var zTree = $.fn.zTree.getZTreeObj("tree");
-	zTree.selectNode(zTree.getNodeByParam("id",'11'));
-});
+// $(document).ready(function(){
+// 	var t = $("#treeDemo");
+// 	t = $.fn.zTree.init(t, setting, zNodes);
+// 	demoIframe = $("#testIframe");
+// 	demoIframe.bind("load", loadReady);
+// 	var zTree = $.fn.zTree.getZTreeObj("tree");
+// 	zTree.selectNode(zTree.getNodeByParam("id",'11'));
+// });
 
 $('.table-sort').dataTable({
 	"aaSorting": [[ 1, "desc" ]],//默认第几个排序
@@ -172,7 +172,7 @@ $('.table-sort').dataTable({
 	  {"orderable":false,"aTargets":[0,7]}// 制定列不参与排序
 	]
 });
-/*图片-添加*/
+/*文化-添加*/
 function product_add(title,url){
 	var index = layer.open({
 		type: 2,
@@ -181,7 +181,7 @@ function product_add(title,url){
 	});
 	layer.full(index);
 }
-/*图片-查看*/
+/*文化-查看*/
 function product_show(title,url,id){
 	var index = layer.open({
 		type: 2,
@@ -190,7 +190,7 @@ function product_show(title,url,id){
 	});
 	layer.full(index);
 }
-/*图片-审核*/
+/*文化-审核*/
 function product_shenhe(obj,id){
 	layer.confirm('审核文章？', {
 		btn: ['通过','不通过'],
@@ -209,7 +209,7 @@ function product_shenhe(obj,id){
     	layer.msg('未通过', {icon:5,time:1000});
 	});
 }
-/*图片-下架*/
+/*文化-下架*/
 function product_stop(obj,id){
 	layer.confirm('确认要下架吗？',function(index){
 		$(obj).parents("tr").find(".td-manage").prepend('<a style="text-decoration:none" onClick="product_start(this,id)" href="javascript:;" title="发布"><i class="Hui-iconfont">&#xe603;</i></a>');
@@ -219,7 +219,7 @@ function product_stop(obj,id){
 	});
 }
 
-/*图片-发布*/
+/*文化-发布*/
 function product_start(obj,id){
 	layer.confirm('确认要发布吗？',function(index){
 		$(obj).parents("tr").find(".td-manage").prepend('<a style="text-decoration:none" onClick="product_stop(this,id)" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6de;</i></a>');
@@ -228,13 +228,13 @@ function product_start(obj,id){
 		layer.msg('已发布!',{icon: 6,time:1000});
 	});
 }
-/*图片-申请上线*/
+/*文化-申请上线*/
 function product_shenqing(obj,id){
 	$(obj).parents("tr").find(".td-status").html('<span class="label label-default radius">待审核</span>');
 	$(obj).parents("tr").find(".td-manage").html("");
 	layer.msg('已提交申请，耐心等待审核!', {icon: 1,time:2000});
 }
-/*图片-编辑*/
+/*文化-编辑*/
 function product_edit(title,url,id){
 	var index = layer.open({
 		type: 2,
@@ -243,7 +243,7 @@ function product_edit(title,url,id){
 	});
 	layer.full(index);
 }
-/*图片-删除*/
+/*文化-删除*/
 function product_del(){
    alert("你想要删除吗？")
 }

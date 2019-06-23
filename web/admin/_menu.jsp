@@ -11,20 +11,20 @@
 			</dd>
 		</dl>
 		<dl id="menu-picture">
-			<dt><i class="Hui-iconfont">&#xe613;</i> 图片管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dt><i class="Hui-iconfont">&#xe613;</i> 文化管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a href="<%=path%>/folk_custom?method=getAllCustom" title="图片管理">图片管理</a></li>
+					<li><a href="<%=path%>/folk_custom?method=getAllCustom" title="文化管理">文化管理</a></li>
 				</ul>
 			</dd>
 		</dl>
 		<dl id="menu-product">
-			<dt><i class="Hui-iconfont">&#xe620;</i> 产品管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dt><i class="Hui-iconfont">&#xe620;</i> 活动管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a href="product-brand.html" title="品牌管理">品牌管理</a></li>
-					<li><a href="product-category.html" title="分类管理">分类管理</a></li>
-					<li><a href="<%=path%>/activity?method=getAdminActivityAll" title="产品管理">产品管理</a></li>
+<%--					<li><a href="product-brand.html" title="品牌管理">品牌管理</a></li>--%>
+<%--					<li><a href="product-category.html" title="分类管理">分类管理</a></li>--%>
+					<li><a href="<%=path%>/activity?method=getAdminActivityAll" title="产品管理">活动管理</a></li>
 				</ul>
 			</dd>
 		</dl>

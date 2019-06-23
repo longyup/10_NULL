@@ -132,7 +132,7 @@
 			<div class="formControls col-xs-8 col-sm-9">
 				<div class="uploader-thum-container">
 					<div id="fileList" class="uploader-list"></div>
-					<div id="filePicker">选择图片</div>
+					<div id="filePicker">选择文化</div>
 					<button id="btn-star" class="btn btn-default btn-uploadstar radius ml-10">开始上传</button>
 				</div>
 			</div>
@@ -196,7 +196,7 @@ $(function(){
 	
 		// 不压缩image, 默认如果是jpeg，文件上传前会压缩一把再上传！
 		resize: false,
-		// 只允许选择图片文件。
+		// 只允许选择文化文件。
 		accept: {
 			title: 'Images',
 			extensions: 'gif,jpg,jpeg,bmp,png',
@@ -215,7 +215,7 @@ $(function(){
 		$list.append( $li );
 	
 		// 创建缩略图
-		// 如果为非图片文件，可以不用调用此方法。
+		// 如果为非文化文件，可以不用调用此方法。
 		// thumbnailWidth x thumbnailHeight 为 100 x 100
 		uploader.makeThumb( file, function( error, src ) {
 			if ( error ) {

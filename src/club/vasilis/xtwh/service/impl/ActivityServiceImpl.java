@@ -72,7 +72,7 @@ public class ActivityServiceImpl implements ActivityService {
     public void test() throws Exception {
 //        System.out.println(new ActivityServiceImpl().findActivityAll());
         System.out.println(new ActivityServiceImpl().getJsonActivityAll());
-        System.out.println(new ActivityServiceImpl().getActivityById("G001"));
+//        System.out.println(new ActivityServiceImpl().getActivityById("G001"));
     }
 
 }

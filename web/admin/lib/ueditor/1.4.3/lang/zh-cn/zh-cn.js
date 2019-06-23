@@ -22,7 +22,7 @@ UE.I18N['zh-cn'] = {
         'justifyjustify':'两端对齐', 'forecolor':'字体颜色', 'backcolor':'背景色', 'insertorderedlist':'有序列表',
         'insertunorderedlist':'无序列表', 'fullscreen':'全屏', 'directionalityltr':'从左向右输入', 'directionalityrtl':'从右向左输入',
         'rowspacingtop':'段前距', 'rowspacingbottom':'段后距',  'pagebreak':'分页', 'insertframe':'插入Iframe', 'imagenone':'默认',
-        'imageleft':'左浮动', 'imageright':'右浮动', 'attachment':'附件', 'imagecenter':'居中', 'wordimage':'图片转存',
+        'imageleft':'左浮动', 'imageright':'右浮动', 'attachment':'附件', 'imagecenter':'居中', 'wordimage':'文化转存',
         'lineheight':'行间距','edittip' :'编辑提示','customstyle':'自定义标题', 'autotypeset':'自动排版',
         'webapp':'百度应用','touppercase':'字母大写', 'tolowercase':'字母小写','background':'背景','template':'模板','scrawl':'涂鸦',
         'music':'音乐','inserttable':'插入表格','drafts': '从草稿箱加载', 'charts': '图表'
@@ -224,7 +224,7 @@ UE.I18N['zh-cn'] = {
         'removeFormat':"清除格式",
         'indent':"首行缩进",
         'alignment':"对齐方式",
-        'imageFloat':"图片浮动",
+        'imageFloat':"文化浮动",
         'removeFontsize':"清除字号",
         'removeFontFamily':"清除字体",
         'removeHtml':"清除冗余HTML代码",
@@ -238,27 +238,27 @@ UE.I18N['zh-cn'] = {
     'background':{
         'static':{
             'lang_background_normal':'背景设置',
-            'lang_background_local':'在线图片',
+            'lang_background_local':'在线文化',
             'lang_background_set':'选项',
             'lang_background_none':'无背景色',
             'lang_background_colored':'有背景色',
             'lang_background_color':'颜色设置',
-            'lang_background_netimg':'网络图片',
+            'lang_background_netimg':'网络文化',
             'lang_background_align':'对齐方式',
             'lang_background_position':'精确定位',
             'repeatType':{'options':["居中", "横向重复", "纵向重复", "平铺","自定义"]}
 
         },
-        'noUploadImage':"当前未上传过任何图片！",
+        'noUploadImage':"当前未上传过任何文化！",
         'toggleSelect':"单击可切换选中状态\n原图尺寸: "
     },
     //===============dialog i18N=======================
     'insertimage':{
         'static':{
-            'lang_tab_remote':"插入图片", //节点
+            'lang_tab_remote':"插入文化", //节点
             'lang_tab_upload':"本地上传",
             'lang_tab_online':"在线管理",
-            'lang_tab_search':"图片搜索",
+            'lang_tab_search':"文化搜索",
             'lang_input_url':"地 址：",
             'lang_input_size':"大 小：",
             'lang_input_width':"宽度",
@@ -266,11 +266,11 @@ UE.I18N['zh-cn'] = {
             'lang_input_border':"边 框：",
             'lang_input_vhspace':"边 距：",
             'lang_input_title':"描 述：",
-            'lang_input_align':'图片浮动方式：',
-            'lang_imgLoading':"　图片加载中……",
+            'lang_input_align':'文化浮动方式：',
+            'lang_imgLoading':"　文化加载中……",
             'lang_start_upload':"开始上传",
             'lock':{'title':"锁定宽高比例"}, //属性
-            'searchType':{'title':"图片类型", 'options':["新闻", "壁纸", "表情", "头像"]}, //select的option
+            'searchType':{'title':"文化类型", 'options':["新闻", "壁纸", "表情", "头像"]}, //select的option
             'searchTxt':{'value':"请输入搜索关键词"},
             'searchBtn':{'value':"百度一下"},
             'searchReset':{'value':"清空搜索"},
@@ -279,7 +279,7 @@ UE.I18N['zh-cn'] = {
             'rightAlign':{'title':'右浮动'},
             'centerAlign':{'title':'居中独占一行'}
         },
-        'uploadSelectFile':'点击选择图片',
+        'uploadSelectFile':'点击选择文化',
         'uploadAddFile':'继续添加',
         'uploadStart':'开始上传',
         'uploadPause':'暂停上传',
@@ -290,7 +290,7 @@ UE.I18N['zh-cn'] = {
         'uploadTurnRight':'向右旋转',
         'uploadPreview':'预览中',
         'uploadNoPreview':'不能预览',
-        'updateStatusReady': '选中_张图片，共_KB。',
+        'updateStatusReady': '选中_张文化，共_KB。',
         'updateStatusConfirm': '已成功上传_张照片，_张照片上传失败',
         'updateStatusFinish': '共_张（_KB），_张上传成功',
         'updateStatusError': '，_张上传失败。',
@@ -304,11 +304,11 @@ UE.I18N['zh-cn'] = {
         'errorServerUpload':'服务器返回出错',
         'remoteLockError':"宽高不正确,不能所定比例",
         'numError':"请输入正确的长度或者宽度值！例如：123，400",
-        'imageUrlError':"不允许的图片格式或者图片域！",
-        'imageLoadError':"图片加载失败！请检查链接地址或网络状态！",
+        'imageUrlError':"不允许的文化格式或者文化域！",
+        'imageLoadError':"文化加载失败！请检查链接地址或网络状态！",
         'searchRemind':"请输入搜索关键词",
-        'searchLoading':"图片加载中，请稍后……",
-        'searchRetry':" :( ，抱歉，没有找到图片！请重试一次！"
+        'searchLoading':"文化加载中，请稍后……",
+        'searchRetry':" :( ，抱歉，没有找到文化！请重试一次！"
     },
     'attachment':{
         'static':{
@@ -454,13 +454,13 @@ UE.I18N['zh-cn'] = {
             'lang_input_addPic':'添加背景',
             'lang_input_ScalePic':'缩放背景',
             'lang_input_removePic':'删除背景',
-            'J_imgTxt':{title:'添加背景图片'}
+            'J_imgTxt':{title:'添加背景文化'}
         },
         'noScarwl':"尚未作画，白纸一张~",
         'scrawlUpLoading':"涂鸦上传中,别急哦~",
         'continueBtn':"继续",
-        'imageError':"糟糕，图片读取失败了！",
-        'backgroundUploading':'背景图片上传中,别急哦~'
+        'imageError':"糟糕，文化读取失败了！",
+        'backgroundUploading':'背景文化上传中,别急哦~'
     },
     'music':{
         'static':{
@@ -654,12 +654,12 @@ UE.I18N['zh-cn'] = {
             lang_resave:"转存步骤",
             uploadBtn:{src:"upload.png",alt:"上传"},
             clipboard:{style:"background: url(copy.png) -153px -1px no-repeat;"},
-            lang_step:"1、点击顶部复制按钮，将地址复制到剪贴板；2、点击添加照片按钮，在弹出的对话框中使用Ctrl+V粘贴地址；3、点击打开后选择图片上传流程。"
+            lang_step:"1、点击顶部复制按钮，将地址复制到剪贴板；2、点击添加照片按钮，在弹出的对话框中使用Ctrl+V粘贴地址；3、点击打开后选择文化上传流程。"
         },
-        'fileType':"图片",
+        'fileType':"文化",
         'flashError':"FLASH初始化失败，请检查FLASH插件是否正确安装！",
         'netError':"网络连接错误，请重试！",
-        'copySuccess':"图片地址已经复制！",
+        'copySuccess':"文化地址已经复制！",
         'flashI18n':{} //留空默认中文
     },
     'autosave': {

@@ -8,7 +8,7 @@ public class FolkCustom {
     private String name;
     private String img;
     private String details;
-    private Date onlinetime;
+    private String onlinetime;
     private String typeid;
 
     public FolkCustom() {
@@ -19,7 +19,7 @@ public class FolkCustom {
         this.name = name;
     }
 
-    public FolkCustom(int id, String name, String img, String details, Date onlinetime, String typeid) {
+    public FolkCustom(int id, String name, String img, String details, String onlinetime, String typeid) {
         this.id = id;
         this.name = name;
         this.img = img;
@@ -72,11 +72,11 @@ public class FolkCustom {
         this.img = img;
     }
 
-    public Date getOnlinetime() {
+    public String getOnlinetime() {
         return onlinetime;
     }
 
-    public void setOnlinetime(Date onlinetime) {
+    public void setOnlinetime(String onlinetime) {
         this.onlinetime = onlinetime;
     }
 

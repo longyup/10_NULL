@@ -461,7 +461,7 @@
                             <div class="lb2-right-hd clearfix">
                                 <div class="lb2-right-hd1 ">
                                     <p class="lb2-right-hd1-p1 clearfix">
-                                        <a href="/Article/Details?id=8192" class="l">周铁社区教育中心举办《三国演义》图片展</a>
+                                        <a href="/Article/Details?id=8192" class="l">周铁社区教育中心举办《三国演义》文化展</a>
                                         <span class="r">2019-04-12</span>
                                     </p>
                                 </div>

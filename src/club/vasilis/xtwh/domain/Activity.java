@@ -6,15 +6,15 @@ public class Activity {
     private int id;
     private String name;
     private String info;
-    private Date launchTime;
-    private Date startTime;
+    private String launchTime;
+    private String startTime;
     private String img;
     private String typeId;
 
     public Activity() {
     }
 
-    public Activity(int id, String name, String info,Date startTime) {
+    public Activity(int id, String name, String info,String startTime) {
         this.id = id;
         this.name = name;
         this.info = info;
@@ -22,7 +22,7 @@ public class Activity {
     }
 
 
-    public Activity(int id, String name, String info, Date launchTime, Date startTime, String img,String typeId) {
+    public Activity(int id, String name, String info, String launchTime, String startTime, String img,String typeId) {
         this.id = id;
         this.name = name;
         this.info = info;
@@ -56,19 +56,19 @@ public class Activity {
         this.info = info;
     }
 
-    public Date getLaunchTime() {
+    public String getLaunchTime() {
         return launchTime;
     }
 
-    public void setLaunchTime(Date launchTime) {
+    public void setLaunchTime(String launchTime) {
         this.launchTime = launchTime;
     }
 
-    public Date getStartTime() {
+    public String getStartTime() {
         return startTime;
     }
 
-    public void setStartTime(Date startTime) {
+    public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
 

@@ -774,12 +774,12 @@
              * @grammar option( key, val ) => self
              * @example
              *
-             * // 初始状态图片上传前不会压缩
+             * // 初始状态文化上传前不会压缩
              * var uploader = new WebUploader.Uploader({
              *     resize: null;
              * });
              *
-             * // 修改后图片上传前，尝试将图片压缩到1600 * 1600
+             * // 修改后文化上传前，尝试将文化压缩到1600 * 1600
              * uploader.options( 'resize', {
              *     width: 1600,
              *     height: 1600
@@ -1457,7 +1457,7 @@
         var $ = Base.$;
     
         /**
-         * @property {Selector} [paste=undefined]  指定监听paste事件的容器，如果不指定，不启用此功能。此功能为通过粘贴来添加截屏的图片。建议设置为`document.body`.
+         * @property {Selector} [paste=undefined]  指定监听paste事件的容器，如果不指定，不启用此功能。此功能为通过粘贴来添加截屏的文化。建议设置为`document.body`.
          * @namespace options
          * @for Uploader
          */
@@ -1857,7 +1857,7 @@
         // 默认选项。
         Image.options = {
     
-            // 默认的图片处理质量
+            // 默认的文化处理质量
             quality: 90,
     
             // 是否裁剪
@@ -1927,7 +1927,7 @@
         return Image;
     });
     /**
-     * @fileOverview 图片操作, 负责预览图片和上传前压缩图片
+     * @fileOverview 文化操作, 负责预览文化和上传前压缩文化
      */
     define('widgets/image',[
         'base',
@@ -1978,7 +1978,7 @@
              *     width: 110,
              *     height: 110,
              *
-             *     // 图片质量，只有type为`image/jpeg`的时候才有效。
+             *     // 文化质量，只有type为`image/jpeg`的时候才有效。
              *     quality: 70,
              *
              *     // 是否允许放大，如果想要生成小图的时候不失真，此选项应该设置为false.
@@ -1990,7 +1990,7 @@
              *     // 是否保留头部meta信息。
              *     preserveHeaders: false,
              *
-             *     // 为空的话则保留原有图片格式。
+             *     // 为空的话则保留原有文化格式。
              *     // 否则强制转换成指定的类型。
              *     type: 'image/jpeg'
              * }
@@ -2004,9 +2004,9 @@
                 crop: true,
                 preserveHeaders: false,
     
-                // 为空的话则保留原有图片格式。
+                // 为空的话则保留原有文化格式。
                 // 否则强制转换成指定的类型。
-                // IE 8下面 base64 大小不能超过 32K 否则预览失败，而非 jpeg 编码的图片很可
+                // IE 8下面 base64 大小不能超过 32K 否则预览失败，而非 jpeg 编码的文化很可
                 // 能会超过 32k, 所以这里设置成预览的时候都是 image/jpeg
                 type: 'image/jpeg'
             },
@@ -2015,7 +2015,7 @@
              * @property {Object} [compress]
              * @namespace options
              * @for Uploader
-             * @description 配置压缩的图片的选项。如果此选项为`false`, 则图片在上传前不进行压缩。
+             * @description 配置压缩的文化的选项。如果此选项为`false`, 则文化在上传前不进行压缩。
              *
              * 默认为：
              *
@@ -2024,7 +2024,7 @@
              *     width: 1600,
              *     height: 1600,
              *
-             *     // 图片质量，只有type为`image/jpeg`的时候才有效。
+             *     // 文化质量，只有type为`image/jpeg`的时候才有效。
              *     quality: 90,
              *
              *     // 是否允许放大，如果想要生成小图的时候不失真，此选项应该设置为false.
@@ -2056,14 +2056,14 @@
     
             /**
              * 生成缩略图，此过程为异步，所以需要传入`callback`。
-             * 通常情况在图片加入队里后调用此方法来生成预览图以增强交互效果。
+             * 通常情况在文化加入队里后调用此方法来生成预览图以增强交互效果。
              *
              * `callback`中可以接收到两个参数。
              * * 第一个为error，如果生成缩略图有错误，此error将为真。
              * * 第二个为ret, 缩略图的Data URL值。
              *
              * **注意**
-             * Date URL在IE6/7中不支持，所以不用调用此方法了，直接显示一张暂不支持预览图片好了。
+             * Date URL在IE6/7中不支持，所以不用调用此方法了，直接显示一张暂不支持预览文化好了。
              *
              *
              * @method makeThumb
@@ -2090,7 +2090,7 @@
     
                 file = this.request( 'get-file', file );
     
-                // 只预览图片格式。
+                // 只预览文化格式。
                 if ( !file.type.match( /^image/ ) ) {
                     cb( true );
                     return;
@@ -2139,7 +2139,7 @@
     
                 file = this.request( 'get-file', file );
     
-                // 只预览图片格式。
+                // 只预览文化格式。
                 if ( !opts || !~'image/jpeg,image/jpg'.indexOf( file.type ) ||
                         file.size < compressSize ||
                         file._compressed ) {
@@ -2186,7 +2186,7 @@
                         file._compressed = true;
                         deferred.resolve();
                     } catch ( e ) {
-                        // 出错了直接继续，让其上传原始图片
+                        // 出错了直接继续，让其上传原始文化
                         deferred.resolve();
                     }
                 });
@@ -3092,7 +3092,7 @@
              * @namespace options
              * @for Uploader
              * @description 是否允许在文件传输时提前把下一个文件准备好。
-             * 对于一个文件的准备工作比较耗时，比如图片压缩，md5序列化。
+             * 对于一个文件的准备工作比较耗时，比如文化压缩，md5序列化。
              * 如果能提前在当前文件传输期处理，可以节省总体耗时。
              */
             prepareNextFile: false,

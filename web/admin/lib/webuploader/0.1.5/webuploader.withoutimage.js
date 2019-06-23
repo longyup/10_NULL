@@ -787,12 +787,12 @@
              * @grammar option( key, val ) => self
              * @example
              *
-             * // 初始状态图片上传前不会压缩
+             * // 初始状态文化上传前不会压缩
              * var uploader = new WebUploader.Uploader({
              *     compress: null;
              * });
              *
-             * // 修改后图片上传前，尝试将图片压缩到1600 * 1600
+             * // 修改后文化上传前，尝试将文化压缩到1600 * 1600
              * uploader.option( 'compress', {
              *     width: 1600,
              *     height: 1600
@@ -1458,7 +1458,7 @@
          */
         
         /**
-         * @property {Selector} [disableGlobalDnd=false]  是否禁掉整个页面的拖拽功能，如果不禁用，图片拖进来的时候会默认被浏览器打开。
+         * @property {Selector} [disableGlobalDnd=false]  是否禁掉整个页面的拖拽功能，如果不禁用，文化拖进来的时候会默认被浏览器打开。
          * @namespace options
          * @for Uploader
          */
@@ -1557,7 +1557,7 @@
         var $ = Base.$;
     
         /**
-         * @property {Selector} [paste=undefined]  指定监听paste事件的容器，如果不指定，不启用此功能。此功能为通过粘贴来添加截屏的图片。建议设置为`document.body`.
+         * @property {Selector} [paste=undefined]  指定监听paste事件的容器，如果不指定，不启用此功能。此功能为通过粘贴来添加截屏的文化。建议设置为`document.body`.
          * @namespace options
          * @for Uploader
          */
@@ -2887,7 +2887,7 @@
              * @namespace options
              * @for Uploader
              * @description 是否允许在文件传输时提前把下一个文件准备好。
-             * 对于一个文件的准备工作比较耗时，比如图片压缩，md5序列化。
+             * 对于一个文件的准备工作比较耗时，比如文化压缩，md5序列化。
              * 如果能提前在当前文件传输期处理，可以节省总体耗时。
              */
             prepareNextFile: false,

@@ -10,7 +10,7 @@ require([ 'webuploader.flashonly' ], function( WebUploader ) {
     $(function() {
         var $wrap = $('#uploader'),
 
-            // 图片容器
+            // 文化容器
             $queue = $( '<ul class="filelist"></ul>' )
                 .appendTo( $wrap.find( '.queueList' ) ),
 
@@ -65,7 +65,7 @@ require([ 'webuploader.flashonly' ], function( WebUploader ) {
         uploader = WebUploader.create({
             pick: {
                 id: '#filePicker',
-                label: '点击选择图片'
+                label: '点击选择文化'
             },
             dnd: '#dndArea',
             paste: '#uploader',
@@ -258,13 +258,13 @@ require([ 'webuploader.flashonly' ], function( WebUploader ) {
             var text = '', stats;
 
             if ( state === 'ready' ) {
-                text = '选中' + fileCount + '张图片，共' +
+                text = '选中' + fileCount + '张文化，共' +
                         WebUploader.formatSize( fileSize ) + '。';
             } else if ( state === 'confirm' ) {
                 stats = uploader.getStats();
                 if ( stats.uploadFailNum ) {
                     text = '已成功上传' + stats.successNum+ '张照片至XX相册，'+
-                        stats.uploadFailNum + '张照片上传失败，<a class="retry" href="#">重新上传</a>失败图片或<a class="ignore" href="#">忽略</a>'
+                        stats.uploadFailNum + '张照片上传失败，<a class="retry" href="#">重新上传</a>失败文化或<a class="ignore" href="#">忽略</a>'
                 }
 
             } else {
@@ -334,7 +334,7 @@ require([ 'webuploader.flashonly' ], function( WebUploader ) {
                     if ( stats.successNum ) {
                         alert( '上传成功' );
                     } else {
-                        // 没有成功的图片，重设
+                        // 没有成功的文化，重设
                         state = 'done';
                         location.reload();
                     }

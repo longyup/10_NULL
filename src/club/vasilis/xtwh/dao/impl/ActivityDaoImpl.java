@@ -73,7 +73,7 @@ public class ActivityDaoImpl implements ActivityDao {
 
     @Test
     public void test() throws Exception {
-//        System.out.println(new ActivityDaoImpl().findActivityAll());
+        System.out.println(new ActivityDaoImpl().findActivityAll());
 //        System.out.println(new ActivityDaoImpl().findActivityByType("T001"));
 //        System.out.println(new ActivityDaoImpl().showDetails("G001"));
     }

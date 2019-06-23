@@ -15,6 +15,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.lang.reflect.InvocationTargetException;
 import java.sql.SQLException;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -75,13 +78,14 @@ public class ActivityServlet extends HttpServlet {
         try {
             BeanUtils.populate(activity,req.getParameterMap());
 //            activity.setId(DsUtils.getUUID());
-            activity.setStartTime(new Date());
+//            SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");//设置日期格式
+            DateFormat df =  SimpleDateFormat.getDateInstance();
+            String date = df.format(new Date());// new Date()为获取当前系统时间，也可使用当前时间戳
+            activity.setStartTime(date);
             new ActivityServiceImpl().sava(activity);
             req.getRequestDispatcher("/activity?method=getAdminActivityAll").forward(req,resp);
         } catch (SQLException e) {
             e.printStackTrace();
-            req.setAttribute("msg","添加商品失败！");
-            req.getRequestDispatcher("/msg.jsp").forward(req,resp);
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (InvocationTargetException e) {
@@ -179,6 +183,7 @@ public class ActivityServlet extends HttpServlet {
             //获取JSON字符串
             ActivityService service = new ActivityServiceImpl();
             String json = service.getJsonActivityAll();
+            System.out.println(json);
             //输出结果
             resp.getWriter().write(json);
         } catch (SQLException e) {

@@ -14,6 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.sql.SQLException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -114,7 +116,9 @@ public class FolkCustomServlet extends HttpServlet {
 
         try {
             BeanUtils.populate(folkCustom,request.getParameterMap());
-            folkCustom.setOnlinetime(new Date());
+            DateFormat df =  SimpleDateFormat.getDateInstance();
+            String date = df.format(new Date());// new Date()为获取当前系统时间，也可使用当前时间戳
+            folkCustom.setOnlinetime(date);
             new FolkCustomServiceImpl().sava(folkCustom);
             request.getRequestDispatcher("/folk_custom?method=getAllCustom").forward(request,response);
         } catch (SQLException e) {

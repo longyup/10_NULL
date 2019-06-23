@@ -112,7 +112,7 @@
         });
     }
 
-    /* 初始化在线图片列表 */
+    /* 初始化在线文化列表 */
     function initImagePanel() {
         onlineImage = onlineImage || new OnlineImage('imageList');
     }
@@ -180,7 +180,7 @@
     }
 
 
-    /* 在线图片 */
+    /* 在线文化 */
     function OnlineImage(target) {
         this.container = utils.isString(target) ? document.getElementById(target) : target;
         this.init();
@@ -207,14 +207,14 @@
         initEvents: function () {
             var _this = this;
 
-            /* 滚动拉取图片 */
+            /* 滚动拉取文化 */
             domUtils.on($G('imageList'), 'scroll', function(e){
                 var panel = this;
                 if (panel.scrollHeight - (panel.offsetHeight + panel.scrollTop) < 10) {
                     _this.getImageData();
                 }
             });
-            /* 选中图片 */
+            /* 选中文化 */
             domUtils.on(this.container, 'click', function (e) {
                 var target = e.target || e.srcElement,
                     li = target.parentNode,
@@ -251,7 +251,7 @@
             this.initContainer();
             this.initData();
         },
-        /* 向后台拉取图片列表数据 */
+        /* 向后台拉取文化列表数据 */
         getImageData: function () {
             var _this = this;
 
@@ -294,7 +294,7 @@
                 });
             }
         },
-        /* 添加图片到列表界面上 */
+        /* 添加文化到列表界面上 */
         pushData: function (list) {
             var i, item, img, icon, _this = this,
                 urlPrefix = editor.getOpt('imageManagerUrlPrefix');
@@ -320,7 +320,7 @@
                 }
             }
         },
-        /* 改变图片大小 */
+        /* 改变文化大小 */
         scale: function (img, w, h, type) {
             var ow = img.width,
                 oh = img.height;

@@ -35,7 +35,7 @@ public final class AppInfo {
 		put( AppInfo.INVALID_ACTION, "\u65E0\u6548\u7684Action" );
 		// 配置文件初始化失败
 		put( AppInfo.CONFIG_ERROR, "\u914D\u7F6E\u6587\u4EF6\u521D\u59CB\u5316\u5931\u8D25" );
-		// 抓取远程图片失败
+		// 抓取远程文化失败
 		put( AppInfo.REMOTE_FAIL, "\u6293\u53D6\u8FDC\u7A0B\u56FE\u7247\u5931\u8D25" );
 		
 		// 被阻止的远程主机

@@ -249,7 +249,7 @@
     return layui.link(config.dir + 'css/' + firename, fn, cssname);
   };
 
-  //图片预加载
+  //文化预加载
   Layui.prototype.img = function(url, callback, error) {   
     var img = new Image();
     img.src = url; 
