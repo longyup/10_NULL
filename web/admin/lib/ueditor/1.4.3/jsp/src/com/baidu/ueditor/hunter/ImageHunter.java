@@ -15,7 +15,7 @@ import com.baidu.ueditor.define.State;
 import com.baidu.ueditor.upload.StorageManager;
 
 /**
- * 图片抓取器
+ * 文化抓取器
  * @author hancong03@baidu.com
  *
  */

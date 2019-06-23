@@ -4717,7 +4717,7 @@ function displaynavbar(obj){
 } (window.jQuery);
 
 /* =======================================================================
- * jQuery.Huipreview.js v2.0 图片预览
+ * jQuery.Huipreview.js v2.0 文化预览
  * http://www.h-ui.net/
  * Created & Modified by guojunhui
  * Date modified 2017.05.05
@@ -4768,7 +4768,7 @@ function displaynavbar(obj){
 								'<img src="'+smallImg+'" width="'+options.bigImgWidth+'">'+
 							'</div>';
 							$("body").append(tooltip_keleyi_com);
-							/*图片预加载*/
+							/*文化预加载*/
 							var image = new Image();
 							image.src = bigImg;
 							/*创建一个Image对象*/

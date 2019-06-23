@@ -2,7 +2,7 @@
  * User: Jinqn
  * Date: 14-04-08
  * Time: 下午16:34
- * 上传图片对话框逻辑代码,包括tab: 远程图片/上传图片/在线图片/搜索图片
+ * 上传文化对话框逻辑代码,包括tab: 远程文化/上传文化/在线文化/搜索文化
  */
 
 (function () {
@@ -142,7 +142,7 @@
     }
 
 
-    /* 在线图片 */
+    /* 在线文化 */
     function RemoteImage(target) {
         this.container = utils.isString(target) ? document.getElementById(target) : target;
         this.init();
@@ -217,7 +217,7 @@
             }
         },
         setImage: function(img){
-            /* 不是正常的图片 */
+            /* 不是正常的文化 */
             if (!img.tagName || img.tagName.toLowerCase() != 'img' && !img.getAttribute("src") || !img.src) return;
 
             var wordImgFlag = img.getAttribute("word_img"),
@@ -286,7 +286,7 @@
 
 
 
-    /* 上传图片 */
+    /* 上传文化 */
     function UploadImage(target) {
         this.$wrap = target.constructor == String ? $('#' + target) : $(target);
         this.init();
@@ -305,7 +305,7 @@
             var _this = this,
                 $ = jQuery,    // just in case. Make sure it's not an other libaray.
                 $wrap = _this.$wrap,
-            // 图片容器
+            // 文化容器
                 $queue = $wrap.find('.filelist'),
             // 状态栏，包括进度和控制按钮
                 $statusBar = $wrap.find('.statusBar'),
@@ -377,7 +377,7 @@
                 compress: editor.getOpt('imageCompressEnable') ? {
                     width: imageCompressBorder,
                     height: imageCompressBorder,
-                    // 图片质量，只有type为`image/jpeg`的时候才有效。
+                    // 文化质量，只有type为`image/jpeg`的时候才有效。
                     quality: 90,
                     // 是否允许放大，如果想要生成小图的时候不失真，此选项应该设置为false.
                     allowMagnify: false,
@@ -785,7 +785,7 @@
     };
 
 
-    /* 在线图片 */
+    /* 在线文化 */
     function OnlineImage(target) {
         this.container = utils.isString(target) ? document.getElementById(target) : target;
         this.init();
@@ -811,14 +811,14 @@
         initEvents: function () {
             var _this = this;
 
-            /* 滚动拉取图片 */
+            /* 滚动拉取文化 */
             domUtils.on($G('imageList'), 'scroll', function(e){
                 var panel = this;
                 if (panel.scrollHeight - (panel.offsetHeight + panel.scrollTop) < 10) {
                     _this.getImageData();
                 }
             });
-            /* 选中图片 */
+            /* 选中文化 */
             domUtils.on(this.container, 'click', function (e) {
                 var target = e.target || e.srcElement,
                     li = target.parentNode;
@@ -849,7 +849,7 @@
             this.initContainer();
             this.initData();
         },
-        /* 向后台拉取图片列表数据 */
+        /* 向后台拉取文化列表数据 */
         getImageData: function () {
             var _this = this;
 
@@ -892,7 +892,7 @@
                 });
             }
         },
-        /* 添加图片到列表界面上 */
+        /* 添加文化到列表界面上 */
         pushData: function (list) {
             var i, item, img, icon, _this = this,
                 urlPrefix = editor.getOpt('imageManagerUrlPrefix');
@@ -918,7 +918,7 @@
                 }
             }
         },
-        /* 改变图片大小 */
+        /* 改变文化大小 */
         scale: function (img, w, h, type) {
             var ow = img.width,
                 oh = img.height;
@@ -964,7 +964,7 @@
         }
     };
 
-    /*搜索图片 */
+    /*搜索文化 */
     function SearchImage() {
         this.init();
     }
@@ -1003,7 +1003,7 @@
                 }
             });
 
-            /* 选中图片 */
+            /* 选中文化 */
             domUtils.on($G('searchList'), 'click', function(e){
                 var target = e.target || e.srcElement,
                     li = target.parentNode.parentNode;
@@ -1035,7 +1035,7 @@
             }
             return strOut;
         },
-        /* 改变图片大小 */
+        /* 改变文化大小 */
         scale: function (img, w, h) {
             var ow = img.width,
                 oh = img.height;
@@ -1081,7 +1081,7 @@
                 }
             });
         },
-        /* 添加图片到列表界面上 */
+        /* 添加文化到列表界面上 */
         setList: function (list) {
             var i, item, p, img, link, _this = this,
                 listUl = $G('searchListUl');

@@ -60,7 +60,7 @@
 					<tr class="text-c">
 						<th>统计</th>
 						<th>资讯库</th>
-						<th>图片库</th>
+						<th>文化库</th>
 						<th>产品库</th>
 						<th>用户</th>
 						<th>管理员</th>

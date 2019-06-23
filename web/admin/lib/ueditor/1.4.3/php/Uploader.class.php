@@ -124,7 +124,7 @@ class Uploader
     }
 
     /**
-     * 处理base64编码的图片上传
+     * 处理base64编码的文化上传
      * @return mixed
      */
     private function upBase64()
@@ -165,7 +165,7 @@ class Uploader
     }
 
     /**
-     * 拉取远程图片
+     * 拉取远程文化
      * @return mixed
      */
     private function saveRemote()
@@ -191,7 +191,7 @@ class Uploader
             return;
         }
 
-        //打开输出缓冲区并获取远程图片
+        //打开输出缓冲区并获取远程文化
         ob_start();
         $context = stream_context_create(
             array('http' => array(

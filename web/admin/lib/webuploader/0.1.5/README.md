@@ -13,7 +13,7 @@
 ├── webuploader.html5only.js          # 只有Html5实现的版本。
 ├── webuploader.html5only.min.js      # min版本
 ├
-├── webuploader.noimage.js            # 去除图片处理的版本，包括HTML5和FLASH.
+├── webuploader.noimage.js            # 去除文化处理的版本，包括HTML5和FLASH.
 ├── webuploader.noimage.min.js        # min版本
 ├
 ├── webuploader.custom.js             # 自定义打包方案，请查看 Gruntfile.js，满足移动端使用。

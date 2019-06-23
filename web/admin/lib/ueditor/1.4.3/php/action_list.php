@@ -15,7 +15,7 @@ switch ($_GET['action']) {
         $listSize = $CONFIG['fileManagerListSize'];
         $path = $CONFIG['fileManagerListPath'];
         break;
-    /* 列出图片 */
+    /* 列出文化 */
     case 'listimage':
     default:
         $allowFiles = $CONFIG['imageManagerAllowFiles'];

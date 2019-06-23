@@ -13,7 +13,7 @@ switch ($action) {
         $result =  json_encode($CONFIG);
         break;
 
-    /* 上传图片 */
+    /* 上传文化 */
     case 'uploadimage':
     /* 上传涂鸦 */
     case 'uploadscrawl':
@@ -24,7 +24,7 @@ switch ($action) {
         $result = include("action_upload.php");
         break;
 
-    /* 列出图片 */
+    /* 列出文化 */
     case 'listimage':
         $result = include("action_list.php");
         break;

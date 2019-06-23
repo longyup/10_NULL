@@ -762,12 +762,12 @@ return (function( root, factory ) {
              * @grammar option( key, val ) => self
              * @example
              *
-             * // 初始状态图片上传前不会压缩
+             * // 初始状态文化上传前不会压缩
              * var uploader = new WebUploader.Uploader({
              *     compress: null;
              * });
              *
-             * // 修改后图片上传前，尝试将图片压缩到1600 * 1600
+             * // 修改后文化上传前，尝试将文化压缩到1600 * 1600
              * uploader.option( 'compress', {
              *     width: 1600,
              *     height: 1600
@@ -1433,7 +1433,7 @@ return (function( root, factory ) {
          */
         
         /**
-         * @property {Selector} [disableGlobalDnd=false]  是否禁掉整个页面的拖拽功能，如果不禁用，图片拖进来的时候会默认被浏览器打开。
+         * @property {Selector} [disableGlobalDnd=false]  是否禁掉整个页面的拖拽功能，如果不禁用，文化拖进来的时候会默认被浏览器打开。
          * @namespace options
          * @for Uploader
          */
@@ -1532,7 +1532,7 @@ return (function( root, factory ) {
         var $ = Base.$;
     
         /**
-         * @property {Selector} [paste=undefined]  指定监听paste事件的容器，如果不指定，不启用此功能。此功能为通过粘贴来添加截屏的图片。建议设置为`document.body`.
+         * @property {Selector} [paste=undefined]  指定监听paste事件的容器，如果不指定，不启用此功能。此功能为通过粘贴来添加截屏的文化。建议设置为`document.body`.
          * @namespace options
          * @for Uploader
          */
@@ -1949,7 +1949,7 @@ return (function( root, factory ) {
         // 默认选项。
         Image.options = {
     
-            // 默认的图片处理质量
+            // 默认的文化处理质量
             quality: 90,
     
             // 是否裁剪
@@ -2024,7 +2024,7 @@ return (function( root, factory ) {
         return Image;
     });
     /**
-     * @fileOverview 图片操作, 负责预览图片和上传前压缩图片
+     * @fileOverview 文化操作, 负责预览文化和上传前压缩文化
      */
     define('widgets/image',[
         'base',
@@ -2075,7 +2075,7 @@ return (function( root, factory ) {
              *     width: 110,
              *     height: 110,
              *
-             *     // 图片质量，只有type为`image/jpeg`的时候才有效。
+             *     // 文化质量，只有type为`image/jpeg`的时候才有效。
              *     quality: 70,
              *
              *     // 是否允许放大，如果想要生成小图的时候不失真，此选项应该设置为false.
@@ -2084,7 +2084,7 @@ return (function( root, factory ) {
              *     // 是否允许裁剪。
              *     crop: true,
              *
-             *     // 为空的话则保留原有图片格式。
+             *     // 为空的话则保留原有文化格式。
              *     // 否则强制转换成指定的类型。
              *     type: 'image/jpeg'
              * }
@@ -2098,9 +2098,9 @@ return (function( root, factory ) {
                 crop: true,
                 preserveHeaders: false,
     
-                // 为空的话则保留原有图片格式。
+                // 为空的话则保留原有文化格式。
                 // 否则强制转换成指定的类型。
-                // IE 8下面 base64 大小不能超过 32K 否则预览失败，而非 jpeg 编码的图片很可
+                // IE 8下面 base64 大小不能超过 32K 否则预览失败，而非 jpeg 编码的文化很可
                 // 能会超过 32k, 所以这里设置成预览的时候都是 image/jpeg
                 type: 'image/jpeg'
             },
@@ -2109,7 +2109,7 @@ return (function( root, factory ) {
              * @property {Object} [compress]
              * @namespace options
              * @for Uploader
-             * @description 配置压缩的图片的选项。如果此选项为`false`, 则图片在上传前不进行压缩。
+             * @description 配置压缩的文化的选项。如果此选项为`false`, 则文化在上传前不进行压缩。
              *
              * 默认为：
              *
@@ -2118,7 +2118,7 @@ return (function( root, factory ) {
              *     width: 1600,
              *     height: 1600,
              *
-             *     // 图片质量，只有type为`image/jpeg`的时候才有效。
+             *     // 文化质量，只有type为`image/jpeg`的时候才有效。
              *     quality: 90,
              *
              *     // 是否允许放大，如果想要生成小图的时候不失真，此选项应该设置为false.
@@ -2130,11 +2130,11 @@ return (function( root, factory ) {
              *     // 是否保留头部meta信息。
              *     preserveHeaders: true,
              *
-             *     // 如果发现压缩后文件大小比原来还大，则使用原来图片
-             *     // 此属性可能会影响图片自动纠正功能
+             *     // 如果发现压缩后文件大小比原来还大，则使用原来文化
+             *     // 此属性可能会影响文化自动纠正功能
              *     noCompressIfLarger: false,
              *
-             *     // 单位字节，如果图片大小小于此值，不会采用压缩。
+             *     // 单位字节，如果文化大小小于此值，不会采用压缩。
              *     compressSize: 0
              * }
              * ```
@@ -2156,7 +2156,7 @@ return (function( root, factory ) {
     
             /**
              * 生成缩略图，此过程为异步，所以需要传入`callback`。
-             * 通常情况在图片加入队里后调用此方法来生成预览图以增强交互效果。
+             * 通常情况在文化加入队里后调用此方法来生成预览图以增强交互效果。
              *
              * 当 width 或者 height 的值介于 0 - 1 时，被当成百分比使用。
              *
@@ -2165,7 +2165,7 @@ return (function( root, factory ) {
              * * 第二个为ret, 缩略图的Data URL值。
              *
              * **注意**
-             * Date URL在IE6/7中不支持，所以不用调用此方法了，直接显示一张暂不支持预览图片好了。
+             * Date URL在IE6/7中不支持，所以不用调用此方法了，直接显示一张暂不支持预览文化好了。
              * 也可以借助服务端，将 base64 数据传给服务端，生成一个临时文件供预览。
              *
              * @method makeThumb
@@ -2192,7 +2192,7 @@ return (function( root, factory ) {
     
                 file = this.request( 'get-file', file );
     
-                // 只预览图片格式。
+                // 只预览文化格式。
                 if ( !file.type.match( /^image/ ) ) {
                     cb( true );
                     return;
@@ -2255,7 +2255,7 @@ return (function( root, factory ) {
     
                 file = this.request( 'get-file', file );
     
-                // 只压缩 jpeg 图片格式。
+                // 只压缩 jpeg 文化格式。
                 // gif 可能会丢失针
                 // bmp png 基本上尺寸都不大，且压缩比比较小。
                 if ( !opts || !~'image/jpeg,image/jpg'.indexOf( file.type ) ||
@@ -2319,7 +2319,7 @@ return (function( root, factory ) {
                         file._compressed = true;
                         deferred.resolve();
                     } catch ( e ) {
-                        // 出错了直接继续，让其上传原始图片
+                        // 出错了直接继续，让其上传原始文化
                         deferred.resolve();
                     }
                 });
@@ -3278,7 +3278,7 @@ return (function( root, factory ) {
              * @namespace options
              * @for Uploader
              * @description 是否允许在文件传输时提前把下一个文件准备好。
-             * 对于一个文件的准备工作比较耗时，比如图片压缩，md5序列化。
+             * 对于一个文件的准备工作比较耗时，比如文化压缩，md5序列化。
              * 如果能提前在当前文件传输期处理，可以节省总体耗时。
              */
             prepareNextFile: false,
@@ -4369,7 +4369,7 @@ return (function( root, factory ) {
         return Md5;
     });
     /**
-     * @fileOverview 图片操作, 负责预览图片和上传前压缩图片
+     * @fileOverview 文化操作, 负责预览文化和上传前压缩文化
      */
     define('widgets/md5',[
         'base',
@@ -7733,7 +7733,7 @@ return (function( root, factory ) {
         });
     });
     /**
-     * @fileOverview 图片压缩
+     * @fileOverview 文化压缩
      */
     define('runtime/flash/image',[
         'runtime/flash/runtime'

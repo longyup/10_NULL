@@ -7459,7 +7459,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
             domUtils.on(doc, ['click', 'contextmenu', 'mousedown', 'keydown', 'keyup', 'keypress', 'mouseup', 'mouseover', 'mouseout', 'selectstart'], me._proxyDomEvent);
             domUtils.on(win, ['focus', 'blur'], me._proxyDomEvent);
             domUtils.on(me.body,'drop',function(e){
-                //阻止ff下默认的弹出新页面打开图片
+                //阻止ff下默认的弹出新页面打开文化
                 if(browser.gecko && e.stopPropagation) { e.stopPropagation(); }
                 me.fireEvent('contentchange')
             });
@@ -7753,7 +7753,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
          * @remind 即使设置了disable，此处配置的例外命令仍然可以执行
          * @example
          * ```javascript
-         * editor.setDisabled(['bold','insertimage']); //禁用工具栏中除加粗和插入图片之外的所有功能
+         * editor.setDisabled(['bold','insertimage']); //禁用工具栏中除加粗和插入文化之外的所有功能
          * ```
          */
         setDisabled: function (except) {
@@ -8426,7 +8426,7 @@ var filterWord = UE.filterWord = function () {
     function filterPasteWord( str ) {
         return str.replace(/[\t\r\n]+/g,' ')
                 .replace( /<!--[\s\S]*?-->/ig, "" )
-                //转换图片
+                //转换文化
                 .replace(/<v:shape [^>]*>[\s\S]*?.<\/v:shape>/gi,function(str){
                     //opera能自己解析出image所这里直接返回空
                     if(browser.opera){
@@ -9991,7 +9991,7 @@ UE.plugins['defaultfilter'] = function () {
                         }
                         break;
                     case 'img':
-                        //todo base64暂时去掉，后边做远程图片上传后，干掉这个
+                        //todo base64暂时去掉，后边做远程文化上传后，干掉这个
                         if (val = node.getAttr('src')) {
                             if (/^data:/.test(val)) {
                                 node.parentNode.removeChild(node);
@@ -10454,7 +10454,7 @@ UE.plugins['autotypeset'] = function(){
         removeClass: true,              //去掉冗余的class
         removeEmptyline: false,         //去掉空行
         textAlign:"left",               //段落的排版方式，可以是 left,right,center,justify 去掉这个属性表示不执行排版
-        imageBlockLine: 'center',       //图片的浮动方式，独占一行剧中,左右浮动，默认: center,left,right,none 去掉这个属性表示不执行排版
+        imageBlockLine: 'center',       //文化的浮动方式，独占一行剧中,左右浮动，默认: center,left,right,none 去掉这个属性表示不执行排版
         pasteFilter: false,             //根据规则过滤没事粘贴进来的内容
         clearFontSize: false,           //去掉所有的内嵌字号，使用编辑器默认的字号
         clearFontFamily: false,         //去掉所有的内嵌字体，使用编辑器默认的字体
@@ -10905,19 +10905,19 @@ UE.plugin.register('background', function () {
 
 // plugins/image.js
 /**
- * 图片插入、排版插件
+ * 文化插入、排版插件
  * @file
  * @since 1.2.6.1
  */
 
 /**
- * 图片对齐方式
+ * 文化对齐方式
  * @command imagefloat
  * @method execCommand
  * @remind 值center为独占一行居中
  * @param { String } cmd 命令字符串
  * @param { String } align 对齐方式，可传left、right、none、center
- * @remaind center表示图片独占一行
+ * @remaind center表示文化独占一行
  * @example
  * ```javascript
  * editor.execCommand( 'imagefloat', 'center' );
@@ -10925,11 +10925,11 @@ UE.plugin.register('background', function () {
  */
 
 /**
- * 如果选区所在位置是图片区域
+ * 如果选区所在位置是文化区域
  * @command imagefloat
  * @method queryCommandValue
  * @param { String } cmd 命令字符串
- * @return { String } 返回图片对齐方式
+ * @return { String } 返回文化对齐方式
  * @example
  * ```javascript
  * editor.queryCommandValue( 'imagefloat' );
@@ -11057,13 +11057,13 @@ UE.commands['imagefloat'] = {
 
 
 /**
- * 插入图片
+ * 插入文化
  * @command insertimage
  * @method execCommand
  * @param { String } cmd 命令字符串
- * @param { Object } opt 属性键值对，这些属性都将被复制到当前插入图片
- * @remind 该命令第二个参数可接受一个图片配置项对象的数组，可以插入多张图片，
- * 此时数组的每一个元素都是一个Object类型的图片属性集合。
+ * @param { Object } opt 属性键值对，这些属性都将被复制到当前插入文化
+ * @remind 该命令第二个参数可接受一个文化配置项对象的数组，可以插入多张文化，
+ * 此时数组的每一个元素都是一个Object类型的文化属性集合。
  * @example
  * ```javascript
  * editor.execCommand( 'insertimage', {
@@ -11917,7 +11917,7 @@ UE.plugins['link'] = function(){
             opt.href && (opt.href = utils.unhtml(opt.href,/[<">]/g));
             opt.textValue && (opt.textValue = utils.unhtml(opt.textValue,/[<">]/g));
             doLink(range=this.selection.getRange(),opt,this);
-            //闭合都不加占位符，如果加了会在a后边多个占位符节点，导致a是图片背景组成的列表，出现空白问题
+            //闭合都不加占位符，如果加了会在a后边多个占位符节点，导致a是文化背景组成的列表，出现空白问题
             range.collapse().select(true);
 
         },
@@ -13985,9 +13985,9 @@ UE.plugins['pagebreak'] = function () {
 
 // plugins/wordimage.js
 ///import core
-///commands 本地图片引导上传
+///commands 本地文化引导上传
 ///commandsName  WordImage
-///commandsTitle  本地图片引导上传
+///commandsTitle  本地文化引导上传
 ///commandsDialog  dialogs\wordimage
 
 UE.plugin.register('wordimage',function(){
@@ -15808,7 +15808,7 @@ UE.plugins['list'] = function () {
      * ```
      */
     /**
-     * 查询当前是否有word文档粘贴进来的图片
+     * 查询当前是否有word文档粘贴进来的文化
      * @command insertunorderedlist
      * @method insertunorderedlist
      * @param { String } command 命令字符串
@@ -16825,10 +16825,10 @@ UE.plugins['keystrokes'] = function() {
 
 // plugins/fiximgclick.js
 ///import core
-///commands 修复chrome下图片不能点击的问题，出现八个角可改变大小
+///commands 修复chrome下文化不能点击的问题，出现八个角可改变大小
 ///commandsName  FixImgClick
-///commandsTitle  修复chrome下图片不能点击的问题，出现八个角可改变大小
-//修复chrome下图片不能点击的问题，出现八个角可改变大小
+///commandsTitle  修复chrome下文化不能点击的问题，出现八个角可改变大小
+//修复chrome下文化不能点击的问题，出现八个角可改变大小
 
 UE.plugins['fiximgclick'] = (function () {
 
@@ -17444,7 +17444,7 @@ UE.plugins['autoheight'] = function () {
 ///commandsTitle  悬浮工具栏
 /**
  *  modified by chengchao01
- *  注意： 引入此功能后，在IE6下会将body的背景图片覆盖掉！
+ *  注意： 引入此功能后，在IE6下会将body的背景文化覆盖掉！
  */
 UE.plugins['autofloat'] = function() {
     var me = this,
@@ -23119,11 +23119,11 @@ UE.plugins['customstyle'] = function() {
 
 // plugins/catchremoteimage.js
 ///import core
-///commands 远程图片抓取
+///commands 远程文化抓取
 ///commandsName  catchRemoteImage,catchremoteimageenable
-///commandsTitle  远程图片抓取
+///commandsTitle  远程文化抓取
 /**
- * 远程图片抓取,当开启本插件时所有不符合本地域名的图片都将被抓取成为本地服务器上的图片
+ * 远程文化抓取,当开启本插件时所有不符合本地域名的文化都将被抓取成为本地服务器上的文化
  */
 UE.plugins['catchremoteimage'] = function () {
     var me = this,
@@ -23400,7 +23400,7 @@ UE.commands['insertparagraph'] = {
  *     title: '植物大战僵尸',
  *     width: 560,
  *     height: 465,
- *     logo: '应用展示的图片',
+ *     logo: '应用展示的文化',
  *     url: '百度应用的地址'
  * } );
  * ```
@@ -23520,7 +23520,7 @@ UE.plugin.register('webapp', function (){
              *     title: '植物大战僵尸',
              *     width: 560,
              *     height: 465,
-             *     logo: '应用展示的图片',
+             *     logo: '应用展示的文化',
              *     url: '百度应用的地址'
              * } );
              * ```
@@ -23672,7 +23672,7 @@ UE.plugin.register('music', function (){
 /**
  * @description
  * 1.拖放文件到编辑区域，自动上传并插入到选区
- * 2.插入粘贴板的图片，自动上传并插入到选区
+ * 2.插入粘贴板的文化，自动上传并插入到选区
  * @author Jinqn
  * @date 2013-10-14
  */
@@ -23802,7 +23802,7 @@ UE.plugin.register('autoupload', function (){
             });
         },
         bindEvents:{
-            //插入粘贴板的图片，拖放插入图片
+            //插入粘贴板的文化，拖放插入文化
             'ready':function(e){
                 var me = this;
                 if(window.FormData && window.FileReader) {
@@ -23826,7 +23826,7 @@ UE.plugin.register('autoupload', function (){
                         }
 
                     });
-                    //取消拖放图片时出现的文字光标位置提示
+                    //取消拖放文化时出现的文字光标位置提示
                     domUtils.on(me.body, 'dragover', function (e) {
                         if(e.dataTransfer.types[0] == 'Files') {
                             e.preventDefault();
@@ -26148,7 +26148,7 @@ UE.ui = baidu.editor.ui = {};
                         editorId = me.editor.uid;
                     if (target && target.tagName == 'INPUT') {
 
-                        // 点击图片浮动的checkbox,去除对应的radio
+                        // 点击文化浮动的checkbox,去除对应的radio
                         if (target.name == 'imageBlockLine' || target.name == 'textAlign' || target.name == 'symbolConver') {
                             var checked = target.checked,
                                 radioTd = document.getElementById( target.name + 'Value' + editorId),
@@ -27745,7 +27745,7 @@ UE.ui = baidu.editor.ui = {};
         return ui;
     };
 
-    //排版，图片排版，文字方向
+    //排版，文化排版，文字方向
     var typeset = {
         'justify':['left', 'right', 'center', 'justify'],
         'imagefloat':['none', 'left', 'center', 'right'],

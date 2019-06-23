@@ -75,7 +75,7 @@ layui.define(function(exports){
       ? Math.ceil( (config.curr + (groups > 1 ? 1 : 0)) / (groups > 0 ? groups : 1) )
     : 1
     
-    //试图片段
+    //试文化段
     ,views = {
       //上一页
       prev: function(){

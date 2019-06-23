@@ -24,7 +24,7 @@
 <script>DD_belatedPNG.fix('*');</script><![endif]-->
 <!--/meta 作为公共模版分离出去-->
 
-<title>新增图片</title>
+<title>新增文化</title>
 <link href="lib/webuploader/0.1.5/webuploader.css" rel="stylesheet" type="text/css" />
 </head>
 <%
@@ -34,13 +34,13 @@
 <div class="page-container">
 	<form method="post" action="<%=path%>/folk_custom?method=addCustom" class="form form-horizontal" id="form-article-add">
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>图片标题：</label>
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>文化标题：</label>
 			<div class="formControls col-xs-8 col-sm-9">
 				<input type="text" class="input-text" value="" placeholder="" id="" name="name">
 			</div>
 		</div>
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">简略标题：</label>
+			<label class="form-label col-xs-4 col-sm-2">详情描述：</label>
 			<div class="formControls col-xs-8 col-sm-9">
 				<input type="text" class="input-text" value="" placeholder="" id="" name="details">
 			</div>
@@ -59,12 +59,12 @@
 <%--				</span>--%>
 <%--			</div>--%>
 <%--		</div>--%>
-		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">详细信息：</label>
-			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="0" placeholder="" id="" name="typeid">
-			</div>
-		</div>
+<%--		<div class="row cl">--%>
+<%--			<label class="form-label col-xs-4 col-sm-2">详细信息：</label>--%>
+<%--			<div class="formControls col-xs-8 col-sm-9">--%>
+<%--				<input type="text" class="input-text" value="0" placeholder="" id="" name="typeid">--%>
+<%--			</div>--%>
+<%--		</div>--%>
 <%--		<div class="row cl">--%>
 <%--			<label class="form-label col-xs-4 col-sm-2">允许评论：</label>--%>
 <%--			<div class="formControls col-xs-8 col-sm-9 skin-minimal">--%>
@@ -87,13 +87,13 @@
 <%--			</div>--%>
 <%--		</div>--%>
 <%--		<div class="row cl">--%>
-<%--			<label class="form-label col-xs-4 col-sm-2">图片作者：</label>--%>
+<%--			<label class="form-label col-xs-4 col-sm-2">文化作者：</label>--%>
 <%--			<div class="formControls col-xs-8 col-sm-9">--%>
 <%--				<input type="text" class="input-text" value="0" placeholder="" id="" name="">--%>
 <%--			</div>--%>
 <%--		</div>--%>
 <%--		<div class="row cl">--%>
-<%--			<label class="form-label col-xs-4 col-sm-2">图片来源：</label>--%>
+<%--			<label class="form-label col-xs-4 col-sm-2">文化来源：</label>--%>
 <%--			<div class="formControls col-xs-8 col-sm-9">--%>
 <%--				<input type="text" class="input-text" value="0" placeholder="" id="" name="">--%>
 <%--			</div>--%>
@@ -105,7 +105,7 @@
 <%--			</div>--%>
 <%--		</div>--%>
 <%--		<div class="row cl">--%>
-<%--			<label class="form-label col-xs-4 col-sm-2">图片摘要：</label>--%>
+<%--			<label class="form-label col-xs-4 col-sm-2">文化摘要：</label>--%>
 <%--			<div class="formControls col-xs-8 col-sm-9">--%>
 <%--				<textarea name="" cols="" rows="" class="textarea"  placeholder="说点什么...最少输入10个字符" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="textarealength(this,200)"></textarea>--%>
 <%--				<p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>--%>
@@ -116,13 +116,13 @@
 <%--			<div class="formControls col-xs-8 col-sm-9">--%>
 <%--				<div class="uploader-thum-container">--%>
 <%--					<div id="fileList" class="uploader-list"></div>--%>
-<%--					<div id="filePicker">选择图片</div>--%>
+<%--					<div id="filePicker">选择文化</div>--%>
 <%--					<button id="btn-star" class="btn btn-default btn-uploadstar radius ml-10">开始上传</button>--%>
 <%--				</div>--%>
 <%--			</div>--%>
 <%--		</div>--%>
 <%--		<div class="row cl">--%>
-<%--			<label class="form-label col-xs-4 col-sm-2">图片上传：</label>--%>
+<%--			<label class="form-label col-xs-4 col-sm-2">文化上传：</label>--%>
 <%--			<div class="formControls col-xs-8 col-sm-9">--%>
 <%--				<div class="uploader-list-container"> --%>
 <%--					<div class="queueList">--%>
@@ -193,7 +193,7 @@ $(function(){
 	
 		// 不压缩image, 默认如果是jpeg，文件上传前会压缩一把再上传！
 		resize: false,
-		// 只允许选择图片文件。
+		// 只允许选择文化文件。
 		accept: {
 			title: 'Images',
 			extensions: 'gif,jpg,jpeg,bmp,png',
@@ -212,7 +212,7 @@ $(function(){
 		$list.append( $li );
 	
 		// 创建缩略图
-		// 如果为非图片文件，可以不用调用此方法。
+		// 如果为非文化文件，可以不用调用此方法。
 		// thumbnailWidth x thumbnailHeight 为 100 x 100
 		uploader.makeThumb( file, function( error, src ) {
 			if ( error ) {
@@ -281,7 +281,7 @@ $(function(){
     $(function() {
         var $wrap = $('.uploader-list-container'),
 
-            // 图片容器
+            // 文化容器
             $queue = $( '<ul class="filelist"></ul>' )
                 .appendTo( $wrap.find( '.queueList' ) ),
 
@@ -317,7 +317,7 @@ $(function(){
 
             // 所有文件的进度信息，key为file id
             percentages = {},
-            // 判断浏览器是否支持图片的base64
+            // 判断浏览器是否支持文化的base64
             isSupportBase64 = ( function() {
                 var data = new Image();
                 var support = true;
@@ -419,7 +419,7 @@ $(function(){
         uploader = WebUploader.create({
             pick: {
                 id: '#filePicker-2',
-                label: '点击选择图片'
+                label: '点击选择文化'
             },
             formData: {
                 uid: 123
@@ -438,7 +438,7 @@ $(function(){
             //     mimeTypes: 'image/*'
             // },
 
-            // 禁掉全局的拖拽功能。这样不会出现图片拖进页面的时候，把图片打开。
+            // 禁掉全局的拖拽功能。这样不会出现文化拖进页面的时候，把文化打开。
             disableGlobalDnd: true,
             fileNumLimit: 300,
             fileSizeLimit: 200 * 1024 * 1024,    // 200 M
@@ -677,13 +677,13 @@ $(function(){
             var text = '', stats;
 
             if ( state === 'ready' ) {
-                text = '选中' + fileCount + '张图片，共' +
+                text = '选中' + fileCount + '张文化，共' +
                         WebUploader.formatSize( fileSize ) + '。';
             } else if ( state === 'confirm' ) {
                 stats = uploader.getStats();
                 if ( stats.uploadFailNum ) {
                     text = '已成功上传' + stats.successNum+ '张照片至XX相册，'+
-                        stats.uploadFailNum + '张照片上传失败，<a class="retry" href="#">重新上传</a>失败图片或<a class="ignore" href="#">忽略</a>'
+                        stats.uploadFailNum + '张照片上传失败，<a class="retry" href="#">重新上传</a>失败文化或<a class="ignore" href="#">忽略</a>'
                 }
 
             } else {
@@ -754,7 +754,7 @@ $(function(){
                     if ( stats.successNum ) {
                         alert( '上传成功' );
                     } else {
-                        // 没有成功的图片，重设
+                        // 没有成功的文化，重设
                         state = 'done';
                         location.reload();
                     }

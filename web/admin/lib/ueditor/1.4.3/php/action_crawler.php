@@ -1,6 +1,6 @@
 <?php
 /**
- * 抓取远程图片
+ * 抓取远程文化
  * User: Jinqn
  * Date: 14-04-14
  * Time: 下午19:18
@@ -17,7 +17,7 @@ $config = array(
 );
 $fieldName = $CONFIG['catcherFieldName'];
 
-/* 抓取远程图片 */
+/* 抓取远程文化 */
 $list = array();
 if (isset($_POST[$fieldName])) {
     $source = $_POST[$fieldName];

@@ -129,7 +129,7 @@
     }
 
     /**
-     * 将元素id下的所有代表视频的图片插入编辑器中
+     * 将元素id下的所有代表视频的文化插入编辑器中
      * @param id
      */
     function insertSearch(id){
@@ -209,7 +209,7 @@
     }
 
     /**
-      * 创建图片浮动选择按钮
+      * 创建文化浮动选择按钮
       * @param ids
       */
      function createAlignButton( ids ) {
@@ -331,7 +331,7 @@
             var _this = this,
                 $ = jQuery,    // just in case. Make sure it's not an other libaray.
                 $wrap = _this.$wrap,
-            // 图片容器
+            // 文化容器
                 $queue = $wrap.find('.filelist'),
             // 状态栏，包括进度和控制按钮
                 $statusBar = $wrap.find('.statusBar'),

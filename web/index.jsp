@@ -108,10 +108,10 @@
 <!--新闻动态和排名-->
 <div class="newNotice-login clearfix">
     <div class="newNotice l">
-        <!--图片新闻-->
+        <!--文化新闻-->
         <div class="news l">
             <div class="news-title">
-                图片新闻
+                文化新闻
             </div>
             <div class="sqhd_lb">
                 <div class="hd">
@@ -177,7 +177,7 @@
                 <ul id="news">
                     <%--                    <li><a href="file:///C:/Article/Details?id=8194">【04-12】<span style="color:#FF9933">【荐】</span>西渚镇社区教育工作会议暨业务培训班顺利召开</a></li>--%>
                     <%--                    <li><a href="file:///C:/Article/Details?id=8193">【04-12】周铁镇隆重举办2019年竺山风筝节</a></li>--%>
-                    <%--                    <li><a href="file:///C:/Article/Details?id=8192">【04-12】周铁社区教育中心举办《三国演义》图片展</a></li>--%>
+                    <%--                    <li><a href="file:///C:/Article/Details?id=8192">【04-12】周铁社区教育中心举办《三国演义》文化展</a></li>--%>
                     <%--                    <li><a href="file:///C:/Article/Details?id=8183">【04-08】缅怀革命先烈 共筑远大理想——徐舍镇开展青少年清明...</a></li>--%>
                     <%--                    <li><a href="file:///C:/Article/Details?id=8182">【04-08】“追寻烈士足迹，重温入党誓词”祭扫烈士墓主题党日活...</a></li>--%>
                     <%--                    <li><a href="file:///C:/Article/Details?id=8181">【04-05】新时代文明实践在太华：红色热土传承红色精神，太华缅...</a></li>--%>

@@ -30,7 +30,7 @@ public final class ConfigManager {
 	private JSONObject jsonConfig = null;
 	// 涂鸦上传filename定义
 	private final static String SCRAWL_FILE_NAME = "scrawl";
-	// 远程图片抓取filename定义
+	// 远程文化抓取filename定义
 	private final static String REMOTE_FILE_NAME = "remote";
 	
 	/*

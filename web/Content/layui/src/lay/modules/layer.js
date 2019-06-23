@@ -1183,7 +1183,7 @@ layer.photos = function(options, loop, key){
     $(document).on('keyup', dict.keyup);
   };
   
-  //图片预加载
+  //文化预加载
   function loadImage(url, callback, error) {   
     var img = new Image();
     img.src = url; 
@@ -1214,7 +1214,7 @@ layer.photos = function(options, loop, key){
         var imgarea = [img.width, img.height];
         var winarea = [$(window).width() - 100, $(window).height() - 100];
         
-        //如果 实际图片的宽或者高比 屏幕大（那么进行缩放）
+        //如果 实际文化的宽或者高比 屏幕大（那么进行缩放）
         if(!options.full && (imgarea[0]>winarea[0]||imgarea[1]>winarea[1])){
           var wh = [imgarea[0]/winarea[0],imgarea[1]/winarea[1]];//取宽度缩放比例、高度缩放比例
           if(wh[0] > wh[1]){//取缩放比例最大的进行缩放

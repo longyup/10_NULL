@@ -5,6 +5,8 @@ import org.junit.Test;
 
 import javax.sql.DataSource;
 import java.sql.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.UUID;
 
 /**
@@ -115,5 +117,20 @@ public class DsUtils {
      */
     public static String getCode(){
         return String.valueOf(getUUID());
+    }
+
+    /**
+     * 时间戳
+     * @param s
+     * @return
+     * @throws ParseException
+     */
+    public static String dateToStamp(String s) throws ParseException {
+        String res;
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date date = (Date) simpleDateFormat.parse(s);
+        long ts = date.getTime();
+        res = String.valueOf(ts);
+        return res;
     }
 }

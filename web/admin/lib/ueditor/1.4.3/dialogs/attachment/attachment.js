@@ -2,7 +2,7 @@
  * User: Jinqn
  * Date: 14-04-08
  * Time: 下午16:34
- * 上传图片对话框逻辑代码,包括tab: 远程图片/上传图片/在线图片/搜索图片
+ * 上传文化对话框逻辑代码,包括tab: 远程文化/上传文化/在线文化/搜索文化
  */
 
 (function () {
@@ -102,7 +102,7 @@
             var _this = this,
                 $ = jQuery,    // just in case. Make sure it's not an other libaray.
                 $wrap = _this.$wrap,
-            // 图片容器
+            // 文化容器
                 $queue = $wrap.find('.filelist'),
             // 状态栏，包括进度和控制按钮
                 $statusBar = $wrap.find('.statusBar'),
@@ -591,14 +591,14 @@
         initEvents: function () {
             var _this = this;
 
-            /* 滚动拉取图片 */
+            /* 滚动拉取文化 */
             domUtils.on($G('fileList'), 'scroll', function(e){
                 var panel = this;
                 if (panel.scrollHeight - (panel.offsetHeight + panel.scrollTop) < 10) {
                     _this.getFileData();
                 }
             });
-            /* 选中图片 */
+            /* 选中文化 */
             domUtils.on(this.list, 'click', function (e) {
                 var target = e.target || e.srcElement,
                     li = target.parentNode;
@@ -624,7 +624,7 @@
             /* 第一次拉取数据 */
             this.getFileData();
         },
-        /* 向后台拉取图片列表数据 */
+        /* 向后台拉取文化列表数据 */
         getFileData: function () {
             var _this = this;
 
@@ -664,7 +664,7 @@
                 });
             }
         },
-        /* 添加图片到列表界面上 */
+        /* 添加文化到列表界面上 */
         pushData: function (list) {
             var i, item, img, filetype, preview, icon, _this = this,
                 urlPrefix = editor.getOpt('fileManagerUrlPrefix');
@@ -707,7 +707,7 @@
                 }
             }
         },
-        /* 改变图片大小 */
+        /* 改变文化大小 */
         scale: function (img, w, h, type) {
             var ow = img.width,
                 oh = img.height;

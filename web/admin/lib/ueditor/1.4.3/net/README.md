@@ -78,7 +78,7 @@ C:\Windows\Microsoft.NET\Framework\v4.0.30319\aspnet_regiis -i
 
 "{tpl}UrlPrefix" 表示上传文件访问的 URL 前缀。注意，这里应该给出应用程序的 URL 路径，否则上传的文件不能正确定位。
 
-> 举个例子，如果你的 UEditor 的位置在 `http://www.mydomain.com/myapp/ueditor`，对应的本地路径是 `C:\iis_pub\www\myapp\ueditor`，那么 .NET 应用程序的位置在 `http://www.mydomain.com/myapp/ueditor/net`，对应的本地路径是 `C:\iis_pub\www\myapp\ueditor\net`。图片上传配置项应该如下：
+> 举个例子，如果你的 UEditor 的位置在 `http://www.mydomain.com/myapp/ueditor`，对应的本地路径是 `C:\iis_pub\www\myapp\ueditor`，那么 .NET 应用程序的位置在 `http://www.mydomain.com/myapp/ueditor/net`，对应的本地路径是 `C:\iis_pub\www\myapp\ueditor\net`。文化上传配置项应该如下：
 > 
 > { 
 >    "imagePathFormat": "upload/image/{yyyy}{mm}{dd}/{time}{rand:6}",

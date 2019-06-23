@@ -11,7 +11,7 @@
 var Uploader = (function() {
 
     // -------setting-------
-    // 如果使用原始大小，超大的图片可能会出现 Croper UI 卡顿，所以这里建议先缩小后再crop.
+    // 如果使用原始大小，超大的文化可能会出现 Croper UI 卡顿，所以这里建议先缩小后再crop.
     var FRAME_WIDTH = 1600;
 
 
@@ -67,7 +67,7 @@ var Uploader = (function() {
                     deferred.resolve();
                 } catch ( e ) {
                     console.log( e );
-                    // 出错了直接继续，让其上传原始图片
+                    // 出错了直接继续，让其上传原始文化
                     deferred.resolve();
                 }
             });

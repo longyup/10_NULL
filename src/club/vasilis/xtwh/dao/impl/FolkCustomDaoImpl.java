@@ -70,8 +70,8 @@ public class FolkCustomDaoImpl implements FolkCustomDao {
     @Override
     public void save(FolkCustom folkCustom) throws SQLException {
         QueryRunner runner = new QueryRunner(DsUtils.getDataSource());
-        String sql = "insert into folk_custom_passage(id,name,img,onlinetime,details) values(?,?,?,?,?)";
-        Object[] parms = {folkCustom.getId(),folkCustom.getName(),folkCustom.getImg(),folkCustom.getOnlinetime(),folkCustom.getDetails(),folkCustom};
+        String sql = "insert into folk_custom_passage(id,name,onlinetime,details) values(?,?,?,?)";
+        Object[] parms = {folkCustom.getId(),folkCustom.getName(),folkCustom.getOnlinetime(),folkCustom.getDetails()};
         System.out.println("有访问到DAO吗？");
         runner.update(sql,parms);
     }
@@ -89,12 +89,18 @@ public class FolkCustomDaoImpl implements FolkCustomDao {
         String sql = "update folk_custom_passage set name =?,details =? where id=?";
         System.out.println("这里访问到了吗？");
         return runner.update(sql,folkCustom.getName(),folkCustom.getDetails(),folkCustom.getId());
+
     }
 
     @Test
     public void test() throws Exception {
 //        System.out.println(new FolkCustomDaoImpl().customPassageDetails("1"));
 //        System.out.println(new FolkCustomDaoImpl().customMenuDetails("cus001"));
-        System.err.println(new FolkCustomDaoImpl().customAllJson());
+        FolkCustom folkCustom = new FolkCustom();
+        folkCustom.setId(2);
+        folkCustom.setName("123456");
+        folkCustom.setDetails("5555555555555555555");
+        System.out.println(new FolkCustomDaoImpl().updateCustom(folkCustom));
+//        System.err.println(new FolkCustomDaoImpl().customAllJson());
     }
 }

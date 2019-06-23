@@ -3,7 +3,7 @@
     $(function() {
         var $wrap = $('.uploader-list-container'),
 
-            // 图片容器
+            // 文化容器
             $queue = $( '<ul class="filelist"></ul>' )
                 .appendTo( $wrap.find( '.queueList' ) ),
 
@@ -39,7 +39,7 @@
 
             // 所有文件的进度信息，key为file id
             percentages = {},
-            // 判断浏览器是否支持图片的base64
+            // 判断浏览器是否支持文化的base64
             isSupportBase64 = ( function() {
                 var data = new Image();
                 var support = true;
@@ -141,7 +141,7 @@
         uploader = WebUploader.create({
             pick: {
                 id: '#filePicker-2',
-                label: '点击选择图片'
+                label: '点击选择文化'
             },
             formData: {
                 uid: 123
@@ -160,7 +160,7 @@
             //     mimeTypes: 'image/*'
             // },
 
-            // 禁掉全局的拖拽功能。这样不会出现图片拖进页面的时候，把图片打开。
+            // 禁掉全局的拖拽功能。这样不会出现文化拖进页面的时候，把文化打开。
             disableGlobalDnd: true,
             fileNumLimit: 300,
             fileSizeLimit: 200 * 1024 * 1024,    // 200 M
@@ -399,13 +399,13 @@
             var text = '', stats;
 
             if ( state === 'ready' ) {
-                text = '选中' + fileCount + '张图片，共' +
+                text = '选中' + fileCount + '张文化，共' +
                         WebUploader.formatSize( fileSize ) + '。';
             } else if ( state === 'confirm' ) {
                 stats = uploader.getStats();
                 if ( stats.uploadFailNum ) {
                     text = '已成功上传' + stats.successNum+ '张照片至XX相册，'+
-                        stats.uploadFailNum + '张照片上传失败，<a class="retry" href="#">重新上传</a>失败图片或<a class="ignore" href="#">忽略</a>'
+                        stats.uploadFailNum + '张照片上传失败，<a class="retry" href="#">重新上传</a>失败文化或<a class="ignore" href="#">忽略</a>'
                 }
 
             } else {
@@ -476,7 +476,7 @@
                     if ( stats.successNum ) {
                         alert( '上传成功' );
                     } else {
-                        // 没有成功的图片，重设
+                        // 没有成功的文化，重设
                         state = 'done';
                         location.reload();
                     }
