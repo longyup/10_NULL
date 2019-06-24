@@ -21,7 +21,7 @@
     <link rel="stylesheet" type="text/css" href="<%= path%>/css/reset.css">
     <link rel="stylesheet" type="text/css" href="<%= path%>/css/firstPage.css">
     <link rel="stylesheet" type="text/css" href="<%= path%>/css/head.css"/>
-    <title>乡土文化教育网</title>
+    <title>忆乡土</title>
 
     <link href="<%= path%>/Content/layui/src/css/layui.css" rel="stylesheet">
 

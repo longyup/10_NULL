@@ -24,7 +24,7 @@
     <link href="<%=path %>/css/Page.css" type="text/css" rel="stylesheet"/>
 
 
-    <title>乡土文化志愿网</title>
+    <title>忆乡土</title>
 
 
     <link href="css/Page.css" rel="stylesheet"/>

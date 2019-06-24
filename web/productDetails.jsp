@@ -24,7 +24,7 @@
     <link href="<%= path%>/css/Page.css" type="text/css" rel="stylesheet"/>
 
 
-    <title>乡土文化</title>
+    <title>忆乡土</title>
 
 
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_234130_nem7eskcrkpdgqfr.css">

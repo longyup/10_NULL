@@ -20,7 +20,7 @@
     <link href="<%= path%>/css/Page.css" type="text/css" rel="stylesheet" />
 
 
-    <title>乡土文化</title>
+    <title>忆乡土</title>
 
 
     <link rel="stylesheet" type="text/css" href="<%= path%>/css/topicCourse.css" />
