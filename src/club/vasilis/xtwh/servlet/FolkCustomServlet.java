@@ -153,7 +153,7 @@ public class FolkCustomServlet extends HttpServlet {
                 ex.printStackTrace();
             }
         }
-        response.sendRedirect("/10_NULL_war_exploded/folk_custom?method=getAllCustom");
+        response.sendRedirect(request.getContextPath()+"/folk_custom?method=getAllCustom");
 
     }
 
